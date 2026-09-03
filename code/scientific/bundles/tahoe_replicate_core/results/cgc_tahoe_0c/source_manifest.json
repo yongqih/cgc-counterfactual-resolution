@@ -1,0 +1,85 @@
+{
+  "alternative_estimator_recomputed": false,
+  "authorized_transfer_bytes": 21600000000,
+  "estimator": "official plate-resolved treatment-versus-control log2FoldChange",
+  "estimator_evidence": [
+    "The official repository labels the release pseudobulk_differential_expression.",
+    "Its schema contains log2FoldChange, plate, n_cells_trt, and n_cells_ctrl.",
+    "The official README identifies DMSO_TF plus plate as the plate-matched vehicle control."
+  ],
+  "estimator_verified": true,
+  "free_disk_before_bytes": 943568195584,
+  "frozen_0b_hashes": {
+    "replicate_definition": {
+      "path": "results\\cgc_tahoe_0b\\replicate_definition.json",
+      "sha256": "76c56e6c384f0cd3642cc26f2220cd2ab56ff90f307e80b9b5643890f549753c"
+    },
+    "selected_core": {
+      "path": "results\\cgc_tahoe_0b\\selected_replicate_core.csv",
+      "sha256": "ce92bbbe27fb7edab784c9442d8fa55b91848e9b0c3df16b66333fce6f82b43e"
+    },
+    "source_revision": {
+      "path": "results\\cgc_tahoe_0b\\source_revision.json",
+      "sha256": "f12eacde99a8a57d783a7ff1ab8cc9d1deea28503d4242e0bae1fcc0a419ac63"
+    },
+    "verdict": {
+      "path": "results\\cgc_tahoe_0b\\verdict.json",
+      "sha256": "bf42bb8cea1f354beff9c42da557359dadb87fd198cc72c14099bfd2b29f90dc"
+    }
+  },
+  "full_de_release_bytes": 88859715303,
+  "full_de_release_downloaded": false,
+  "model_training_calls": 0,
+  "official_dataset_url": "https://huggingface.co/datasets/tahoebio/Tahoe-100M",
+  "official_de_schema": [
+    "gene_name",
+    "baseMean",
+    "log2FoldChange",
+    "lfcSE",
+    "stat",
+    "pvalue",
+    "padj",
+    "plate",
+    "n_cells_trt",
+    "n_cells_ctrl",
+    "Cell_ID_Cellosaur",
+    "Cell_ID_DepMap",
+    "drug",
+    "concentration",
+    "concentration_unit",
+    "Cell_Name_Vevo"
+  ],
+  "official_readme_sha256": "257d17d255800088f2f100805dc4a15dfe03ca1bcc88591b8282d5c4711ee934",
+  "official_readme_url": "https://huggingface.co/datasets/tahoebio/Tahoe-100M/raw/2dc57900b7981cfcf5e211527169a0b006546a95/README.md",
+  "paper_doi": "10.1101/2025.02.20.639398",
+  "paper_versions": [
+    {
+      "date": "2025-02-24",
+      "jatsxml": "https://www.biorxiv.org/content/early/2025/02/24/2025.02.20.639398.source.xml",
+      "version": "1"
+    },
+    {
+      "date": "2025-04-23",
+      "jatsxml": "https://www.biorxiv.org/content/early/2025/04/23/2025.02.20.639398.source.xml",
+      "version": "2"
+    },
+    {
+      "date": "2025-05-10",
+      "jatsxml": "https://www.biorxiv.org/content/early/2025/05/10/2025.02.20.639398.source.xml",
+      "version": "3"
+    }
+  ],
+  "phase": "CGC-SUPPORT-0C",
+  "plate_pooling": false,
+  "probe_footer_bytes": 5815853,
+  "probe_shard": {
+    "lfs_sha256": "5071292ace0abb0b1266f35f6739d59e63a8396ffae583f729e11af26e1b2560",
+    "oid": "a65b369274ab59036392e00d2e08935f950dd95e",
+    "path": "metadata/pseudobulk_differential_expression/train-00000-of-01026.parquet",
+    "size_bytes": 91442763
+  },
+  "repository": "tahoebio/Tahoe-100M",
+  "revision": "2dc57900b7981cfcf5e211527169a0b006546a95",
+  "timestamp_utc": "2026-08-20T17:39:19.943484+00:00",
+  "virtual_cell_checkpoint_calls": 0
+}

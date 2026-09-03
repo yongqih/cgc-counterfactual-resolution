@@ -1,0 +1,678 @@
+[
+  {
+    "bundle": "experimental_compression",
+    "path": "data/cgc_entrywise_cache/same_plate6_float32.npy",
+    "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "bytes_if_known": 86490128,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "experimental_compression",
+    "path": "data/cgc_entrywise_cache/same_plate14_float32.npy",
+    "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "bytes_if_known": 86490128,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "experimental_compression",
+    "path": "data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy",
+    "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "bytes_if_known": 86490128,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "experimental_compression",
+    "path": "data/cgc_entrywise_cache/sample_gene_sums_float64.npy",
+    "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "bytes_if_known": 74528,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "low_rank_completion",
+    "path": "data/cgc_entrywise_cache",
+    "authority": "LOW_RANK_INTERACTION_PROTOCOL.md; ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Pass --source-root explicitly; three 86,490,128-byte Gram matrices plus sums and frozen affine selection metadata."
+  },
+  {
+    "bundle": "m1_secondary",
+    "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+    "authority": "ENTRYWISE_RUN_MANIFEST.json",
+    "bytes_if_known": 27158852,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "m1_secondary",
+    "path": "data/cgc_entrywise_cache",
+    "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "context_anchoring",
+    "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+    "authority": "ENTRYWISE_RUN_MANIFEST.json",
+    "bytes_if_known": 27158852,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "context_anchoring",
+    "path": "results/cgc_entrywise_compression/_cache/bootstrap_draws.npz",
+    "authority": "ENTRYWISE_RUN_MANIFEST.json",
+    "bytes_if_known": 43200800,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_bio1_official/bio1_gene_arrays.npz",
+    "authority": "MULTI2 SOURCE_HASHES; BIO2 EXPECTED_GENE_HASH",
+    "bytes_if_known": 1911708512,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_bio1_official/bio1_projected_programs.npz",
+    "authority": "BIO2 EXPECTED_PROGRAM_HASH",
+    "bytes_if_known": 191722116,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_multi1_official/rppa500-mclp_tahoe49.parquet",
+    "authority": "MULTI2 SOURCE_HASHES",
+    "bytes_if_known": 210556,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Shared prepared measurements reused by final MULTI2, not historical MULTI1 results."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_multi1_official/harmonized_Sanger_MS_2022_tahoe49.parquet",
+    "authority": "MULTI2 SOURCE_HASHES",
+    "bytes_if_known": 2331840,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_multi1_official/Chronos_Combined_tahoe49.parquet",
+    "authority": "MULTI2 SOURCE_HASHES",
+    "bytes_if_known": 7068304,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_mechanism_followup",
+    "authority": "MULTI2_ANNOTATION_PROVENANCE.json",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+    "authority": "MULTI2 load_foundation baseline-only primary_dmso_cpm",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+    "authority": "gene_universe_hashes.json",
+    "bytes_if_known": 102908,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "mechanism_aligned",
+    "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+    "authority": "MULTI2 SOURCE_HASHES",
+    "bytes_if_known": 2705687,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "tahoe_operator_anatomy",
+    "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+    "authority": "response_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "tahoe_operator_anatomy",
+    "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+    "authority": "gene_universe_hashes.json",
+    "bytes_if_known": 102908,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "tahoe_replicate_core",
+    "path": "data/tahoe100m_plate6_14_core",
+    "authority": "results/cgc_tahoe_0b and cgc_tahoe_0c frozen manifests",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared pseudobulk core only; downloading large raw resources is not part of this release repair."
+  },
+  {
+    "bundle": "held_context_scaling",
+    "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+    "authority": "response_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "held_context_scaling",
+    "path": "data/tahoe100m_control_state/control_wells_log1p_cpm_float32.npy",
+    "authority": "frozen control-state source manifest",
+    "bytes_if_known": 34018528,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "held_context_scaling",
+    "path": "results/cgc_tahoe_0d/lineage_baseline.csv",
+    "authority": "frozen lineage metadata",
+    "bytes_if_known": 11137,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "five_pathway_scaling",
+    "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+    "authority": "response_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "five_pathway_scaling",
+    "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+    "authority": "frozen pathway model source",
+    "bytes_if_known": 2705687,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "ed7_hierarchical_repair",
+    "path": ".worktrees/tahoe_held_context_scaling/results/tahoe_held_context_scaling",
+    "authority": "abb503e9f3cf75eaea7a075f81160db3d04de64d frozen Grams, hyperparameters and point estimates",
+    "bytes_if_known": null,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_DIRECTORY",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "ed7_hierarchical_repair",
+    "path": ".worktrees/tahoe_five_pathway_scaling/results/tahoe_five_pathway_scaling/_cache/TAHOE_FIVE_PATHWAY_SCALING_CONTRIBUTIONS.npz",
+    "authority": "22926886e3f87994492720ad2a529dd382596f09",
+    "bytes_if_known": 28793698,
+    "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+    "local_presence": "PRESENT_FILE",
+    "notes": "Prepared input; external to the code-only export."
+  },
+  {
+    "bundle": "tcell_truth",
+    "path": "data/raw/cgc_tcell/GWCD4i.pseudobulk_merged.h5ad",
+    "authority": "Official processed guide x donor x culture pseudobulk; exact URL and checksum in download_manifest.json",
+    "bytes_if_known": 44566657140,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "tcell_lodo",
+    "path": "data/processed/cgc_tcell",
+    "authority": "T-cell truth freeze 4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "tcell_lodo",
+    "path": "results/cgc_tcell",
+    "authority": "Frozen truth manifests, strict-trans genes, dataset_inventory.json and NTC manifest",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "tcell_lodo",
+    "path": "data/raw/cgc_tcell/GWCD4i.pseudobulk_merged.h5ad",
+    "authority": "Required by NTC baseline extraction if data/processed/cgc_tcell_1b/ntc_context.float32.npy is not already valid",
+    "bytes_if_known": 44566657140,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "tcell_decomposition",
+    "path": "results/cgc_tcell_1b",
+    "authority": "Frozen 1B predictions and model checkpoint manifest at f8f6b345fba8b90b834558834f26665b63300177",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "tcell_decomposition",
+    "path": "data/processed/cgc_tcell",
+    "authority": "Truth freeze 4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "state_official_summary",
+    "path": "data/state_official_predictions",
+    "authority": "ArcInstitute/state; HuggingFace ST-SE-Parse and ST-HVG-Parse official eval-best full-DE artifacts; 434168727 bytes recorded in source manifest",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "state_independent_stability",
+    "path": "data/state_stability_official",
+    "authority": "Official Arc STATE Tahoe evaluation artifacts with source URLs and hashes in STATE_STABILITY_ARTIFACT_MANIFEST.json",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "state_independent_stability",
+    "path": "results/cgc_state_1/context_heterogeneity.csv",
+    "authority": "Frozen discovery report overlay only",
+    "bytes_if_known": 1795,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_historical_analysis",
+    "path": "data/level2_lea_official/GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+    "authority": "GEO GSE207049 official author residualized processed matrix",
+    "bytes_if_known": 217469362,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_historical_analysis",
+    "path": "data/level2_lea_official/31Mar21_all_runs_voom_resid_metadata.txt",
+    "authority": "Exact sample-to-LCL/ETOH/DEX mapping in integrity and pairing audit",
+    "bytes_if_known": 292921,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_historical_analysis",
+    "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+    "authority": "Pilot output required by full battery; six-model battery reuses pilot predictions/checkpoints",
+    "bytes_if_known": 90490423,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_archs4",
+    "path": "data/level2_lea_archs4_matched",
+    "authority": "ARCHS4 v2.5 matched count extraction and prepared matched 340-LCL/10110-gene representations; exact hashes in extraction/run manifests",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "lea_archs4",
+    "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+    "authority": "Historical Lea frozen 342-LCL OOF and exact matched-core selection",
+    "bytes_if_known": 90490423,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_archs4",
+    "path": "data/level2_lea_official/GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+    "authority": "Matched post-SVA comparator from author GEO matrix",
+    "bytes_if_known": 217469362,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_full_span",
+    "path": "data/wgcna_frontier_official/MATCHED_POSTSVA_340_REPRESENTATION.npz",
+    "authority": "Matched Lea 340-LCL response representation and frozen folds",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "lea_full_span",
+    "path": "data/wgcna_frontier_official/MATCHED_POSTSVA_FULL_OOF.npz",
+    "authority": "Matched post-SVA six-model OOF archive",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "lea_full_span",
+    "path": "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+    "authority": "Frozen matched gene axis",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "lea_full_span",
+    "path": "results/cgc_dimension_matched_compression",
+    "authority": "Historical PCA curve/summary comparison required by reporting",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "resolution_pathway_frozen",
+    "path": "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv",
+    "authority": "46b25eec4a97e3001cc43262980af8f69c533478; valid contrast selected under21b08f02d3371129bb5cbf49704c65a271240c7c",
+    "redistribution": "included byte-exact frozen result table; active renderer discards every random-arm row",
+    "bytes_if_known": null
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
+    "authority": "Frozen Tahoe replicate truth",
+    "bytes_if_known": 955854128,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "data/cgc_resolution2_replay/m49_k92_predictions_float32.npy",
+    "authority": "Frozen all-but-one model predictions; no refit",
+    "bytes_if_known": 955854128,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "data/cgc_resolution2_replay/m49_k92_frozen_weights.npz",
+    "authority": "Frozen prediction replay episode weights",
+    "bytes_if_known": 3455810,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy",
+    "authority": "Frozen shared hierarchical bootstrap weights",
+    "bytes_if_known": 93000128,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+    "authority": "Frozen entrywise utility and support/sentinel assignment",
+    "bytes_if_known": 27158852,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+    "authority": "Frozen PROGENy weights and gene identifiers",
+    "bytes_if_known": 2705687,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "data/cgc_bio1_official/progeny",
+    "authority": "Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "results/cgc_tahoe_0i/gene_metadata_frozen.csv",
+    "authority": "Frozen gene metadata axis",
+    "bytes_if_known": 5092546,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_fidelity",
+    "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+    "authority": "Frozen primary gene indices",
+    "bytes_if_known": 102908,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
+    "authority": "Frozen Tahoe replicate truth",
+    "bytes_if_known": 955854128,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "data/cgc_resolution2_replay/m49_k92_predictions_float32.npy",
+    "authority": "Frozen all-but-one model predictions; no refit",
+    "bytes_if_known": 955854128,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "data/cgc_resolution2_replay/m49_k92_frozen_weights.npz",
+    "authority": "Frozen prediction replay episode weights",
+    "bytes_if_known": 3455810,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy",
+    "authority": "Frozen shared hierarchical bootstrap weights",
+    "bytes_if_known": 93000128,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+    "authority": "Frozen entrywise utility and support/sentinel assignment",
+    "bytes_if_known": 27158852,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+    "authority": "Frozen PROGENy weights and gene identifiers",
+    "bytes_if_known": 2705687,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "data/cgc_bio1_official/progeny",
+    "authority": "Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "results/cgc_tahoe_0i/gene_metadata_frozen.csv",
+    "authority": "Frozen gene metadata axis",
+    "bytes_if_known": 5092546,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "pathway_composition",
+    "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+    "authority": "Frozen primary gene indices",
+    "bytes_if_known": 102908,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "crc_pdo_application",
+    "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+    "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_application",
+    "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+    "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_application",
+    "path": "results/crc_pdo_personalized_drug_application",
+    "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_application",
+    "path": "data/crc_pdo_personalized_application/raw",
+    "authority": "Official supplementary spreadsheets, GEO processed matrices and exact source-manifest hashes needed only for preparation",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_application",
+    "path": "data/crc_pdo_personalized_application/processed/HTA2_PDO_public_processed.npz",
+    "authority": "Secondary HTA expression platform; full original application loops over RNAseq and HTA2.0",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_conditioning",
+    "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+    "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_conditioning",
+    "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+    "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_conditioning",
+    "path": "results/crc_pdo_personalized_drug_application",
+    "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_conditioning",
+    "path": "PROGENy weights file",
+    "authority": "Official PROGENy v1.17.3 revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f; expected SHA256 59227c888c2bfa1ed89fe00109da7ce1bacffbb9b8b6b79215065d41f2476223",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_pca",
+    "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+    "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_pca",
+    "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+    "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_pca",
+    "path": "results/crc_pdo_personalized_drug_application",
+    "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_pca",
+    "path": "results/crc_pdo_conditioning_resolution/PCA14_OOF.csv",
+    "authority": "Frozen conditioning result 38adafd8601f3a0382baa88e03bf72e3dd0d3a62; accompanying CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json required",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_dense",
+    "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+    "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_dense",
+    "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+    "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_dense",
+    "path": "results/crc_pdo_personalized_drug_application",
+    "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "crc_pdo_dense",
+    "path": "results/crc_pdo_pca_resolution_sweep",
+    "authority": "Prior frozen OOF: FIXED_K_OOF_PREDICTIONS.csv, PCA_STAR_OOF_PREDICTIONS.csv, FULL_RNA_REOPT_OOF.csv and FINAL_QA; result 1bb0e95b39c2181638d732097f8f868689f32c87, ledger 624e6f239459418f8d6a8792ff41d2dcc1c2c61c",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  },
+  {
+    "bundle": "lea_semisynthetic",
+    "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+    "authority": "Historical response/base-state arrays and frozen LCL folds",
+    "bytes_if_known": 90490423,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+    "local_presence": "PRESENT_FILE"
+  },
+  {
+    "bundle": "lea_semisynthetic",
+    "path": "results/level2_lea/FULL_MODEL_BATTERY_RESULTS.csv",
+    "authority": "Frozen real-data results for side-by-side comparison only",
+    "bytes_if_known": null,
+    "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+  }
+]

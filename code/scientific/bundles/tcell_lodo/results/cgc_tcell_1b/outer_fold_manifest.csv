@@ -1,0 +1,5 @@
+outer_fold,held_out_donor,training_donors,training_donor_count,test_donor_count,held_out_ntc_allowed,held_out_perturbation_responses_allowed
+0,CE0006864,CE0008162;CE0008678;CE0010866,3,1,True,False
+1,CE0008162,CE0006864;CE0008678;CE0010866,3,1,True,False
+2,CE0008678,CE0006864;CE0008162;CE0010866,3,1,True,False
+3,CE0010866,CE0006864;CE0008162;CE0008678,3,1,True,False

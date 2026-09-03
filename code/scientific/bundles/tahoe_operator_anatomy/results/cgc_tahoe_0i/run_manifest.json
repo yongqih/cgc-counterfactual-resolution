@@ -1,0 +1,63 @@
+{
+  "phase": "CGC-0I",
+  "created_at": "2026-08-21T15:04:12.936412-04:00",
+  "branch": "cgc_tahoe_fulltranscriptome_reconstruction",
+  "git_parent": "32bffc563c6f994e0741e498b367211eedbb1bbf",
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "raw_official_revision": "76cb053d59be08a7d0c4dc68c265622f6e0ab52e",
+  "raw_download_bytes": 51362829642,
+  "contexts": 50,
+  "interventions": 93,
+  "pseudobulks": 9500,
+  "gene_universes": {
+    "G_ALL_MAPPED": 62710,
+    "G_PRIMARY": 25695,
+    "G_BROAD": 37554,
+    "G_STRICT": 20182,
+    "G_PRIMARY_NO_MITO": 25677,
+    "G_PRIMARY_NO_MITO_RIBO": 25497
+  },
+  "gpu_dimensionality": {
+    "device": "cuda",
+    "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "peak_bytes": 1552574976
+  },
+  "tests": {
+    "all_non_data_dependent": "PASS",
+    "excluded": [
+      {
+        "test": "test_frozen_missing_itgav_combination_remains_masked",
+        "status": "DATA_NOT_PRESENT",
+        "reason": "approved Feng cleanup removed regenerable observation mask; no redownload authorized"
+      }
+    ]
+  },
+  "required_output_sha256": {
+    "access_inventory.csv": "df8274a7b4ce8107aaf0690307a672469e054c7434a6825c5de13bbc5e49dbb4",
+    "raw_source_manifest.json": "af039e786bdf941bf3fc6969a04dfb97857766aba7073cefa9b93868af7b6d26",
+    "raw_source_hashes.json": "5ef9bbf3c7d8ef4b2ddc4f3a44ce431bb3cd7dc0ce681ab4185ae0c0f54ca650",
+    "raw_schema.md": "aa1d3493c75daa328b9cacfe75821a669c88459744993d404cd306bac11f3989",
+    "extraction_manifest.json": "9cf012d31be6cc0d6ad1b7793fc24fa52c8cddb6e5238d6a3dc79eb7feed8255",
+    "pseudobulk_sample_metadata.csv": "6524e7cabf3d5feb12fd6f2a0f3a3cad11a6a238e6ff9ac187d0a741afd470a7",
+    "cell_count_manifest.csv": "338c77424983953718c8f429685899d740e6161012e0948da07750b008142780",
+    "gene_metadata_frozen.csv": "f690be9e4a57bcf1fc2c70d1e458ea901950c5c42cc84c6d1fb7e728094c4960",
+    "gene_universe_manifest.csv": "58c523928c80b677403ec9e02098dba23f15427a56c22ac490ed23c2c87eb3fd",
+    "gene_universe_hashes.json": "7be063bd8873a3fe866d4d64ff2ab81c53938ea2558b126965f3117f4a1940e7",
+    "panel127_raw_comparison.csv": "213aad137932f2f0d994ec3b7ea733b01e12c7a95c9ec40b1273213320810622",
+    "source_semantics_summary.csv": "3975a502beb70a3d1a98e3085f3766da2fa35c7e0e354b6a4a672cd8faa9b893",
+    "truth_reliability.csv": "b9334e4e2ece83bd55db7bdf5985d821b0fe841b7df818a1db264acb44dc1ee8",
+    "truth_null.csv": "b0b37b32ba0d429d77ef969e959cc237b385233999408062533ca43515f3ff50",
+    "support_q_curve.csv": "7ec497804f3b8c112c51d7ed3d5abe6bba5ae4ff76c4347e096b41d7065c0c0f",
+    "support_trend.csv": "97f1c5cffe3a412012fbcbb8e5b7fb8766f112a59ef3636655d396b245461a50",
+    "maximal_support_summary.csv": "db692b2682bcce5dd3c5429cc7777c34bfe65374d3be8dadd02843bba08efcc6",
+    "nuisance_robustness.csv": "70237935108b50de09a63b0df9f7941567e6dff54fc81b8702e2a48981fedf01",
+    "lowrank_capture.csv": "df3198bfcb590705a6b6db85c3410ce6fdaa51384b80eed1a0b32de5a43a71b0",
+    "loco_module_coverage.csv": "7f3517f71e983731c634dfe7333b063bcb1a321ca6f899bea4cd031738882a46",
+    "bootstrap_summary.csv": "164436cadb24ac5b7af80181ba11321a47008ac8a5ee1fdfe7f38dde41b6482e",
+    "integrity_audit.json": "8f5187751c4fb8a9f7e9428d04010933c101fadda3bef523e9ae0f81ec81285b",
+    "verdict.json": "5af17795566fec2dce58c3a06d57d318abc0706fce30d93eed99217c4a4a5e4a"
+  },
+  "verdict": "TAHOE_FULL_TRANSCRIPTOME_CGC_STRONGLY_CONFIRMED",
+  "git_status_at_freeze": "M results/cgc_tahoe_0i/verdict.json\n?? .idea/\n?? results/phase1/donor_disjoint_oof.parquet\n?? results/phase1/program_transferability.csv\n?? results/phase1/program_transport_utility.csv\n?? results/phase1/router_predictions.csv"
+}

@@ -1,0 +1,25 @@
+panel_order,drug_name,dss_column,library_1_presence,library_2_presence,coverage_group,primary_panel,eligible_pdo_count,total_pdo_count,total_patient_count,missingness,response_metric_availability,source_file,selection_basis,frozen_before_model_outcomes
+1,5-FU,5-FU,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+2,Afatinib,Afatinib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+3,Alisertib,Alisertib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+4,Atorvastatin,Atorvastatin,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+5,AZD7762,AZD7762,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+6,Bemcentinib,Bemcentinib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+7,Encorafenib,Encorafenib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+8,Gedatolisib,Gedatolisib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+9,Gemcitabine,Gemcitabine,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+10,Idasanutlin,Idasanutlin,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+11,Lapatinib,Lapatinib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+12,LCL161,LCL161,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+13,LGK974,LGK974,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+14,Luminespib,Luminespib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+15,Methotrexate,Methotrexate,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+16,Napabucasin,Napabucasin,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+17,Palbociclib,Palbociclib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+18,Panobinostat,Panobinostat,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+19,Pevonedistat,Pevonedistat,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+20,Regorafenib,Regorafenib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+21,SN-38,SN-38,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+22,TAS-102,TAS-102,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+23,Trametinib,Trametinib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True
+24,Volasertib,Volasertib,True,True,shared,True,211,211,102,0.0,DSS,mmc6.xlsx (Data S5),"coverage completeness, patient count, and valid official mapping only",True

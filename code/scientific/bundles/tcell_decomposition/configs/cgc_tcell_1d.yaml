@@ -1,0 +1,15 @@
+phase: CGC-TCELL-1D
+truth_commit: 4f2e608d9814015de98cfbc9cbf358af54fbc45e
+prediction_commit: f8f6b345fba8b90b834558834f26665b63300177
+interpretation_commit: 61d826df81a62a333571903e8ef26b25893f9f17
+branch: cgc_tcell_shared_specific_decomposition
+models: [Ridge, Bilinear, MLP]
+permutations: 10000
+bootstrap_draws: 10000
+random_seed: 20260821
+gene_chunk: 1024
+matrix_row_batch: 256
+output_directory: results/cgc_tcell_1d
+report_directory: results/reports
+temporary_directory: data/processed/cgc_tcell_1d_tmp
+

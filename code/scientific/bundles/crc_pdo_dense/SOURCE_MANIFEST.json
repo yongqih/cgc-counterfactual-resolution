@@ -1,0 +1,216 @@
+{
+  "id": "crc_pdo_dense",
+  "analysis_name": "Dense conditioning-resolution saturation with matched-random controls",
+  "class": "FULL_ANALYSIS",
+  "commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+  "implementation_commit": "21e627d96220b6f12da317597e4f748b334c8b64",
+  "entrypoints": [
+    {
+      "path": "scripts/run_crc_pdo_dense_resolution_plateau.py",
+      "command": "python scripts/run_crc_pdo_dense_resolution_plateau.py --root . --application-root <PDO-root> --implementation-commit 21e627d96220b6f12da317597e4f748b334c8b64",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/run_crc_pdo_dense_resolution_plateau.py",
+    "src/igc_virtual_cell/crc_pdo_personalized/dense_resolution_plateau.py"
+  ],
+  "extra_sources": [
+    "tests/test_crc_pdo_dense_resolution_plateau.py"
+  ],
+  "configs": [
+    "configs/crc_pdo_dense_resolution_plateau.json"
+  ],
+  "split_metadata": [
+    "results/crc_pdo_dense_resolution_plateau/DENSE_RESOLUTION_GRID_MANIFEST.csv",
+    "results/crc_pdo_dense_resolution_plateau/DENSE_CONDITIONING_RESOLUTION_FINAL_QA.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+      "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+      "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application",
+      "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/crc_pdo_pca_resolution_sweep",
+      "authority": "Prior frozen OOF: FIXED_K_OOF_PREDICTIONS.csv, PCA_STAR_OOF_PREDICTIONS.csv, FULL_RNA_REOPT_OOF.csv and FINAL_QA; result 1bb0e95b39c2181638d732097f8f868689f32c87, ledger 624e6f239459418f8d6a8792ff41d2dcc1c2c61c",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    }
+  ],
+  "outputs": [
+    "results/crc_pdo_dense_resolution_plateau"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Dense fixed grid2,4,8,12,14,16,18,20,22,24,26,28,30,32; nested patient-disjoint selection; 100 matched-random controls at16,24,32 and10000 bootstrap draws.",
+    "Runner validates prior result/ledger Git references and hashes. A source-only export is not automatically a compatible full historical worktree.",
+    "No new model fit was executed for this release packaging."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_crc_pdo_dense_resolution_plateau.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 13,
+  "exported_source_bytes": 745232,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/crc_pdo_dense_resolution_plateau.json",
+      "source_file": "configs/crc_pdo_dense_resolution_plateau.json",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "1ca01bea7fbec4488b3dd48b28fda3c2ae87b4cb",
+      "sha256": "eb5d1ab6216976efb9b27e90f15f4d62c23f4bd5e3bc549d705675aab3eaf497",
+      "size_bytes": 2880,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "2ad3bf0d82dc19f3aca959f18bab717cfeddc607",
+      "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f",
+      "size_bytes": 853,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_dense_resolution_plateau/DENSE_CONDITIONING_RESOLUTION_FINAL_QA.json",
+      "source_file": "results/crc_pdo_dense_resolution_plateau/DENSE_CONDITIONING_RESOLUTION_FINAL_QA.json",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "05de67abed9543c91ae2910222ba54045e22615f",
+      "sha256": "cf81c797a6bcda0f4b3136c894504a911a3aa8caa9ca403a8fdb4c6ba3754af9",
+      "size_bytes": 4110,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_dense_resolution_plateau/DENSE_RESOLUTION_GRID_MANIFEST.csv",
+      "source_file": "results/crc_pdo_dense_resolution_plateau/DENSE_RESOLUTION_GRID_MANIFEST.csv",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "23a2fce8058112dfa8e8fd5689da88614d4fb0d0",
+      "sha256": "fb324ea3e90e9755cf7635734ef7ce27cba33165bf1e8f10582eeeaa6b138d27",
+      "size_bytes": 573091,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/run_crc_pdo_dense_resolution_plateau.py",
+      "source_file": "scripts/run_crc_pdo_dense_resolution_plateau.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "235b57d4564f84ca720e8cc70b2d6088ecc90d31",
+      "sha256": "66c05a7238fe2418be8efd6bfd27a4cdeac213c5f8d86e88fc71664938d2a493",
+      "size_bytes": 38763,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/__init__.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/__init__.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "d977384d84c10e38fa05c6829bd57767aacde17e",
+      "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd",
+      "size_bytes": 229,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/audit.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/audit.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "65ba221d636d744438f56cb16d7a4ef1160484ab",
+      "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b",
+      "size_bytes": 24349,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/conditioning_resolution.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/conditioning_resolution.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "3a3ad2e942dd76b49955cf8d360a1c54112de489",
+      "sha256": "628e2ad2e6d3626e866ed3e4a808b1fb62ba9193c56820969e1f61835caeacc7",
+      "size_bytes": 30644,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/dense_resolution_plateau.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/dense_resolution_plateau.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "a8e91b189228fca8c17bfc195bb80e69d0466079",
+      "sha256": "eac607ec59a512d732c8f257aa7b395652d273a8bd77c2f32b796f57c4805e45",
+      "size_bytes": 14877,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/modeling.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/modeling.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "c55618a139c47f0161ea1b24fc790420ebc1d8ae",
+      "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7",
+      "size_bytes": 30548,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/pca_resolution_sweep.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/pca_resolution_sweep.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "22f710316f3dbf1bad70ce0d7912203dc8e96ca6",
+      "sha256": "d5dcdbd12fe7dbe014f2492a3b66e25096523eddb78f1e28577fd3253009eea7",
+      "size_bytes": 20677,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_crc_pdo_dense_resolution_plateau.py",
+      "source_file": "tests/test_crc_pdo_dense_resolution_plateau.py",
+      "source_commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "git_blob": "cdb3aad00ca7804b75c4e3a335217a4bebc61d2c",
+      "sha256": "f6c4757c4d00d7213abbe88724ae010d1df7052fbf92f1c8ececfb2bb5f8627c",
+      "size_bytes": 4126,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

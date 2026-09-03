@@ -1,0 +1,324 @@
+{
+  "id": "lea_archs4",
+  "analysis_name": "Independent ARCHS4 pre-SVA quantification robustness",
+  "class": "FULL_ANALYSIS",
+  "commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+  "implementation_commit": "8096f976e4a84b866955c930e7e7d2f94f600d21",
+  "entrypoints": [
+    {
+      "path": "scripts/run_lea_archs4_robustness.py",
+      "command": "python scripts/run_lea_archs4_robustness.py --source-root <historical-Lea-root> --stage formal",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    },
+    {
+      "path": "scripts/prepare_lea_archs4_robustness.py",
+      "command": "python scripts/prepare_lea_archs4_robustness.py --source-root <historical-Lea-root>",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/run_lea_archs4_robustness.py",
+    "scripts/prepare_lea_archs4_robustness.py",
+    "scripts/audit_lea_archs4_coverage.py",
+    "scripts/extract_lea_archs4_matched.py"
+  ],
+  "extra_sources": [
+    "tests/test_lea_archs4_robustness.py",
+    "tests/test_prepare_lea_archs4_robustness.py"
+  ],
+  "configs": [],
+  "split_metadata": [
+    "results/level2_lea/archs4_robustness/ARCHS4_EXTRACTION_MANIFEST.json",
+    "results/level2_lea/archs4_robustness/ARCHS4_HISTORICAL_IMPLEMENTATION_AUTHORITY.md",
+    "results/level2_lea/archs4_robustness/ARCHS4_PREMODEL_GATE.json",
+    "results/level2_lea/archs4_robustness/ARCHS4_ROBUSTNESS_RUN_MANIFEST.json",
+    "results/level2_lea/archs4_robustness/ARCHS4_VERSION_AGGREGATION_PROTOCOL.md",
+    "results/level2_lea/archs4_robustness/ARCHS4_MATCHED_340_FOLD_MANIFEST.csv",
+    "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/level2_lea_archs4_matched",
+      "authority": "ARCHS4 v2.5 matched count extraction and prepared matched 340-LCL/10110-gene representations; exact hashes in extraction/run manifests",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+      "authority": "Historical Lea frozen 342-LCL OOF and exact matched-core selection",
+      "bytes_if_known": 90490423,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/level2_lea_official/GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+      "authority": "Matched post-SVA comparator from author GEO matrix",
+      "bytes_if_known": 217469362,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    }
+  ],
+  "outputs": [
+    "results/level2_lea/archs4_robustness"
+  ],
+  "runtime_git_sources": [
+    {
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "path": "src/igc_virtual_cell/level2_lea.py"
+    },
+    {
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "path": "scripts/level2_lea_pilot.py"
+    },
+    {
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "path": "src/igc_virtual_cell/level2_full.py"
+    },
+    {
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "path": "scripts/level2_lea_response_programs.py"
+    },
+    {
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "path": "configs/level2_lea_full_battery_frozen.json"
+    },
+    {
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "path": "scripts/level2_lea_full_battery.py"
+    }
+  ],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Dynamic git-show source loading requires historical c3d074 source objects. A separate lea_historical_analysis bundle supplies its unchanged local-import closure.",
+    "Source-root is an explicit path; compiled historical modules may retain source-layout assumptions.",
+    "ARCHS4 uniform Kallisto-derived counts are not Lea original HTSeq counts. No full ARCHS4 matrix/raw reads are downloaded by this packaging.",
+    "Extraction entrypoints perform HTTP range access if executed; --help only is safe during packaging."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_lea_archs4_robustness.py",
+      "status": "packaged, not rerun by registry build"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_prepare_lea_archs4_robustness.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "path_adapter": "Unchanged source requests historical modules through git_source; launcher maps only this artifact lookup to exact SHA-verified runtime_sources blobs. No incomplete Git database and no scientific function replacement.",
+  "exported_file_count": 14,
+  "exported_source_bytes": 1078977,
+  "external_import_roots": [
+    "h5py",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "psutil",
+    "pytest",
+    "scripts",
+    "sklearn",
+    "torch"
+  ],
+  "runtime_git_authority": {
+    "kind": "exact frozen source-lookup map, not a Git repository",
+    "verified_sources": [
+      {
+        "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+        "path": "src/igc_virtual_cell/level2_lea.py",
+        "exported_path": "runtime_sources/c3d074412ecc1be0958141726db16a1ed0036a04/src/igc_virtual_cell/level2_lea.py",
+        "sha256": "d435a3b3d71595a21b80047ad259f1b5c65459330a0cce578f321748f30fba9e",
+        "size_bytes": 4791,
+        "git_blob": "3180cd57c2da2f63d29f468529aa60502fbeaf38"
+      },
+      {
+        "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+        "path": "scripts/level2_lea_pilot.py",
+        "exported_path": "runtime_sources/c3d074412ecc1be0958141726db16a1ed0036a04/scripts/level2_lea_pilot.py",
+        "sha256": "db3fa07123670d0c6331ef08515883714b6e71d581fcfeda193eec0803b83ad1",
+        "size_bytes": 29240,
+        "git_blob": "579d58c55b10a96579502fd73eaacf2c00c67a74"
+      },
+      {
+        "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+        "path": "src/igc_virtual_cell/level2_full.py",
+        "exported_path": "runtime_sources/c3d074412ecc1be0958141726db16a1ed0036a04/src/igc_virtual_cell/level2_full.py",
+        "sha256": "dcf79af7d937b9001a9de9a71ec40d3e2e8aa94f4ee351d5f29fb897aa776564",
+        "size_bytes": 14841,
+        "git_blob": "34bb1c95b0f1408096358d7fcc6f6d061449363f"
+      },
+      {
+        "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+        "path": "scripts/level2_lea_response_programs.py",
+        "exported_path": "runtime_sources/c3d074412ecc1be0958141726db16a1ed0036a04/scripts/level2_lea_response_programs.py",
+        "sha256": "125026cfc39e0254bb8768517e692080f27f43c9689bab022dc57b2b8afdf755",
+        "size_bytes": 5169,
+        "git_blob": "2bbcae6117aa71298da0af431c3390ca0dc620a9"
+      },
+      {
+        "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+        "path": "configs/level2_lea_full_battery_frozen.json",
+        "exported_path": "runtime_sources/c3d074412ecc1be0958141726db16a1ed0036a04/configs/level2_lea_full_battery_frozen.json",
+        "sha256": "3262c078a0aae1abf324c84b3929c8e6728ca213d54fdc46ad13fb22e94fb413",
+        "size_bytes": 4101,
+        "git_blob": "7ce919ccd38fcd7d31c9a0957bd334c067c17a37"
+      },
+      {
+        "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+        "path": "scripts/level2_lea_full_battery.py",
+        "exported_path": "runtime_sources/c3d074412ecc1be0958141726db16a1ed0036a04/scripts/level2_lea_full_battery.py",
+        "sha256": "5fec26a92b0a32645d2b973cd379edd0543ba1ffc636201e24972e2f423622e8",
+        "size_bytes": 17329,
+        "git_blob": "1cd95b97dd8490ae9f0e4ac2b9ee246719ba27c7"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_EXTRACTION_MANIFEST.json",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_EXTRACTION_MANIFEST.json",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "0d2cb151c8043e5255a3b4d65c3b38fe9353da43",
+      "sha256": "d9a5a5e7f2b5f21bf851359b4ae182173d246b28a730937059ff69a24422b8d7",
+      "size_bytes": 2336,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "7eb042ffb26571d2072a5251537322d7123ec9d7",
+      "sha256": "3949adac40a48ffb94aa20cb93429818c1cfc52246ecf3e95f0078efa37e208a",
+      "size_bytes": 916673,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_HISTORICAL_IMPLEMENTATION_AUTHORITY.md",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_HISTORICAL_IMPLEMENTATION_AUTHORITY.md",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "d3286590e0aba3a712ffada392f7af4da65508bf",
+      "sha256": "906f1a9cd42a10215007e0824a42dccf1af25027b6fe8081e1400e7bf5b0b918",
+      "size_bytes": 1359,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_MATCHED_340_FOLD_MANIFEST.csv",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_MATCHED_340_FOLD_MANIFEST.csv",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "2ecc934aad306ce113b9e5949a1c5bee10c64090",
+      "sha256": "f25f82f03d946b4698621e33eae52b93cf842f0bb26fd3bdb001e46826ac1c26",
+      "size_bytes": 59081,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_PREMODEL_GATE.json",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_PREMODEL_GATE.json",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "5869fcc0530cfc07b5a8b1cfb4e84e726c4b710d",
+      "sha256": "e1bd3f8a733fe229be560defcbf74448ffc8105488632f367e3f848c373fdf7e",
+      "size_bytes": 2151,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_ROBUSTNESS_RUN_MANIFEST.json",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_ROBUSTNESS_RUN_MANIFEST.json",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "6a369034f5dca69a1763922073879799241649ef",
+      "sha256": "3dbd7e8a0336a82bb55a12bd1556c11aa44ac4f2bee4b632b1f8e674f094c8ea",
+      "size_bytes": 848,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_VERSION_AGGREGATION_PROTOCOL.md",
+      "source_file": "results/level2_lea/archs4_robustness/ARCHS4_VERSION_AGGREGATION_PROTOCOL.md",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "1c1eead0a32c92a0e435e8ab83a7d6fc6ff02adf",
+      "sha256": "273410e615b32a29a75f679a2af561ad60e7499587aebea3e55c77d5a535443b",
+      "size_bytes": 6890,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/audit_lea_archs4_coverage.py",
+      "source_file": "scripts/audit_lea_archs4_coverage.py",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "cd1ede2293275b8c473d7c2b75bff193b74f015c",
+      "sha256": "87d59bf8638dbee9392d258a00abe773a91600228c96d884be3c03b7de26c416",
+      "size_bytes": 27285,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/extract_lea_archs4_matched.py",
+      "source_file": "scripts/extract_lea_archs4_matched.py",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "ff617740a28ae582e6ba41c179c037c8e4cff587",
+      "sha256": "fdac488affb0a6c6e5d87b0061e6fe86f3a25b2589e759fe8d29cd2600cf6cbb",
+      "size_bytes": 14978,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/prepare_lea_archs4_robustness.py",
+      "source_file": "scripts/prepare_lea_archs4_robustness.py",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "ee37766e666580383c8b38378d32331fe42675f8",
+      "sha256": "015bbc4c37ba159811c8ca38b706ba046128b4d35bfcf853fcc096f4a9a42c59",
+      "size_bytes": 10203,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/run_lea_archs4_robustness.py",
+      "source_file": "scripts/run_lea_archs4_robustness.py",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "ebe13a6e899c28f5c6e82fb9c9cfda2b3716342e",
+      "sha256": "ff1778f0efb331fbcd0ce015b57b7c8391c6fa6251c1b5390a3cba81471a7f0d",
+      "size_bytes": 33331,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_lea_archs4_robustness.py",
+      "source_file": "tests/test_lea_archs4_robustness.py",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "bca22ebe8d0c9ce0655f75ac0353320d8ec8339b",
+      "sha256": "fa468cc9603bbef07e49c862a15d6ef047734bc5f7f8a820b88987d9ec381bd8",
+      "size_bytes": 2753,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_prepare_lea_archs4_robustness.py",
+      "source_file": "tests/test_prepare_lea_archs4_robustness.py",
+      "source_commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "git_blob": "97e7ab4341d7b2286a912ea72a22a20520461c1b",
+      "sha256": "80aef8308c3268fd306987f155c9fc8913e1c916bf86fa4e64d9daeb7854eb2d",
+      "size_bytes": 255,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

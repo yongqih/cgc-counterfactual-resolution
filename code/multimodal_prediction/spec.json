@@ -1,0 +1,31 @@
+{
+  "analysis_name": "Mechanism-aligned multimodal prediction",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Supplementary_Figure_4_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Supplementary_Figure_4_source_data.csv",
+      "where": {
+        "kind": "aligned_minus_rna",
+        "modality_panel": "Wiring",
+        "estimator": "Ridge"
+      },
+      "column": "value",
+      "expected": -0.0177851972021023,
+      "tolerance": 1e-14
+    },
+    {
+      "file": "Supplementary_Figure_4_source_data.csv",
+      "where": {
+        "kind": "aligned_minus_rna",
+        "modality_panel": "Exact-target total protein",
+        "estimator": "Ridge"
+      },
+      "column": "value",
+      "expected": 0.00131813975513,
+      "tolerance": 1e-14
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "experiment": "LEA-RNA-SEMISYNTHETIC-IDENTIFIABILITY-CONTROL",
+  "analysis_identity": "SEMI_SYNTHETIC_BASELINE_ENCODED_RESPONSE_CONTROL",
+  "authority_branch": "codex/level2_lea_rna_counterfactual",
+  "authority_head": "4424e4acbbcc593f61b7556282f45f12e29802fc",
+  "real_result_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+  "base_seed": 207049,
+  "simulation_seeds": [207049, 207050, 207051, 207052, 207053, 207054, 207055, 207056, 207057, 207058],
+  "latent_rank": 4,
+  "secondary_rank_8_enabled": false,
+  "lambda_grid": [0.0, 0.05, 0.1, 0.25, 0.5, 0.75, 1.0],
+  "target_replicate_reliability": 0.7443,
+  "reliability_absolute_tolerance": 0.015,
+  "runtime_design": "TIERED",
+  "tier_1_models": ["ridge", "rbf_kernel_ridge", "deep_residual_mlp"],
+  "tier_1_lambdas": [0.0, 0.05, 0.1, 0.25, 0.5, 0.75, 1.0],
+  "tier_2_models": ["ridge", "pca_ridge", "pilot_mlp", "rbf_kernel_ridge", "hist_gradient_boosting", "deep_residual_mlp"],
+  "tier_2_lambdas": [0.0, 0.25, 1.0],
+  "figure_endpoint_model": "rbf_kernel_ridge",
+  "real_full_gene_oof_r2": {
+    "ridge": 0.002898149495299096,
+    "pca_ridge": 0.002390466879790054,
+    "pilot_mlp": 0.00016149553705147035,
+    "rbf_kernel_ridge": 0.003543750822481817,
+    "hist_gradient_boosting": -0.003216159070449809,
+    "deep_residual_mlp": -0.00631687615912413
+  },
+  "adjudication": {
+    "negative_control_max_median_seedwise_best_r2": 0.02,
+    "positive_control_min_model_median_r2": 0.25,
+    "clear_separation_min_paired_median_difference": 0.20,
+    "clear_separation_requires_all_seed_differences_positive": true,
+    "monotonicity_min_spearman": 0.90,
+    "partial_requires_any_model_lambda1_median_above_lambda0": true
+  },
+  "forbidden": [
+    "real-data hyperparameter retuning",
+    "synthetic-outcome model tuning",
+    "rank search",
+    "noise-level search",
+    "lambda-grid search",
+    "fold changes",
+    "CCA",
+    "mutual-information estimation",
+    "inversion of the real R2 into a biological information fraction"
+  ]
+}

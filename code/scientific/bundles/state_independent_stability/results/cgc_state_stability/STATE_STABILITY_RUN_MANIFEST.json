@@ -1,0 +1,33 @@
+{
+  "phase": "STATE_STABILITY",
+  "created_at": "2026-08-25T15:14:02.036453-04:00",
+  "authority_commit": "35cf07d8f3d90450b365893b56aa127dca7c4774",
+  "protocol_freeze_commit": "5d6a1c34a82c5818c4efb8bfebc41d44ab750bcb",
+  "branch": "codex/state_stability_audit",
+  "analysis_worktree_head_before_results_commit": "2c26f98a7dd839ee14cf4d52e0e2da07151c4580",
+  "python": "3.12.13",
+  "seed": 68421,
+  "gpu_used": false,
+  "model_trained": false,
+  "contexts": [
+    "C32",
+    "HOP62",
+    "HepG2-C3A",
+    "Hs 766T",
+    "PANC-1"
+  ],
+  "n_interventions": 1136,
+  "features": 2000,
+  "verdict": "STATE_OPERATOR_RECOVERY_NOT_REPLICATED",
+  "required_sha256": {
+    "STATE_STABILITY_RESULTS.csv": "f432a58da313bae58386361be9c2f9dfe2a78944d130da8d029b73af9674c747",
+    "STATE_STABILITY_SUMMARY.csv": "2fcbd687c1887626f3fb7fde558e1ad3a1a53291533dec3bdf4214054784aed0",
+    "STATE_STABILITY_BOOTSTRAP.csv": "b5d4ef76892569fe2dba135756f6bbefcfc394528956e7c0b0091773df160ee2",
+    "STATE_STABILITY_NUMERICAL_RECONCILIATION.csv": "14c7ad3ba3d25801159bfe66a23d34a32205e84ddbee870c5bea7ed01eb7f2dd",
+    "STATE_STABILITY_EXTENDED_DATA_SOURCE.csv": "f2e51b54c9a2ba3b938345c89f547e6ad118db6db7f00bbb43492a9f0749973a",
+    "STATE_STABILITY_REPORT.md": "d3b3f028d866bf2588ceb4ea61344ed0855ddcdb81e0ca34ba223e38831a8558",
+    "STATE_STABILITY_MANUSCRIPT_WORDING.md": "5f501456340629a92a91754ae1714faa6351158aaf9bad2a5e37271aeb0bb84c",
+    "STATE_STABILITY_EXTENDED_DATA.png": "3e675f90df85af389aff592b00edc434f46504cf325bb075df915b621af15a94",
+    "STATE_STABILITY_EXTENDED_DATA.svg": "76f2be55ee046e7ea5fc071e3e8b585a8df4dacdc5b26b38129599080d1e638c"
+  }
+}

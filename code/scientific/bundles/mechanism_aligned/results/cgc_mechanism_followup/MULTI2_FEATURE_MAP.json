@@ -1,0 +1,40 @@
+{
+  "frozen": true,
+  "seed": 8201,
+  "outer_split": "leave-one-context-out",
+  "inner_intervention_folds": "intervention_axis modulo 5",
+  "response_ranks": [8, 16, 32, 64],
+  "ridge_grid": [1e-06, 1e-05, 0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0],
+  "primary_multitarget_aggregation": "mean",
+  "sensitivity_multitarget_aggregation": "max",
+  "missing_value_rule": "not eligible; never biological zero",
+  "features": [
+    {"name": "target_mut", "role": "WIRING", "source": "frozen hotspot/damaging mutation", "primary": true},
+    {"name": "target_cnv", "role": "WIRING", "source": "frozen WGS gene copy number", "primary": true},
+    {"name": "pathway_mut", "role": "WIRING", "source": "frozen mutation + Reactome target pathways", "primary": true},
+    {"name": "pathway_cnv", "role": "WIRING", "source": "frozen WGS CNV + Reactome target pathways", "primary": true},
+    {"name": "lineage_onehot", "role": "WIRING_NUISANCE", "source": "frozen OncotreeLineage/Organ", "primary": true},
+    {"name": "target_rppa", "role": "ACTIVITY_EXACT_TARGET", "source": "rppa500-mclp", "primary": false, "reason": "sparse exact-target coverage"},
+    {"name": "target_phospho", "role": "PHOSPHO_EXACT_TARGET", "source": "rppa500-mclp phosphosite-name rule", "primary": false, "reason": "sparse exact-target coverage"},
+    {"name": "pathway_rppa", "role": "ACTIVITY_PATHWAY", "source": "rppa500-mclp + frozen Reactome", "primary": true},
+    {"name": "target_total_protein", "role": "TOTAL_PROTEIN_EXACT_TARGET", "source": "harmonized_Sanger_MS_2022", "primary": false},
+    {"name": "target_dependency", "role": "FUNCTIONAL_PERTURBATIONAL_ORACLE", "source": "Chronos_Combined 26Q1", "primary": true},
+    {"name": "pathway_dependency", "role": "FUNCTIONAL_PERTURBATIONAL_ORACLE", "source": "Chronos_Combined 26Q1 + frozen Reactome", "primary": true}
+  ],
+  "generic_comparator": {
+    "construction": "training-only PCA of the same raw modality columns on the identical context panel",
+    "ranks": [8, 16],
+    "all_components_interact_with_intervention_embedding": true
+  },
+  "complete_case_panels": {
+    "WIRING": {"preaudit_contexts": 49},
+    "ACTIVITY_RPPA": {"preaudit_contexts": 44},
+    "TOTAL_PROTEIN_SANGER": {"preaudit_contexts": 45},
+    "FUNCTIONAL_DEPENDENCY_ORACLE": {"preaudit_contexts": 39},
+    "JOINT_WIRING_ACTIVITY_TOTAL": {"preaudit_contexts": 40},
+    "ALL_SIX_SENSITIVITY": {"preaudit_contexts": 30}
+  },
+  "alignment_null_draws": 10000,
+  "power": {"replicates_per_level": 200, "delta_g_levels": [0.02, 0.05, 0.1, 0.2], "include_zero_fpr": true},
+  "device": "CPU_ONLY_WHILE_CMONGE_RUNNING"
+}

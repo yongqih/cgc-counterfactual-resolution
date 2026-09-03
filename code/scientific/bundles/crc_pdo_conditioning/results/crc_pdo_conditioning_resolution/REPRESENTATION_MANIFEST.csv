@@ -1,0 +1,12 @@
+representation,nominal_dimensions,biological_definition,training_fitted_components
+FULL_RNA,19421,all frozen baseline genes,gene scaling only
+PROGENY14,14,orthonormal basis for complete signed PROGENy v1.17.3 span,gene and coordinate scaling
+PCA14,14,generic low-dimensional control,"gene scaling, PCA, coordinate scaling"
+COARSE_R0,14,PROGENy span plus fine-residual PCs,"gene scaling, fine-residual PCA, coordinate scaling"
+COARSE_R4,18,PROGENy span plus fine-residual PCs,"gene scaling, fine-residual PCA, coordinate scaling"
+COARSE_R8,22,PROGENy span plus fine-residual PCs,"gene scaling, fine-residual PCA, coordinate scaling"
+COARSE_R16,30,PROGENy span plus fine-residual PCs,"gene scaling, fine-residual PCA, coordinate scaling"
+COARSE_R32,46,PROGENy span plus fine-residual PCs,"gene scaling, fine-residual PCA, coordinate scaling"
+R14_ONLY,14,fine residual only,"gene scaling, fine-residual PCA, coordinate scaling"
+RANDOM14,14,100 outcome-blind orthonormal projections,gene and coordinate scaling
+RANDOM_PATHWAY14,14,100 outcome-blind matched pathway-like vocabularies,gene and coordinate scaling

@@ -1,0 +1,217 @@
+{
+  "id": "crc_pdo_conditioning",
+  "analysis_name": "Training-local biological conditioning-resolution comparison",
+  "class": "FULL_ANALYSIS",
+  "commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+  "implementation_commit": "52bec9136373897d944a557fb9f7a23c6563e147",
+  "entrypoints": [
+    {
+      "path": "scripts/run_crc_pdo_conditioning_resolution.py",
+      "command": "python scripts/run_crc_pdo_conditioning_resolution.py --root . --application-root <PDO-root> --progeny-weights <weights-file> --implementation-commit 52bec9136373897d944a557fb9f7a23c6563e147",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/run_crc_pdo_conditioning_resolution.py",
+    "src/igc_virtual_cell/crc_pdo_personalized/conditioning_resolution.py"
+  ],
+  "extra_sources": [
+    "tests/test_crc_pdo_conditioning_resolution.py"
+  ],
+  "configs": [
+    "configs/crc_pdo_conditioning_resolution.json"
+  ],
+  "split_metadata": [
+    "results/crc_pdo_conditioning_resolution/CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json",
+    "results/crc_pdo_conditioning_resolution/OUTER_FOLD_TRANSFORM_AUDIT.csv",
+    "results/crc_pdo_conditioning_resolution/REPRESENTATION_MANIFEST.csv",
+    "results/crc_pdo_conditioning_resolution/BASELINE_GENE_AXIS_MANIFEST.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+      "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+      "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application",
+      "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "PROGENy weights file",
+      "authority": "Official PROGENy v1.17.3 revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f; expected SHA256 59227c888c2bfa1ed89fe00109da7ce1bacffbb9b8b6b79215065d41f2476223",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    }
+  ],
+  "outputs": [
+    "results/crc_pdo_conditioning_resolution"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "All transforms and model choices are training-local; no target DSS enters features.",
+    "HTA biological projection is NOT_EXECUTABLE without official probe-to-gene annotation; do not infer that annotation or claim successful HTA pathway validation."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_crc_pdo_conditioning_resolution.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 13,
+  "exported_source_bytes": 2275601,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/crc_pdo_conditioning_resolution.json",
+      "source_file": "configs/crc_pdo_conditioning_resolution.json",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "357db440ad7f800d5eaf22cbe370fcc5205feab9",
+      "sha256": "f2f50ef3df6c683679369dff5f56d06ffa6d84cb4e0c8a34234fcb761f8861c3",
+      "size_bytes": 2312,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "2ad3bf0d82dc19f3aca959f18bab717cfeddc607",
+      "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f",
+      "size_bytes": 853,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_conditioning_resolution/BASELINE_GENE_AXIS_MANIFEST.csv",
+      "source_file": "results/crc_pdo_conditioning_resolution/BASELINE_GENE_AXIS_MANIFEST.csv",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "6a733847ed996f24469c13793b6cfc4fc53732d6",
+      "sha256": "c5acae0b8fb94496fb74161bedcb7f582acb91f24fd5ab4dc814a724d766f111",
+      "size_bytes": 1223622,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_conditioning_resolution/CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json",
+      "source_file": "results/crc_pdo_conditioning_resolution/CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "75d3b5fb4a4b6113bef6c858e2320f55bfbb5f37",
+      "sha256": "7304569c754cace790ef5335247163aeb4bfbd99316df48b116fe3c5ba33131e",
+      "size_bytes": 4290,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_conditioning_resolution/OUTER_FOLD_TRANSFORM_AUDIT.csv",
+      "source_file": "results/crc_pdo_conditioning_resolution/OUTER_FOLD_TRANSFORM_AUDIT.csv",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "9d725a041b54604adc0f1fe4b8b1646abaeebb87",
+      "sha256": "41fc9c45ef9c418d9bdab10739db5ccd044be46fdc94e2f1e5d88fcfd1bdc785",
+      "size_bytes": 918846,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_conditioning_resolution/REPRESENTATION_MANIFEST.csv",
+      "source_file": "results/crc_pdo_conditioning_resolution/REPRESENTATION_MANIFEST.csv",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "e2e494377b177720c68d6ef9cea026af801cc4b3",
+      "sha256": "aa7fad0f70d50cc6f7a4a551f1ca5c85c40370b5fda357465c9654b485e2da4b",
+      "size_bytes": 1107,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/run_crc_pdo_conditioning_resolution.py",
+      "source_file": "scripts/run_crc_pdo_conditioning_resolution.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "118c662d9424ccb3f59ab37106f10901a68d874e",
+      "sha256": "9865a0d9e5ab723152543ad0d44e6e6c5ffae5c3a26bcf147ae454709ffa249d",
+      "size_bytes": 31058,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/__init__.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/__init__.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "d977384d84c10e38fa05c6829bd57767aacde17e",
+      "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd",
+      "size_bytes": 229,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/audit.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/audit.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "65ba221d636d744438f56cb16d7a4ef1160484ab",
+      "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b",
+      "size_bytes": 24349,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/conditioning_resolution.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/conditioning_resolution.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "3a3ad2e942dd76b49955cf8d360a1c54112de489",
+      "sha256": "628e2ad2e6d3626e866ed3e4a808b1fb62ba9193c56820969e1f61835caeacc7",
+      "size_bytes": 30644,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/modeling.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/modeling.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "c55618a139c47f0161ea1b24fc790420ebc1d8ae",
+      "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7",
+      "size_bytes": 30548,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_crc_pdo_conditioning_resolution.py",
+      "source_file": "tests/test_crc_pdo_conditioning_resolution.py",
+      "source_commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "git_blob": "e0d02394fe502b602955e0062304ea0d85a1ee27",
+      "sha256": "8b09ea126e6aa70e0e63ac9b222b2c1fbb614043434bf7cc4975cebb999127d9",
+      "size_bytes": 7658,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

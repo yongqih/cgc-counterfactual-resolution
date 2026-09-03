@@ -1,0 +1,87 @@
+{
+  "path": "data\\processed\\cgc_tcell_1b\\ntc_context.float32.npy",
+  "shape": [
+    4,
+    3,
+    9082
+  ],
+  "dtype": "float32",
+  "construction": "log1p_CPM_each_NTC_pseudobulk; equal_mean_within_run; equal_mean_across_runs",
+  "held_out_donor_ntc_only_test_time": true,
+  "rows": [
+    {
+      "donor_id": "CE0006864",
+      "stimulation_state": "Rest",
+      "ntc_pseudobulk_rows": 961,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0006864",
+      "stimulation_state": "Stim8hr",
+      "ntc_pseudobulk_rows": 972,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0006864",
+      "stimulation_state": "Stim48hr",
+      "ntc_pseudobulk_rows": 970,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0008162",
+      "stimulation_state": "Rest",
+      "ntc_pseudobulk_rows": 907,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0008162",
+      "stimulation_state": "Stim8hr",
+      "ntc_pseudobulk_rows": 931,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0008162",
+      "stimulation_state": "Stim48hr",
+      "ntc_pseudobulk_rows": 944,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0008678",
+      "stimulation_state": "Rest",
+      "ntc_pseudobulk_rows": 731,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0008678",
+      "stimulation_state": "Stim8hr",
+      "ntc_pseudobulk_rows": 740,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0008678",
+      "stimulation_state": "Stim48hr",
+      "ntc_pseudobulk_rows": 720,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0010866",
+      "stimulation_state": "Rest",
+      "ntc_pseudobulk_rows": 788,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0010866",
+      "stimulation_state": "Stim8hr",
+      "ntc_pseudobulk_rows": 832,
+      "runs": 1
+    },
+    {
+      "donor_id": "CE0010866",
+      "stimulation_state": "Stim48hr",
+      "ntc_pseudobulk_rows": 807,
+      "runs": 1
+    }
+  ],
+  "sha256": "210f4bdce71e2f30e8a8f7a1730b93b4ca3164d54ac9a374bf4a40138e878b16",
+  "fit_policy": "outer_training_donors_only; held_out donor transformed at test time"
+}

@@ -1,0 +1,29 @@
+{
+  "analysis_name": "Generic context calibration",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Supplementary_Figure_2_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Supplementary_Figure_2_source_data.csv",
+      "where": {
+        "kind": "calibration_peak",
+        "label": "90-point calibration grid"
+      },
+      "column": "value",
+      "expected": 0.3230888771804677,
+      "tolerance": 1e-14
+    },
+    {
+      "file": "Supplementary_Figure_2_source_data.csv",
+      "where": {
+        "kind": "correspondence_contrast",
+        "label": "context identity"
+      },
+      "column": "value",
+      "expected": 0.4029538532495481,
+      "tolerance": 1e-14
+    }
+  ]
+}

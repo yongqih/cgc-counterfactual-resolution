@@ -1,0 +1,2 @@
+"""Response-program decomposition."""
+

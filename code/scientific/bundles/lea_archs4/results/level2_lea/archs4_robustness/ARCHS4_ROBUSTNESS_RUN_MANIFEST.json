@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-08-25T15:42:38.533521-04:00",
+  "authority_commit": "35cf07d8f3d90450b365893b56aa127dca7c4774",
+  "historical_implementation_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+  "formal_preoutcome_head": "8096f976e4a84b866955c930e7e7d2f94f600d21",
+  "frozen_results_commit": "b1bb8706022f96563a0ab41ed073ddb0c565966a",
+  "branch": "codex/lea_archs4_robustness",
+  "representation_sha256": {
+    "matched_postSVA": "7f44947ec59a43eb954ec2032e4b9c3733306542bcd117e03f584d72b3ecf59b",
+    "ARCHS4": "f3717abe7f5f012654cc36f51eee3bc165158a1926b1a181a2152a6d19f88936"
+  },
+  "models": [
+    "ridge",
+    "pca_ridge",
+    "mlp",
+    "rbf_kernel_ridge",
+    "hist_gradient_boosting",
+    "deep_residual_mlp"
+  ],
+  "device": "cuda",
+  "runtime_seconds": 752.7339565999573,
+  "verdict": "ARCHS4_RESOLUTION_HIERARCHY_REPLICATED"
+}

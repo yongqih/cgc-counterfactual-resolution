@@ -1,0 +1,177 @@
+{
+  "id": "m1_secondary",
+  "analysis_name": "Frozen M1 secondary and post-selection correspondence adjudication",
+  "class": "FULL_ANALYSIS",
+  "commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+  "entrypoints": [
+    {
+      "path": "scripts/cgc_m1_secondary_audit.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_m1_m2k92_confirmation.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "scripts/cgc_m1_secondary_audit.py",
+    "scripts/cgc_m1_m2k92_confirmation.py",
+    "src/igc_virtual_cell/cgc_m1_secondary.py",
+    "src/igc_virtual_cell/cgc_m1_m2k92_confirmation.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_PROTOCOL.md",
+    "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_RUN_MANIFEST.json",
+    "results/cgc_entrywise_compression/ENTRYWISE_HYPERPARAMETERS.csv",
+    "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+    "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+      "authority": "ENTRYWISE_RUN_MANIFEST.json",
+      "bytes_if_known": 27158852,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_entrywise_cache",
+      "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "results/cgc_m1_secondary_audit"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [],
+  "claim_boundary": "Post-hoc descriptive point selection is jointly corrected; M1 remedy line remains closed. Pass --upstream-root explicitly.",
+  "exported_file_count": 11,
+  "exported_source_bytes": 7597659,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_HYPERPARAMETERS.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_HYPERPARAMETERS.csv",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "6d0b43ca60d45933e20b5958708dfcd992931b03",
+      "sha256": "a7409e00be843d14568cfe82821b2402782bd57d1ac59edcda170eedb8bdc34f",
+      "size_bytes": 766602,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "32cc15acbeb8ec55b753f4139b98613e2eeabe57",
+      "sha256": "0f73abebe6f3bdfc3270ad81ac937842fc6738a6dfbad934b5d9477cbe934f73",
+      "size_bytes": 10173,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "a9b479eec800cd06fa5f743804797bbc24166619",
+      "sha256": "25ece465029e157f5ee915762ef7a4728a2f7db57693c62b4729fde4f4e9048b",
+      "size_bytes": 6737410,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_PROTOCOL.md",
+      "source_file": "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_PROTOCOL.md",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "425a39bc69987f4d27e4ec267b7261ddf22947b6",
+      "sha256": "0b94180eeef1cfa5958663fa95b6d1608239fa5c0f8345821447e325eb1fb283",
+      "size_bytes": 6571,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_RUN_MANIFEST.json",
+      "source_file": "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_RUN_MANIFEST.json",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "2b503bce6c6a149d436fef3a2b3723f144da4e7a",
+      "sha256": "34b3bd944f60db819ceaa5816eb091d80c3ba9e4ae670a55675b7c822c47ddf1",
+      "size_bytes": 8532,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_m1_m2k92_confirmation.py",
+      "source_file": "scripts/cgc_m1_m2k92_confirmation.py",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "5ea4611e7b82820fcf560a2eb5f1eeeed7607d80",
+      "sha256": "43e66d6c859fe27a18f9c98913660de2731794d30fa9e247737524e37e7b1f0b",
+      "size_bytes": 603,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_m1_secondary_audit.py",
+      "source_file": "scripts/cgc_m1_secondary_audit.py",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "9d3d524a4aa86b6930444919b95bf4544112b5a0",
+      "sha256": "4a4ac6015ed81e991579c1ecb4cc74c9698557b072c02f8dffcb784eabc5433e",
+      "size_bytes": 559,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_m1_m2k92_confirmation.py",
+      "source_file": "src/igc_virtual_cell/cgc_m1_m2k92_confirmation.py",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "b6aaab911c4a478443a9b789d95c396db7529ddc",
+      "sha256": "a59a71a87cf8d0e51ae5798de83c619c8e7fe73cf56ddb73e1f712ef33ace0c0",
+      "size_bytes": 12888,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_m1_secondary.py",
+      "source_file": "src/igc_virtual_cell/cgc_m1_secondary.py",
+      "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "git_blob": "62160d6e4cac379c60877f7451757ef94a131ee1",
+      "sha256": "432dfd666217648498dd850176a51cd21bce4ad94bd6777d7f7426d5134eb141",
+      "size_bytes": 53402,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

@@ -1,0 +1,206 @@
+{
+  "phase": "CGC-EC-2",
+  "created_at": "2026-08-22T16:17:04.297924-04:00",
+  "integrity_label": "STRICT_ENTRYWISE_EXPERIMENTAL_COMPRESSION_VALID",
+  "git_branch": "codex/cgc_entrywise_experimental_compression",
+  "git_commit_at_generation": "20cf2a1e9c331f9ee4b412e1e5eddce8a49710e1",
+  "frozen_protocol_commit": "555d3f67cb6d7d71ea293cc94dd7151562599492",
+  "derived_from_commit": "6d3b3203504eb7f18917c949cfd94536d6f5648d",
+  "primary_surface_targets": 50,
+  "primary_surface_entries": 4650,
+  "bootstrap_draws": 10000,
+  "gpu_used": false,
+  "rna_secondary_status": "NOT_RUN_PROTOCOL_GATE_FAILED (matched synthetic control did not cross the frozen 80% level)",
+  "source_store": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\results\\cgc_tahoe_0i\\response_tensors.zarr",
+  "source_indices_sha256": "efea7718149514c763fbbad86d2337fde3377bf6c977365f0046576a85b94343",
+  "artifacts": {
+    "results/cgc_entrywise_compression/ALL_BUT_ONE_ENTRY_REPORT.md": {
+      "size_bytes": 1232,
+      "sha256": "cc5ce170135c5536fa6cb831e824f928387e5d7e6b5c660c2d6e76576637b3ee"
+    },
+    "results/cgc_entrywise_compression/ALL_BUT_ONE_ENTRY_RESULTS.csv": {
+      "size_bytes": 9263453,
+      "sha256": "c6b4cd77bd1d13135d9e2d100879906d12e3b682c18b9b598a468547fc9c2cd9"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FRONTIER.csv": {
+      "size_bytes": 15340,
+      "sha256": "09c55a5fa52ccf6667d990c4cc3f97fed6d1f09a3ce2fa79a66b6c4850af30f2"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md": {
+      "size_bytes": 8802,
+      "sha256": "c769e9cb5657a006c40d489ac1c8c2c69e6e65fc277c3429c44c70391aafed03"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_THRESHOLDS.csv": {
+      "size_bytes": 1132,
+      "sha256": "e2706cb63890488595e95641c61151579da48e7c7dc6550096fb304c9616e500"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_EXPERIMENTAL_COMPRESSION_FINAL.md": {
+      "size_bytes": 3391,
+      "sha256": "516b38e6cc3610721765f0f1ff21252b7b18b0e172abfeadafdf232cc69cd96f"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_FOUNDATION_MANIFEST.json": {
+      "size_bytes": 1866,
+      "sha256": "625dcc91463e3f9da9b2d69b32bb7fd5c4495fa99353f8062794c5e8394df95a"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_GRAM_PRECISION.csv": {
+      "size_bytes": 7646,
+      "sha256": "98b1f61ab045c22f8e7f87b11f03e8e8658dc37b20a7b250c261df9c1b1b13d0"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_HYPERPARAMETERS.csv": {
+      "size_bytes": 775603,
+      "sha256": "5aaee27f29d380560289023e30db2557049bfb4eed9adf3fe2afe606e6f9002a"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_INFORMATION_SET.json": {
+      "size_bytes": 5561,
+      "sha256": "15f7e10dc8b9b1a9f5d3d9b040685139cde453f6874739a7d63f118cc33420a5"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_INVARIANCE_TESTS.md": {
+      "size_bytes": 831,
+      "sha256": "8684a93774fa997cc4d1e3db976420b622960659ba8773221a4a88dbd055bb9a"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md": {
+      "size_bytes": 4057,
+      "sha256": "f8b8cfc01ca7018deb76ce96ed47f340ff8f8214ae127f78f026ca8c0621948c"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_NULL_CONTROLS.csv": {
+      "size_bytes": 46929,
+      "sha256": "123261a93b15d5da7eb29b501ba3cfffaf67164d07d661ef759114168910b064"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_NUMERICAL_RECONCILIATION.csv": {
+      "size_bytes": 381,
+      "sha256": "b08a8dd07bb3ae8e0c8f48843eb35a2436a831adef11693ddd8f7fd548a9fd4f"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_POSITIVE_CONTROLS.csv": {
+      "size_bytes": 2112,
+      "sha256": "3c9b6c3c49903b302726e31f0ce586c995d1ad754b543baf2f5baad5c6b74bc7"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE.csv": {
+      "size_bytes": 168081,
+      "sha256": "f1b5d3ecb649887d387790c401473e816cab8967c3f2c73bd8fa1110c14959c9"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv": {
+      "size_bytes": 14084,
+      "sha256": "aa077401e616f86d67a88bf2eead29d873f9a5994f3e79e17dcad06ca7c604b7"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv": {
+      "size_bytes": 11523,
+      "sha256": "c532c64269ce821736629ec6b99639bce3155dc7b681838246ac0841d8ab49df"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_REPLICATE_ORACLE.csv": {
+      "size_bytes": 1378312,
+      "sha256": "bdcbae6d32d30c3329e4832bb97890a1d21bbf6686b87a87f266b213e3a93d61"
+    },
+    "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json": {
+      "size_bytes": 6876836,
+      "sha256": "da3fc0f3422c12e2a1ec9fcdc6447cd137836a963290a262a82451430df1198d"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC1_strict_design.pdf": {
+      "size_bytes": 16861,
+      "sha256": "a0b0c91427e0487f8fa6a4b22b1a8c5e2309c6979d78ee6eb7f222715c101b37"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC1_strict_design.png": {
+      "size_bytes": 57855,
+      "sha256": "99e21806aa5bb4e48c63fad19289be88ada271e09148a26f9206fa62b222df7e"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC1_strict_design.svg": {
+      "size_bytes": 34593,
+      "sha256": "92d1205203c2864667da0380a7f4b15a236b430d13c17f808332d6b7192f82e7"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC2_recovery_surface.pdf": {
+      "size_bytes": 26340,
+      "sha256": "70dd266bee56183eefa8bf2779cdb519670c86180255fb12d8dba0acb2083319"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC2_recovery_surface.png": {
+      "size_bytes": 64691,
+      "sha256": "4428732d8cee9b3d1787c77e1d4caf37c90be4220c99015f1e1c745c398d5595"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC2_recovery_surface.svg": {
+      "size_bytes": 51645,
+      "sha256": "d7951a22d1b0d376c4c1d07560e91369a0bc5972e69aa85073030f8c23088a8c"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC3_simultaneous_lcb.pdf": {
+      "size_bytes": 28625,
+      "sha256": "478f7b441d26ac419c406bdbeadbade88abd283aba3bc2e32ecc35c5065fd72a"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC3_simultaneous_lcb.png": {
+      "size_bytes": 68254,
+      "sha256": "5701a7b40ccad738d594bb2492a12c6411e32a02fe5d01ea2f25505a4ee0c7c6"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC3_simultaneous_lcb.svg": {
+      "size_bytes": 53173,
+      "sha256": "cff9a0f835e11292b9141fa3b41622aa0dfb81f352756c3ad1dc2fe84760bd11"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC4_compression_frontier.pdf": {
+      "size_bytes": 18793,
+      "sha256": "53643bc81decf0ad6a2bc232a06fbc5879dab2d6485938d22971a784ffdef12a"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC4_compression_frontier.png": {
+      "size_bytes": 108506,
+      "sha256": "011ee08607239067152753d9f21de9861febe612c3d6db2c679f896a61906f18"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC4_compression_frontier.svg": {
+      "size_bytes": 63491,
+      "sha256": "6488a61309b933a45c02618923eafadda72e01a468e044ba7b2d4ccbfbad709b"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC5_thresholds.pdf": {
+      "size_bytes": 14431,
+      "sha256": "ed4541fd48782dbeaf1028d92cae39d6a6bccb81d4c3ad819df2a42c541a44f5"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC5_thresholds.png": {
+      "size_bytes": 63565,
+      "sha256": "5bd7562c6044e7ce62231cf07b2f62dcf7de97a05833373385a59718a893cb96"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC5_thresholds.svg": {
+      "size_bytes": 37342,
+      "sha256": "3e6c77cf6ae6ebb31b71df36ab8f21d8adfffba17a0316ea3a544983e982b7e3"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC6_all_but_one.pdf": {
+      "size_bytes": 13178,
+      "sha256": "2143a2ee5db4b7dab14d7237872b93799dc08af49c2f46ccd4f7e28e338a8a2a"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC6_all_but_one.png": {
+      "size_bytes": 49090,
+      "sha256": "7c91a1649dbbcd0fda654114f00a88e85c715c6b09f2df3dd37184443cee4801"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC6_all_but_one.svg": {
+      "size_bytes": 40559,
+      "sha256": "3ca051d17b3855ec84a6c3830e8db40dc69ab0e23f7944cc519bdc6b533c3277"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC7_full_vs_context_specific.pdf": {
+      "size_bytes": 16995,
+      "sha256": "2edffa904bc480d9c1233a9d259a2048e75f9b040c64f55f6cb5191b3f1e9234"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC7_full_vs_context_specific.png": {
+      "size_bytes": 87722,
+      "sha256": "187fab68c1b8580611b393c5c6b619799b95011cd54349fb1e25ad137a1e6df1"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC7_full_vs_context_specific.svg": {
+      "size_bytes": 48966,
+      "sha256": "423c0e47b49e62813784e54861feec7038fc52979340a6d4c56f030c33848b92"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC8_random_vs_rna.pdf": {
+      "size_bytes": 17167,
+      "sha256": "d5c4ea78e8d6a259e4f583342ae23eb74ea7924b6a432ab116dd201281224f97"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC8_random_vs_rna.png": {
+      "size_bytes": 96203,
+      "sha256": "94dd3e2e6fd2a0d5f60822d65fede97b1f5d4c9d6d0496972b232a85e80e1489"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC8_random_vs_rna.svg": {
+      "size_bytes": 46832,
+      "sha256": "52d6a350f1652bb21a21754c6cdb3b139a235cb51ad92baed2d5adfb90be009c"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC9_controls_and_nulls.pdf": {
+      "size_bytes": 19682,
+      "sha256": "4ecc8b1e30b16dd57c7578dfdaeee1e031f649ef8896eb86fc2ecbfa6e84b426"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC9_controls_and_nulls.png": {
+      "size_bytes": 129750,
+      "sha256": "aa17864159d41a72d3964081bb0172f503196a29485696b276ead9975c71936a"
+    },
+    "results/cgc_entrywise_compression/figures/Figure_EC9_controls_and_nulls.svg": {
+      "size_bytes": 51025,
+      "sha256": "25b474e20cc908812d122b83a0cedf4866208948944d6ea70ffd4e965f4a11c5"
+    }
+  }
+}

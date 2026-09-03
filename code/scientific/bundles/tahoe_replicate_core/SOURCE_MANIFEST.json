@@ -1,0 +1,438 @@
+{
+  "id": "tahoe_replicate_core",
+  "analysis_name": "Tahoe replicate-core inventory, pseudobulk extraction and truth",
+  "class": "FULL_ANALYSIS",
+  "commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+  "entrypoints": [
+    {
+      "path": "scripts/cgc_tahoe_0b_inventory.py",
+      "help_args": null,
+      "help_boundary": "No argument parser; use launcher --inspect-only, never pass --help directly."
+    }
+  ],
+  "source_roots": [
+    "src/igc_virtual_cell/cgc_tahoe_0b",
+    "src/igc_virtual_cell/cgc_tahoe_0c",
+    "scripts/cgc_tahoe_0b_*.py",
+    "scripts/cgc_tahoe_0c_*.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_tahoe_0c/core_tensor_manifest.json",
+    "results/cgc_tahoe_0c/design_manifest.json",
+    "results/cgc_tahoe_0c/run_manifest.json",
+    "results/cgc_tahoe_0c/shard_scan_manifest.json",
+    "results/cgc_tahoe_0c/source_manifest.json",
+    "results/cgc_tahoe_0c/temporary_shard_deletion_manifest.json",
+    "results/cgc_tahoe_0c/intervention_folds.csv",
+    "results/cgc_tahoe_0c/readout_genes.csv",
+    "results/cgc_tahoe_0c/support_sequences.csv",
+    "results/cgc_tahoe_0i/gene_universe_hashes.json",
+    "results/cgc_tahoe_0i/raw_source_manifest.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/tahoe100m_plate6_14_core",
+      "authority": "results/cgc_tahoe_0b and cgc_tahoe_0c frozen manifests",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared pseudobulk core only; downloading large raw resources is not part of this release repair."
+    }
+  ],
+  "outputs": [
+    "results/cgc_tahoe_0c"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [],
+  "max_single_source_bytes": 16000000,
+  "exported_file_count": 41,
+  "exported_source_bytes": 17913229,
+  "external_import_roots": [
+    "numpy",
+    "pandas",
+    "pyarrow"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/core_tensor_manifest.json",
+      "source_file": "results/cgc_tahoe_0c/core_tensor_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "58416178fccaaeba0876f15ef1421ee545ab38b6",
+      "sha256": "8af84d561787904e500ba9e9489e2cf0cf03bba274fa51734bb20a9c720f428b",
+      "size_bytes": 24338,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/design_manifest.json",
+      "source_file": "results/cgc_tahoe_0c/design_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "20652c750fcc8652e645c6e61c1f3d5c3670dd5d",
+      "sha256": "82b8123ec41e6ae282e230b3715ea0a5e3b798c98a5f3a3114ba451076807248",
+      "size_bytes": 677,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/intervention_folds.csv",
+      "source_file": "results/cgc_tahoe_0c/intervention_folds.csv",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "1f6516c4d8772c35d4be60492e350ba7bac36dae",
+      "sha256": "6012d9b3f7660b259fa21ca2ed9973d6172bde9b52024b53d6bc0d965d984831",
+      "size_bytes": 6173,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/readout_genes.csv",
+      "source_file": "results/cgc_tahoe_0c/readout_genes.csv",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "ff8cdd736bdb18def21279a8c82320abc0c60e47",
+      "sha256": "b4e053c2d4d9c175cfdc2efaae87082963645e5780004e6496413f87debf1158",
+      "size_bytes": 8900,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/run_manifest.json",
+      "source_file": "results/cgc_tahoe_0c/run_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "417058b33711d45704400153406d9425141663a4",
+      "sha256": "a43f3d66821aef7d26b462e8022ec7ea35a743e2dead20b768ea2c418a232067",
+      "size_bytes": 3617,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/shard_scan_manifest.json",
+      "source_file": "results/cgc_tahoe_0c/shard_scan_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "7f4ea2c2d97d74896dbba17a656ce68536258969",
+      "sha256": "e381c70a8f6a07e10fa6866a6c65957ec7ac6c92f009d1f2ae2b7e64c3e1261f",
+      "size_bytes": 3126297,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/source_manifest.json",
+      "source_file": "results/cgc_tahoe_0c/source_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "0ac8a241fd23b8e69a5978e5b8d7b2fbc0f7cfe2",
+      "sha256": "a9def77ae83d2ae9e6d6b153fbb2a293b26d158376efe6ff846b00b31c9732bb",
+      "size_bytes": 3113,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/support_sequences.csv",
+      "source_file": "results/cgc_tahoe_0c/support_sequences.csv",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "4037237656201bed4830f2b2432a89da9f84ad68",
+      "sha256": "0eaee3d3b676232a6c8552ad0eb6393a58514cd345d9a53a89b022cb94de7be9",
+      "size_bytes": 14537796,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0c/temporary_shard_deletion_manifest.json",
+      "source_file": "results/cgc_tahoe_0c/temporary_shard_deletion_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "26a9b871633c927aec676b7dcc26a3c0792a1fb7",
+      "sha256": "5df0a3efa0b7e63d1c4774461d6a002dd776395436470be61c440c82e793c16a",
+      "size_bytes": 322,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0i/gene_universe_hashes.json",
+      "source_file": "results/cgc_tahoe_0i/gene_universe_hashes.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "dbdc7966359df44feb136fbedeb43d239d5713a0",
+      "sha256": "ef7815db004b927cd49051b55da3ad4785e1de4bc6758d9c98c759ea4718667b",
+      "size_bytes": 1742,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0i/raw_source_manifest.json",
+      "source_file": "results/cgc_tahoe_0i/raw_source_manifest.json",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "aade5253249911194c33acc54e59bb4300a0aabd",
+      "sha256": "62d1e04742d1cbfe6d830672713babcdc42072b0232d46e7f8e8341f20a5944d",
+      "size_bytes": 2457,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0b_feasibility.py",
+      "source_file": "scripts/cgc_tahoe_0b_feasibility.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "71b33a4589e3cdcb850fd902f1febb8c0e96a72b",
+      "sha256": "edf5b24224ca5594cc96fff34e8669641054b30a2673d0a19ae63a01fc9ab5fc",
+      "size_bytes": 423,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0b_inventory.py",
+      "source_file": "scripts/cgc_tahoe_0b_inventory.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "ad06d0f9faeccd8aa116e5d103420d90b2e660bc",
+      "sha256": "b1987ffd4c4e48c4cda3cf1f3ee5b9d52e745b54fd0ed8a5da9988c6b7cf238f",
+      "size_bytes": 460,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0b_validate.py",
+      "source_file": "scripts/cgc_tahoe_0b_validate.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "30a3bdfc4ec5e8fef9354ba2cc0b1dc309fdfe06",
+      "sha256": "837a786b419c00307e42761e34b8bcc732da35400ddb4e5fd37714551a7e3562",
+      "size_bytes": 390,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_compact_fit_csv.py",
+      "source_file": "scripts/cgc_tahoe_0c_compact_fit_csv.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "4a0cd889c4c1b83bbcb374f2c6bd9f0f57ac656c",
+      "sha256": "3138ea16f04ae039e606a39e394ea722d0a38649456b55946520fd19dba39373",
+      "size_bytes": 870,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_debug_condition.py",
+      "source_file": "scripts/cgc_tahoe_0c_debug_condition.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "020de9705ad5a724336901d820ec622c274d3ff3",
+      "sha256": "2217d26f133df1226770e290a9f9a949b02c13ab3662b776836a6539897f7237",
+      "size_bytes": 1100,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_extract.py",
+      "source_file": "scripts/cgc_tahoe_0c_extract.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "261b4da52bf315c6a63a0566739019622269e26f",
+      "sha256": "020125a922278251d833608cc6bc03f99a4f237f76dd12725e27bab61cbf4fdf",
+      "size_bytes": 365,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_figures.py",
+      "source_file": "scripts/cgc_tahoe_0c_figures.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "6b857bd7162dd9210e569d45de7a0b1fa52947ae",
+      "sha256": "1399efda0730dcb9607fb1bf7827ef8366f768d6ad9fa16b09f13f5b45605f53",
+      "size_bytes": 253,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_finalize.py",
+      "source_file": "scripts/cgc_tahoe_0c_finalize.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "6c310c1bb423aea8aac2c585941921b3bcc36aeb",
+      "sha256": "8fef6f03c473936aa75714c01700c6e74a9261463d0aa7452c3091df635c72fd",
+      "size_bytes": 309,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_finalize_tensor.py",
+      "source_file": "scripts/cgc_tahoe_0c_finalize_tensor.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "4c5c3e475cd7caa76d55571442ed5a8f45e243cf",
+      "sha256": "093713f87f17b9264c0da43dc2a7746434d21ee077eb3a9e6576ef54bb306832",
+      "size_bytes": 340,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_freeze_design.py",
+      "source_file": "scripts/cgc_tahoe_0c_freeze_design.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "f647c87fe775c83149e8c2bf762eecf71f376ea7",
+      "sha256": "cefe5f7f0fc26c341365141b7a34604f5cd2c3ac6ee6c5813413125372c8d43a",
+      "size_bytes": 249,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_freeze_source.py",
+      "source_file": "scripts/cgc_tahoe_0c_freeze_source.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "183091109fdc1a95c3f150f6bfb303104e043c8f",
+      "sha256": "5afe08debd66c7dec100062823b5ee181d1979c3fb64196315e33e3609f3a722",
+      "size_bytes": 316,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_probe_shards.py",
+      "source_file": "scripts/cgc_tahoe_0c_probe_shards.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "920141e5e2551fb440f3afd7713036f4fd74189f",
+      "sha256": "c74ced83e6fcff30fdbb6d76f4558c82acbfa25088a3313c88f90b6fbb105747",
+      "size_bytes": 699,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_resume_missing.py",
+      "source_file": "scripts/cgc_tahoe_0c_resume_missing.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "538c44437faabf43f0b02c2ebbea02927de97a89",
+      "sha256": "1890d0f2a1384f0c2e59bb0effa625f1bfa48367c181001112d92b24193c6f1d",
+      "size_bytes": 326,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_scaling.py",
+      "source_file": "scripts/cgc_tahoe_0c_scaling.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "14d522069a065a50e9e00de2768b4be557585a93",
+      "sha256": "bfec1e7be5ecd3430535dc1001bcb9486224155dc07f8d7f5ef7f294e740daa2",
+      "size_bytes": 241,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_scan_shards.py",
+      "source_file": "scripts/cgc_tahoe_0c_scan_shards.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "8136e3ad4a7f5018540404d9c1c0d1dbe4e96d11",
+      "sha256": "5047af57f4145f41243204e47c841fe141fc88f4df8f86bebf43e0fceea11da0",
+      "size_bytes": 418,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_tahoe_0c_truth.py",
+      "source_file": "scripts/cgc_tahoe_0c_truth.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "b36b95731328986df8409b55090c1e91f81d5b25",
+      "sha256": "d2241d40d70cc200e3c6cb5b9350b93483a498d67e9d29a6fdfd6fefe3bb9ae8",
+      "size_bytes": 287,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0b/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0b/__init__.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "e9da78646f65521f08504ccd9786563536924635",
+      "sha256": "c9b0a8fe9ab7c1e3c6593ad6aa6ae6cf91a566ca8fb1a820ca8138491ad87617",
+      "size_bytes": 62,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0b/analysis.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0b/analysis.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "fb781f86d3963303392519d9c12f6180e23da692",
+      "sha256": "9c8bfd69ff487441561ccfbc90f653cd9a5b2b35e2854d27bb6204ce0f0c0293",
+      "size_bytes": 36482,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0b/inventory.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0b/inventory.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "66394d599684b6a57f1c789c65228e4327cf0a01",
+      "sha256": "e80800b162431ba258e3c6fa5e17bf4582bf737ab52c09605186322009e6f43c",
+      "size_bytes": 4727,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0b/validation.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0b/validation.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "78961b50eeba9c29a6c33a347f92f7a28e18c00a",
+      "sha256": "cebee9b88d39c5652497299015efbb54cf45db3752fd98cd42aa2efbceaf501b",
+      "size_bytes": 11338,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/__init__.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "d2e559d0e46736aa8108185b0208c2124506633b",
+      "sha256": "36d9e8faac4d8d2c2602c5efb3a0a60c439830a09a65c0c51e9e7875f911a89a",
+      "size_bytes": 58,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/analysis.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/analysis.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "e4b94e47852038438b1c25b76c3be1a483de643e",
+      "sha256": "897541bc05cc7cf6245cdb883e729f0219d8d13595129d1a0489a28e851a3bfd",
+      "size_bytes": 7795,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/design.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/design.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "d493eaec6e9107eb1759f6ada57a7f4dc8b04e5e",
+      "sha256": "5feca9d615ef901d14f216cc912e9efa4ef97dc27a7e850b04b962524e7a7acd",
+      "size_bytes": 3396,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/extraction.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/extraction.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "e0594072515ffc82224aceb8587cb10d18929791",
+      "sha256": "f4922fd2157866096e9162985534a66fac5d2eba817c580a9dfce10979df2b8e",
+      "size_bytes": 58136,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/figures.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/figures.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "55d880d8e5191b92aeaa512af26c188d759e768b",
+      "sha256": "1ced029c7eb431df28dd3268a21d033182ea3c7bb7f28e7a946fcd4a9aa2cca8",
+      "size_bytes": 12069,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/reporting.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/reporting.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "722393192959a6d88986fb4349368e557dd1d3ac",
+      "sha256": "74a0c498596353c7b7ad301d8cc02bd1491858b449542bcd6832fe7eaf930fcb",
+      "size_bytes": 15674,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/scaling.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/scaling.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "e3e0ea6973d166df4d05212266c8fe9b1d4ead7a",
+      "sha256": "30c08a4d01ef093112103c77d0407bef23f44a7ab16122e7b251f0280085c95e",
+      "size_bytes": 35375,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0c/source.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0c/source.py",
+      "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "git_blob": "2dd18662fed7c443483a847955c7c35edaa29acf",
+      "sha256": "a872073658504735c11db20ed1db27c35eaea0a89c60e03a55ab363e7d5657d2",
+      "size_bytes": 4720,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

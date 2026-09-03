@@ -1,0 +1,83 @@
+{
+  "dataset": "Kryeziu_2026_metastatic_CRC_PDO_biobank",
+  "retrieved_at": "2026-08-30T09:50:00-04:00",
+  "study_doi": "10.1016/j.xcrm.2026.102840",
+  "mendeley_version_doi": "10.17632/hr94h42xdc.3",
+  "geo_accession": "GSE294511",
+  "files": [
+    {
+      "local_name": "PMC13293968.xml",
+      "role": "official article XML and methods/resource provenance",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13293968",
+      "size_bytes": 264542,
+      "sha256": "b74a1da337d67f16395ed38221a391850e43e52d39bd7bac6e75f96144ceb189"
+    },
+    {
+      "local_name": "mmc2.xlsx",
+      "role": "Data S1 explicit sample_id-patient mapping validation",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc2.xlsx",
+      "size_bytes": 75938,
+      "sha256": "4c4f63735580842f9c54322445501828127c6e97712c2c7a76e53b22bc2531fd"
+    },
+    {
+      "local_name": "mmc3.xlsx",
+      "role": "Data S2 RNA-seq raw gene counts for 92 PDOs",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc3.xlsx",
+      "size_bytes": 10189391,
+      "sha256": "b4d4a4205f3a932cac80ff49abb344ed91b841737dfa361fbd19fd7a687766d0"
+    },
+    {
+      "local_name": "mmc5.xlsx",
+      "role": "Data S4 raw drug-screen measurements and replicate/run audit",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc5.xlsx",
+      "size_bytes": 15886254,
+      "sha256": "3847aa93b2a84c7d5d0b04c26494f39f35963fc41e96eae97d8a180fbc33d81c"
+    },
+    {
+      "local_name": "mmc6.xlsx",
+      "role": "Data S5 author-computed DSS table used as the functional endpoint",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc6.xlsx",
+      "size_bytes": 136815,
+      "sha256": "05be116a1cc837a70b97ed24af1d7a01efdb57faa5e9d9b711882ebaec5ebae2"
+    },
+    {
+      "local_name": "mmc7.xlsx",
+      "role": "Table S1 patient cohort demographics summary",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc7.xlsx",
+      "size_bytes": 19498,
+      "sha256": "09b85bfbb5c7a8e6c2533513833a030f6e6cb13470dc6c47f8d74cd982cd0e83"
+    },
+    {
+      "local_name": "mmc8.xlsx",
+      "role": "Table S2 official PDO inventory and modality coverage",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc8.xlsx",
+      "size_bytes": 51659,
+      "sha256": "105c3edf7ff5cb69d8a6ef006026e5cf8dc43bc7cc78dd18a9bb738a7d26117e"
+    },
+    {
+      "local_name": "mmc11.xlsx",
+      "role": "Table S5 official library drug inventory",
+      "url": "https://ars.els-cdn.com/content/image/1-s2.0-S2666379126002570-mmc11.xlsx",
+      "size_bytes": 24453,
+      "sha256": "b0c15ad0eb39c840c38e7357b1743b6c1189adcdd52ca2f4d231c9d27ba02f91"
+    },
+    {
+      "local_name": "GSE294511_series_matrix.txt.gz",
+      "role": "official processed HTA2.0 series matrix and explicit GEO patient/PDO mapping",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE294nnn/GSE294511/matrix/GSE294511_series_matrix.txt.gz",
+      "size_bytes": 39626568,
+      "sha256": "f4fa7a7778d4854402c558f9074b2f8090de48131bcae22118f625657b4dca3a"
+    }
+  ],
+  "deliberately_not_downloaded": [
+    {
+      "resource": "GSE294511_RAW.tar",
+      "size_bytes": 4582666240,
+      "reason": "processed GEO matrix is sufficient for the secondary array audit"
+    },
+    {
+      "resource": "RNA-seq raw reads",
+      "reason": "official Data S2 raw gene counts are sufficient"
+    }
+  ]
+}

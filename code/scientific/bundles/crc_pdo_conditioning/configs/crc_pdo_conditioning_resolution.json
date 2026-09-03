@@ -1,0 +1,70 @@
+{
+  "protocol_id": "CRC_PDO_CONDITIONING_RESOLUTION_V1",
+  "frozen_date": "2026-08-30",
+  "prerequisite_verdict": "PERSONALIZED_RIDGE_INTERACTION_VALID",
+  "authority_commit": "563c2b95a690e3e7a77b71df5aebf1787c8631b6",
+  "frozen_application_commit": "c6cccb90453c567b6593982df442c4f127809fa1",
+  "progeny": {
+    "version": "1.17.3",
+    "official_revision": "cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f",
+    "weights_sha256": "59227c888c2bfa1ed89fe00109da7ce1bacffbb9b8b6b79215065d41f2476223",
+    "pathway_order": [
+      "Androgen",
+      "EGFR",
+      "Estrogen",
+      "Hypoxia",
+      "JAK-STAT",
+      "MAPK",
+      "NFkB",
+      "p53",
+      "PI3K",
+      "TGFb",
+      "TNFa",
+      "Trail",
+      "VEGF",
+      "WNT"
+    ]
+  },
+  "model": {
+    "family": "multioutput linear-kernel Ridge on training-centered drug-specific DSS residuals",
+    "outer_cv": "leave-one-patient-out",
+    "inner_cv": "deterministic 5-fold patient split within each outer-training set",
+    "inner_selection_metric": "mean held-inner-patient Kendall tau-b",
+    "alpha_grid": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "seed": 20260830
+  },
+  "representations": {
+    "fine_residual_pc_levels": [0, 4, 8, 16, 32],
+    "pca_control_dimensions": 14,
+    "random_projection_dimensions": 14,
+    "random_projection_draws": 100,
+    "random_pathway_draws": 100,
+    "random_seed": 20260901,
+    "random_pathway_seed": 20260902,
+    "run_residual_only_control": true,
+    "run_hta_replication": true
+  },
+  "inference": {
+    "bootstrap_draws": 10000,
+    "seed": 20260903,
+    "simultaneous_family": [
+      "PROGENY14_minus_FULL_RNA_PG",
+      "PROGENY14_minus_FULL_RNA_g_func",
+      "PROGENY14_minus_PCA14_PG",
+      "COARSE_R4_minus_R0_PG",
+      "COARSE_R8_minus_R0_PG",
+      "COARSE_R16_minus_R0_PG",
+      "COARSE_R32_minus_R0_PG"
+    ],
+    "pg_noninferiority_margin": 0.010085,
+    "g_func_noninferiority_margin": 0.027858,
+    "material_fine_pg_gain": 0.010,
+    "material_fine_g_func_gain": 0.030,
+    "random_pathway_alpha": 0.05
+  },
+  "evaluation": {
+    "pair_tolerance": 1e-12,
+    "primary_metrics": ["PG_macro", "g_func", "reversal_balanced_accuracy_patient_mean"]
+  },
+  "claim_boundary": "Operational finite-sample held-patient prediction; no information creation or universal RNA-resolution claim."
+}

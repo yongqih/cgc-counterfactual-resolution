@@ -1,0 +1,39 @@
+{
+  "phase": "CGC-STATE-1",
+  "frozen_parent": "6b4ecc8cf3b5fa5799d612c37d6f96ea526c15cd",
+  "seed": 4101,
+  "primary_variant": "ST_SE",
+  "robustness_variant": "ST_HVG",
+  "artifact_policy": {
+    "official_only": true,
+    "checkpoint": "eval_best",
+    "eval_last_mixed": false,
+    "maximum_new_transfer_gb": 80,
+    "minimum_free_disk_after_download_gb": 700,
+    "h5ad_required": false,
+    "official_full_de_tables_sufficient": true
+  },
+  "matrix": {
+    "contexts": "all five official zero-shot held-out cell types",
+    "interventions": "exact 90 non-control cytokines shared across all contexts",
+    "genes": "exact official feature axis 0..1999",
+    "control": "context-matched real PBS reference_mean from official DE tables",
+    "delta": "target_mean - reference_mean",
+    "pertmean": "leave-one-context-out mean of real deltas; target predictions excluded"
+  },
+  "reliability": {
+    "donor_metadata_available": false,
+    "primary_label": "STATE_PARSE_OPERATOR_RELIABILITY_LIMITED",
+    "recovery": "deterministic cross-context squared-error analogue; not replicate-stable recovery",
+    "hierarchical_bootstrap_draws": 10000,
+    "context_derangements": 5000,
+    "cytokine_permutations": 5000
+  },
+  "embedding": {
+    "optional": true,
+    "official_embedding_present": false,
+    "run_se600m_inference": false,
+    "reason": "optional analysis must not delay the primary audit; official compact artifacts contain no embeddings"
+  },
+  "verdict_rules": "verbatim CGC_GLIS3_State_Final_Enhancement_Codex_Protocol.md section 39; applied to the explicitly limited deterministic analogue"
+}

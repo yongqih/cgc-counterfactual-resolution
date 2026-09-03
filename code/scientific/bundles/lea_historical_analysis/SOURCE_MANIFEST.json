@@ -1,0 +1,299 @@
+{
+  "id": "lea_historical_analysis",
+  "analysis_name": "Lea RNA-only strict LCL-disjoint pilot and six-model battery (ARCHS4 dynamic source authority)",
+  "class": "FULL_ANALYSIS",
+  "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+  "implementation_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+  "entrypoints": [
+    {
+      "path": "scripts/level2_lea_pilot.py",
+      "command": "python scripts/level2_lea_pilot.py --matrix <author-matrix> --metadata <sample-metadata> --integrity <passed-integrity-json> --truth <truth-directory> --output <results-directory>",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    },
+    {
+      "path": "scripts/level2_lea_full_battery.py",
+      "command": "python scripts/level2_lea_full_battery.py --config configs/level2_lea_full_battery_frozen.json --pilot-oof <pilot.npz> --pilot-checkpoints <checkpoint-directory> --metadata <sample-metadata> --output <results-directory>",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/level2_lea_pilot.py",
+    "scripts/level2_lea_full_battery.py",
+    "scripts/level2_lea_response_programs.py",
+    "scripts/level2_lea_data_integrity.py",
+    "scripts/level2_lea_pairing_audit.py",
+    "scripts/level2_lea_truth_gate.py",
+    "scripts/level2_lea_controls.py",
+    "scripts/level2_lea_program_controls.py",
+    "scripts/level2_lea_measurement_coupling.py",
+    "src/igc_virtual_cell/level2_lea.py",
+    "src/igc_virtual_cell/level2_full.py"
+  ],
+  "extra_sources": [
+    "tests/test_level2_lea.py"
+  ],
+  "configs": [
+    "configs/level2_lea_frozen.json",
+    "configs/level2_lea_full_battery_frozen.json"
+  ],
+  "split_metadata": [
+    "results/level2_lea/GSE207049_DATA_INTEGRITY.json",
+    "results/level2_lea/GSE207049_PAIRING_BY_LCL.csv",
+    "results/level2_lea/TRUTH_REPLICATE_LCLS.csv",
+    "results/level2_lea/DATA_PROVENANCE.md"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/level2_lea_official/GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+      "authority": "GEO GSE207049 official author residualized processed matrix",
+      "bytes_if_known": 217469362,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/level2_lea_official/31Mar21_all_runs_voom_resid_metadata.txt",
+      "authority": "Exact sample-to-LCL/ETOH/DEX mapping in integrity and pairing audit",
+      "bytes_if_known": 292921,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+      "authority": "Pilot output required by full battery; six-model battery reuses pilot predictions/checkpoints",
+      "bytes_if_known": 90490423,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    }
+  ],
+  "outputs": [
+    "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+    "results/level2_lea/FULL_BATTERY_OOF.npz"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Raw reads not required. This representation is author post-SVA, not original HTSeq counts.",
+    "Five strict LCL-disjoint folds; full battery requires an already completed pilot, not a new random split.",
+    "Torch optional dependency required for neural models; no data or checkpoint arrays in source bundle."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_level2_lea.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 20,
+  "exported_source_bytes": 160067,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "sklearn",
+    "torch"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/level2_lea_frozen.json",
+      "source_file": "configs/level2_lea_frozen.json",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "78e6b4b780066b69df1066500772f68bea6106c2",
+      "sha256": "813fc4f51b593467fad24cbde2015303a6fc5d74dfa5abcd50ec7032a88ad72b",
+      "size_bytes": 3497,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "configs/level2_lea_full_battery_frozen.json",
+      "source_file": "configs/level2_lea_full_battery_frozen.json",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "7ce919ccd38fcd7d31c9a0957bd334c067c17a37",
+      "sha256": "3262c078a0aae1abf324c84b3929c8e6728ca213d54fdc46ad13fb22e94fb413",
+      "size_bytes": 4101,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/DATA_PROVENANCE.md",
+      "source_file": "results/level2_lea/DATA_PROVENANCE.md",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "7e17b4376b0075b2be89e94ebb61626021cdeea5",
+      "sha256": "54800e3b2bb457c7a7409d80733ac2876888239248d9d7c4ed9c91654386ccc3",
+      "size_bytes": 1466,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/GSE207049_DATA_INTEGRITY.json",
+      "source_file": "results/level2_lea/GSE207049_DATA_INTEGRITY.json",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "9989edc0380369012c7194dcd5b98af6041b83e0",
+      "sha256": "5cdb59dc33816a99194441cc7749a293ee6f8947321600f2b3af6c12e7ac7289",
+      "size_bytes": 2058,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/GSE207049_PAIRING_BY_LCL.csv",
+      "source_file": "results/level2_lea/GSE207049_PAIRING_BY_LCL.csv",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "5363903efc05a358a07b051f26b1ebd8850277c0",
+      "sha256": "f0f14ba6bfd1826c3f063897e5bff6e33872e5cd8d6b17dda4643f394912419f",
+      "size_bytes": 21894,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/TRUTH_REPLICATE_LCLS.csv",
+      "source_file": "results/level2_lea/TRUTH_REPLICATE_LCLS.csv",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "d7f87e2aea8abe239fa6764cba68d7704e984b4b",
+      "sha256": "46ae87d27aa5491469969545ce025e185dbb2e9a3acb9c9234c7f62ef492e626",
+      "size_bytes": 3856,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/level2_lea_controls.py",
+      "source_file": "scripts/level2_lea_controls.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "a21b27150f6c7ae61e0923dd60eca1fb9ee20a9d",
+      "sha256": "ed69dcb8518139de955241a17a988af858e460020fd001be93a1e0b1a5d0ddd7",
+      "size_bytes": 8001,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_data_integrity.py",
+      "source_file": "scripts/level2_lea_data_integrity.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "34c916079b70b8a7929836db5f7bd5bf1c982430",
+      "sha256": "9586279b24f60a1e70d547ca06864c72a98f4ca40876b2928d22ae68261822a9",
+      "size_bytes": 12060,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_full_battery.py",
+      "source_file": "scripts/level2_lea_full_battery.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "1cd95b97dd8490ae9f0e4ac2b9ee246719ba27c7",
+      "sha256": "5fec26a92b0a32645d2b973cd379edd0543ba1ffc636201e24972e2f423622e8",
+      "size_bytes": 17329,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_measurement_coupling.py",
+      "source_file": "scripts/level2_lea_measurement_coupling.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "99c04aff5448565613e31a4f5f3377681dbf9d63",
+      "sha256": "f477fbd7183a75916a8387718e1ceafc2b3d00df09dbc8ad66aeec054afb90af",
+      "size_bytes": 7344,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_pairing_audit.py",
+      "source_file": "scripts/level2_lea_pairing_audit.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "95b4528b986f372bac1da600adcb38eede52ad35",
+      "sha256": "72ecadb7ecd3b5e91ba9af3a699cbcc1f92987965e295f92c3adb07f926c874b",
+      "size_bytes": 7824,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_pilot.py",
+      "source_file": "scripts/level2_lea_pilot.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "579d58c55b10a96579502fd73eaacf2c00c67a74",
+      "sha256": "db3fa07123670d0c6331ef08515883714b6e71d581fcfeda193eec0803b83ad1",
+      "size_bytes": 29240,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_program_controls.py",
+      "source_file": "scripts/level2_lea_program_controls.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "a4fbeee35b2a1b5f92db24a755a46873829760b2",
+      "sha256": "803b57367332c846e76636f9a48a11cea10b119010c98f43d87f4d0421e6c29a",
+      "size_bytes": 3717,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_response_programs.py",
+      "source_file": "scripts/level2_lea_response_programs.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "2bbcae6117aa71298da0af431c3390ca0dc620a9",
+      "sha256": "125026cfc39e0254bb8768517e692080f27f43c9689bab022dc57b2b8afdf755",
+      "size_bytes": 5169,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_truth_gate.py",
+      "source_file": "scripts/level2_lea_truth_gate.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "4265fb77496285b414ceb4f5e9fbd065e909aea6",
+      "sha256": "c60858c7c3429e5333bbe35d05755fa974306df556077e5b547c63dc4cb5dffc",
+      "size_bytes": 10309,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/level2_full.py",
+      "source_file": "src/igc_virtual_cell/level2_full.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "34bb1c95b0f1408096358d7fcc6f6d061449363f",
+      "sha256": "dcf79af7d937b9001a9de9a71ec40d3e2e8aa94f4ee351d5f29fb897aa776564",
+      "size_bytes": 14841,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/level2_lea.py",
+      "source_file": "src/igc_virtual_cell/level2_lea.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "3180cd57c2da2f63d29f468529aa60502fbeaf38",
+      "sha256": "d435a3b3d71595a21b80047ad259f1b5c65459330a0cce578f321748f30fba9e",
+      "size_bytes": 4791,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_level2_lea.py",
+      "source_file": "tests/test_level2_lea.py",
+      "source_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "git_blob": "55cfdeefe221a69e9bbecd76cacad29d63dc9ee0",
+      "sha256": "2e854c91d4d8512dbd8df5c62539a13c45aab32901c3e14e929a8d37d265ced3",
+      "size_bytes": 1651,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

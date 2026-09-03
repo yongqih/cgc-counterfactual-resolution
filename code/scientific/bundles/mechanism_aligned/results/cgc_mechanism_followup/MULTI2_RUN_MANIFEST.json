@@ -1,0 +1,134 @@
+{
+  "complete_case_sha256": "882597a059c9fa36d1b5d8d3bb07a82052c7d792f7d4b073d89540189794003c",
+  "created_at": "2026-08-23T18:32:30Z",
+  "current_branch": "codex/cgc_mechanism_aligned_followup",
+  "current_commit": "615ffafeed6a527cfbc4ae2173ff264d11c9a0d3",
+  "device": "CPU_ONLY",
+  "formal_nulls": {
+    "completed_at": "2026-08-23T18:32:30Z",
+    "estimator_contrasts": 38,
+    "estimators": [
+      "ridge",
+      "bilinear_ridge"
+    ],
+    "executable_panel_null_families": 19,
+    "fold_manifests": {
+      "FEATURE_NULL": 822,
+      "OBSERVED": 261,
+      "TOTAL_PRIMARY_RESIDUAL": 1083
+    },
+    "non_executable_families": 5,
+    "null_families": [
+      "DRUG_TARGET_MAPPING_PERMUTATION",
+      "PATHWAY_MAPPING_PERMUTATION",
+      "CONTEXT_MODALITY_WITHIN_LINEAGE",
+      "RANDOM_GENE_SET_MATCHED"
+    ],
+    "output": {
+      "MULTI2_ALIGNMENT_NULLS.csv": {
+        "rows": 43,
+        "sha256": "0253f93873204f90241c8e7a6987ffdb78c4f17126ebd415e94b5c73e27a6627"
+      }
+    },
+    "parent_commit": "615ffafeed6a527cfbc4ae2173ff264d11c9a0d3",
+    "response_target": "PRIMARY_RESIDUAL",
+    "runtime_seconds": 5041,
+    "started_at": "2026-08-23T17:08:29Z",
+    "status": "FORMAL_PRIMARY_RESIDUAL_NULLS_COMPLETE_REPORTING_PENDING",
+    "table_draws_per_estimator_contrast": 10000,
+    "targeted_tests_passed": 28
+  },
+  "formal_outcome": {
+    "completed_at": "2026-08-23T16:46:10Z",
+    "fold_manifests": {
+      "PRIMARY_RESIDUAL": 261,
+      "SECONDARY_GAMMA": 261
+    },
+    "nulls_complete": true,
+    "outputs": {
+      "MULTI2_FITS.parquet": {
+        "rows": 8544,
+        "sha256": "f5e5b623051fa730dcd9f6da4909f2ed464848934af3546bdef084c9f2432379"
+      },
+      "MULTI2_INCREMENTAL_RECOVERY.csv": {
+        "rows": 72,
+        "sha256": "02c6e9fe9bba20af563d306c09bb2c237267d954d733aabb1f6929b092e0e046"
+      },
+      "MULTI2_OOF_UTILITY_BLOCKS.parquet": {
+        "rows": 128296,
+        "sha256": "63966f53131db240b266e0f46c665b167affa63eaa6a860ed8c7a72beb14bc07"
+      },
+      "MULTI2_PER_INTERVENTION_GAINS.csv": {
+        "rows": 804,
+        "sha256": "3c80cc31c2f58d7f7bd3f7e35898a4ca145c9eaa4f1b08d9d98a1b4b068f3959"
+      }
+    },
+    "parent_commit": "c08fe95981afb3cee709d2f844959769cb38f30c",
+    "power_panels_complete": 6,
+    "reporting_complete": false,
+    "runtime_seconds": 4897,
+    "started_at": "2026-08-23T15:24:33Z",
+    "status": "FORMAL_OUTCOME_AND_PRIMARY_RESIDUAL_NULLS_COMPLETE_REPORTING_PENDING"
+  },
+  "frozen_commit": "de548acea86b4da93b736feb0fcab9ebd830cf48",
+  "outcomes_opened": true,
+  "panel_audit_sha256": "6ab6246b2170499e88d21f3227643043491eaa850981d2514b167b64ee597078",
+  "panels": {
+    "ACTIVITY": {
+      "aligned_features": [
+        "pathway_rppa"
+      ],
+      "complete_features": 446,
+      "contexts": 44,
+      "interventions": 47
+    },
+    "DEPENDENCY_ORACLE": {
+      "aligned_features": [
+        "target_dependency",
+        "pathway_dependency"
+      ],
+      "complete_features": 17101,
+      "contexts": 39,
+      "interventions": 48
+    },
+    "M5": {
+      "aligned_features": [
+        "target_mut",
+        "pathway_mut",
+        "pathway_rppa"
+      ],
+      "complete_features": 19961,
+      "contexts": 40,
+      "interventions": 47
+    },
+    "PHOSPHO": {
+      "aligned_features": [
+        "target_phospho"
+      ],
+      "complete_features": 81,
+      "contexts": 44,
+      "interventions": 5
+    },
+    "TOTAL_PROTEIN": {
+      "aligned_features": [
+        "target_total_protein"
+      ],
+      "complete_features": 1879,
+      "contexts": 45,
+      "interventions": 5
+    },
+    "WIRING": {
+      "aligned_features": [
+        "target_mut",
+        "pathway_mut"
+      ],
+      "complete_features": 19515,
+      "contexts": 49,
+      "interventions": 49
+    }
+  },
+  "phase": "CGC-MULTI-2 formal outcome and primary-residual feature-null refits complete; reporting pending",
+  "seed": 8201,
+  "source_root": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell",
+  "working_tree_dirty": true
+}

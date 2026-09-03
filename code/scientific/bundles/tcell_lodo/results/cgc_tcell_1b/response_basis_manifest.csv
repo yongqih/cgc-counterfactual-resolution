@@ -1,0 +1,5 @@
+outer_fold,held_out_donor,training_rows,rank,captured_training_variance_fraction,fit_seconds,basis_path,context_path
+0,CE0006864,84474,256,0.19477298673702279,15.360527299999376,results\cgc_tcell_1b\checkpoints\outer_0_response_basis.npz,results\cgc_tcell_1b\checkpoints\outer_0_context.npz
+1,CE0008162,84474,256,0.19372420681635383,4.477861999999732,results\cgc_tcell_1b\checkpoints\outer_1_response_basis.npz,results\cgc_tcell_1b\checkpoints\outer_1_context.npz
+2,CE0008678,84474,256,0.1822002490669174,4.46394169999985,results\cgc_tcell_1b\checkpoints\outer_2_response_basis.npz,results\cgc_tcell_1b\checkpoints\outer_2_context.npz
+3,CE0010866,84474,256,0.19077896637247244,4.16928740000003,results\cgc_tcell_1b\checkpoints\outer_3_response_basis.npz,results\cgc_tcell_1b\checkpoints\outer_3_context.npz

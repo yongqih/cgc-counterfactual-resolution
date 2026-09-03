@@ -1,0 +1,7 @@
+{
+  "compact_tensor_preserved": "data\\tahoe100m_plate6_14_core\\delta_float32.npy",
+  "compact_tensor_sha256": "ecd4899d38a7877e29a608ab0c185f0260b567e971eef1ee3debc3e22655abb1",
+  "deleted_bytes": 0,
+  "reason": "Sparse HTTP range extraction wrote directly to compact tensor",
+  "temporary_full_shards_created": false
+}

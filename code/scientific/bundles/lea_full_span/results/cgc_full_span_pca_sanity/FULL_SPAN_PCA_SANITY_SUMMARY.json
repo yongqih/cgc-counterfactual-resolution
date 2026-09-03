@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE",
+  "verdict": "HELDOUT_RESPONSE_SUBSPACE_TRANSFER_POOR",
+  "recommendation": "STOP_NO_PREDICTION_OR_REPRESENTATION_RESCUE",
+  "numerical_ranks": [
+    272,
+    270,
+    271,
+    271,
+    271
+  ],
+  "train_reconstruction_pass": true,
+  "historical_D256_reproduction_pass": true,
+  "max_abs_D256_fidelity_discrepancy": 6.938893903907228e-17,
+  "projection_identity_pass": true,
+  "max_projection_identity_relative_error": 4.186990616287207e-16,
+  "pooled_D256_fidelity": 0.05494476342905452,
+  "pooled_fullspan_fidelity": 0.05784418576099637,
+  "increment_D256_to_fullspan": 0.0028994223319418477,
+  "held_q_raw_mean": 0.06697947469783117,
+  "held_q_raw_median": 0.062194816331927104,
+  "held_q_raw_q25": 0.05186324274746287,
+  "held_q_raw_q75": 0.07469198464483874,
+  "held_q_raw_q05": 0.03961750245391742,
+  "held_q_raw_q95": 0.11393832779475867,
+  "pooled_q_raw": 0.05784418578877186,
+  "pooled_q_affine": 0.05784418582946138,
+  "metric_minus_q_raw": -2.7775490241133127e-11,
+  "reconstructed_fidelity": 0.05784418576099626,
+  "optional_train_LOO": "SKIPPED_NOT_COMPUTATIONALLY_TRIVIAL",
+  "predictive_model_trained": false,
+  "manuscript_modified": false
+}

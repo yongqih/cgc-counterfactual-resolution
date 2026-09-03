@@ -1,0 +1,19 @@
+{
+  "analysis_name": "Mechanistic attribution of the unresolved operator",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Supplementary_Figure_3_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Supplementary_Figure_3_source_data.csv",
+      "where": {
+        "kind": "primary_gene_pooled_hierarchy",
+        "label": "Exact target"
+      },
+      "column": "value",
+      "expected": 0.0089117990343896,
+      "tolerance": 1e-14
+    }
+  ]
+}

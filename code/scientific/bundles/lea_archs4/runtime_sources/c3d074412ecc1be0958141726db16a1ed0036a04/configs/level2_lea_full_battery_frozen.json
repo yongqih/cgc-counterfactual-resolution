@@ -1,0 +1,93 @@
+{
+  "experiment": "LEVEL2-LEA-RNA-CF-0A-FULL",
+  "parent_pilot_commit": "afae241",
+  "continuation_head": "ffe34e1f6acf517339599c84e4cfe81c5a42c6ad",
+  "seed": 207049,
+  "data_source": "frozen LEVEL2_OOF_FROZEN.npz generated from official GSE207049 voom_resid",
+  "outer_folds": "reuse exact frozen pilot fold vector; no resplitting",
+  "primary_target": "DEX minus ETOH minus outer-training LCL mean response",
+  "primary_metric": "pooled OOF residual R2",
+  "substantial_recovery_threshold_R2": 0.05,
+  "program_substantial_recovery_threshold_R2": 0.05,
+  "negative_control_max_allowed_R2": 0.01,
+  "kernel_ridge": {
+    "kernel": "exact RBF",
+    "gamma_multipliers_of_training_median_squared_distance": [0.25, 1.0, 4.0],
+    "alphas": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "inner_cv_folds": 3
+  },
+  "boosting": {
+    "implementation": "sklearn HistGradientBoostingRegressor, one regressor per training-response PC",
+    "baseline_pca_components": 100,
+    "response_pca_components": 16,
+    "candidate_settings": [
+      {"learning_rate": 0.05, "max_iter": 200, "max_leaf_nodes": 15, "l2_regularization": 1.0},
+      {"learning_rate": 0.05, "max_iter": 300, "max_leaf_nodes": 31, "l2_regularization": 10.0},
+      {"learning_rate": 0.1, "max_iter": 150, "max_leaf_nodes": 15, "l2_regularization": 10.0}
+    ],
+    "min_samples_leaf": 10,
+    "inner_cv_folds": 3
+  },
+  "deep_residual_mlp": {
+    "baseline_pca_components": 128,
+    "width": 768,
+    "residual_blocks": 5,
+    "activation": "GELU",
+    "normalization": "LayerNorm",
+    "dropout": 0.2,
+    "batch_size": 32,
+    "max_epochs": 150,
+    "patience": 15,
+    "inner_validation_fraction": 0.2,
+    "candidate_settings": [
+      {"learning_rate": 0.0003, "weight_decay": 0.0001},
+      {"learning_rate": 0.001, "weight_decay": 0.0001},
+      {"learning_rate": 0.0003, "weight_decay": 0.001}
+    ],
+    "final_seeds": [207049, 207050, 207051],
+    "primary_prediction": "arithmetic mean across three seed predictions"
+  },
+  "negative_controls": {
+    "controls": ["training-fold response permutation", "baseline-response mismatch"],
+    "deep_model_seeds": [207049],
+    "reuse_primary_selected_hyperparameters": true
+  },
+  "ancestry_sensitivity": {
+    "subsets": ["AFR", "EUR"],
+    "models": ["Ridge", "PCA+Ridge", "best nonlinear by full-cohort pooled OOF residual R2"],
+    "folds": 5,
+    "split": "fixed-seed shuffled biological-LCL KFold within ancestry",
+    "best_nonlinear_candidates": ["rbf_kernel_ridge", "hist_gradient_boosting", "deep_residual_mlp"]
+  },
+  "measurement_coupling": {
+    "minimum_complete_LCLs_for_decoupled_modeling": 60,
+    "complete_definition": "two independently labelled ETOH versions and two matching DEX versions",
+    "if_below_minimum": "measurement-decoupled distance diagnostic only",
+    "near_pair_rule": "one nearest other LCL per predictor-replicate-A baseline",
+    "random_draws": 10000,
+    "coupling_not_sufficient_to_explain_gate": "replicate-B residual reliability positive and baseline-A versus response-B distance Spearman <= 0.20"
+  },
+  "response_programs": {
+    "training_response_components": 16,
+    "frozen_k_summaries": [4, 8, 16],
+    "metrics": ["coordinate OOF R2", "variance-weighted R2", "predicted-to-true variance", "sign agreement", "Pearson"]
+  },
+  "pretrained_encoder": {
+    "candidate": "Geneformer V2",
+    "compatibility_requirement": "official raw-count single-cell input without feature selection and with total counts",
+    "incompatible_action": "PRETRAINED_ENCODER_NOT_INPUT_COMPATIBLE; do not install or fabricate counts"
+  },
+  "reliability_adjustment": {
+    "method": "two-replicate random-effects variance decomposition on replicate-complete LCLs",
+    "primary_metric_unchanged": true,
+    "secondary_only": true
+  },
+  "forbidden": [
+    "outer-result-driven architecture or hyperparameter changes",
+    "genotype or ancestry predictor inputs",
+    "DEX-informed baseline feature selection",
+    "raw FASTQ/BAM/SRA/VCF downloads",
+    "coupled geometry as positive verdict evidence",
+    "Level-3 biological or information-theoretic claims"
+  ]
+}

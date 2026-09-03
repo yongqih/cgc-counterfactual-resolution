@@ -1,0 +1,253 @@
+{
+  "id": "crc_pdo_application",
+  "analysis_name": "Patient-disjoint ex-vivo functional drug prioritization and nested Ridge",
+  "class": "FULL_ANALYSIS",
+  "commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+  "implementation_commit": "4e6600c62103ab5c3b6a6a26d8aa096661ea3801",
+  "entrypoints": [
+    {
+      "path": "scripts/run_crc_pdo_personalized_audit.py",
+      "command": "python scripts/run_crc_pdo_personalized_audit.py --help",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    },
+    {
+      "path": "scripts/run_crc_pdo_personalized_application.py",
+      "command": "python scripts/run_crc_pdo_personalized_application.py --root .",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/run_crc_pdo_personalized_audit.py",
+    "scripts/run_crc_pdo_personalized_application.py",
+    "src/igc_virtual_cell/crc_pdo_personalized"
+  ],
+  "extra_sources": [
+    "tests/test_crc_pdo_personalized.py"
+  ],
+  "configs": [
+    "configs/crc_pdo_personalized_application.json"
+  ],
+  "split_metadata": [
+    "data/crc_pdo_personalized_application/source_manifest.json",
+    "results/crc_pdo_personalized_drug_application/CRC_PDO_PATIENT_MANIFEST.csv",
+    "results/crc_pdo_personalized_drug_application/PRIMARY_DRUG_PANEL_MANIFEST.csv",
+    "results/crc_pdo_personalized_drug_application/MODEL_FOLD_MANIFEST.csv",
+    "results/crc_pdo_personalized_drug_application/CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+      "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+      "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application",
+      "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/crc_pdo_personalized_application/raw",
+      "authority": "Official supplementary spreadsheets, GEO processed matrices and exact source-manifest hashes needed only for preparation",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/crc_pdo_personalized_application/processed/HTA2_PDO_public_processed.npz",
+      "authority": "Secondary HTA expression platform; full original application loops over RNAseq and HTA2.0",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    }
+  ],
+  "outputs": [
+    "results/crc_pdo_personalized_drug_application"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Primary RNAseq cohort is 52 patients/91 PDOs/24 drugs/19421 genes. Secondary HTA is distinct; no clinical-response claim.",
+    "Patient-level aggregation and LOPO outer evaluation; alpha is selected within five-fold training data.",
+    "Final source includes corrected restudentization per shared sign-flip draw; initial implementation alone is not valid final inferential authority.",
+    "--postprocess-only requires frozen predictions/null draws; it is not a substitute for the complete analysis."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_crc_pdo_personalized.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 15,
+  "exported_source_bytes": 184887,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/crc_pdo_personalized_application.json",
+      "source_file": "configs/crc_pdo_personalized_application.json",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "aa57120c7c9d67547682269c17f95c53d5ceba80",
+      "sha256": "97c7d2e86984686a657a0043f31926af3df84036583593073ce2dd6d0cb843a9",
+      "size_bytes": 3637,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "data/crc_pdo_personalized_application/source_manifest.json",
+      "source_file": "data/crc_pdo_personalized_application/source_manifest.json",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "f11a3bca81618aca59bbbf49200452aed278503d",
+      "sha256": "b87f02e35ffb672bb6e98c28ca80885a46aa663fb9c317f497112e5db795aebf",
+      "size_bytes": 3497,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "2ad3bf0d82dc19f3aca959f18bab717cfeddc607",
+      "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f",
+      "size_bytes": 853,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application/CRC_PDO_PATIENT_MANIFEST.csv",
+      "source_file": "results/crc_pdo_personalized_drug_application/CRC_PDO_PATIENT_MANIFEST.csv",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "c2d5e656d36826d8e37be233eeb75a9cc1350d01",
+      "sha256": "1246a407bf7322b8bb19a29e7d0d492545448bdecf7318ffc27715e2af3a7565",
+      "size_bytes": 67199,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application/CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json",
+      "source_file": "results/crc_pdo_personalized_drug_application/CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "62f372c6d357f82cc825e245c5e438f0272cb495",
+      "sha256": "e99ba89b44ddb4394b2399c264ccda3712246054a7c5fa06627246228d393af6",
+      "size_bytes": 4301,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application/MODEL_FOLD_MANIFEST.csv",
+      "source_file": "results/crc_pdo_personalized_drug_application/MODEL_FOLD_MANIFEST.csv",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "929f48fa66057c73f0d14a54dfc11ee3280e65f7",
+      "sha256": "084feac9039f85ac5439636f968702ca1ba893901babbbb8688b2482ce37f9af",
+      "size_bytes": 9983,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/crc_pdo_personalized_drug_application/PRIMARY_DRUG_PANEL_MANIFEST.csv",
+      "source_file": "results/crc_pdo_personalized_drug_application/PRIMARY_DRUG_PANEL_MANIFEST.csv",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "7b6d722e34bf15a6aa4e9febc26fcacb8869467d",
+      "sha256": "7a64c3290381af889985047ec5a9e69e2c784d4d9e2688295301c387e02fb020",
+      "size_bytes": 4154,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/run_crc_pdo_personalized_application.py",
+      "source_file": "scripts/run_crc_pdo_personalized_application.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "23e404ceebbbcca09c21b3e0644d29b2d8a1ff9d",
+      "sha256": "72511c90488dee095cccfcd990ba646ff0450cf14692acaf894143904bfeb105",
+      "size_bytes": 18317,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/run_crc_pdo_personalized_audit.py",
+      "source_file": "scripts/run_crc_pdo_personalized_audit.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "e4a0dfae57d048820048ea5653f676dffda26674",
+      "sha256": "f847272dff331db74f40861248d21b6c027e175197c05ac6cd609ff40246eeac",
+      "size_bytes": 482,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/__init__.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/__init__.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "d977384d84c10e38fa05c6829bd57767aacde17e",
+      "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd",
+      "size_bytes": 229,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/audit.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/audit.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "65ba221d636d744438f56cb16d7a4ef1160484ab",
+      "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b",
+      "size_bytes": 24349,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/modeling.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/modeling.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "c55618a139c47f0161ea1b24fc790420ebc1d8ae",
+      "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7",
+      "size_bytes": 30548,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/crc_pdo_personalized/reporting.py",
+      "source_file": "src/igc_virtual_cell/crc_pdo_personalized/reporting.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "909f3e0f28c55c3229352338e02a333b280af680",
+      "sha256": "4788045629c2c7cdce83a8703884821aa6f73312dcf90a8686e8bc5e66737068",
+      "size_bytes": 9514,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_crc_pdo_personalized.py",
+      "source_file": "tests/test_crc_pdo_personalized.py",
+      "source_commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "git_blob": "98b8810946d0f4fa53f3d6da1fc548520e2f3b8b",
+      "sha256": "e085d82f3d1b8ec49dae8ea9d7ead81de89abd4b18fe0b6708f4d3518c179cc5",
+      "size_bytes": 7739,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

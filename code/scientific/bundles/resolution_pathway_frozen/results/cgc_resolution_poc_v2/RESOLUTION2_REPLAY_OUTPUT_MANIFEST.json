@@ -1,0 +1,157 @@
+{
+  "experiment": "CGC-RESOLUTION-2",
+  "status": "RESOLUTION2_FROZEN_REPLAY_VALID",
+  "source_checks": {
+    "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json": "da3fc0f3422c12e2a1ec9fcdc6447cd137836a963290a262a82451430df1198d",
+    "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz": "bd3b4f5097b4f158f58da102849d52080bb9ae7b7a4c4325f37bf574fd1a7c08",
+    "data/cgc_entrywise_cache/same_plate6_float32.npy": "90681a0429339581a329536036b9353cc1761feb76a34b5cb5c64df34b28281f",
+    "data/cgc_entrywise_cache/same_plate14_float32.npy": "9c1703a17855545f0dad3ba3d34c60c5187780612051bace36545ecd204567fd",
+    "data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy": "cece3ec0e2066bb46e9bc8bcdd11cb6666e486da3362358a15addaa1927909a3",
+    "data/cgc_entrywise_cache/sample_gene_sums_float64.npy": "1f266acbc9ef8d84a63fe9166dc32988e14b882df6356c127f143e1b71655ee1",
+    "target_cache_aggregate": "688cb5b0054f6f824981f8566bf72622b9bc991a425fd231c0fb8fcfe6d12d5d",
+    "gene_indices": "efea7718149514c763fbbad86d2337fde3377bf6c977365f0046576a85b94343",
+    "truth_shape": [
+      2,
+      50,
+      93,
+      62710
+    ]
+  },
+  "metric_rows": [
+    {
+      "check": "gene_metric_m49_k92",
+      "observed": 0.11068053088808294,
+      "expected": 0.11068053088808294,
+      "absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "vtruth_table_m49_k92",
+      "observed": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "absolute_difference": 1.1102230246251565e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "vafter_table_m49_k92",
+      "observed": 3.885780586188048e-16,
+      "expected": 0.0,
+      "absolute_difference": 3.885780586188048e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "gene_metric_m40_k4",
+      "observed": 0.07718711664021216,
+      "expected": 0.07718711664021238,
+      "absolute_difference": 2.220446049250313e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "vtruth_table_m40_k4",
+      "observed": 0.0,
+      "expected": 0.0,
+      "absolute_difference": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "vafter_table_m40_k4",
+      "observed": 1.942890293094024e-16,
+      "expected": 0.0,
+      "absolute_difference": 1.942890293094024e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "check": "deterministic_weights_bitwise",
+      "observed": 1,
+      "expected": 1,
+      "absolute_difference": 0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "deterministic_vectors_bitwise",
+      "observed": 1,
+      "expected": 1,
+      "absolute_difference": 0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "hidden_target_adversarial_weight_invariance",
+      "observed": 1,
+      "expected": 1,
+      "absolute_difference": 0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "stored_vector_matches_replay",
+      "observed": 1,
+      "expected": 1,
+      "absolute_difference": 0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "materialization": {
+    "files": {
+      "m49_k92_predictions_float32.npy": {
+        "shape": [
+          2,
+          1,
+          50,
+          93,
+          25695
+        ],
+        "dtype": "float32",
+        "size_bytes": 955854128
+      },
+      "m40_k4_predictions_float32.npy": {
+        "shape": [
+          2,
+          8,
+          50,
+          93,
+          25695
+        ],
+        "dtype": "float32",
+        "size_bytes": 7646832128
+      }
+    },
+    "weights": {
+      "m49_k92_frozen_weights.npz": {
+        "sha256": "b0e410e9c0f5d0d9f0a4d3fbfd02cf247d171cd203c480083dc6fa666b68d928",
+        "size_bytes": 3455810
+      },
+      "m40_k4_frozen_weights.npz": {
+        "sha256": "661425872af7ebe17f2f2bcf41b5d1161519b88254a216149cc29a1ad07919dc",
+        "size_bytes": 1386351
+      }
+    }
+  },
+  "model_fits": "frozen fit_batches deterministic replay only",
+  "retuning_performed": false,
+  "prediction_files": {
+    "m49_k92_predictions_float32.npy": {
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell_CGC_resolution_v2\\data\\cgc_resolution2_replay\\m49_k92_predictions_float32.npy",
+      "size_bytes": 955854128,
+      "sha256": "a1e99f8a949b8b205d1b360dd9e6919229e6b41969e98fdc57139f6983f798d6"
+    },
+    "m40_k4_predictions_float32.npy": {
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell_CGC_resolution_v2\\data\\cgc_resolution2_replay\\m40_k4_predictions_float32.npy",
+      "size_bytes": 7646832128,
+      "sha256": "55017f61489dffbebfce9e3f83144371e289d9e2735507696a2d1a91ce0447de"
+    }
+  },
+  "truth_cache": {
+    "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell_CGC_resolution_v2\\data\\cgc_resolution2_replay\\truth_g_primary_float32.npy",
+    "size_bytes": 955854128,
+    "sha256": "005603c5a01c085762c9eecb266de6302f95356ca5eb4026f8c0380f57793f73"
+  }
+}

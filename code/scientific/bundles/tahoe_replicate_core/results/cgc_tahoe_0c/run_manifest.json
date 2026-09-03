@@ -1,0 +1,107 @@
+{
+  "bootstrap_draws": 10000,
+  "branch": "cgc_tahoe_context_support_scaling",
+  "checkpoint_calls": 0,
+  "conservative_remote_transfer_bytes": 21179851407,
+  "fit_rows": 448500,
+  "full_de_release_downloaded": false,
+  "gpu_used": false,
+  "head_before_commit": "529e1c60768c378cebcaa4f949f407e6596ad90b",
+  "intervention_folds": 5,
+  "models_trained": 0,
+  "parent_commit": "529e1c60768c378cebcaa4f949f407e6596ad90b",
+  "phase": "CGC-SUPPORT-0C / Tahoe replicate-calibrated context support scaling",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "rcond": 1e-10,
+  "readout_gene_count": 127,
+  "remaining_free_disk_bytes": 943161257984,
+  "residual_permutations": {
+    "2_to_40": 2000,
+    "49": 5000
+  },
+  "scientific_definitions_changed_after_results": false,
+  "source_revision": "2dc57900b7981cfcf5e211527169a0b006546a95",
+  "support_sequences": 128,
+  "support_sizes": [
+    2,
+    4,
+    8,
+    16,
+    24,
+    32,
+    40,
+    49
+  ],
+  "temporary_full_de_shard_bytes_deleted": 0,
+  "temporary_full_de_shards_created": false,
+  "temporary_intermediate_bytes_deleted": 2433164256,
+  "tensor_sha256": "ecd4899d38a7877e29a608ab0c185f0260b567e971eef1ee3debc3e22655abb1",
+  "tensor_shape": [
+    2,
+    50,
+    93,
+    127
+  ],
+  "tests": {
+    "command": "py -3 -m pytest -q -k \"not frozen_missing_itgav_combination_remains_masked\"",
+    "data_not_present_exclusion": "frozen_missing_itgav_combination_remains_masked",
+    "passed": 109,
+    "status": "PASS"
+  },
+  "timestamp_utc": "2026-08-20T18:56:44.246338+00:00",
+  "truth_permutations": 5000,
+  "verdict": {
+    "contexts_q49_below_q2": 46,
+    "coverage_label": "CONTEXT_OPERATOR_SUPPORT_COVERAGE_WEAK",
+    "fit_rows": 448500,
+    "max_support_empirical_p": 0.0001999600079984003,
+    "max_support_null_q95": 0.0028714051053591702,
+    "max_support_residual_energy": 0.01240141688266786,
+    "max_support_residual_lower_95": 0.010017411528530902,
+    "max_support_residual_upper_95": 0.015078884682218949,
+    "maximal_support_label": "NOVEL_REPRODUCIBLE_OPERATOR_PERSISTS_AT_MAX_SUPPORT",
+    "models_trained": 0,
+    "novelty_gates": {
+      "at_least_30_positive_contexts": true,
+      "bootstrap_lower_positive": true,
+      "empirical_p_below_0_05": true,
+      "pooled_residual_positive": true,
+      "residual_above_shuffle_q95": true
+    },
+    "phase": "CGC-SUPPORT-0C",
+    "positive_max_support_contexts": 50,
+    "q2_minus_q49": 0.20044223553440854,
+    "q_values": {
+      "16": 0.9305644466190319,
+      "2": 1.0450307367198348,
+      "24": 0.9006312572492455,
+      "32": 0.878546568017546,
+      "4": 1.0118356346012536,
+      "40": 0.8607714448117538,
+      "49": 0.8445885011854263,
+      "8": 0.9741121021566599
+    },
+    "status": "complete_pending_integrity",
+    "trend_beta1": -0.043751318255579374,
+    "trend_beta1_lower_95": -0.053882925395651364,
+    "trend_beta1_upper_95": -0.03358292010853244,
+    "trend_gates": {
+      "at_least_35_contexts_decline": true,
+      "beta_negative": true,
+      "beta_upper_ci_negative": true,
+      "paired_difference_ci_positive": true,
+      "q49_below_q2": true
+    },
+    "trend_label": "REPRODUCIBLE_RESIDUAL_DECLINES_WITH_CONTEXT_SUPPORT",
+    "truth_gates": {
+      "at_least_40_positive_contexts": true,
+      "bootstrap_lower_positive": true,
+      "empirical_p_below_0_05": true,
+      "observed_above_shuffle_q95": true,
+      "signal_energy_positive": true
+    },
+    "truth_label": "TAHOE_REPLICATE_STABLE_CONTEXT_OPERATOR_CONFIRMED",
+    "virtual_cell_checkpoint_calls": 0
+  }
+}

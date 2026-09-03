@@ -1,0 +1,65 @@
+{
+  "experiment": "LEVEL2-LEA-RNA-CF-0A",
+  "dataset": "Lea et al. 2022 / GSE207049",
+  "primary_question": "baseline ETOH RNA predicts individual-specific DEX-minus-ETOH residual in unseen biological LCLs",
+  "seed": 207049,
+  "input_eligibility": {
+    "allowed_primary_inputs": [
+      "authors' official GSE207049 voom_resid processed matrix for the preregistered pilot, with an explicit SVA caveat",
+      "author unresidualized normalized expression",
+      "author gene counts normalized strictly within each outer training fold"
+    ],
+    "forbidden_primary_inputs": [
+      "expression residualized using genotype or individual-linked latent factors",
+      "expression residualized using ancestry",
+      "expression residualized using treatment",
+      "features or filters estimated from held-out DEX expression"
+    ],
+    "published_voom_resid_role": "primary pilot plus truth validation, under the user's resource amendment dated 2026-08-22",
+    "published_voom_resid_primary_predictor_allowed": true,
+    "reason": "the amended protocol explicitly authorizes the authors' official processed matrix for the pilot; all reports must state that three surrogate variables were removed and must not call the input unresidualized baseline RNA"
+  },
+  "replicate_handling": {
+    "biological_group": "LCL",
+    "prediction_aggregation": "arithmetic mean of every retained version within LCL and treatment",
+    "cross_fold_rule": "all versions of an LCL remain in one outer fold",
+    "truth_replicates": "use only LCLs with two independently labelled retained versions in both ETOH and DEX"
+  },
+  "truth_gate": {
+    "response": "DEX minus ETOH within version, followed by version-specific shared-response centering across replicate-complete LCLs",
+    "bootstrap_unit": "LCL",
+    "bootstrap_draws": 1000,
+    "permutation_draws": 1000,
+    "replicate_global_correlation_gate": "bootstrap lower 95% bound greater than zero",
+    "genetic_support_gate": "at least one DEX-versus-ETOH context-dependent eQTL with LFSR below 0.10 in either environment and posterior effects differing by at least two-fold or sign",
+    "continue_rule": "both replicate and genetic support gates pass"
+  },
+  "pilot_if_input_eligible": {
+    "outer_cv": "five-fold ancestry-stratified grouped split by LCL; seed 207049",
+    "inner_cv": "three-fold ancestry-stratified grouped split by LCL",
+    "models": ["zero residual null", "Ridge", "training-fold PCA plus Ridge", "MLP"],
+    "ridge_alphas": [1.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0],
+    "pca_components": [10, 25, 50, 100],
+    "mlp": {
+      "hidden_widths": [512, 256],
+      "activation": "GELU",
+      "dropout": 0.2,
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "batch_size": 32,
+      "max_epochs": 200,
+      "inner_validation_fraction": 0.2,
+      "early_stopping_patience": 20
+    },
+    "target_centering": "outer-training LCL mean response only",
+    "primary_metric": "pooled OOF residual R2",
+    "positive_predictability_pause": "pooled OOF residual R2 greater than 0.10",
+    "bootstrap_draws": 1000
+  },
+  "stop_rules": {
+    "data_integrity_failure": "stop before model fitting and issue no Level-2 sufficiency verdict",
+    "truth_not_established": "INDIVIDUAL_RESPONSE_RESIDUAL_RELIABILITY_NOT_ESTABLISHED"
+  },
+  "claim_boundary": "No claim of biological RNA insufficiency, transcriptomic identity, information-theoretic impossibility, or impossibility for future models"
+}

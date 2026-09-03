@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-08-25T15:28:06.280896-04:00",
+  "remote_url": "https://s3.dev.maayanlab.cloud/archs4/files/human_gene_v2.5.h5",
+  "remote_head": {
+    "content_length": 47865298452,
+    "etag": "\"350f7e2f1096e77b8b8da50c6a91c509-9130\"",
+    "last_modified": "Sat, 13 Jun 2026 22:46:32 GMT",
+    "accept_ranges": "bytes"
+  },
+  "normalization": "natural log1p of CPM; library sum over all 67,186 genes",
+  "aggregation": "equal arithmetic mean of all confidently assigned GSM versions within LCL-by-treatment",
+  "position_scan": {
+    "range_requests": 16,
+    "bytes_transferred": 67108864
+  },
+  "worker_sessions": [
+    {
+      "timestamp": "2026-08-25T15:23:11.736338-04:00",
+      "worker": 0,
+      "range_requests": 325,
+      "bytes_transferred": 85196800,
+      "peak_rss_bytes": 203939840,
+      "runtime_seconds": 82.90016700001433
+    },
+    {
+      "timestamp": "2026-08-25T15:23:06.602311-04:00",
+      "worker": 1,
+      "range_requests": 302,
+      "bytes_transferred": 79167488,
+      "peak_rss_bytes": 197816320,
+      "runtime_seconds": 77.7643875000067
+    },
+    {
+      "timestamp": "2026-08-25T15:23:22.561551-04:00",
+      "worker": 2,
+      "range_requests": 359,
+      "bytes_transferred": 94109696,
+      "peak_rss_bytes": 211984384,
+      "runtime_seconds": 93.71606459998293
+    },
+    {
+      "timestamp": "2026-08-25T15:23:23.219117-04:00",
+      "worker": 3,
+      "range_requests": 358,
+      "bytes_transferred": 93847552,
+      "peak_rss_bytes": 212672512,
+      "runtime_seconds": 94.37669209996238
+    }
+  ],
+  "expression_range_requests": 1344,
+  "expression_bytes_transferred": 352321536,
+  "total_bytes_transferred_this_run": 419430400,
+  "peak_worker_rss_bytes": 212672512,
+  "runtime_seconds": 101.56028710003011,
+  "initial_extraction_runtime_seconds": 101.56028710003011,
+  "latest_cache_rebuild_runtime_seconds": 0.483211700047832,
+  "full_hdf5_downloaded": false,
+  "raw_sequencing_downloaded": false,
+  "representation_path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\.worktrees\\lea_archs4_robustness\\data\\level2_lea_archs4_matched\\ARCHS4_MATCHED_340_REPRESENTATION.npz",
+  "representation_size_bytes": 13612320,
+  "shard_cache_size_bytes": 15300158,
+  "selected_gsms": 1026,
+  "matched_genes": 10110,
+  "library_size_min": 6.0,
+  "library_size_max": 18528202.0
+}

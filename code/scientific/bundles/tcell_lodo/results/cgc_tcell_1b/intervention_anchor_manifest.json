@@ -1,0 +1,47 @@
+{
+  "definition": "mu_train[p,state] = arithmetic mean delta[p,donor,state] over the three outer-training donors",
+  "context_blind_definition": "mu_train[p] = arithmetic mean of mu_train[p,state] over the three states",
+  "target_count": 9386,
+  "target_order_sha256": "a114b0922e5d2ffaa23fdd9df2acae8e76f348f20626009ff13de6d1bdc9819f",
+  "gene_count": 9082,
+  "gene_order_sha256": "ee30465dfd63279cd24f1dd46803793260861ec5e36e34b512b77179353229cf",
+  "held_out_response_used": false,
+  "folds": [
+    {
+      "outer_fold": 0,
+      "held_out_donor": "CE0006864",
+      "training_donors": [
+        "CE0008162",
+        "CE0008678",
+        "CE0010866"
+      ]
+    },
+    {
+      "outer_fold": 1,
+      "held_out_donor": "CE0008162",
+      "training_donors": [
+        "CE0006864",
+        "CE0008678",
+        "CE0010866"
+      ]
+    },
+    {
+      "outer_fold": 2,
+      "held_out_donor": "CE0008678",
+      "training_donors": [
+        "CE0006864",
+        "CE0008162",
+        "CE0010866"
+      ]
+    },
+    {
+      "outer_fold": 3,
+      "held_out_donor": "CE0010866",
+      "training_donors": [
+        "CE0006864",
+        "CE0008162",
+        "CE0008678"
+      ]
+    }
+  ]
+}

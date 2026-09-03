@@ -1,0 +1,68 @@
+{
+  "git_provenance": "64102cafb02139bcdd26a4b6432e62cadbf8730e",
+  "authorized_files_only": true,
+  "cell_level_files_downloaded": false,
+  "de_files_downloaded": true,
+  "minimum_free_disk_gb": 500,
+  "free_disk_gb_after_download": 948.705,
+  "files": [
+    {
+      "file": "GWCD4i.pseudobulk_merged.h5ad",
+      "path": "data\\raw\\cgc_tcell\\GWCD4i.pseudobulk_merged.h5ad",
+      "url": "https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/GWCD4i.pseudobulk_merged.h5ad",
+      "expected_bytes": 44566657140,
+      "actual_bytes": 44566657140,
+      "sha256": "fd2b8c21d357f8699ec34e2d5ebc1639612c27a0147a9ca94d4983822d93247e"
+    },
+    {
+      "file": "sample_metadata.suppl_table.csv",
+      "path": "data\\raw\\cgc_tcell\\sample_metadata.suppl_table.csv",
+      "url": "https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/suppl_tables/sample_metadata.suppl_table.csv",
+      "expected_bytes": 2966,
+      "actual_bytes": 2966,
+      "sha256": "175a70bef0aca270d49cac278fc1ce02f18c43afb18791a6c13574fba51bad07"
+    },
+    {
+      "file": "QC_summaries_per_sample_lane.csv",
+      "path": "data\\raw\\cgc_tcell\\QC_summaries_per_sample_lane.csv",
+      "url": "https://raw.githubusercontent.com/emdann/GWT_perturbseq_analysis_2025/master/metadata/suppl_tables/QC_summaries_per_sample_lane.csv",
+      "expected_bytes": 60515,
+      "actual_bytes": 60515,
+      "sha256": "cf927a057a5775763d738fb91da624962069b4e487ca6dd6663377b6e45fee6a"
+    },
+    {
+      "file": "sgrna_library_metadata.suppl_table.csv",
+      "path": "data\\raw\\cgc_tcell\\sgrna_library_metadata.suppl_table.csv",
+      "url": "https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/suppl_tables/sgrna_library_metadata.suppl_table.csv",
+      "expected_bytes": 9935249,
+      "actual_bytes": 9935249,
+      "sha256": "00a1bec2afc2082fc79765531696d7e22672a8ba904ea54c035858f425a657a8"
+    },
+    {
+      "file": "guide_kd_efficiency.suppl_table.csv",
+      "path": "data\\raw\\cgc_tcell\\guide_kd_efficiency.suppl_table.csv",
+      "url": "https://raw.githubusercontent.com/emdann/GWT_perturbseq_analysis_2025/master/metadata/suppl_tables/guide_kd_efficiency.suppl_table.csv",
+      "expected_bytes": 13319852,
+      "actual_bytes": 13319852,
+      "sha256": "75929bef741f87a944838fe3638fe3eaeef881c14a6653bab96f4b5df899aee3"
+    },
+    {
+      "file": "GWCD4i.DE_stats.by_guide.h5mu",
+      "path": "data\\raw\\cgc_tcell\\GWCD4i.DE_stats.by_guide.h5mu",
+      "url": "https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/GWCD4i.DE_stats.by_guide.h5mu",
+      "expected_bytes": 29424424894,
+      "actual_bytes": 29424424894,
+      "sha256": "964eeafb3356a7322a1d5b1121802c6a1433456f3591e2d5797817df3bf9c2f6",
+      "conditional_authorization": "primary_truth_signal_confirmed"
+    },
+    {
+      "file": "GWCD4i.DE_stats.by_donors.h5mu",
+      "path": "data\\raw\\cgc_tcell\\GWCD4i.DE_stats.by_donors.h5mu",
+      "url": "https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/GWCD4i.DE_stats.by_donors.h5mu",
+      "expected_bytes": 16866278447,
+      "actual_bytes": 16866278447,
+      "sha256": "2ee3cf90925600eb044619021da2bdd47d661f306a204586652256facf17af64",
+      "conditional_authorization": "primary_truth_signal_confirmed"
+    }
+  ]
+}

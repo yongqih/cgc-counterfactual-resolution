@@ -1,0 +1,70 @@
+{
+  "base_commit": "6d3b3203504eb7f18917c949cfd94536d6f5648d",
+  "coverage": {
+    "interventions_with_exact_target": 50,
+    "interventions_with_target_family": 44,
+    "targets_mapped_to_hgnc": 91,
+    "targets_with_eligible_family": 83,
+    "unique_target_strings": 92
+  },
+  "created_at": "2026-08-22T20:35:51.037785+00:00",
+  "frozen_axes": {
+    "contexts": 50,
+    "genes": 25695,
+    "interventions": 93,
+    "plates": [
+      "Plate6",
+      "Plate14"
+    ]
+  },
+  "outcomes_inspected_before_freeze": false,
+  "phase": "CGC-BIO-2 annotation freeze",
+  "sources": {
+    "bio1_drug_annotation": {
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell_CGC_mechanism\\results\\cgc_tahoe_bio1\\drug_target_moa_manifest.csv",
+      "sha256": "33efd4cebbf7965bd20bc90a44b2b9d917b83740dad1991979d9e1dbc7d3ab59"
+    },
+    "frozen_gene_residual": {
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_bio1_official\\bio1_gene_arrays.npz",
+      "sha256": "6b46053324175bfc34b2534bb59ae5519a1aa47b504ddeb2887956953f222228"
+    },
+    "frozen_program_residual": {
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_bio1_official\\bio1_projected_programs.npz",
+      "sha256": "b481b44f29a22227527e9e9c05c48dbc203e0b33a48406e49b0bb7557ca60999"
+    },
+    "hgnc_gene_family": {
+      "bytes": 16947570,
+      "declared_snapshot_date": "2026-07-07",
+      "downloaded_at": "2026-08-22T20:35:51.037785+00:00",
+      "fields": [
+        "symbol",
+        "status",
+        "locus_group",
+        "gene_group",
+        "gene_group_id"
+      ],
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell_CGC_mechanism\\data\\cgc_mechanism_followup\\hgnc_complete_set_2026-07-07.tsv",
+      "sha256": "d63733c257ffeca6116f6fd401960da8ed113d213463bc0d1a6be26dc87e7f13",
+      "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt"
+    }
+  },
+  "target_family_rule": {
+    "approved_protein_coding_group_size": [
+      2,
+      100
+    ],
+    "excluded_name_patterns": [
+      "domain containing",
+      "complex subunits",
+      "complex 1",
+      "complex 2",
+      "host genes",
+      "CD molecules",
+      "minor histocompatibility antigens",
+      "protein phosphatase 1 regulatory subunits"
+    ],
+    "multi_target_aggregation": "union of eligible HGNC group IDs",
+    "pair_match": "at least one shared eligible group ID; exact-target level is identical non-empty canonical target set",
+    "source": "HGNC gene_group_id"
+  }
+}

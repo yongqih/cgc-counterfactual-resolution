@@ -1,0 +1,29 @@
+{
+  "analysis_name": "Low-rank context-by-intervention completion",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Main_Figure_3_source_data.csv",
+    "Extended_Data_Figure_3_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Main_Figure_3_source_data.csv",
+      "where": {
+        "kind": "lowrank_interaction_increment"
+      },
+      "column": "value",
+      "expected": -0.0051041546297324,
+      "tolerance": 1e-14
+    },
+    {
+      "file": "Extended_Data_Figure_3_source_data.csv",
+      "where": {
+        "kind": "synthetic_rank4",
+        "label": "Low-rank interaction"
+      },
+      "column": "value",
+      "expected": 0.9998231320207877,
+      "tolerance": 1e-14
+    }
+  ]
+}

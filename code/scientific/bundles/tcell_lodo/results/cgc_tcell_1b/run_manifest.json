@@ -1,0 +1,13 @@
+{
+  "git_provenance": "fdbe80a",
+  "branch": "cgc_tcell_strict_lodo_benchmark",
+  "runtime_seconds": 1539.6813925000024,
+  "model_fit_count": 244,
+  "outer_folds": 4,
+  "bootstrap_draws": 10000,
+  "full_cell_data_used": false,
+  "published_de_targets_used": false,
+  "response_pca_protocol_deviation": true,
+  "peak_vram_bytes": 270625792,
+  "verdict": "CONTEXT_GEOMETRY_COMPRESSION_SUPPORTED"
+}

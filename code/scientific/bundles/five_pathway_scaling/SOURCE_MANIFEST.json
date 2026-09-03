@@ -1,0 +1,160 @@
+{
+  "id": "five_pathway_scaling",
+  "analysis_name": "Predefined five-pathway held-context scaling",
+  "class": "FULL_ANALYSIS",
+  "commit": "22926886e3f87994492720ad2a529dd382596f09",
+  "entrypoints": [
+    {
+      "path": "scripts/tahoe_five_pathway_scaling.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "scripts/tahoe_five_pathway_scaling.py",
+    "src/igc_virtual_cell/tahoe_five_pathway_scaling.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/tahoe_five_pathway_scaling/TAHOE_FIVE_PATHWAY_SCALING_PATHWAY_MANIFEST.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+      "authority": "response_manifest.json",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+      "authority": "frozen pathway model source",
+      "bytes_if_known": 2705687,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "results/tahoe_five_pathway_scaling"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [],
+  "claim_boundary": "Externally predefined pathway set; no outcome-based selection. Historical uncertainty superseded by ed7_hierarchical_repair.",
+  "allowed_stage": "prepare",
+  "active_execution_guard": "Only the empirical prepare stage is allowlisted; original finalize/all produce superseded context-only intervals. Use ed7_hierarchical_repair for current inference.",
+  "exported_file_count": 10,
+  "exported_source_bytes": 185720,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "zarr"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/tahoe_five_pathway_scaling/TAHOE_FIVE_PATHWAY_SCALING_PATHWAY_MANIFEST.csv",
+      "source_file": "results/tahoe_five_pathway_scaling/TAHOE_FIVE_PATHWAY_SCALING_PATHWAY_MANIFEST.csv",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "4af72a71f2a7013e086fd6558153153b9153efa6",
+      "sha256": "df576a6cc5b6304ff86eae195cda359041fdc7fdb2bc86710c10b3745ad4fd41",
+      "size_bytes": 6104,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/tahoe_five_pathway_scaling.py",
+      "source_file": "scripts/tahoe_five_pathway_scaling.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "bad4ea11b906b30325f8aba2214f0e7384d1020d",
+      "sha256": "3821b3831961db811c66394f13bc59002e9b4a907406338042712d8ec2afebab",
+      "size_bytes": 828,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0i/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0i/__init__.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "b083c50f29b32fe55fa7e7dc5b7528da590630a2",
+      "sha256": "3e47ce5f7d31c0a140531355fdc808fba43553018b1d0fc91c2bf9bcd0d05bc7",
+      "size_bytes": 59,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0i/scaling.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0i/scaling.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "c9a7ab0f26b2e32f199ab1b1042f701b18ce1246",
+      "sha256": "7ced2dc901283dff77faf2d367069de1a88c45c53c6d49f97fe8fa5cb0c5679f",
+      "size_bytes": 27800,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0i/truth.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0i/truth.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "3dfece624417cc5a006b9a40d220621cc13efd5a",
+      "sha256": "c01b7fb5b23ffe13ad8f4b4c5cc16bb55b6c8b93fd7a4043c3698f63341aed42",
+      "size_bytes": 11698,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/tahoe_five_pathway_scaling.py",
+      "source_file": "src/igc_virtual_cell/tahoe_five_pathway_scaling.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "3db2f732d0241720b5463ad7b6aa568c5b0530cb",
+      "sha256": "c758cbcda6069875c9847d5aa4250f2b6d2b24af3030c0f49634d6af7cd0efeb",
+      "size_bytes": 61558,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/tahoe_held_context_finalize.py",
+      "source_file": "src/igc_virtual_cell/tahoe_held_context_finalize.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "7e75f39d4360cdcb228fded651d35aec132d8074",
+      "sha256": "5b3947a06c92e442575faeaeb2b37a96819432927c9fac8259c6e91efdeb8109",
+      "size_bytes": 40285,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/tahoe_held_context_scaling.py",
+      "source_file": "src/igc_virtual_cell/tahoe_held_context_scaling.py",
+      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "git_blob": "a03e8beb3019ccd82b5b1cffbc4e47debb3b8828",
+      "sha256": "6e59a0e3a6c52fc16bb5bd20b78885a3e4e321a82dcf5dc8aa73758a20b82346",
+      "size_bytes": 36469,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

@@ -1,0 +1,59 @@
+{
+  "experiment": "LEVEL2-LEA-RNA-CF-0A",
+  "created_at": "2026-08-22T10:07:19.692485-04:00",
+  "git_commit_at_audit": "7ec0049fb105a5d21d41239737750b4128b8eca4",
+  "source": "GEO GSE207049; Zenodo DOI 10.5281/zenodo.6595427 checksum; AmandaJLea/LCLs_gene_exp metadata",
+  "filename": "GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+  "compressed_size_bytes": 217469362,
+  "compressed_sha256": "55a504219b90b9c532d44462c3d49a3bf19606e12a2ae7b310aed1991214587b",
+  "uncompressed_md5": "fc2e3e6d082ab6431155830c9a7767a7",
+  "matrix_total_rows_with_header": 10158,
+  "matrix_gene_rows": 10157,
+  "matrix_total_columns": 3887,
+  "matrix_sample_columns": 3886,
+  "first_header": "GeneID",
+  "field_counts": [
+    3887
+  ],
+  "metadata_rows": 3886,
+  "metadata_columns": 9,
+  "filtered_info_rows": 3886,
+  "filtered_info_columns": 5,
+  "gene_id_rows": 10157,
+  "duplicate_gene_id_rows_beyond_first": 37,
+  "unique_lines_all_processed": 500,
+  "ETOH_samples": 433,
+  "DEX_samples": 448,
+  "paired_ETOH_DEX_LCLs": 342,
+  "paired_ancestry": {
+    "AFR": 177,
+    "EUR": 165
+  },
+  "pairing_classes": {
+    "one_to_one": 306,
+    "DEX_only": 70,
+    "ETOH_only": 59,
+    "neither": 29,
+    "two_to_two": 24,
+    "two_ETOH_one_DEX": 6,
+    "one_ETOH_two_DEX": 6
+  },
+  "duplicate_handling": "arithmetic mean of all retained samples within biological line and treatment; all versions remain in one outer fold",
+  "checks": {
+    "gzip_stream_readable": true,
+    "matrix_rectangular": true,
+    "matrix_first_header_is_GeneID": true,
+    "matrix_sample_names_unique": true,
+    "matrix_metadata_sample_count_match": true,
+    "matrix_metadata_name_order_exact": true,
+    "matrix_filtered_info_name_order_exact": true,
+    "filtered_id_range_exact": true,
+    "filtered_id_to_sample_name_exact": true,
+    "matrix_gene_count_matches_companion": true,
+    "matrix_gene_order_matches_companion": true,
+    "uncompressed_md5_matches_Zenodo": true,
+    "twenty_sample_GEO_linkage_pass": true,
+    "paired_LCL_count_plausible": true
+  },
+  "verdict": "DATA_INTEGRITY_PASS"
+}

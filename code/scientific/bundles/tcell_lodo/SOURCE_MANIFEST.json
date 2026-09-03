@@ -1,0 +1,383 @@
+{
+  "id": "tcell_lodo",
+  "analysis_name": "Strict leave-one-donor-out T-cell predictor benchmark",
+  "class": "FULL_ANALYSIS",
+  "commit": "f8f6b345fba8b90b834558834f26665b63300177",
+  "implementation_commit": "fdbe80ab9e39560aaf367d41fdc2f0728996d0da",
+  "entrypoints": [
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell_1b/benchmark.py",
+      "command": "python -m igc_virtual_cell.cgc_tcell_1b.benchmark --root . --config configs/cgc_tcell_1b.yaml",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true,
+      "module": "igc_virtual_cell.cgc_tcell_1b.benchmark"
+    }
+  ],
+  "source_roots": [
+    "src/igc_virtual_cell/cgc_tcell_1b"
+  ],
+  "extra_sources": [
+    "tests/test_cgc_tcell_1b.py"
+  ],
+  "configs": [
+    "configs/cgc_tcell_1b.yaml"
+  ],
+  "split_metadata": [
+    "results/cgc_tcell_1b/context_feature_manifest.json",
+    "results/cgc_tcell_1b/inner_validation_manifest.csv",
+    "results/cgc_tcell_1b/intervention_anchor_manifest.json",
+    "results/cgc_tcell_1b/model_training_manifest.json",
+    "results/cgc_tcell_1b/outer_fold_manifest.csv",
+    "results/cgc_tcell_1b/response_basis_manifest.csv",
+    "results/cgc_tcell_1b/run_manifest.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/processed/cgc_tcell",
+      "authority": "T-cell truth freeze 4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/cgc_tcell",
+      "authority": "Frozen truth manifests, strict-trans genes, dataset_inventory.json and NTC manifest",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/raw/cgc_tcell/GWCD4i.pseudobulk_merged.h5ad",
+      "authority": "Required by NTC baseline extraction if data/processed/cgc_tcell_1b/ntc_context.float32.npy is not already valid",
+      "bytes_if_known": 44566657140,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    }
+  ],
+  "outputs": [
+    "results/cgc_tcell_1b",
+    "data/processed/cgc_tcell_1b"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "CUDA-enabled Torch and a compatible GPU are required by this unchanged implementation; benchmark.run explicitly rejects unavailable CUDA. Substantial input caches are required.",
+    "Four donor-disjoint outer folds; response-basis protocol deviation is explicitly disclosed in original run_manifest.json, not hidden by source packaging."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_cgc_tcell_1b.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 31,
+  "exported_source_bytes": 322993,
+  "external_import_roots": [
+    "anndata",
+    "numpy",
+    "pandas",
+    "psutil",
+    "pyarrow",
+    "scipy",
+    "sklearn",
+    "torch",
+    "yaml"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/cgc_tcell_1b.yaml",
+      "source_file": "configs/cgc_tcell_1b.yaml",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "f5132d71427657cc9de4e31dac246c44eada5a4e",
+      "sha256": "13c3b3171e96c691b752276b27b1bace783da97b6730e99b0c352f193f262a0c",
+      "size_bytes": 804,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "12c7b79087dc881488270a200690de5bf23fc0fe",
+      "sha256": "b7d57b9c126f6e71dfdb6d72763bb965d1f791aff4f94a2a52bb268eaa234a7f",
+      "size_bytes": 729,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/context_feature_manifest.json",
+      "source_file": "results/cgc_tcell_1b/context_feature_manifest.json",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "01562f4bc090437753caffa45f946ab2c70b93f4",
+      "sha256": "b226ab064362478651ff3a924059d1ce108ddfcb6177234e97c0f5489e06c166",
+      "size_bytes": 2035,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/inner_validation_manifest.csv",
+      "source_file": "results/cgc_tcell_1b/inner_validation_manifest.csv",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "3fa2e409458e1c1809dda2f0307dd4a4679ec4e8",
+      "sha256": "0c98570ab177f7fb54aa8660cdf82025feee8a0f1ea3876a67b72a9e75afdfc7",
+      "size_bytes": 22645,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/intervention_anchor_manifest.json",
+      "source_file": "results/cgc_tcell_1b/intervention_anchor_manifest.json",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "269c3666b13061bc81773d9c5a27a48dc232920b",
+      "sha256": "bfadfcb89030083c4733d381fa4ff1d70c92ab6c23e148537061dcd5cd296fc2",
+      "size_bytes": 1183,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/model_training_manifest.json",
+      "source_file": "results/cgc_tcell_1b/model_training_manifest.json",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "18b89c752c46d8faaf141d8238345ca6942f1add",
+      "sha256": "c269e570d75b13ea196c47edb98526d5791246f2dbdf834a9c5c8619da863926",
+      "size_bytes": 415,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/outer_fold_manifest.csv",
+      "source_file": "results/cgc_tcell_1b/outer_fold_manifest.csv",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "0bf5685b966116a4370b8794d24fa425327c3f19",
+      "sha256": "88c5667f89b56abe22248a09552f67405cdf7c2153c5d706de349ef2db95892b",
+      "size_bytes": 369,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/response_basis_manifest.csv",
+      "source_file": "results/cgc_tcell_1b/response_basis_manifest.csv",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "ca2b10a307163e168e83d243d75d04f97c407b54",
+      "sha256": "1a8863cf260c4a471255a6c128f030b5afc8d22af8fee331c3dc7502ff796d7b",
+      "size_bytes": 807,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tcell_1b/run_manifest.json",
+      "source_file": "results/cgc_tcell_1b/run_manifest.json",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "b7ea150ab8ce17f4e94cd05465f16ffce867108d",
+      "sha256": "c766ed9abf664da2e6164029b88b8f97b7063deaa22c5de98c22927316c39eeb",
+      "size_bytes": 396,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "061825b54132205f3f008f4a83c856b8ed75306a",
+      "sha256": "91b8ea5a81769317618060d1bc91dcb8f8b9fb8fe3ad4a39320bff276531cd2b",
+      "size_bytes": 66,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc/core.py",
+      "source_file": "src/igc_virtual_cell/cgc/core.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "bcb24a79d1d307b7b80e4af92b2f2334704df7ca",
+      "sha256": "7d5d91542bc48b9e3f55abe1846444fcc968316a21fa0b635b24225c5e9fb1e6",
+      "size_bytes": 9663,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "a6db9cbe5114d405da7f5cdd1c68bc0964eec172",
+      "sha256": "38fb2f5eda3986080dc71e6921fe85191a14cfb6190b81c466befe47e3692ab6",
+      "size_bytes": 59,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell/core.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell/core.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "c171f760d78702d81a495e7dbe4ace0ee71c221d",
+      "sha256": "a07e7629396bcc52c22faac7b119fff822e7d0e11d3968704e9626b3470ae0ee",
+      "size_bytes": 16527,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell/inventory.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell/inventory.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "a3fa873cce819f03fcaf0bd8edfaa95e16581e44",
+      "sha256": "1dff83f2678cfe4b7c99225ca757ec1bfea67f064f5cf1dbaab11937ca45f371",
+      "size_bytes": 13319,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell/prepare.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell/prepare.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "fb49fb8c4179dd00b36103c5048cac4b5810f58a",
+      "sha256": "10fae3e3c9a543bf7e1f6a209a8557b56a659d9acc1e195eed262a41cecb3f54",
+      "size_bytes": 22360,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell_1b/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell_1b/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "d45c8802a6f9a8246fc91300656dabd930be9c50",
+      "sha256": "00f06a6d4ee3d221cf4881287c617e480897593b6575d9f92d05ba628ef236a2",
+      "size_bytes": 54,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell_1b/audit.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell_1b/audit.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "6124dbfd199943dcb70f7583476b683717d7ef76",
+      "sha256": "5334717a500796cfd32e47cf3958f48ec3213ff85be23060190dbd437f939040",
+      "size_bytes": 14581,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tcell_1b/benchmark.py",
+      "source_file": "src/igc_virtual_cell/cgc_tcell_1b/benchmark.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "e6df2a88e54cb2ad8a739480bac728aa2c85e3f1",
+      "sha256": "635c20be02760b93697a69801ac26404a901eb040b01955272e14255149cf3fb",
+      "size_bytes": 57650,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/data/__init__.py",
+      "source_file": "src/igc_virtual_cell/data/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "2471ed807fe7cffb39f6ec29205b5f695aeffa52",
+      "sha256": "4afb2a20aa7e1ef461741819f5592b0e7fbc056b11eb7a4b4f578346380d8503",
+      "size_bytes": 63,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/data/ingest_feng.py",
+      "source_file": "src/igc_virtual_cell/data/ingest_feng.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "85430b23f424a8340159893f27d7ff29d6d1256c",
+      "sha256": "699dffb32830a535179ee14fc620de691ff42406d45f024990150678f9d211e0",
+      "size_bytes": 26237,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/data/materialize_feng.py",
+      "source_file": "src/igc_virtual_cell/data/materialize_feng.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "a22791444e2387fcb7167edef94537af2cfc8619",
+      "sha256": "c011a8c2e1697c1b5c4e0fe1b604b847399d19f131709313f856cd99fff185b2",
+      "size_bytes": 15542,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/data/schema.py",
+      "source_file": "src/igc_virtual_cell/data/schema.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "3f01703468552d8db11f4fb915a455ea15fd40b9",
+      "sha256": "bace578e543ecb141e83ddbc758f27fcd63c81921c6e8596ecc16dd2c127da05",
+      "size_bytes": 6896,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/phase1/__init__.py",
+      "source_file": "src/igc_virtual_cell/phase1/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "edbdbf8e46e0e2fa0591ebb3b02a247b6342b010",
+      "sha256": "9a06603aac3ac32e1dd8dfbd24f051444305e6937846db000d4370868a474673",
+      "size_bytes": 71,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/phase1/analysis.py",
+      "source_file": "src/igc_virtual_cell/phase1/analysis.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "06d011e50ba9d2585c26d2c8d4f5b520f0d288b9",
+      "sha256": "f67ee83ef117c6d0f71c45b703a6a56d4285910a10cc733489b41cdb00083e2b",
+      "size_bytes": 40253,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/phase1/materialize.py",
+      "source_file": "src/igc_virtual_cell/phase1/materialize.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "887041b1a9d3835c4502e530fe4995d98e2bd83e",
+      "sha256": "6bf36fe7d096bad7488fff9353d9207224ac2a4441a2fd47837bbafc76a694fa",
+      "size_bytes": 16771,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/phase1/targeted_counts.py",
+      "source_file": "src/igc_virtual_cell/phase1/targeted_counts.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "e702c24eb96699f11805d2049d49be792e5be923",
+      "sha256": "76c717ad887ccc73c7755b0833a90a9df0227ece254335b87764f495a4458ddc",
+      "size_bytes": 8998,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/phase1/targeted_tensorized.py",
+      "source_file": "src/igc_virtual_cell/phase1/targeted_tensorized.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "48d148fa00780c7338ddd3eaa5fd62782301b166",
+      "sha256": "30856095a5847a902a07453ad39b8f7d4f3da8296279038f680e479caf745e2d",
+      "size_bytes": 36064,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/programs/__init__.py",
+      "source_file": "src/igc_virtual_cell/programs/__init__.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "5dc519477fe9313483e59b504b5dfaebbc38f4d6",
+      "sha256": "5b2646b62bf10903606b99264056c97d300afb2c6bbbc6075b62222d942b748a",
+      "size_bytes": 39,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/programs/decompose.py",
+      "source_file": "src/igc_virtual_cell/programs/decompose.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "7cf9b75599a98b4a9e5c2b41b11d6e5c8df118b6",
+      "sha256": "2d25dc02bfcd68e537292389a4264839a4c42b3ddc908a363064d02347911bd2",
+      "size_bytes": 5705,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_cgc_tcell_1b.py",
+      "source_file": "tests/test_cgc_tcell_1b.py",
+      "source_commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "git_blob": "0e758fac37422899396f9e8fc047932937f76ae0",
+      "sha256": "e5bbb4fed41a0a5ed5e53fe6865736de57282ee1bce21cdd09f1a6890f4b8999",
+      "size_bytes": 2607,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

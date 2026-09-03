@@ -1,0 +1,230 @@
+{
+  "id": "lea_semisynthetic",
+  "analysis_name": "Lea semi-synthetic baseline-encoded response identifiability control",
+  "class": "FULL_ANALYSIS",
+  "commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+  "implementation_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+  "entrypoints": [
+    {
+      "path": "scripts/lea_semisynthetic_control.py",
+      "command": "python scripts/lea_semisynthetic_control.py run --root . --source-root <historical-Lea-root>",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/lea_semisynthetic_control.py",
+    "src/igc_virtual_cell/lea_semisynthetic.py",
+    "scripts/level2_lea_pilot.py"
+  ],
+  "extra_sources": [
+    "tests/test_lea_semisynthetic.py"
+  ],
+  "configs": [
+    "configs/lea_semisynthetic_control_frozen.json"
+  ],
+  "split_metadata": [
+    "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_PROTOCOL.md",
+    "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
+    "results/level2_lea/FULL_BATTERY_UNITS.csv",
+    "results/level2_lea/TRUTH_RELIABILITY.json",
+    "results/level2_lea/MODEL_SELECTED_HYPERPARAMETERS.csv",
+    "results/level2_lea/FULL_MODEL_SELECTED_HYPERPARAMETERS.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+      "authority": "Historical response/base-state arrays and frozen LCL folds",
+      "bytes_if_known": 90490423,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "results/level2_lea/FULL_MODEL_BATTERY_RESULTS.csv",
+      "authority": "Frozen real-data results for side-by-side comparison only",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    }
+  ],
+  "outputs": [
+    "results/lea_semisynthetic_identifiability_control"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Simulated baseline-encoded rank4 response with fixed reliability and10 simulation seeds; not a new biological dataset or estimate of real biological information fraction.",
+    "Uses frozen real-data hyperparameters; source runs tiered model/signal sweep and can use CPU or CUDA. No simulation or fitting was executed in this release repair."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_lea_semisynthetic.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 15,
+  "exported_source_bytes": 121284,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "scripts",
+    "sklearn",
+    "torch"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/lea_semisynthetic_control_frozen.json",
+      "source_file": "configs/lea_semisynthetic_control_frozen.json",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "535c1d29d81800ccb9ee4967e823c36a500bcd3b",
+      "sha256": "404a732cda25fe579955cfc0e084959aaba6fb881418ccc5abde4984b4e43982",
+      "size_bytes": 2003,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
+      "source_file": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "c3f6df83a300bd05860c355cf55143e89bbc52df",
+      "sha256": "6a8b65856d52fa8d8d8cd0e283dbac78aea2d63275d4c5ac3764e0914af8931c",
+      "size_bytes": 1539,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_PROTOCOL.md",
+      "source_file": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_PROTOCOL.md",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "38287b620254eb96fd6ec1b85fa0f3479d7cf088",
+      "sha256": "cf3f5872a8af0d748f6275a30efceebf695b67047a56c52327483ef62b1d7534",
+      "size_bytes": 7269,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/FULL_BATTERY_UNITS.csv",
+      "source_file": "results/level2_lea/FULL_BATTERY_UNITS.csv",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "936d4b8320a967a36db43720f1f1754bdf8e9de8",
+      "sha256": "e211d9622cec963d0f0999a07cdf731e3a6b6a755f51586f516b3ddbcda80ef3",
+      "size_bytes": 15800,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/FULL_MODEL_SELECTED_HYPERPARAMETERS.csv",
+      "source_file": "results/level2_lea/FULL_MODEL_SELECTED_HYPERPARAMETERS.csv",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "a682542630293dc78d6275cdce558741a29356bd",
+      "sha256": "a12d2ff4160f81694f4649359e9867a061a95d0a20b5bb63ccbb4db196902bb3",
+      "size_bytes": 610,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/MODEL_SELECTED_HYPERPARAMETERS.csv",
+      "source_file": "results/level2_lea/MODEL_SELECTED_HYPERPARAMETERS.csv",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "d29f690e720e08f895ff713a23f741096621e106",
+      "sha256": "59dc601a6fb9224082b4367a3e2eadc253ca677bc91fdff8eec358151cad4886",
+      "size_bytes": 201,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/level2_lea/TRUTH_RELIABILITY.json",
+      "source_file": "results/level2_lea/TRUTH_RELIABILITY.json",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "5afbf50083264ecb1897b97a119b29a5a0e79597",
+      "sha256": "12e5c4d5509d27b7279342a6fb2c4e08dd27b6743f223415cad85a2313462a9b",
+      "size_bytes": 870,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/lea_semisynthetic_control.py",
+      "source_file": "scripts/lea_semisynthetic_control.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "5ea05a7e76a3539cd6f1296d1751ff9e9f64a6be",
+      "sha256": "6649f53b611461c1080464d53f79d0634948051fc1b090ce71c4a85541429f5c",
+      "size_bytes": 896,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/level2_lea_pilot.py",
+      "source_file": "scripts/level2_lea_pilot.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "579d58c55b10a96579502fd73eaacf2c00c67a74",
+      "sha256": "db3fa07123670d0c6331ef08515883714b6e71d581fcfeda193eec0803b83ad1",
+      "size_bytes": 29240,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/lea_semisynthetic.py",
+      "source_file": "src/igc_virtual_cell/lea_semisynthetic.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "9a2325e07c4840e22001af3dd7a54b11e7c017b1",
+      "sha256": "29fccd4dd053945222b54ec3838909d69122050a64349e4cff8efb5bf109ed7f",
+      "size_bytes": 39435,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/level2_full.py",
+      "source_file": "src/igc_virtual_cell/level2_full.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "34bb1c95b0f1408096358d7fcc6f6d061449363f",
+      "sha256": "dcf79af7d937b9001a9de9a71ec40d3e2e8aa94f4ee351d5f29fb897aa776564",
+      "size_bytes": 14841,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/level2_lea.py",
+      "source_file": "src/igc_virtual_cell/level2_lea.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "3180cd57c2da2f63d29f468529aa60502fbeaf38",
+      "sha256": "d435a3b3d71595a21b80047ad259f1b5c65459330a0cce578f321748f30fba9e",
+      "size_bytes": 4791,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_lea_semisynthetic.py",
+      "source_file": "tests/test_lea_semisynthetic.py",
+      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "git_blob": "78649618e1c21daf982541527e6cf94a99123d73",
+      "sha256": "97865c6b15340f63f98e9f8b04130493ff1c83f23e49967a701b496da1a5179d",
+      "size_bytes": 2870,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

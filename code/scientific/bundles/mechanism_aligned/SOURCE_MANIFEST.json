@@ -1,0 +1,411 @@
+{
+  "id": "mechanism_aligned",
+  "analysis_name": "Final BIO2 attribution and MULTI2 mechanism-aligned prediction",
+  "class": "FULL_ANALYSIS",
+  "commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+  "entrypoints": [
+    {
+      "path": "scripts/cgc_mechanism_bio2.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_mechanism_multi2.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "src/igc_virtual_cell/cgc_mechanism_followup",
+    "scripts/cgc_mechanism_bio2.py",
+    "scripts/cgc_mechanism_multi2.py",
+    "scripts/cgc_mechanism_finalize.py",
+    "scripts/freeze_cgc_mechanism_followup.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
+    "results/cgc_mechanism_followup/BIO2_FROZEN_INTERVENTION_ANNOTATIONS.csv",
+    "results/cgc_mechanism_followup/BIO2_HIERARCHICAL_ATTRIBUTION_PROTOCOL.md",
+    "results/cgc_mechanism_followup/BIO2_RUN_MANIFEST.json",
+    "results/cgc_mechanism_followup/CGC_MECHANISM_REPORTING_MANIFEST.json",
+    "results/cgc_mechanism_followup/MULTI2_ANNOTATION_PROVENANCE.json",
+    "results/cgc_mechanism_followup/MULTI2_FEATURE_MAP.json",
+    "results/cgc_mechanism_followup/MULTI2_MECHANISM_ALIGNED_PROTOCOL.md",
+    "results/cgc_mechanism_followup/MULTI2_RUN_MANIFEST.json",
+    "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
+    "results/cgc_mechanism_followup/BIO2_MATCHING_RULES.json",
+    "results/cgc_mechanism_followup/BIO2_NULL_DEFINITIONS.md",
+    "results/cgc_tahoe_0i/pseudobulk_sample_metadata.csv",
+    "results/cgc_tahoe_bio1/cellline_depmap_mapping.csv",
+    "results/cgc_tahoe_bio1/drug_target_moa_manifest.csv",
+    "results/cgc_tahoe_bio1/genotype_drug_match_manifest.csv",
+    "results/cgc_tahoe_bio1/program_manifest.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/cgc_bio1_official/bio1_gene_arrays.npz",
+      "authority": "MULTI2 SOURCE_HASHES; BIO2 EXPECTED_GENE_HASH",
+      "bytes_if_known": 1911708512,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_bio1_official/bio1_projected_programs.npz",
+      "authority": "BIO2 EXPECTED_PROGRAM_HASH",
+      "bytes_if_known": 191722116,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_multi1_official/rppa500-mclp_tahoe49.parquet",
+      "authority": "MULTI2 SOURCE_HASHES",
+      "bytes_if_known": 210556,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Shared prepared measurements reused by final MULTI2, not historical MULTI1 results."
+    },
+    {
+      "path": "data/cgc_multi1_official/harmonized_Sanger_MS_2022_tahoe49.parquet",
+      "authority": "MULTI2 SOURCE_HASHES",
+      "bytes_if_known": 2331840,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_multi1_official/Chronos_Combined_tahoe49.parquet",
+      "authority": "MULTI2 SOURCE_HASHES",
+      "bytes_if_known": 7068304,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_mechanism_followup",
+      "authority": "MULTI2_ANNOTATION_PROVENANCE.json",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+      "authority": "MULTI2 load_foundation baseline-only primary_dmso_cpm",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+      "authority": "gene_universe_hashes.json",
+      "bytes_if_known": 102908,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+      "authority": "MULTI2 SOURCE_HASHES",
+      "bytes_if_known": 2705687,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "results/cgc_mechanism_followup"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [],
+  "claim_boundary": "Power denotes detection under oracle-aligned injected delta-g, not an unbiased fitted-effect MDE. Dependency is an oracle input, not deployment-available untreated biology.",
+  "path_adapter": "bio2: launcher sets only common/bio2 ROOT, SOURCE_ROOT and OUT before invoking unchanged run_bio2; multi2 accepts --root --source-root --out.",
+  "exported_file_count": 29,
+  "exported_source_bytes": 2657082,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "zarr"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
+      "source_file": "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "0cd983899ca7b1a7117c8de74b889283d0908b0c",
+      "sha256": "c5f8db3ad7fb269eff6e52050e4ae91ac4689e6e91937f318a8581d8b7692a0c",
+      "size_bytes": 2536,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/BIO2_FROZEN_INTERVENTION_ANNOTATIONS.csv",
+      "source_file": "results/cgc_mechanism_followup/BIO2_FROZEN_INTERVENTION_ANNOTATIONS.csv",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "3f5c7e86a9616b2481c920b72f70c23adc2aaf0f",
+      "sha256": "d5182dc456c83314cdb0e40b1498814040c614451412b0f0973dcffd6bfbbc1d",
+      "size_bytes": 12103,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/BIO2_HIERARCHICAL_ATTRIBUTION_PROTOCOL.md",
+      "source_file": "results/cgc_mechanism_followup/BIO2_HIERARCHICAL_ATTRIBUTION_PROTOCOL.md",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "da1f8ce587b716860a8c68a268aa0b71e5740065",
+      "sha256": "49e7a1326f30180120b2aca6d0908829b10dce6c597f364f482c5cebc2510728",
+      "size_bytes": 4766,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/BIO2_MATCHING_RULES.json",
+      "source_file": "results/cgc_mechanism_followup/BIO2_MATCHING_RULES.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "53dcccbb0f19cbdd6b3637057030ce23d0abd756",
+      "sha256": "0d9ab2f1f662cae69b495d5fbe628b41a2a12a446d9d771241939439a70dbb1f",
+      "size_bytes": 3189,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/BIO2_NULL_DEFINITIONS.md",
+      "source_file": "results/cgc_mechanism_followup/BIO2_NULL_DEFINITIONS.md",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "dde793b2133e55c68a17a74f2f3519db31b0fb96",
+      "sha256": "974d0f34f30df186ed94d8d2c6ae44d88978100273122b2adc7e45a2ddecfaa0",
+      "size_bytes": 1857,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/BIO2_RUN_MANIFEST.json",
+      "source_file": "results/cgc_mechanism_followup/BIO2_RUN_MANIFEST.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "b2eeb048d4c15a7321c3db3aa2d94fb5b1334f88",
+      "sha256": "597351f0eab8a4993a39b969c7d7a38a56766728ca79becb7bf2bd731b9886ca",
+      "size_bytes": 1819,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/CGC_MECHANISM_REPORTING_MANIFEST.json",
+      "source_file": "results/cgc_mechanism_followup/CGC_MECHANISM_REPORTING_MANIFEST.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "6370db3fa76dfdc9f8221d5179231e2b84e34aee",
+      "sha256": "b83e69c1f998c74137e64c6135fad4320ad53f6ddf4981a62013899d98a2575a",
+      "size_bytes": 5176,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/MULTI2_ANNOTATION_PROVENANCE.json",
+      "source_file": "results/cgc_mechanism_followup/MULTI2_ANNOTATION_PROVENANCE.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "f8c72e46e4733e6914030ab8e28f940b7320dd9d",
+      "sha256": "538844ca570b693798d7dceb26eb0d862c3b2844cd1f3ad84160062203100f87",
+      "size_bytes": 833,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/MULTI2_FEATURE_MAP.json",
+      "source_file": "results/cgc_mechanism_followup/MULTI2_FEATURE_MAP.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "7716c5e1391ff121f4addf06d6c132ef5f402a7c",
+      "sha256": "fcf8947e0d436d045a64f4ad877649840fbbf8e1660c1334600006fd4921c435",
+      "size_bytes": 2616,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/MULTI2_MECHANISM_ALIGNED_PROTOCOL.md",
+      "source_file": "results/cgc_mechanism_followup/MULTI2_MECHANISM_ALIGNED_PROTOCOL.md",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "f53b7ee0297a2c5cb1d0ecf52cb4ac6d104d05ec",
+      "sha256": "422ae0426dedd807ca26c37ea3478d696dcbf27980b78f85ab93cdd1187ec166",
+      "size_bytes": 5041,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_mechanism_followup/MULTI2_RUN_MANIFEST.json",
+      "source_file": "results/cgc_mechanism_followup/MULTI2_RUN_MANIFEST.json",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "e9e3664b70107e0a1a30b743614e07f0432fc143",
+      "sha256": "dc7071c7169b1c7a100a4877f244c4de18a48fad11420f83aa3e97a017a8a675",
+      "size_bytes": 3996,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_0i/pseudobulk_sample_metadata.csv",
+      "source_file": "results/cgc_tahoe_0i/pseudobulk_sample_metadata.csv",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "2d3bf044ec09e07327d6c5725ea8785eeff0a959",
+      "sha256": "60ff090c2998075a49abaaad357dc9aa57f545598b46fbc474c882365ce52b8e",
+      "size_bytes": 981131,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_bio1/cellline_depmap_mapping.csv",
+      "source_file": "results/cgc_tahoe_bio1/cellline_depmap_mapping.csv",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "36141e8dfe6a48e58507415dc4e4b9ed2ea2708d",
+      "sha256": "ae3cbc662a7fe8ffade6ce2fd255aa71628758dc00943580e65e449924eabca0",
+      "size_bytes": 10896,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_bio1/drug_target_moa_manifest.csv",
+      "source_file": "results/cgc_tahoe_bio1/drug_target_moa_manifest.csv",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "7a3df0d0bfe0efedba82cc34cf090d97a19daff4",
+      "sha256": "c9f7ee7a72c799dd77b97c7ca9fa8417c92a52d994662ab1e529cccc23cb93a7",
+      "size_bytes": 23469,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_bio1/genotype_drug_match_manifest.csv",
+      "source_file": "results/cgc_tahoe_bio1/genotype_drug_match_manifest.csv",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "13508ecf085fff5f4ecc8098244fb8ffb6b04239",
+      "sha256": "319361ca849958050b255ee74636e7d1fb9ee4826d26e57a1d68d4ffa8110420",
+      "size_bytes": 750274,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_tahoe_bio1/program_manifest.csv",
+      "source_file": "results/cgc_tahoe_bio1/program_manifest.csv",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "02fef40e236950db7dc3e14f09b86c96827799d1",
+      "sha256": "ca2b671dc63bcc1d29e4addf53c096bd9c0b4bcf4fe3ff7b22612da495d3545f",
+      "size_bytes": 556998,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_mechanism_bio2.py",
+      "source_file": "scripts/cgc_mechanism_bio2.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "ff93c0087f89a2c80ef6d200fe93cab167f6159f",
+      "sha256": "b26e63ed5fe6bc1c6b35a6c799a672155a9f7e62e9cedfdf73e76f28371f064f",
+      "size_bytes": 659,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_mechanism_finalize.py",
+      "source_file": "scripts/cgc_mechanism_finalize.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "0999899e69bfa11435f9c9f1671705c322e7c2d6",
+      "sha256": "f75afd6b22ecad42ed5c13cfc75557b081f0d8bcf1371114c579b320ac453e4b",
+      "size_bytes": 818,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_mechanism_multi2.py",
+      "source_file": "scripts/cgc_mechanism_multi2.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "e6fb07d90a3512392986eb97f88019f5d77af52f",
+      "sha256": "5b093c3a8d4b5494e3932d7f8fc43dc0285c903a59aa260b0fa959fa2a66138c",
+      "size_bytes": 196,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/freeze_cgc_mechanism_followup.py",
+      "source_file": "scripts/freeze_cgc_mechanism_followup.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "60fd9dd5306a77b1b25abbfd4df57ca0bb3ab646",
+      "sha256": "0e5d803b53529cc868916d6357f3e1b2a6e228cd3966df11ac31eaca6b0e6cba",
+      "size_bytes": 9395,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/__init__.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "fe3466ba5b47aad5512890d815f5a716090b4136",
+      "sha256": "0428b168bd3969d57f6261abdcaa62020a246a62bc463ae3c0197c887fe8b672",
+      "size_bytes": 153,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/bio2.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/bio2.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "ccc5ffb664b318870d59afb57ff7bd40fcfd044a",
+      "sha256": "c637ef38680f1349fef554238f5f16e93bf9695aaba94246c0e0ef2cc0ca2156",
+      "size_bytes": 74530,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/bridge.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/bridge.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "7993f112a6175c8ca9592b9a65fe8b9462da705d",
+      "sha256": "b4aa5663a7cad488f83c2b528ee04fad31308fe25a2488ce826bd9b86ac16ea9",
+      "size_bytes": 5435,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/common.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/common.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "1fb65ef73ae3d9ccd20587fec8b6aee249a61571",
+      "sha256": "cbc397fdb47037c6af038a0fad0a5ffe6ad956eb0dbedad94039e438a167e6e9",
+      "size_bytes": 2372,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/multi2.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/multi2.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "1acff9e1d115200b4323c03a83f5ade2c4149e32",
+      "sha256": "4bde562f1443b2d7f8df22ec475f89ae7673e399a62e3a611ac7546a3e52e7de",
+      "size_bytes": 75403,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/multi2_runner.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/multi2_runner.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "5eb3f68d3aa31936e438f8104560142180bdd95d",
+      "sha256": "3445f812cd14c5ed8a534d50683fce249524fa9465ad374a5ff37708257f68ec",
+      "size_bytes": 71474,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_mechanism_followup/reporting.py",
+      "source_file": "src/igc_virtual_cell/cgc_mechanism_followup/reporting.py",
+      "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "git_blob": "356e1f7a5cedeafb883e830c86f95c5cddf89d75",
+      "sha256": "8ed3191f1cb53f9b4d989deded2a7882922d500fd702598ea59d9236171677ba",
+      "size_bytes": 49028,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

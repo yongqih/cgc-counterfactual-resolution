@@ -1,0 +1,49 @@
+{
+  "protocol_id": "CRC_PDO_DENSE_RESOLUTION_PLATEAU_V1",
+  "frozen_date": "2026-08-30",
+  "prerequisite": {
+    "branch": "codex/crc_pdo_pca_resolution_sweep",
+    "ledger_commit": "624e6f239459418f8d6a8792ff41d2dcc1c2c61c",
+    "scientific_result_commit": "1bb0e95b39c2181638d732097f8f868689f32c87",
+    "verdict": "NO_STABLE_CONDITIONING_RESOLUTION_OPTIMUM"
+  },
+  "model": {
+    "family": "multioutput linear-kernel Ridge on training-centered drug-specific DSS residuals",
+    "outer_cv": "leave-one-patient-out",
+    "inner_cv": "deterministic 5-fold patient split within each outer-training set",
+    "inner_selection_objective": "patient-balanced mean squared error across the complete 24-drug residual profile",
+    "alpha_grid": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "dense_pca_grid": [2, 4, 8, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32],
+    "selection_tie_break": "minimum MSE, then smaller k, then larger alpha",
+    "seed": 20260830
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20260916,
+    "performance_interval": "pointwise percentile 95% patient-profile bootstrap",
+    "threshold_range": "5th to 95th percentile among numerically defined patient-profile bootstrap draws",
+    "nonpositive_denominator_rule": "exclude the metric threshold from that draw and report the count; joint threshold requires both positive denominators"
+  },
+  "saturation": {
+    "retention_thresholds": [0.90, 0.95],
+    "practical_pg_gain": 0.010,
+    "practical_g_func_gain": 0.030,
+    "plateau_reference": "componentwise maximum of FULL_RNA_REOPT and PCA_STAR_DENSE",
+    "plateau_membership": "PG >= reference_PG - 0.010 and g_func >= reference_g_func - 0.030",
+    "broad_plateau_min_grid_points": 7,
+    "broad_plateau_min_dimension_span": 12,
+    "strong_early_gain_rule": "PCA16 minus PCA2 >= the frozen practical scale for both PG and g_func",
+    "late_gain_rule": "PCA32 minus PCA16 is below the frozen practical scale for both metrics and no adjacent positive late gain reaches its practical scale",
+    "dense_selection_compact_fraction": 0.80,
+    "dense_selection_region": [16, 32],
+    "random_structure_rule": "PCA exceeds the 95th percentile of matched random projections for both PG and g_func at at least two of k=16,24,32"
+  },
+  "random_control": {
+    "dimensions": [16, 24, 32],
+    "draws": 100,
+    "seed": 20260917,
+    "construction": "one shared set of 100 outcome-blind 32-column gene-space orthonormal bases; each fixed-k control uses the first k columns"
+  },
+  "optional_tail_pc_control": "NOT_EXECUTED: a strict 32-dimensional lower-variance block is not uniformly available within approximately 40-patient inner-training ranks",
+  "claim_boundary": "Operational finite-sample predictive representation resolution; PCA still requires full baseline RNA measurement and is not an assay or information-theoretic dimension claim."
+}

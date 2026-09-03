@@ -1,0 +1,48 @@
+{
+  "phase": "CGC-EC-2",
+  "created_at": "2026-08-22T15:20:25.058281-04:00",
+  "status": "PASS",
+  "source_store": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\results\\cgc_tahoe_0i\\response_tensors.zarr",
+  "source_array": "delta_primary",
+  "source_indices": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\results\\cgc_tahoe_0i\\gene_indices_g_primary.npy",
+  "source_indices_sha256": "efea7718149514c763fbbad86d2337fde3377bf6c977365f0046576a85b94343",
+  "selected_shape": [
+    2,
+    4650,
+    25695
+  ],
+  "sample_order": "context-major then intervention-major",
+  "gene_count": 25695,
+  "gram_dtype": "float32 BLAS with frozen float64 direct-dot precision gate",
+  "sample_sum_dtype": "float64",
+  "precision_checks": 96,
+  "precision_seed": 202608226,
+  "precision_max_relative_error": 3.425412068932754e-06,
+  "precision_tolerance": 0.0001,
+  "gpu_used": false,
+  "threading": "12",
+  "cache_files": {
+    "same6": {
+      "path": "data\\cgc_entrywise_cache\\same_plate6_float32.npy",
+      "size_bytes": 86490128,
+      "sha256": "90681a0429339581a329536036b9353cc1761feb76a34b5cb5c64df34b28281f"
+    },
+    "same14": {
+      "path": "data\\cgc_entrywise_cache\\same_plate14_float32.npy",
+      "size_bytes": 86490128,
+      "sha256": "9c1703a17855545f0dad3ba3d34c60c5187780612051bace36545ecd204567fd"
+    },
+    "cross": {
+      "path": "data\\cgc_entrywise_cache\\cross_plate6_plate14_float32.npy",
+      "size_bytes": 86490128,
+      "sha256": "cece3ec0e2066bb46e9bc8bcdd11cb6666e486da3362358a15addaa1927909a3"
+    },
+    "sums": {
+      "path": "data\\cgc_entrywise_cache\\sample_gene_sums_float64.npy",
+      "size_bytes": 74528,
+      "sha256": "1f266acbc9ef8d84a63fe9166dc32988e14b882df6356c127f143e1b71655ee1"
+    }
+  },
+  "raw_h5ad_read": false,
+  "response_matrix_persisted": false
+}

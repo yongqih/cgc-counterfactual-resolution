@@ -1,0 +1,310 @@
+{
+  "id": "pathway_composition",
+  "analysis_name": "All 16383 subsets of 14 predefined PROGENy pathways: fidelity and recoverability",
+  "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+  "commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+  "implementation_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+  "entrypoints": [
+    {
+      "path": "scripts/pathway_resolution_scaling_audit.py",
+      "command": "python scripts/pathway_resolution_scaling_audit.py --formal --root . --source-root <frozen-Tahoe-root> --protocol-commit <frozen-protocol-commit>",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/pathway_resolution_scaling_audit.py",
+    "src/igc_virtual_cell/pathway_resolution_scaling.py"
+  ],
+  "extra_sources": [
+    "tests/test_pathway_resolution_scaling.py"
+  ],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_pathway_resolution_scaling/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
+    "results/cgc_pathway_resolution_scaling/PATHWAY_ANCHOR_AUDIT.json",
+    "results/cgc_pathway_resolution_scaling/PATHWAY_METRIC_RECONCILIATION.md",
+    "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
+      "authority": "Frozen Tahoe replicate truth",
+      "bytes_if_known": 955854128,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/cgc_resolution2_replay/m49_k92_predictions_float32.npy",
+      "authority": "Frozen all-but-one model predictions; no refit",
+      "bytes_if_known": 955854128,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/cgc_resolution2_replay/m49_k92_frozen_weights.npz",
+      "authority": "Frozen prediction replay episode weights",
+      "bytes_if_known": 3455810,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy",
+      "authority": "Frozen shared hierarchical bootstrap weights",
+      "bytes_if_known": 93000128,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+      "authority": "Frozen entrywise utility and support/sentinel assignment",
+      "bytes_if_known": 27158852,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+      "authority": "Frozen PROGENy weights and gene identifiers",
+      "bytes_if_known": 2705687,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "data/cgc_bio1_official/progeny",
+      "authority": "Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/cgc_tahoe_0i/gene_metadata_frozen.csv",
+      "authority": "Frozen gene metadata axis",
+      "bytes_if_known": 5092546,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    },
+    {
+      "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+      "authority": "Frozen primary gene indices",
+      "bytes_if_known": 102908,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+      "local_presence": "PRESENT_FILE"
+    }
+  ],
+  "outputs": [
+    "results/cgc_pathway_resolution_scaling/PATHWAY_SUBSET_METRICS.csv",
+    "results/cgc_pathway_resolution_scaling/PATHWAY_SCALING_BOOTSTRAP_SUMMARY.csv",
+    "results/cgc_pathway_resolution_scaling/PATHWAY_COMPOSITION_SUMMARY.csv"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "No model fit; computes full subset projection and 10000 frozen-prediction bootstrap statistics, not mere CSV checks.",
+    "Claim is composition-dependent recoverability, not a universal composition ceiling. Nonpositive denominators remain undefined.",
+    "Default --source-root is an author-machine Windows path; explicit input root is required for portability."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_pathway_resolution_scaling.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 19,
+  "exported_source_bytes": 6930718,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "zarr"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "a9b479eec800cd06fa5f743804797bbc24166619",
+      "sha256": "25ece465029e157f5ee915762ef7a4728a2f7db57693c62b4729fde4f4e9048b",
+      "size_bytes": 6737410,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_pathway_resolution_scaling/PATHWAY_ANCHOR_AUDIT.json",
+      "source_file": "results/cgc_pathway_resolution_scaling/PATHWAY_ANCHOR_AUDIT.json",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "b6f5089b568b9360505cbccaeb957fcc81fd8b22",
+      "sha256": "2b5dd2258001a32f6a7e5cfe6d343cbad549e493a2498afacaf620c830ef522e",
+      "size_bytes": 1950,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_pathway_resolution_scaling/PATHWAY_METRIC_RECONCILIATION.md",
+      "source_file": "results/cgc_pathway_resolution_scaling/PATHWAY_METRIC_RECONCILIATION.md",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "f739be7e6e9aee28058e0e599baf6adfc4048dde",
+      "sha256": "3a8d7ee521afd453a1956c75146045af16b5c1ccf9c028f796fcf8c6bc097113",
+      "size_bytes": 1521,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_pathway_resolution_scaling/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
+      "source_file": "results/cgc_pathway_resolution_scaling/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "5ab39bad1f1800a2c784a69fea980ae1558224ba",
+      "sha256": "b621e01795aa5c68c1b38af135c384d0fd74bb80f1ba57cc608bcddbada9fd7d",
+      "size_bytes": 8309,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/pathway_resolution_scaling_audit.py",
+      "source_file": "scripts/pathway_resolution_scaling_audit.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "b88a3adbf4e69cc478b9e55fb0f53132e06c1fe9",
+      "sha256": "657ce84b997b220df712dc660da3ff3ba473a53ecde7f0138bc3911bb0847a4f",
+      "size_bytes": 1086,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/__init__.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "9f23650214275dbc2783f036106d727adac9fbb5",
+      "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b",
+      "size_bytes": 340,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
+      "sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
+      "size_bytes": 26890,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/core.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/core.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "673a5af689bebe7d11313692b56afce7ea17d2af",
+      "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8",
+      "size_bytes": 8372,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
+      "sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
+      "size_bytes": 10967,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "04564a28f850cc27e607f2700b99768a80874224",
+      "sha256": "c8b389b164d91744cf701251d1733d62dd2a1bd5c8c66ea8eb797a3c6cb748e8",
+      "size_bytes": 8366,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/metrics.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/metrics.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "7dabae2759e1a1096736565e14ebaa68504f36bd",
+      "sha256": "b64b0ababafca6e1bc304926e48f192b42e8876317529eae56ac4822b4473287",
+      "size_bytes": 9662,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_resolution_poc/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_resolution_poc/__init__.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "53dac9a08e86a938a87c1d3c936748b91fc0dbc8",
+      "sha256": "1e2feebcce3f977f09f70b4b6636cd078a6abdc8cfb9340022bb7066d2397f36",
+      "size_bytes": 201,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_resolution_poc/audit.py",
+      "source_file": "src/igc_virtual_cell/cgc_resolution_poc/audit.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "e8c802a74cf54124adb6c202b01ad24e82a76f02",
+      "sha256": "7f3b8c321bec8546cd04e581743d33c940e98b0aef92d7dd6ab9e7f79864cd22",
+      "size_bytes": 9230,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_resolution_poc/pathway.py",
+      "source_file": "src/igc_virtual_cell/cgc_resolution_poc/pathway.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "a713893183abfa7d838e8845518497f492bba265",
+      "sha256": "2f3e6137bc64ca9f528cc396260b97e65dd8dccf5b961f347fb7c63f8f6f8920",
+      "size_bytes": 14869,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_resolution_poc/replay.py",
+      "source_file": "src/igc_virtual_cell/cgc_resolution_poc/replay.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "69259f186b09d3e9a34efed77079248598ebd669",
+      "sha256": "c0880daa0727b0c7e528e60386b342d1b21a86651f5fa4851dbec7b46d27f5ee",
+      "size_bytes": 18323,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/pathway_resolution_scaling.py",
+      "source_file": "src/igc_virtual_cell/pathway_resolution_scaling.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "46b4098577ea9e8ede44dc1347bdce306a1d3445",
+      "sha256": "87010c1399d9ece76e83fae11536bc03810de16436d6eaef3e11b0c8fb2f2699",
+      "size_bytes": 69499,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_pathway_resolution_scaling.py",
+      "source_file": "tests/test_pathway_resolution_scaling.py",
+      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "git_blob": "e8e08b9b6922da2da703650f4efeff91053c8ff9",
+      "sha256": "5e713c18635fd851a7b84f5213170401760c75c97ac2773b1cfa9b2ef5a8846b",
+      "size_bytes": 2804,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

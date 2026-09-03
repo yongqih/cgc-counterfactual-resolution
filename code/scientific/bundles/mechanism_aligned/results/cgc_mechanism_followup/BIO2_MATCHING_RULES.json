@@ -1,0 +1,76 @@
+{
+  "frozen": true,
+  "seed": 7201,
+  "permutation_draws": 10000,
+  "cluster_bootstrap_draws": 10000,
+  "pair_order": "unordered intervention pairs; self-pairs excluded",
+  "nuisance_features": [
+    "context_overlap",
+    "available_context_count",
+    "mean_log_global_response_magnitude",
+    "absolute_log_global_response_magnitude_difference",
+    "mean_log_residual_energy",
+    "absolute_log_residual_energy_difference",
+    "absolute_log10_dose_difference_within_unit",
+    "lineage_composition_distance",
+    "mean_target_annotation_count",
+    "absolute_target_annotation_count_difference"
+  ],
+  "nuisance_construction": {
+    "response_magnitude": "geometric mean of the two plate-specific gamma L2 norms before pair similarity",
+    "residual_energy": "geometric mean of the two plate-specific residual L2 norms before pair similarity",
+    "context_overlap": "exact shared frozen context mask; constant 50 for pharmacologic fingerprints",
+    "lineage_composition": "frozen context mask lineage proportions; constant for full-context fingerprints",
+    "scaling": "median/MAD using all eligible pairs; zero-MAD columns retained as documented constants"
+  },
+  "positive_pair_rules": {
+    "BROAD_ACTION": "same non-unclear moa_broad",
+    "MOA": "same non-unclear moa_fine",
+    "TARGET_FAMILY": "share >=1 eligible HGNC family ID and do not have identical non-empty canonical target sets",
+    "EXACT_TARGET": "identical non-empty canonical molecular target sets (historical BIO-1 definition)"
+  },
+  "conditional_control_priority": {
+    "BROAD_ACTION": ["different broad action"],
+    "MOA": ["same broad action and different fine MOA", "different fine MOA"],
+    "TARGET_FAMILY": ["same fine MOA and different family", "same broad action and different family", "different family"],
+    "EXACT_TARGET": ["same target family and different canonical target set", "same fine MOA and different canonical target set", "same broad action and different canonical target set"]
+  },
+  "nearest_control": {
+    "distance": "Euclidean distance on frozen robust-scaled nuisance features",
+    "controls_per_positive_pair": 5,
+    "tie_break": "lexicographic intervention-axis pair",
+    "replacement": true,
+    "maximum_distance": 2.5,
+    "no_valid_control": "NOT_ESTIMABLE_AT_REQUESTED_CONDITIONAL_RESOLUTION"
+  },
+  "qap_strata": {
+    "target_count_bins": [0, 1, 2, 4, 1000000],
+    "dose_rule": "exact concentration_unit plus log10 concentration tertile; zero/invalid is separate",
+    "whole_annotation_row_moves_together": true
+  },
+  "genotype_matching": {
+    "primary_eligible_rows": 424,
+    "direct_target_rows": 4,
+    "pathway_linked_rows": 420,
+    "exact_drug_exchange_rows": 420,
+    "G2_fallback_order": ["exact_target_set", "moa_fine", "moa_broad"],
+    "continuous_caliper_mad": 2.5,
+    "matched_fields": [
+      "drug_identity",
+      "MOA",
+      "target_class",
+      "lineage",
+      "mutant_prevalence",
+      "wildtype_mutant_balance",
+      "context_count",
+      "relations_per_drug",
+      "response_magnitude",
+      "residual_energy"
+    ]
+  },
+  "minimum_independent_clusters": {
+    "ROBUST": 5,
+    "LIMITED_POWER": 3,
+    "NOT_ESTIMABLE": 0
+  }
+}

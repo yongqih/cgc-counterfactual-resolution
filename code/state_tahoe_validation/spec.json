@@ -1,0 +1,29 @@
+{
+  "analysis_name": "Independent State Tahoe held-context validation",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Extended_Data_Figure_1_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Extended_Data_Figure_1_source_data.csv",
+      "where": {
+        "kind": "pooled_g",
+        "label": "Pooled ST-SE"
+      },
+      "column": "value",
+      "expected": -0.4968356112958052,
+      "tolerance": 1e-14
+    },
+    {
+      "file": "Extended_Data_Figure_1_source_data.csv",
+      "where": {
+        "kind": "aggregate_g",
+        "label": "ST-HVG sensitivity"
+      },
+      "column": "value",
+      "expected": 0.1616954481675251,
+      "tolerance": 1e-14
+    }
+  ]
+}

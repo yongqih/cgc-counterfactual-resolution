@@ -1,0 +1,354 @@
+{
+  "id": "experimental_compression",
+  "analysis_name": "Strict target-hidden entrywise Experimental Compression",
+  "class": "FULL_ANALYSIS",
+  "commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+  "entrypoints": [
+    {
+      "path": "scripts/cgc_entrywise_foundation.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_entrywise_surface.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_entrywise_controls.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_entrywise_inference.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_entrywise_report.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "src/igc_virtual_cell/cgc_entrywise",
+    "scripts/cgc_entrywise_*.py",
+    "tests/test_cgc_entrywise.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
+    "results/cgc_entrywise_compression/ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+    "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+    "results/cgc_entrywise_compression/ENTRYWISE_INFORMATION_SET.json",
+    "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/cgc_entrywise_cache/same_plate6_float32.npy",
+      "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "bytes_if_known": 86490128,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_entrywise_cache/same_plate14_float32.npy",
+      "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "bytes_if_known": 86490128,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy",
+      "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "bytes_if_known": 86490128,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/cgc_entrywise_cache/sample_gene_sums_float64.npy",
+      "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "bytes_if_known": 74528,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "results/cgc_entrywise_compression"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [
+    {
+      "kind": "pytest",
+      "args": [
+        "tests/test_cgc_entrywise.py"
+      ],
+      "boundary": "synthetic tensors only; five tests; no frozen outcomes"
+    }
+  ],
+  "exported_file_count": 26,
+  "exported_source_bytes": 6908669,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "zarr"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "53bd6281fba5b694455f26ae9f33f52c7bd14d3f",
+      "sha256": "c769e9cb5657a006c40d489ac1c8c2c69e6e65fc277c3429c44c70391aafed03",
+      "size_bytes": 8802,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "1e8500be18dc9df1f150c0c7e0cb5fab0d33353e",
+      "sha256": "6122c74ba6fff0815f80d4aff58a2cf922449839ae9030ac14a4242799cdcf6f",
+      "size_bytes": 1818,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_INFORMATION_SET.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_INFORMATION_SET.json",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "f0bbb4b5a213fab8bc41ac345fcdfcce4a41008b",
+      "sha256": "1b1c464bfbe6a8702c8e74271707ed888823d02cf8508db91382a611c95b5a19",
+      "size_bytes": 5375,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "f9d5dad4e5b8737660ee6eac0e57a196ee3acaa3",
+      "sha256": "f8b8cfc01ca7018deb76ce96ed47f340ff8f8214ae127f78f026ca8c0621948c",
+      "size_bytes": 4057,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "32cc15acbeb8ec55b753f4139b98613e2eeabe57",
+      "sha256": "0f73abebe6f3bdfc3270ad81ac937842fc6738a6dfbad934b5d9477cbe934f73",
+      "size_bytes": 10173,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "a9b479eec800cd06fa5f743804797bbc24166619",
+      "sha256": "25ece465029e157f5ee915762ef7a4728a2f7db57693c62b4729fde4f4e9048b",
+      "size_bytes": 6737410,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_entrywise_controls.py",
+      "source_file": "scripts/cgc_entrywise_controls.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "3d34786746a9bcbb8930b958abe34dd7a2923a13",
+      "sha256": "6c63ab1573c9ee70155d0f397d40bfa1ba48bd88f4bbbe551b2cb1f8237bc4b0",
+      "size_bytes": 393,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_entrywise_foundation.py",
+      "source_file": "scripts/cgc_entrywise_foundation.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "2aaddb73a5a678160237ad17f644e075b47bc536",
+      "sha256": "bb4b29af66eea1a5ebc06089bac8b8a85ddfa6dc0bcf20866a47fd6f9dca8857",
+      "size_bytes": 547,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_entrywise_freeze.py",
+      "source_file": "scripts/cgc_entrywise_freeze.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "4ed31e83c8a49f78f7ed852662a35a534350b742",
+      "sha256": "fc3355483692bbc3629f80e8dd38a8e1b4e76591c1ec917a63b81c5798d69b57",
+      "size_bytes": 9318,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_entrywise_inference.py",
+      "source_file": "scripts/cgc_entrywise_inference.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "1d1f5a0d5aa8ff260cc28f28e7368c0f06837f29",
+      "sha256": "1ecdbc432fedc8f6f489c01dd782e53e2529d1e0005e7c31555e4e33681b70bc",
+      "size_bytes": 378,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_entrywise_report.py",
+      "source_file": "scripts/cgc_entrywise_report.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "bf86a909c2225ecb4122d7b5cf8757471568e9b7",
+      "sha256": "8c06613e9736dd4659a8b46edda7a88ad0ace702f210f4ac3f934cf34d97c247",
+      "size_bytes": 378,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_entrywise_rna.py",
+      "source_file": "scripts/cgc_entrywise_rna.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "66d7d31ea56f6e7b824d8171581b6dd0047a6487",
+      "sha256": "e41e3dd765ceed08e3d7a5aac5d548c09a2a05f6e0d21bbf811350fbce6f4c89",
+      "size_bytes": 623,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_entrywise_surface.py",
+      "source_file": "scripts/cgc_entrywise_surface.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "927e3831457f4484f4d80aa129acd3041d67b959",
+      "sha256": "e0125daf92f085c285ca54bce9c32fda0ae14ec5377033fdd14a860e69bda04c",
+      "size_bytes": 1385,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/__init__.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "9f23650214275dbc2783f036106d727adac9fbb5",
+      "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b",
+      "size_bytes": 340,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
+      "sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
+      "size_bytes": 26890,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/controls.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/controls.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "06193a6bc9e95e4f1793afbc3d39a5b5ba8e92f5",
+      "sha256": "15736feefea742ee8ba057ea8d2e6d09b51009579665c78388498a6d7eaf295d",
+      "size_bytes": 14001,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/core.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/core.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "673a5af689bebe7d11313692b56afce7ea17d2af",
+      "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8",
+      "size_bytes": 8372,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
+      "sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
+      "size_bytes": 10967,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "04564a28f850cc27e607f2700b99768a80874224",
+      "sha256": "c8b389b164d91744cf701251d1733d62dd2a1bd5c8c66ea8eb797a3c6cb748e8",
+      "size_bytes": 8366,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/inference.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/inference.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "13accc9dee1ec4a708234cfee5d510f6e85a5066",
+      "sha256": "91ce4992fd6ada9e46a7248e73df1a6e7c8a6ade63ccd7076f21abd51165121e",
+      "size_bytes": 10108,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/metrics.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/metrics.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "7dabae2759e1a1096736565e14ebaa68504f36bd",
+      "sha256": "b64b0ababafca6e1bc304926e48f192b42e8876317529eae56ac4822b4473287",
+      "size_bytes": 9662,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/reporting.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/reporting.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "cf0ac131d287addfe3200a5503f65a49580a8011",
+      "sha256": "8d874bbe1bcc23a5491ad8c057f8bf6ce4bdfd93b2525ef9342d8fc1b3919c9c",
+      "size_bytes": 23525,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/secondary.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/secondary.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "74cba3ecaf884f6e05a726a37ad51348fb60d6b4",
+      "sha256": "046198195b4eb85070d81cd932be0fdd8805bb9f642d8f1952d4b1fe9153b6e1",
+      "size_bytes": 8444,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_cgc_entrywise.py",
+      "source_file": "tests/test_cgc_entrywise.py",
+      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "git_blob": "cacf7d56c4608be1706ceda3b85ff78e47892617",
+      "sha256": "401db8cde2cf96cbcae7306b8273c77bc7d528e52efd05e7b1d8b1a192bf245a",
+      "size_bytes": 6418,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "ed7_hierarchical_repair",
+  "analysis_name": "Frozen-contribution ED7 hierarchical uncertainty repair",
+  "class": "FULL_ANALYSIS",
+  "commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
+  "entrypoints": [],
+  "source_roots": [
+    "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "audit/release_repair/ed7/ED7_OUTPUT_MANIFEST.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": ".worktrees/tahoe_held_context_scaling/results/tahoe_held_context_scaling",
+      "authority": "abb503e9f3cf75eaea7a075f81160db3d04de64d frozen Grams, hyperparameters and point estimates",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": ".worktrees/tahoe_five_pathway_scaling/results/tahoe_five_pathway_scaling/_cache/TAHOE_FIVE_PATHWAY_SCALING_CONTRIBUTIONS.npz",
+      "authority": "22926886e3f87994492720ad2a529dd382596f09",
+      "bytes_if_known": 28793698,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "audit/release_repair/ed7"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [
+    {
+      "kind": "import",
+      "path": "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py",
+      "boundary": "import only; main never called"
+    }
+  ],
+  "claim_boundary": "Only frozen-contribution uncertainty; unchanged predictors, point definitions and draws. No CLI --help is advertised because the original script has no argument parser.",
+  "path_adapter": "ed7: launcher resolves GENE_WT/PATH_WT to exported frozen bundles or explicit prepared workspaces and patches directory constants only before unchanged main.",
+  "exported_file_count": 4,
+  "exported_source_bytes": 54001,
+  "external_import_roots": [
+    "numpy",
+    "pandas"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "audit/release_repair/ed7/ED7_OUTPUT_MANIFEST.json",
+      "source_file": "audit/release_repair/ed7/ED7_OUTPUT_MANIFEST.json",
+      "source_commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
+      "git_blob": "1d8e20bcb96831c5dcaabf821b9ca151e6bab9d6",
+      "sha256": "c64030426a291c42ccb6c7b0f8f58f59a277b29a751f74de6f7b581a73c885dc",
+      "size_bytes": 2318,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py",
+      "source_file": "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py",
+      "source_commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
+      "git_blob": "9f821e421285b6a477efc3eebc1df3896937c545",
+      "sha256": "c30676486021b05ddd6dcdd8b040c0ef21d13da179e352abb63cc14a3ad5f462",
+      "size_bytes": 50764,
+      "role": "scientific_source"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

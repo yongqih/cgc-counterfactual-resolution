@@ -1,0 +1,33 @@
+{
+  "experiment": "CGC-RESOLUTION-2",
+  "freeze_status": "PRE_OUTCOME",
+  "parent_commit": "e47b76bd267545c45c19d4a08dd6dfc787d306e7",
+  "source_results_commit": "dad1ca9dc86a6e0104976026810a246c20feba52",
+  "estimator": "M2_AFFINE_RIDGE",
+  "budgets": [
+    {"m": 49, "k": 92, "role": "primary", "support_sequences": 1, "expected_g": 0.11068053088808294},
+    {"m": 40, "k": 4, "role": "secondary", "support_sequences": 8, "expected_g": 0.07718711664021238}
+  ],
+  "metric_absolute_tolerance": 1e-10,
+  "axes": {"plates": 2, "contexts": 50, "interventions": 93, "genes": 25695},
+  "source_root": "C:/Users/24119/PyCharmMiscProject/Virtual_Cell_CGC_entrywise",
+  "truth_root": "C:/Users/24119/PyCharmMiscProject/Virtual_Cell",
+  "sources": {
+    "split_manifest": {"path": "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json", "sha256": "da3fc0f3422c12e2a1ec9fcdc6447cd137836a963290a262a82451430df1198d"},
+    "utility_table": {"path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz", "sha256": "bd3b4f5097b4f158f58da102849d52080bb9ae7b7a4c4325f37bf574fd1a7c08"},
+    "target_cache_set": {"glob": "results/cgc_entrywise_compression/_cache/target_*.npz", "count": 50, "ordered_name_hash_aggregate_sha256": "688cb5b0054f6f824981f8566bf72622b9bc991a425fd231c0fb8fcfe6d12d5d", "aggregate_serialization": "UTF-8 name:sha256 records separated and terminated by byte 0x0A"},
+    "same_plate6_gram": {"path": "data/cgc_entrywise_cache/same_plate6_float32.npy", "sha256": "90681a0429339581a329536036b9353cc1761feb76a34b5cb5c64df34b28281f"},
+    "same_plate14_gram": {"path": "data/cgc_entrywise_cache/same_plate14_float32.npy", "sha256": "9c1703a17855545f0dad3ba3d34c60c5187780612051bace36545ecd204567fd"},
+    "cross_plate_gram": {"path": "data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy", "sha256": "cece3ec0e2066bb46e9bc8bcdd11cb6666e486da3362358a15addaa1927909a3"},
+    "sample_gene_sums": {"path": "data/cgc_entrywise_cache/sample_gene_sums_float64.npy", "sha256": "1f266acbc9ef8d84a63fe9166dc32988e14b882df6356c127f143e1b71655ee1"},
+    "truth_store": {"path": "results/cgc_tahoe_0i/response_tensors.zarr", "array": "delta_primary", "expected_shape": [2, 50, 93, 62710]},
+    "gene_indices": {"path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy", "sha256": "efea7718149514c763fbbad86d2337fde3377bf6c977365f0046576a85b94343", "expected_length": 25695}
+  },
+  "frozen_parameter_source": "parameter_rows_json in each target cache",
+  "required_parameter_fields": ["target_context_index", "plate", "m", "k", "ridge_lambda", "rank", "target_outcome_used"],
+  "allowed_model_call": "fit_batches with frozen parameters only",
+  "forbidden_calls": ["select_parameters", "hyperparameter_search", "new_estimator", "new_budget", "new_seed"],
+  "materialization_dtype": "float32",
+  "determinism_gate": "bitwise equality on a frozen audit subset across two independent replay calls",
+  "leakage_gate": "adversarial hidden-target replacement leaves fit-side identities, frozen parameters, weights, and predictions bitwise identical"
+}

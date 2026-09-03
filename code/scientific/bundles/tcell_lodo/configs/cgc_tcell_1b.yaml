@@ -1,0 +1,28 @@
+phase: CGC-TCELL-1B
+truth_commit: 4f2e608d9814015de98cfbc9cbf358af54fbc45e
+artifact_audit_commit: fc32463b7268044efc699594ae880f3a1b9ac09b
+branch: cgc_tcell_strict_lodo_benchmark
+states: [Rest, Stim8hr, Stim48hr]
+context_pca_max_dim: 8
+response_rank: 256
+response_pca_oversample: 16
+intervention_embedding_dim: 32
+bilinear_rank: 32
+mlp_hidden: [256, 256]
+mlp_dropout: 0.1
+ridge_alphas: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+learning_rates: [0.0001, 0.0003, 0.001]
+weight_decay: 0.0001
+batch_size: 8192
+max_epochs: 300
+early_stopping_patience: 25
+gradient_clip: 1.0
+seeds: [0, 1, 2]
+bootstrap_draws: 10000
+bootstrap_seed: 20260819
+gene_chunk: 256
+response_pca_target_batch: 64
+output_directory: results/cgc_tcell_1b
+report_directory: results/reports
+checkpoint_directory: results/cgc_tcell_1b/checkpoints
+

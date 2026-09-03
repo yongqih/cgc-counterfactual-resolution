@@ -1,0 +1,90 @@
+{
+  "all_required_checks_pass": true,
+  "baseline_gene_count": 19421,
+  "bootstrap_draws": 10000,
+  "branch": "codex/crc_pdo_conditioning_resolution",
+  "checks": {
+    "PG_recomputes_from_saved_OOF": true,
+    "all_outer_folds_patient_disjoint": true,
+    "all_outputs_finite": true,
+    "drug_panel_unchanged": true,
+    "fine_pca_training_side_only": true,
+    "frozen_application_files_unchanged": true,
+    "g_func_recomputes_from_saved_OOF": true,
+    "held_outcome_not_used_in_representation": true,
+    "model_supports_patient_specific_ranking": true,
+    "no_outcome_selected_pathways": true,
+    "patient_identities_unchanged": true,
+    "pca_training_side_only": true,
+    "population_training_only": true,
+    "progeny_weights_externally_frozen": true,
+    "random_pathways_preserve_column_weight_properties": true,
+    "random_projections_outcome_blind": true,
+    "reversal_metrics_recompute": true,
+    "same_model_family": true,
+    "same_patient_PDOs_grouped": true,
+    "same_ridge_tuning_logic": true
+  },
+  "fine_g_material_gate_crossed": true,
+  "fine_pg_material_gate_crossed": true,
+  "frozen_application_commit": "c6cccb90453c567b6593982df442c4f127809fa1",
+  "frozen_source_hashes_unchanged": true,
+  "full_metric_reproduction_pass": true,
+  "full_prediction_max_abs_difference": 7.105427357601002e-15,
+  "full_prediction_reproduction_pass": true,
+  "hta_status": "NOT_EXECUTABLE_FROM_FROZEN_MATRIX: the frozen HTA NPZ contains probe-set IDs but no gene-symbol annotation; the optional official GPL17586 SOFT archive exceeded 1.69 GB and was stopped/deleted before primary outcomes, so no probe-gene mapping was guessed",
+  "implementation_commit": "52bec9136373897d944a557fb9f7a23c6563e147",
+  "passed_checks": 20,
+  "prerequisite_verdict": "PERSONALIZED_RIDGE_INTERACTION_VALID",
+  "progeny_mapped_gene_count": 17349,
+  "progeny_span_rank": 14,
+  "protocol_id": "CRC_PDO_CONDITIONING_RESOLUTION_V1",
+  "random_pathway_draws": 100,
+  "random_pathway_empirical_p": 0.009900990099009901,
+  "random_pathway_percentile": 100.0,
+  "random_projection_draws": 100,
+  "repository_tests": {
+    "passed": 245,
+    "failed_due_to_data_or_worktree_not_present": 4,
+    "conditioning_resolution_regressions": 0,
+    "status": "245_PASS_4_DATA_OR_WORKTREE_NOT_PRESENT",
+    "unavailable_checks": [
+      ".idea preservation assertion is main-worktree-specific",
+      "results/cgc_tahoe_0j/frozen_utility_table.npz absent from isolated worktree",
+      "Feng observation mask intentionally absent after approved cleanup",
+      "untracked GenePT embedding pickle absent from isolated worktree"
+    ]
+  },
+  "targeted_tests": {
+    "passed": 24,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "required_checks": 20,
+  "source_hashes_after": {
+    "CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json": "fdd0be397f71e4303c326c2065bd72571521b51fe958f82ef7cdcd18fd074390",
+    "HELD_PATIENT_FUNCTIONAL_PREDICTIONS.csv": "d6e833a158083e26cb6e7d20508cc4d067668537dbd90ac9ffc9cce05c5d5ae3",
+    "MODEL_FOLD_MANIFEST.csv": "dcf35ba3801abc117b856530757d868f29589671128d571d8cbf91205a9aa05f",
+    "PRIMARY_DSS.npz": "0e08e1f0df5daf6b3e007e17979e40045dc2d7b9e7e82fce3c79796ac450bb42",
+    "RNAseq_PDO_log2CPM1.npz": "cfd9dcad8beaa1ceade90ca52e19aedbc953b65b39f6c18ee5e49f9577996262"
+  },
+  "source_hashes_before": {
+    "CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json": "fdd0be397f71e4303c326c2065bd72571521b51fe958f82ef7cdcd18fd074390",
+    "HELD_PATIENT_FUNCTIONAL_PREDICTIONS.csv": "d6e833a158083e26cb6e7d20508cc4d067668537dbd90ac9ffc9cce05c5d5ae3",
+    "MODEL_FOLD_MANIFEST.csv": "dcf35ba3801abc117b856530757d868f29589671128d571d8cbf91205a9aa05f",
+    "PRIMARY_DSS.npz": "0e08e1f0df5daf6b3e007e17979e40045dc2d7b9e7e82fce3c79796ac450bb42",
+    "RNAseq_PDO_log2CPM1.npz": "cfd9dcad8beaa1ceade90ca52e19aedbc953b65b39f6c18ee5e49f9577996262"
+  },
+  "verdict": "FINE_BASELINE_DETAIL_ADDS_PREDICTIVE_VALUE",
+  "verdict_gates": {
+    "PROGENY14_PG_exceeds_FULL": false,
+    "PROGENY14_PG_exceeds_PCA14": false,
+    "PROGENY14_minus_PCA14_CI_includes_zero": true,
+    "PROGENY14_within_RANDOM14_central95": false,
+    "exceeds_random_pathway_on_PG": true,
+    "material_fine_PG_gain": true,
+    "material_fine_g_func_gain_descriptive": true,
+    "retains_PG": false,
+    "retains_g_func": false
+  }
+}

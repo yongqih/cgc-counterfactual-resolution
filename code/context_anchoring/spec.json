@@ -1,0 +1,31 @@
+{
+  "analysis_name": "Same-context anchoring",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Extended_Data_Figure_4_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Extended_Data_Figure_4_source_data.csv",
+      "where": {
+        "kind": "anchor_simultaneous_interval",
+        "m": "40",
+        "k_or_block": "2"
+      },
+      "column": "value",
+      "expected": 0.071798337214193,
+      "tolerance": 1e-14
+    },
+    {
+      "file": "Extended_Data_Figure_4_source_data.csv",
+      "where": {
+        "kind": "anchor_simultaneous_interval",
+        "m": "40",
+        "k_or_block": "8"
+      },
+      "column": "value",
+      "expected": 0.08097044645818,
+      "tolerance": 1e-14
+    }
+  ]
+}

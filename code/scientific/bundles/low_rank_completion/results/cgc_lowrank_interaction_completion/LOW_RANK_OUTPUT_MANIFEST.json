@@ -1,0 +1,1291 @@
+{
+  "verdict": "LOW_RANK_INTERACTION_COMPLETION_NO_RESCUE",
+  "branch": "codex/low_rank_interaction_completion",
+  "commit_at_generation": "0addad74c54220ba904b9da0570711ab52a67162",
+  "protocol_commit": "86e57476fa0fd32b8d1579008f71d23dd27ce5a3",
+  "feasibility_commit": "004d3bbdbfedde28e520d0571f4e5be7060c8121",
+  "artifacts": {
+    "LOW_RANK_CONTEXT_RESULTS.csv": {
+      "size_bytes": 14438,
+      "sha256": "050b24bd2f18175112d3e617c23cc58a035ab3b68388e07ebb1562393fef0930"
+    },
+    "LOW_RANK_EXECUTION_FEASIBILITY.md": {
+      "size_bytes": 1306,
+      "sha256": "0064267820611a3d56915d6fc459ee04f10116b3a265af5a495a81f594d6d050"
+    },
+    "LOW_RANK_FAIRNESS_AUDIT.md": {
+      "size_bytes": 1585,
+      "sha256": "ec384cb2e1add8fb71ea9cf1cbba6d4eb46f4ef6f18e3ede769d4362f554e7cf"
+    },
+    "LOW_RANK_FEASIBILITY_BENCHMARK.csv": {
+      "size_bytes": 897,
+      "sha256": "188fc90093636206695cb9b165e88b0a88249e16df4ad2b0f53c936b8f6633d6"
+    },
+    "LOW_RANK_FEASIBILITY_DECISION.json": {
+      "size_bytes": 418,
+      "sha256": "1145ca6f966429f2cb5fa4f49d74f6c8a6df38f24609259eb09bb1f090e5fd32"
+    },
+    "LOW_RANK_FEASIBILITY_FITS.csv": {
+      "size_bytes": 64576,
+      "sha256": "4b77cea4f064d9fdd65c21e218bdf791c310d68e6563c2e2f1a792a66c8db991"
+    },
+    "LOW_RANK_FEASIBILITY_INPUT_HASHES.csv": {
+      "size_bytes": 1717,
+      "sha256": "9034bc6f4f0db4da2b9c2ec6dda380438d5aead40c2caa701385eaa063ce831e"
+    },
+    "LOW_RANK_HYPERPARAMETER_SELECTION.csv": {
+      "size_bytes": 1604757,
+      "sha256": "2754492eafcf75265d5cc23b4b8538095657f9d0c0d607a8f64e356e1b62f7f8"
+    },
+    "LOW_RANK_INTERACTION_COMPLETION.png": {
+      "size_bytes": 320798,
+      "sha256": "42a27e1d5b89a11923e46f584f4b835b2feadaa48a35330601116d5d607ec351"
+    },
+    "LOW_RANK_INTERACTION_COMPLETION.svg": {
+      "size_bytes": 40157,
+      "sha256": "0f42f184f6fca43cff3931bd99207c584701e981e4277eaea9f92f5d8e11227e"
+    },
+    "LOW_RANK_INTERACTION_DIAGNOSTICS.csv": {
+      "size_bytes": 1325,
+      "sha256": "047cd78d6a9df05769ac74b8732ade556ba13356df3a15cdc540b968cb07e8a2"
+    },
+    "LOW_RANK_INTERACTION_DIAGNOSTICS_BY_ENTRY.csv": {
+      "size_bytes": 5635977,
+      "sha256": "7b0cfef9cf8f33e793aca785373ec77da47cba7d41e83ade8dd6e1d5672b65eb"
+    },
+    "LOW_RANK_INTERACTION_PROTOCOL.md": {
+      "size_bytes": 8238,
+      "sha256": "6cbf4a89ecc56631f4967721b1dfd922ec9903e27e52e2c50a1880f99778b455"
+    },
+    "LOW_RANK_INTERACTION_REPORT.md": {
+      "size_bytes": 2297,
+      "sha256": "018163b26fd0b38354de76bc40e58d1054e1681debd6fccce4c57d31bdcb83d2"
+    },
+    "LOW_RANK_MASK_MANIFEST.csv": {
+      "size_bytes": 432660,
+      "sha256": "184dfaf85a4ad459e4f66cea11cd1a6bdd15afe7c0cb7f39e35001006f7a7a93"
+    },
+    "LOW_RANK_OUTCOME_INVARIANCE.json": {
+      "size_bytes": 487,
+      "sha256": "597a29e9de11ee71a22bb483a6170deacf79d29e0a447231e3fefcd9213b017d"
+    },
+    "LOW_RANK_PREDICTIONS.parquet": {
+      "size_bytes": 1313935,
+      "sha256": "07f65831f51562b48ba43205f7382650eb4d199476bff2d14bc38a0f98b39aef"
+    },
+    "LOW_RANK_RECOVERY_RESULTS.csv": {
+      "size_bytes": 1384,
+      "sha256": "f9552b92196062bf1a39451f9bd81abac585aa8f1f172ff60b2184f30053d7ca"
+    },
+    "LOW_RANK_SYNTHETIC_POSITIVE_CONTROL.csv": {
+      "size_bytes": 405,
+      "sha256": "7387faeacf274aa8bd2535751719971d5fa68dd935b1c78ec278ee6b984aeda6"
+    },
+    "LOW_RANK_WORKSPACE_EQUIVALENCE.json": {
+      "size_bytes": 522,
+      "sha256": "313fb8ad0a2ad6ebee8f69314aecb2b70a0a354ee700433d1e8f568c82e4e326"
+    }
+  },
+  "fold_manifests": [
+    {
+      "kind": "synthetic",
+      "fold": 0,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_000.COMPLETE.json",
+      "sha256": "a8fb0d4b8d919c1ca53cf7bdcb8300e77de633e805853784152813d454e9f898"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 1,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_001.COMPLETE.json",
+      "sha256": "ff6eec132a69f612a6dcb398f2bb2cd281f6e36a921300744983cc314cb65658"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 2,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_002.COMPLETE.json",
+      "sha256": "c5d01ef312bad2797ccc47279742c2c63775e84a25ffc2929b2f9b88f3fff079"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 3,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_003.COMPLETE.json",
+      "sha256": "7fde91e1fb029af1f39ab51445e7c30043a7af6f3a831dec84fb692ae866754b"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 4,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_004.COMPLETE.json",
+      "sha256": "78db3568f6e0792a4776fb38a485ee55db5d7eed56b86588a89bc6a6e4ace27a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 5,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_005.COMPLETE.json",
+      "sha256": "754826611a84ec42c202a0e644722d0b6c57b21b3bd2ac0d2b3ed8265d331695"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 6,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_006.COMPLETE.json",
+      "sha256": "16ff4bf7082e9f4b3b40ce97ce113e4e2af83fa114ed3cf0d23fc5cf8647436c"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 7,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_007.COMPLETE.json",
+      "sha256": "bb14b3a38359fb25ba3a8fa775f2d260f98c6cdf12f0d632c897b10b328a0dd1"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 8,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_008.COMPLETE.json",
+      "sha256": "6a5d82ae6ba07e7cdb93c1a6f9f67f5e020c43b4f2c4f0fad630e89558ca4e14"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 9,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_009.COMPLETE.json",
+      "sha256": "09342a6050451e81ed517ed8578a77de69f3d9aba08c4e009e5bfc171f16485c"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 10,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_010.COMPLETE.json",
+      "sha256": "2ea5413e5dad4e54fef9b251f45cb32091919b68d9fed5e6f7f76e26618787ae"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 11,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_011.COMPLETE.json",
+      "sha256": "0e3ee90d865c42ba7d31c4e706577d424d77a2474f578bbcdeadc6e5fe161e0d"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 12,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_012.COMPLETE.json",
+      "sha256": "4585d7c524b2ef0da55cead19715c16e49f5f474ddc5fcc925100a9fa0479cac"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 13,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_013.COMPLETE.json",
+      "sha256": "527e75d4876531148aeb8cb16b03d9eed20d9c879b724c6c5ec16972a0d02d1c"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 14,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_014.COMPLETE.json",
+      "sha256": "fa69fd100cca8b01d37c43fe380989fca5b08036f8bf7079df399a882289d964"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 15,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_015.COMPLETE.json",
+      "sha256": "f573676c9da4c102945518c094acb67cf83cdd1cf207e3bde0123189cfa4544f"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 16,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_016.COMPLETE.json",
+      "sha256": "db2e83fb621d9dfe1cf14c4f9353146f276a6b8f82ff8bbe2b8d10b51deccaf8"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 17,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_017.COMPLETE.json",
+      "sha256": "4596dfeb5cd43cdec4531497d1bc8de2e19b997dcffe3e96956a849e23be72f9"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 18,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_018.COMPLETE.json",
+      "sha256": "d04578ac673aaa0b1ce4f8d11cc8dbce6dadcfa27d2dda231d6518c0d893cf49"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 19,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_019.COMPLETE.json",
+      "sha256": "643720f9939396f9a8cac11651da376e900d5c2180c5ac4d7e24a67b6e717384"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 20,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_020.COMPLETE.json",
+      "sha256": "775bb289a93d020defdf4e4070a31b13b814314e22fb02fb28d6be74da84a616"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 21,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_021.COMPLETE.json",
+      "sha256": "b27a986d57be73ee7d2f8130998753de8d6d2641345f10a887088f0278dd2f03"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 22,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_022.COMPLETE.json",
+      "sha256": "5d09831fa94461a24b1cce4af8c1721e308ec13e8d5d1d5bc654859b1921fe70"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 23,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_023.COMPLETE.json",
+      "sha256": "8255534fe20d4dcd8ae80d61339171403df2130e39d5869a37f4e0310347b60d"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 24,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_024.COMPLETE.json",
+      "sha256": "ff8664f960be6f6c4465e19ea6232af47aa1b8861fbf196ae48932d6af7e637f"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 25,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_025.COMPLETE.json",
+      "sha256": "ae16efc183aba3c513459a571b8005505729a0f340a7bb029ae8e065c4977744"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 26,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_026.COMPLETE.json",
+      "sha256": "ebfce08cd514aea0d313641fb31321025c8447b884094552ccb5135144a5fefc"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 27,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_027.COMPLETE.json",
+      "sha256": "20168541755b239c4d0b038a484e806f59857208fc7919d55514bf02579f28f6"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 28,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_028.COMPLETE.json",
+      "sha256": "6e85cff774fd97ca707a5395edba879034db30b14814d75caec915e4b6fde912"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 29,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_029.COMPLETE.json",
+      "sha256": "c7e84f6ed1ed50fd79fa0a033e7c4db8a26b78de301694f3600b29987b732778"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 30,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_030.COMPLETE.json",
+      "sha256": "8ffda9f587ebabc569650ef704b6ca501581e897d91855002e168152590327c7"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 31,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_031.COMPLETE.json",
+      "sha256": "91be95358f459738c82e954d50e2f54c9d8bb4895e26c0b9fa53f26bfc6d2b07"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 32,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_032.COMPLETE.json",
+      "sha256": "11b22eaa18075a6c42dbef668f988439833f247b46c43aa019d1158f061ff6a6"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 33,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_033.COMPLETE.json",
+      "sha256": "0570a57250fb5cace7f9c264651aaed1343949f995f67adedbbbee799192eee7"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 34,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_034.COMPLETE.json",
+      "sha256": "ff9d438d3afb8b807cd47a044fd30c6bbe0fe0da7e4872e441fe5f55244b29fa"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 35,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_035.COMPLETE.json",
+      "sha256": "77ceb39c21a54a4f809790785e27659f16f7cfc9d20894c76fed867c2370f63d"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 36,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_036.COMPLETE.json",
+      "sha256": "7dcf7f89d8a6310a3cb7666d01048570f7dd30b4c574d8713dd1edf94700c66e"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 37,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_037.COMPLETE.json",
+      "sha256": "e1afcf1e9ce6f0139477f0607178686dcfb77c62c200b9653f793ce81b0e8286"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 38,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_038.COMPLETE.json",
+      "sha256": "f121d5851c31d0525236c3bdc3ab76bbe408c70e7e729c7c9fa409d8af4015ce"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 39,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_039.COMPLETE.json",
+      "sha256": "0e779253570776dcb41d30fa152a886f3d512cb51d5e2461249297221c12edab"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 40,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_040.COMPLETE.json",
+      "sha256": "9b0427e8d2135826669a013fd8224450040ffb6e0282d70923f18503f7d3fc88"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 41,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_041.COMPLETE.json",
+      "sha256": "775186dc8398d980ce777a3ec455e2c8577e76731815221d812ccdd4d692a50a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 42,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_042.COMPLETE.json",
+      "sha256": "38b794eb51a404207046550506b31a11d49ca60df18bac6b80d0e5b5dfdcd34a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 43,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_043.COMPLETE.json",
+      "sha256": "b0414cd35ab34591548d62ebe64a150a6e34183937b68998638069a1dd8a8fe6"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 44,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_044.COMPLETE.json",
+      "sha256": "74f9aedc347d58f38fbba36d9a23a6a2fa834f6e67ddddda4157fb0a61786aa0"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 45,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_045.COMPLETE.json",
+      "sha256": "aac04b4752f0b0ad2711a9df7a3d91b1aec290bf9a461996f7570580ae745b61"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 46,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_046.COMPLETE.json",
+      "sha256": "264a29711cbe11f6f4727993cd4027ebd458f9a567689a1fa590e7f6efd7c5d5"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 47,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_047.COMPLETE.json",
+      "sha256": "2693995d7b24e5fe97687dcdced081c0a798411017a1cce28b111f4168f7d7a5"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 48,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_048.COMPLETE.json",
+      "sha256": "2d05a3ab510bb731d477d3fa13e4ded162bafa01af29608f1110f48aa26a0ef7"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 49,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_049.COMPLETE.json",
+      "sha256": "def917503ccd1d4b8ef7025533aa62cccfba13788ef9ead8c4d450b2e087ff78"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 50,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_050.COMPLETE.json",
+      "sha256": "45eaef8683a33208b7661075b8ccc9b8ed71c5bbdc28a299030d6d4cccec9371"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 51,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_051.COMPLETE.json",
+      "sha256": "2240ab11b2c625d4d49c07a30aa6c879194f23e311efcc0e1dc8194cfcce5aef"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 52,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_052.COMPLETE.json",
+      "sha256": "f18592e876ab9d9061f0f51b91a40437859d675e1ec9cdd889a1a3de706e6229"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 53,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_053.COMPLETE.json",
+      "sha256": "f3821ca2a5fc2299b39aa43c87691e652caf029ee18258f20c2a3f4107a45792"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 54,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_054.COMPLETE.json",
+      "sha256": "dfef69964f927223cb37977466cf537e4bcf7ee4e8be9a07dbaa85631c7e1cd8"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 55,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_055.COMPLETE.json",
+      "sha256": "f18d12fa34bdd7e4449e29e07ce542010e8dc55902315a1f9aa60f8aa0a7acf5"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 56,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_056.COMPLETE.json",
+      "sha256": "d0ec2482728005775b73515207b39427926c47ec1bdce6e30aaf8291b55175d0"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 57,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_057.COMPLETE.json",
+      "sha256": "c0737e460f4e992d1db96cb25d5e0c2d80eb275929bdff65acdf23f8205980b2"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 58,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_058.COMPLETE.json",
+      "sha256": "b31ea0a7165abc8e8ab5e21a56a1663792e4b66ef5a0acf0566ef6dbd99f26db"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 59,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_059.COMPLETE.json",
+      "sha256": "53d3c633540b67acddfb04b47b5fa5860d2f327608c8e930da08ccd4429af8da"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 60,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_060.COMPLETE.json",
+      "sha256": "22dec95ab2b843dabb35b971789e5368635d9a83ce3997b90ea51af0627065ae"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 61,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_061.COMPLETE.json",
+      "sha256": "9ebe522588fbbf6d99765c5a03211e2d005f7608d3e22e139ee148540564ac6a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 62,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_062.COMPLETE.json",
+      "sha256": "134c492553663a86962b2e289e4644efc135721a5f98aab1f4a25c461cf2becc"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 63,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_063.COMPLETE.json",
+      "sha256": "5993ef9aa3e39fcca7793ccadf9aa750726412c4e64b55e5e1010217a95c9d14"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 64,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_064.COMPLETE.json",
+      "sha256": "68c1f7f2be421a896618678b281ddbbfd4213237af81fbc8ba42ba97296c9731"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 65,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_065.COMPLETE.json",
+      "sha256": "956956debd037ed2fe3e0ce3f4e0f7acb49a083a491180c96b4a03dbe18cb5e1"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 66,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_066.COMPLETE.json",
+      "sha256": "e0615e017749cc4df0a82d6f9026953f9698c9c8f5e37ba984380718663a48c3"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 67,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_067.COMPLETE.json",
+      "sha256": "6b7052e2597e0e47f6c3e8319be9d3bb16dbdfa9216199cd2d0f4fbb27594ddd"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 68,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_068.COMPLETE.json",
+      "sha256": "2569b6293a191f73d68da725b963933b2cad85d823125a711ab2c0fafa17be6a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 69,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_069.COMPLETE.json",
+      "sha256": "09674f37fca52fab9d2d752746963cfd4b33a3cd0ccbf610e87dce28da8040e0"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 70,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_070.COMPLETE.json",
+      "sha256": "656c90d7095630157674954a376732fc65ee784c54c7bbce13e9e80091e9db57"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 71,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_071.COMPLETE.json",
+      "sha256": "5f2f49a7fff576efd49c57896d2135db1bcf0e5d2a0a14e79397930a665fe6fc"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 72,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_072.COMPLETE.json",
+      "sha256": "6f64ad79df588dbeed8b9020468394f18d275353ed4f410f6e11fa2fb9bb93a5"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 73,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_073.COMPLETE.json",
+      "sha256": "7b90500fdbb967234881152ae9826cc0d21c75026d534f6f95d8be06e8fedd7d"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 74,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_074.COMPLETE.json",
+      "sha256": "f41b4af15793bee96f3838ba7cf58f508e2f5e74c8bf72e8845224d605793c83"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 75,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_075.COMPLETE.json",
+      "sha256": "b0655f8e9bc60e0b2bf228d5bb9c4e7789e141f6397f959d13392b151350095f"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 76,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_076.COMPLETE.json",
+      "sha256": "f4f10ce32d7341a3b4fa910ef6065868b67a1acd66849098a545c6adccf7c127"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 77,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_077.COMPLETE.json",
+      "sha256": "af4d6faacdfa0b3c006f13d6174aeabd794cefa6fbbbb636e09c1b1fabd8981a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 78,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_078.COMPLETE.json",
+      "sha256": "e2fb915709c882b0038444c34e9897dfad72f078bd92692a40bc130afb0e4e5a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 79,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_079.COMPLETE.json",
+      "sha256": "ee850877c63e35025bf01c20776bd6ba87f45c3f95bc3fb1c8cedc7d4d3112ca"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 80,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_080.COMPLETE.json",
+      "sha256": "c1d4c15b49f6c7fc3241aab1a82bd70b79c90d80061cf49c9506ffa205e594a6"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 81,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_081.COMPLETE.json",
+      "sha256": "728b0ae15d0f3f7bdad8f65b39feb207edd48acc31ef3cc617e9184b858158d9"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 82,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_082.COMPLETE.json",
+      "sha256": "56949fef6b08b3311a341fb20a66de7ef0b0de31ffa3fc733cf1d77c81e1aaac"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 83,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_083.COMPLETE.json",
+      "sha256": "5427353e4926abdc45e7dcfb221659cd2c02045f3927db18a85781c05e1ec856"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 84,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_084.COMPLETE.json",
+      "sha256": "e2821740f1a294610b447e39c8ee7b92ac93ad2aad3c1254ae5308befff11971"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 85,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_085.COMPLETE.json",
+      "sha256": "39eeba41c78d300c9fa8208f80dee01b7312a925af7d9f4d7a4c067c5b6638f7"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 86,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_086.COMPLETE.json",
+      "sha256": "470ccd75bb5d870bf64a0c0ef9a3fd7cc1ca9298630c8f0b3b38dca7c938b1cc"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 87,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_087.COMPLETE.json",
+      "sha256": "c5481cf65054368d4128f5e82753b4d355eae6584d4902ea06088af0d6fe343a"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 88,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_088.COMPLETE.json",
+      "sha256": "2a9b6c800c3a8f188edaa0948d166df8adb593a23d6a4647e626a920450a26be"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 89,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_089.COMPLETE.json",
+      "sha256": "bcb10c6d8b5c01d565a4beb26ff0d24c67af32a098a34dd5e22489101cf241cf"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 90,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_090.COMPLETE.json",
+      "sha256": "42cbbf0a226d95b738f35a3cb3e482d1dc130c04259daef8b8e6efe1b0757baf"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 91,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_091.COMPLETE.json",
+      "sha256": "49d30fa007610f6ff42c84aee0eeb34ebf0d4fba119111486c4b67ff89b6c022"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 92,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_092.COMPLETE.json",
+      "sha256": "a78fccc17ce1d7e4b4e76f0c34a1a09ebd1e8d3c67e00e5264f345339bce4d62"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 93,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_093.COMPLETE.json",
+      "sha256": "abe4cdaec92222221d925534a683a2f76c9661cb02d3bc36e110144d4caa32ae"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 94,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_094.COMPLETE.json",
+      "sha256": "2cd9cbaea01e3f4c3d8d583339f726bc2c8b6ad6041baac02e406dbf738892c6"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 95,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_095.COMPLETE.json",
+      "sha256": "8a71f362e3db1e8f4397a73ec88ea55f353a0dced1f559db0eb0c47a59b3a5fb"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 96,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_096.COMPLETE.json",
+      "sha256": "c41986fce2e2eb8ce7aedaf8281933b580902143b7b453ec8bfa1403ded1dd4d"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 97,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_097.COMPLETE.json",
+      "sha256": "4d93219d18b77ec789f76c022a7d9e5be91f8bfb574d181895dce23dd5ca83f9"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 98,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_098.COMPLETE.json",
+      "sha256": "1aa39a5c226d46b0fdbc89198a3c73e2c0b46aadbb8b2174dcbac0e609f46ca5"
+    },
+    {
+      "kind": "synthetic",
+      "fold": 99,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\synthetic\\fold_099.COMPLETE.json",
+      "sha256": "a5066d568c87a285c4e9fb5a6994f92bb5a88be03afc22d3555b77ac156e6bbe"
+    },
+    {
+      "kind": "real",
+      "fold": 0,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_000.COMPLETE.json",
+      "sha256": "603707b915b87a1723d16c91fe7501f2707a5a8af57a71662e61c72146d102f0"
+    },
+    {
+      "kind": "real",
+      "fold": 1,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_001.COMPLETE.json",
+      "sha256": "72f74f276151f1297ab6792bcdf7b3947ae28288f608fba14d80b16d75059913"
+    },
+    {
+      "kind": "real",
+      "fold": 2,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_002.COMPLETE.json",
+      "sha256": "cdabd809107133176d84436af793fb8d6a39c2caca194412a6f7ea2a9b12cefb"
+    },
+    {
+      "kind": "real",
+      "fold": 3,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_003.COMPLETE.json",
+      "sha256": "b629a2b9e951798570fd8867d4372ddaa31d6e127279803f998eaa4aa35ea416"
+    },
+    {
+      "kind": "real",
+      "fold": 4,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_004.COMPLETE.json",
+      "sha256": "7678108a6fc18a9213783a6c7aa5a4e204a2244ed8a43d88cc011bfa8053b78b"
+    },
+    {
+      "kind": "real",
+      "fold": 5,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_005.COMPLETE.json",
+      "sha256": "2a08d488c96c9c853aec346d1df044c56e25ee216c479c464545a2f0059ec8d3"
+    },
+    {
+      "kind": "real",
+      "fold": 6,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_006.COMPLETE.json",
+      "sha256": "70517e69c02a0e4024f039ee02629016c1a36ebdd187692d680856aee9c851a1"
+    },
+    {
+      "kind": "real",
+      "fold": 7,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_007.COMPLETE.json",
+      "sha256": "b4baf890699dacc2b886cbe407bc6b0854631d0a840d106fa55cdd1843767934"
+    },
+    {
+      "kind": "real",
+      "fold": 8,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_008.COMPLETE.json",
+      "sha256": "87ffa518b85d32bcd8da49303c8669e95b79a50cc5361efa281954b29f4d6f90"
+    },
+    {
+      "kind": "real",
+      "fold": 9,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_009.COMPLETE.json",
+      "sha256": "634c83a0f6b3d89cc5354f6f44c18ee1f37ecd8e58b8562c9c0cf133b6240b5d"
+    },
+    {
+      "kind": "real",
+      "fold": 10,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_010.COMPLETE.json",
+      "sha256": "1edae660f3136d32367d31a8bf2c0360694844ec900843191d7a9cb5e54e00f9"
+    },
+    {
+      "kind": "real",
+      "fold": 11,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_011.COMPLETE.json",
+      "sha256": "52751a9ea7c38ba0e1308ab2a26ca6543e43ef6144f696cb6b6d5906d5524dc5"
+    },
+    {
+      "kind": "real",
+      "fold": 12,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_012.COMPLETE.json",
+      "sha256": "a21a5b77fa2f0ed8eb27cf02ae98cb45fce28a50758ec2500ae59985f44af7f0"
+    },
+    {
+      "kind": "real",
+      "fold": 13,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_013.COMPLETE.json",
+      "sha256": "6acca9fc8bc29396132ff528a7fa5c7a177df7dd4e95130f941886983ab3a15d"
+    },
+    {
+      "kind": "real",
+      "fold": 14,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_014.COMPLETE.json",
+      "sha256": "4cecc8d401a6553414ded906393557b8d614cf83a8de7a533d6c9807c5739735"
+    },
+    {
+      "kind": "real",
+      "fold": 15,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_015.COMPLETE.json",
+      "sha256": "d9275b482e971e6c977dce70a8fff2708fc345cb9d339d881db36fa09ca0c20b"
+    },
+    {
+      "kind": "real",
+      "fold": 16,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_016.COMPLETE.json",
+      "sha256": "9ad2019da33900183718374c5ef5dff470da75e6a960de4cf94286b8ffeb2da5"
+    },
+    {
+      "kind": "real",
+      "fold": 17,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_017.COMPLETE.json",
+      "sha256": "8f07146ca62ac2e1d7e039951829c3c73886a67d8232bafcc97ed84c83940cfb"
+    },
+    {
+      "kind": "real",
+      "fold": 18,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_018.COMPLETE.json",
+      "sha256": "12dc8ffc7795302480a7b2a15b3df8aad09b7bdfe45a958d33765a3403280f0e"
+    },
+    {
+      "kind": "real",
+      "fold": 19,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_019.COMPLETE.json",
+      "sha256": "f39cae691d11d9d641df99d9ed71c8e0b7c4a5e7a3bf87d1ab6b6808999d1691"
+    },
+    {
+      "kind": "real",
+      "fold": 20,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_020.COMPLETE.json",
+      "sha256": "6175deb7f8597d5d0072a607207f1967b5dace9a0023cc2838c93d6712a86ed2"
+    },
+    {
+      "kind": "real",
+      "fold": 21,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_021.COMPLETE.json",
+      "sha256": "38a4380037ad7e1a40860d5bf08df79d0685e5519e080db78c6b7db35f078156"
+    },
+    {
+      "kind": "real",
+      "fold": 22,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_022.COMPLETE.json",
+      "sha256": "383474c38f4aa2615da8095a5a6e1836da078694afb83fb8bc0039ce77063a20"
+    },
+    {
+      "kind": "real",
+      "fold": 23,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_023.COMPLETE.json",
+      "sha256": "ca1f4b6f2118291544c29d4635d12fe87b81a17e8bb863968b025ed2fb4f52cf"
+    },
+    {
+      "kind": "real",
+      "fold": 24,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_024.COMPLETE.json",
+      "sha256": "7149fe12a258cfba6591bc9de4eed9c6b6a5b54ef7fc522a8549b233c7081410"
+    },
+    {
+      "kind": "real",
+      "fold": 25,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_025.COMPLETE.json",
+      "sha256": "9f0869e9157ff41bda083904122e2185dce5ce116eb1eaf3890f27a76c6d50b7"
+    },
+    {
+      "kind": "real",
+      "fold": 26,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_026.COMPLETE.json",
+      "sha256": "6f1caaf6690cd44196fc3c7eb4ae816d88db93d588533da5f6623f3ba69b9e26"
+    },
+    {
+      "kind": "real",
+      "fold": 27,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_027.COMPLETE.json",
+      "sha256": "f49a9868ea541e812a55db08639b2a15d4eb4e6a444642b4b97785983410896a"
+    },
+    {
+      "kind": "real",
+      "fold": 28,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_028.COMPLETE.json",
+      "sha256": "12ee1fb466907a0f7cbd3a837807f754c8acba96cd491d7995a0fc2c7aedf44d"
+    },
+    {
+      "kind": "real",
+      "fold": 29,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_029.COMPLETE.json",
+      "sha256": "18bee54467d75f666c5c4cc36018641c41e3f3e297d40a1afa4e091211853252"
+    },
+    {
+      "kind": "real",
+      "fold": 30,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_030.COMPLETE.json",
+      "sha256": "6f93259a2f20ef0af17c37ad4fa4276feb53f0435943c7de78b05dadbcefd4eb"
+    },
+    {
+      "kind": "real",
+      "fold": 31,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_031.COMPLETE.json",
+      "sha256": "11196576452bce81f466c999921f25f8a77d47d069a1f7a0d687af9e8294a900"
+    },
+    {
+      "kind": "real",
+      "fold": 32,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_032.COMPLETE.json",
+      "sha256": "dbb8d3ff36b88f9d47fde7836f7a297a4b51791ecb8c0bdc1696a74490a9b0bb"
+    },
+    {
+      "kind": "real",
+      "fold": 33,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_033.COMPLETE.json",
+      "sha256": "96a026e64cd6a05449a01407fddd9c901cf5a0c5409175b2b437bdc38879db71"
+    },
+    {
+      "kind": "real",
+      "fold": 34,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_034.COMPLETE.json",
+      "sha256": "ba67864ef9117e0c51234c20efad6d1b54ac176a8fa541e27d25b0890fd02eb7"
+    },
+    {
+      "kind": "real",
+      "fold": 35,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_035.COMPLETE.json",
+      "sha256": "d12c9d26ebdb77ae5943ded461259d9b7f161232b98a3a2bfaa94caec152b8ba"
+    },
+    {
+      "kind": "real",
+      "fold": 36,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_036.COMPLETE.json",
+      "sha256": "b08c590d9629e9d64535e28c2a8e72df4c6a97f7b198d12b19f66e8ba02fbc98"
+    },
+    {
+      "kind": "real",
+      "fold": 37,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_037.COMPLETE.json",
+      "sha256": "e9462711ec1189c5551107f64f26ed3abc7809af7eba9f0a2f16e2407ea54855"
+    },
+    {
+      "kind": "real",
+      "fold": 38,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_038.COMPLETE.json",
+      "sha256": "8b1985eba362893431ad46845c4c7b891cd43bc6ec764d19ffb572ba01eae829"
+    },
+    {
+      "kind": "real",
+      "fold": 39,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_039.COMPLETE.json",
+      "sha256": "688fb880f09e5b1d8da28548f75be3eb6e27851f8f092cfae343ba2344218d7e"
+    },
+    {
+      "kind": "real",
+      "fold": 40,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_040.COMPLETE.json",
+      "sha256": "3591d921d148b8d6593240e0bc7034d06b2355c539095edea9b0f8a08e00df4b"
+    },
+    {
+      "kind": "real",
+      "fold": 41,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_041.COMPLETE.json",
+      "sha256": "4e899fde2ecd91afad28c8ee844d9afc85e7b956d1ac10439adf511d22bfaac0"
+    },
+    {
+      "kind": "real",
+      "fold": 42,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_042.COMPLETE.json",
+      "sha256": "1612affaff4eeb64c792f1acf8d700abbc756b3086ce6a0086f59889edf3ae09"
+    },
+    {
+      "kind": "real",
+      "fold": 43,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_043.COMPLETE.json",
+      "sha256": "0d70ff341fe59bf017f0a38e6d8cdff50efd6f7bc1245114838878cc8956c7d4"
+    },
+    {
+      "kind": "real",
+      "fold": 44,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_044.COMPLETE.json",
+      "sha256": "32452f34b50ad39010a6a1695c3b36a4f936ef80967168b9933ca6db9cda91b6"
+    },
+    {
+      "kind": "real",
+      "fold": 45,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_045.COMPLETE.json",
+      "sha256": "d77d82aecd107b74c0d8810cf136ae94ae44d2e3faa878b0803da4f82405e4cf"
+    },
+    {
+      "kind": "real",
+      "fold": 46,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_046.COMPLETE.json",
+      "sha256": "5eab751b04b47285249c915afb777f1198ab5791e167971fc28bebc3494c47a2"
+    },
+    {
+      "kind": "real",
+      "fold": 47,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_047.COMPLETE.json",
+      "sha256": "1557c2cb3399c214fa68d57bf6d2c646acca0c5775101342c08b82d68b4d8784"
+    },
+    {
+      "kind": "real",
+      "fold": 48,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_048.COMPLETE.json",
+      "sha256": "099b0aeaf7a5c0af267bd5ddd13354a446d1cb6b2c044e9b473375392be05f06"
+    },
+    {
+      "kind": "real",
+      "fold": 49,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_049.COMPLETE.json",
+      "sha256": "3767b5ca21086c3253e15b73641d8c721169760a219e018e5c919f91897c6ff8"
+    },
+    {
+      "kind": "real",
+      "fold": 50,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_050.COMPLETE.json",
+      "sha256": "b35dedee599fb8a2a3f8aef4d446b677bc4af13b672064d643063937bffa1cab"
+    },
+    {
+      "kind": "real",
+      "fold": 51,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_051.COMPLETE.json",
+      "sha256": "90f79865c6a785148b00f09673670c2ea52194a12ab2cf6d758ba837dc823b9f"
+    },
+    {
+      "kind": "real",
+      "fold": 52,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_052.COMPLETE.json",
+      "sha256": "c0a2bf118c8879e98336c68313139acea8f2e990c2b2fb836af19100d2dc3bc6"
+    },
+    {
+      "kind": "real",
+      "fold": 53,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_053.COMPLETE.json",
+      "sha256": "208e6226d7d95da794b4389b67cff99a3b139c0e427c405f3ae50751dd07e467"
+    },
+    {
+      "kind": "real",
+      "fold": 54,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_054.COMPLETE.json",
+      "sha256": "835036bfeb8070653ba192733511b0e92242fd055defd588fcab5a051d437eca"
+    },
+    {
+      "kind": "real",
+      "fold": 55,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_055.COMPLETE.json",
+      "sha256": "8cfce83f0035804b181ded0464adca3da33c199becb408fb91bae82e707c1955"
+    },
+    {
+      "kind": "real",
+      "fold": 56,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_056.COMPLETE.json",
+      "sha256": "5fe01e1c0e9b4cdcdad7ca5fe63120df2fdc5642f88064b84672846d9bbb366c"
+    },
+    {
+      "kind": "real",
+      "fold": 57,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_057.COMPLETE.json",
+      "sha256": "f148f750b242ba7ad5f477e1e431751f589f85fdd481be883fca9908992d27be"
+    },
+    {
+      "kind": "real",
+      "fold": 58,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_058.COMPLETE.json",
+      "sha256": "864beee3619b17d08ed4576d04f18418b0fcc73857a396f81c38ace67e02baf0"
+    },
+    {
+      "kind": "real",
+      "fold": 59,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_059.COMPLETE.json",
+      "sha256": "6ef6da915f1f71c12d4098965b452d150f896d9f1de922f648074c53cecd8c84"
+    },
+    {
+      "kind": "real",
+      "fold": 60,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_060.COMPLETE.json",
+      "sha256": "81453170d7334960de56db2a98cd0b7319aad1e6c63776595af84eee5eaeda11"
+    },
+    {
+      "kind": "real",
+      "fold": 61,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_061.COMPLETE.json",
+      "sha256": "bc259ecb3048ada7cdd3075698cf0517b2dcf585cd5257f7e7fa174ef7ed3d79"
+    },
+    {
+      "kind": "real",
+      "fold": 62,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_062.COMPLETE.json",
+      "sha256": "852f872b6f59261112665727834ee425e1acdb407a7691ffafb72c1a44468b8b"
+    },
+    {
+      "kind": "real",
+      "fold": 63,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_063.COMPLETE.json",
+      "sha256": "926478c138d2c12d5fbffb19ece2ea9ce43e810040a5bb55ae7615f8d8feba4b"
+    },
+    {
+      "kind": "real",
+      "fold": 64,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_064.COMPLETE.json",
+      "sha256": "568ddfae04b274a59fe3b209d57765321df033fcc09c97744d333f4d284bedb0"
+    },
+    {
+      "kind": "real",
+      "fold": 65,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_065.COMPLETE.json",
+      "sha256": "f6f7e3fa53d54f5fde88b3c9187b9a24fd90c200c3745fc123f190c42de49f0d"
+    },
+    {
+      "kind": "real",
+      "fold": 66,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_066.COMPLETE.json",
+      "sha256": "ed959638e02bd3b3d8066754f86f934a8ae06b4ce375780db1967b8990fd94b0"
+    },
+    {
+      "kind": "real",
+      "fold": 67,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_067.COMPLETE.json",
+      "sha256": "d515665c6bbb1b7b2d85109daf2e6297f871e368d18d647197fac49d76b73f96"
+    },
+    {
+      "kind": "real",
+      "fold": 68,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_068.COMPLETE.json",
+      "sha256": "b01eea8378a76fc145bef80e557ec704dede2f94a7f363359015239af7c4419a"
+    },
+    {
+      "kind": "real",
+      "fold": 69,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_069.COMPLETE.json",
+      "sha256": "4ce71a1c6bdc474627e34d4d3757f469c9d9dbc7ad07a45d904c0ce58e10665b"
+    },
+    {
+      "kind": "real",
+      "fold": 70,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_070.COMPLETE.json",
+      "sha256": "69fe56c3acbe5d798304b71e1ab7b5a38867c3d6c09c9499673c8098223d741d"
+    },
+    {
+      "kind": "real",
+      "fold": 71,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_071.COMPLETE.json",
+      "sha256": "404000c2856c42133d2b705b764786043df18940069c80c184ef14a1597392ba"
+    },
+    {
+      "kind": "real",
+      "fold": 72,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_072.COMPLETE.json",
+      "sha256": "2bf8e2d17a39fc95f48185fc3fef3aaefa2669c0aebfa3852a708ccfdb59b012"
+    },
+    {
+      "kind": "real",
+      "fold": 73,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_073.COMPLETE.json",
+      "sha256": "b9cd7184c41637b4a0f1a1cb05c6ba3bf05bc50c5fbd9ffcadf7ebfd349d602f"
+    },
+    {
+      "kind": "real",
+      "fold": 74,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_074.COMPLETE.json",
+      "sha256": "2694cce0cb860e332d79f0a8ae5d3a92dfb49d6b5fc00b6372e546c4e9cc11a6"
+    },
+    {
+      "kind": "real",
+      "fold": 75,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_075.COMPLETE.json",
+      "sha256": "e2b4e0662ebad4118c6de84f884e207bc6a142ef8b56922ec3572d34d5a31aff"
+    },
+    {
+      "kind": "real",
+      "fold": 76,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_076.COMPLETE.json",
+      "sha256": "c2187bc855483d1d56bc86c5337824cabc203174cda93028a60eae769335442f"
+    },
+    {
+      "kind": "real",
+      "fold": 77,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_077.COMPLETE.json",
+      "sha256": "b40de61429c3751c9b0290418bcc8b9ad4fbf15e979022c780089b6e013f9dad"
+    },
+    {
+      "kind": "real",
+      "fold": 78,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_078.COMPLETE.json",
+      "sha256": "7c20404bde5d0b3eac4915140383d6ba03d3a52c6c50731459ea7a13555db7c7"
+    },
+    {
+      "kind": "real",
+      "fold": 79,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_079.COMPLETE.json",
+      "sha256": "d6c579ab46dec1701ae560edad14e17a9c73c67b6ba4129a75b8ce8b46c528db"
+    },
+    {
+      "kind": "real",
+      "fold": 80,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_080.COMPLETE.json",
+      "sha256": "b513980681a0440ac06ff18be958f5bdf8921bfa9908a40768906ffdebb6bc66"
+    },
+    {
+      "kind": "real",
+      "fold": 81,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_081.COMPLETE.json",
+      "sha256": "3c628562754018d94adea7ea6488bf0237bca66d5eda2242d2ca0093aac3b807"
+    },
+    {
+      "kind": "real",
+      "fold": 82,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_082.COMPLETE.json",
+      "sha256": "50fdf51505cdfc6601b831f2b51be8c1bd7c137189f14ef9cff0c93677542c37"
+    },
+    {
+      "kind": "real",
+      "fold": 83,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_083.COMPLETE.json",
+      "sha256": "d46da58308965a59cc30800cd8f63716f664ab4be782dc8ed83c1e53311683f7"
+    },
+    {
+      "kind": "real",
+      "fold": 84,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_084.COMPLETE.json",
+      "sha256": "22a6c9b985fa752fc415fa5839a0aba04fe702f90a716b964316af8a18e5d00b"
+    },
+    {
+      "kind": "real",
+      "fold": 85,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_085.COMPLETE.json",
+      "sha256": "2317c16db41d19f06777cb94e6275515b2a7b6b5c045805c1365620acd3ce04a"
+    },
+    {
+      "kind": "real",
+      "fold": 86,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_086.COMPLETE.json",
+      "sha256": "5600291d5dc634c7a53653a68c08d2333e786a2265b2e4a1da6f3ec11c4fb97e"
+    },
+    {
+      "kind": "real",
+      "fold": 87,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_087.COMPLETE.json",
+      "sha256": "1193ab660ef7611140ff2d8bc393e1d8162d8e6256c221dd9769f7565eac480e"
+    },
+    {
+      "kind": "real",
+      "fold": 88,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_088.COMPLETE.json",
+      "sha256": "16f5f24f09cb34bd4ad82cd7907b2ff6e6acd322428b8bc06c8a4d391c958008"
+    },
+    {
+      "kind": "real",
+      "fold": 89,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_089.COMPLETE.json",
+      "sha256": "a534248e7b4440257f5b6f994a4310907914cdca442a1e8ec839f1148340017d"
+    },
+    {
+      "kind": "real",
+      "fold": 90,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_090.COMPLETE.json",
+      "sha256": "c442d99781f7215a17275ef90b083915db37f1d3780f26875f0c0ccf80c990eb"
+    },
+    {
+      "kind": "real",
+      "fold": 91,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_091.COMPLETE.json",
+      "sha256": "8ced9deb3ea12e744928d4d079586834a164a2588e7549b2fa78c63ff669a7d5"
+    },
+    {
+      "kind": "real",
+      "fold": 92,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_092.COMPLETE.json",
+      "sha256": "f23d039ffb573e49da5ed115c57c1fd6ca907adfd797bea343ee16922ff125bc"
+    },
+    {
+      "kind": "real",
+      "fold": 93,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_093.COMPLETE.json",
+      "sha256": "4f82e13c826e4625d4323b223a90fd78f58ab6701c2779abed09fb8533c93256"
+    },
+    {
+      "kind": "real",
+      "fold": 94,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_094.COMPLETE.json",
+      "sha256": "4675044ee8ecedfaebde53029d9cc179e25d814e5649fa0bf42934b9acbdafd8"
+    },
+    {
+      "kind": "real",
+      "fold": 95,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_095.COMPLETE.json",
+      "sha256": "be9d05a4b1a9955c77e1cf595eb5cbf5331f928ff96f429bcb8bfd9936e83b69"
+    },
+    {
+      "kind": "real",
+      "fold": 96,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_096.COMPLETE.json",
+      "sha256": "5e7a5d2d3f9cf0cee5a7f750af16397f9f411ed08b59ae4b6a49e896bdbaa9c6"
+    },
+    {
+      "kind": "real",
+      "fold": 97,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_097.COMPLETE.json",
+      "sha256": "7fafb1e0369ec87e2f7d641b6e40c4b62d086e932da0c42e2cf45148ebbb2a61"
+    },
+    {
+      "kind": "real",
+      "fold": 98,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_098.COMPLETE.json",
+      "sha256": "d23a6b96be8beb0d74e0a064bf9f23fe30df4a5ffb8c95871ca62b72d3c04605"
+    },
+    {
+      "kind": "real",
+      "fold": 99,
+      "path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\cgc_lowrank_completion\\real\\fold_099.COMPLETE.json",
+      "sha256": "f32c3dcb8c4376b12d7f2de5d3ac1bf4d74793870e9066e77a5e7c832d767ccd"
+    }
+  ]
+}

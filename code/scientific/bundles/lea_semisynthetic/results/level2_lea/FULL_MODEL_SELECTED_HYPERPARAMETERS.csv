@@ -1,0 +1,6 @@
+outer_fold,kernel_gamma_multiplier,kernel_fitted_gamma,kernel_alpha,boost_setting_index,boost_learning_rate,boost_max_iter,boost_max_leaf_nodes,boost_l2_regularization,deep_setting_index,deep_learning_rate,deep_weight_decay,deep_epochs,device
+0,0.25,1.488397709700643e-05,1.0,1,0.05,300,31,10.0,1,0.001,0.0001,1,cuda
+1,0.25,1.455929785377546e-05,1.0,0,0.05,200,15,1.0,1,0.001,0.0001,1,cuda
+2,0.25,1.4523336019072125e-05,1.0,0,0.05,200,15,1.0,1,0.001,0.0001,1,cuda
+3,0.25,1.499103194418567e-05,1.0,0,0.05,200,15,1.0,1,0.001,0.0001,1,cuda
+4,0.25,1.460901829184465e-05,1.0,2,0.1,150,15,10.0,1,0.001,0.0001,1,cuda

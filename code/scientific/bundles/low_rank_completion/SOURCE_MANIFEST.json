@@ -1,0 +1,279 @@
+{
+  "id": "low_rank_completion",
+  "analysis_name": "Additive versus CP low-rank interaction completion",
+  "class": "FULL_ANALYSIS",
+  "commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+  "entrypoints": [
+    {
+      "path": "scripts/cgc_lowrank_run.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_lowrank_masks.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/cgc_lowrank_report.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "src/igc_virtual_cell/cgc_lowrank_completion",
+    "scripts/cgc_lowrank_*.py",
+    "tests/test_cgc_lowrank_completion.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_lowrank_interaction_completion/LOW_RANK_INTERACTION_PROTOCOL.md",
+    "results/cgc_lowrank_interaction_completion/LOW_RANK_MASK_MANIFEST.csv",
+    "results/cgc_lowrank_interaction_completion/LOW_RANK_OUTPUT_MANIFEST.json"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/cgc_entrywise_cache",
+      "authority": "LOW_RANK_INTERACTION_PROTOCOL.md; ENTRYWISE_FOUNDATION_MANIFEST.json",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Pass --source-root explicitly; three 86,490,128-byte Gram matrices plus sums and frozen affine selection metadata."
+    }
+  ],
+  "outputs": [
+    "results/cgc_lowrank_interaction_completion"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [
+    {
+      "kind": "pytest",
+      "args": [
+        "tests/test_cgc_lowrank_completion.py"
+      ],
+      "boundary": "four design/prediction-weight/Gram identities; no optimizer training"
+    }
+  ],
+  "exported_file_count": 22,
+  "exported_source_bytes": 594399,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "torch"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_lowrank_interaction_completion/LOW_RANK_INTERACTION_PROTOCOL.md",
+      "source_file": "results/cgc_lowrank_interaction_completion/LOW_RANK_INTERACTION_PROTOCOL.md",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "3d418254cae59289c02d044871e032eed4d5368e",
+      "sha256": "6cbf4a89ecc56631f4967721b1dfd922ec9903e27e52e2c50a1880f99778b455",
+      "size_bytes": 8238,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_lowrank_interaction_completion/LOW_RANK_MASK_MANIFEST.csv",
+      "source_file": "results/cgc_lowrank_interaction_completion/LOW_RANK_MASK_MANIFEST.csv",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "851d6a77203bb3b3f22141fa269ee1672c287732",
+      "sha256": "9355f375a3039b3bf5c953b54b66087af4b41d30bc234abae7dd98c18be64993",
+      "size_bytes": 428009,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_lowrank_interaction_completion/LOW_RANK_OUTPUT_MANIFEST.json",
+      "source_file": "results/cgc_lowrank_interaction_completion/LOW_RANK_OUTPUT_MANIFEST.json",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "0df928e347586e164a4c72db9afffd1ef92c08a8",
+      "sha256": "ef4c2dd01c9aa5a171b116ab9039e2cae0afd1dc85f3c969045fddeee56c34f7",
+      "size_bytes": 57335,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_lowrank_feasibility.py",
+      "source_file": "scripts/cgc_lowrank_feasibility.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "05a3e630de92a8180683bb6ff46830fd3e7aba14",
+      "sha256": "f949ad70e85ed4b0fd220825bfc72a9d65cf29248ec3cd6503be59e388a2b61d",
+      "size_bytes": 543,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_lowrank_masks.py",
+      "source_file": "scripts/cgc_lowrank_masks.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "65be32e36186b86cd1ab1f9538ae7c3b7aad964b",
+      "sha256": "e8c9e510f84989d6207a666c3b3628bc7e773b5b57328a8e74c8490ae9903e4f",
+      "size_bytes": 481,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_lowrank_report.py",
+      "source_file": "scripts/cgc_lowrank_report.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "9ec827d0ff366ac5819c44a75b9d08e0d3cea9b8",
+      "sha256": "853d66421a76e40b8587876a2dbacbd4e12c721ac2f2ff01ba3e47a8f069ace9",
+      "size_bytes": 472,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_lowrank_run.py",
+      "source_file": "scripts/cgc_lowrank_run.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "42fbda8a85b58f86949bc9d94851decc16dbd293",
+      "sha256": "855323ab9213d62bae6b856cf4446cf0c71cc7cfcbf4d05fed5205e05ca35446",
+      "size_bytes": 1028,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/__init__.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "9f23650214275dbc2783f036106d727adac9fbb5",
+      "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b",
+      "size_bytes": 340,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_entrywise/core.py",
+      "source_file": "src/igc_virtual_cell/cgc_entrywise/core.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "673a5af689bebe7d11313692b56afce7ea17d2af",
+      "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8",
+      "size_bytes": 8372,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/__init__.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "58ae8931cfe89c3100429969a2a179133620fe1a",
+      "sha256": "8a7cf51d853a558c7b414eea99e18e293ff4431917aabce6cb70e996f4f959d8",
+      "size_bytes": 436,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/affine.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/affine.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "9ec4cf59128fe98933b9e3cbdeff0c461e4b01f9",
+      "sha256": "2ce237d863fa7a1e54c37f01ba7bd487c63fe183395c7427d2f0d95e3e1e09af",
+      "size_bytes": 7524,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/aggregate.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/aggregate.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "1f6cb4af2f12c18458ddcd0be1ded83ec22bfe09",
+      "sha256": "f65abf8d6c6e05b207c2b4525ea72b79d4c1917b701c764d4a67b40610a07f2c",
+      "size_bytes": 13786,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/core.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/core.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "d396c93f8154005cd19c3efe47a69e1daac4b210",
+      "sha256": "4a9c3abdcda66dbc1eebc1e101d1d1c15089fc17d68b8cf0da8eb8831d865108",
+      "size_bytes": 10909,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/design.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/design.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "31dcf752de2e0ffe938114176f14373f6807db54",
+      "sha256": "2d5c769e31b90041e0832e2675776500f6c6c31872faddd41b7b8b062f0aa388",
+      "size_bytes": 6265,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/evaluation.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/evaluation.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "5399b687b2463b8f33e3c4a0d1e6c5f55a4cda93",
+      "sha256": "9b1aa8bfea885007c9a3caffbee3d7f9c6345008979fd4b90a070af09b6097f4",
+      "size_bytes": 9344,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/feasibility.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/feasibility.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "fd6f5e4595ae37b657d2e2e1817969e34d4088d0",
+      "sha256": "0cc168e38a8fe0d239cca817826481b7d8eb1743e591560efccfccf4b1c16c8d",
+      "size_bytes": 7588,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/fitting.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/fitting.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "89ed0b75a4019b0eb0b4635b25395aa54f9fd83c",
+      "sha256": "459f60a2b7f0dd18c7bfaf9ada998740cde9e06c2f427dc11efe6ba279965f1d",
+      "size_bytes": 6175,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/reporting.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/reporting.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "59e4f8194ff18f71412d13b342d9396b8ca0c368",
+      "sha256": "eb2509d1a5b8a8df70aac26d00ec73dc41f87fbf760005a8730a736573a635fa",
+      "size_bytes": 12419,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_lowrank_completion/runner.py",
+      "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/runner.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "9bac5229d9847edafc646f0264544e92d70a53fd",
+      "sha256": "7038b7412904790afe02b62db25ab3130a3aa57cb5e99838a1c6a3dfe2d3410e",
+      "size_bytes": 11941,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_cgc_lowrank_completion.py",
+      "source_file": "tests/test_cgc_lowrank_completion.py",
+      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "git_blob": "1620f923ba31545540d1903cc3e5f9f701a71b21",
+      "sha256": "9b45de010a7acc2cdcdbc07f16cf50595436f87311a4898b9596401ee32c4bd5",
+      "size_bytes": 2275,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

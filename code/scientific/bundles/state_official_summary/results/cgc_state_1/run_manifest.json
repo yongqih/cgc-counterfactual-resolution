@@ -1,0 +1,63 @@
+{
+  "phase": "CGC-STATE-1",
+  "created_at": "2026-08-21T17:42:13.180767-04:00",
+  "branch": "cgc_state_zeroshot_geometry_audit",
+  "preregistered_input_commit": "e6856949e6f03c9276a91a5328818138b50be819",
+  "analysis_commit": "b817ffa3caf9eeef65183a11c3b8a2625a610f1e",
+  "python": "3.14.0",
+  "seed": 4101,
+  "gpu_used": false,
+  "model_trained": false,
+  "downloaded_bytes": 434168727,
+  "official_contexts": [
+    "B_Intermediate_Memory",
+    "B_Naive",
+    "Plasmablast",
+    "CD4_Memory",
+    "CD14_Mono"
+  ],
+  "shared_cytokines": 90,
+  "features": 2000,
+  "required_sha256": {
+    "official_source_manifest.json": "d7f1dbd4811f0b87ccff9b6181567324ae333cd79c0601549c7bc0cc1e2e3992",
+    "repository_revisions.json": "983fc70c2f7210989209fe016a4eecbed18f293ce4208565041eba2ad2827cac",
+    "license_acknowledgement.md": "8047547af9cde2e94081f1968c276dadee2c35a9527488805d7ba69d91a58db7",
+    "zero_shot_split_manifest.csv": "ae82424c2d5f22e9ae0c317718ec6c55965cb33eb26dfcb73d90755654b15196",
+    "artifact_inventory.csv": "cdef626348140d1c3c09a4eaddb334fa540455038a39654f76210951a0bbedc9",
+    "official_metric_reproduction.csv": "03e728eed8d01d706281f2974f6bd848dc07a7badd95e46d73ceba29198b01bc",
+    "context_intervention_gene_manifest.json": "23ed4650c5bc4a50f912536a3adf8d3d8bf1d336276e58df6bbb2e05481fa73e",
+    "real_pseudobulk.parquet": "946e476e863fdd6ba3c710a7916f738cd75bf6d46b8e1e2853064bcaa1295fa3",
+    "predicted_pseudobulk.parquet": "cdadbc77d3e4e97baaf8b7417c2636fbffdcd7987d9dc7a645d5cd7fa137a91e",
+    "truth_operator_reliability.csv": "3215d94f46e37ee5e0cf32eece5b415d0ea043b33801bbb5e59f9657b430e081",
+    "pertmean_predictions.parquet": "09c80590517016f77c9b2fd32ada6da47cbe0d011b9afec09e064f9b3d6244d1",
+    "state_canonical_metrics.csv": "7445f432691f6effcd0ae4a3a15b05652410a111ce2bce7be5b6c8dc866cc47c",
+    "shared_novel_decomposition.csv": "40e6b24a6a16d8aa0434fef1a9b2d98222caa650a1065d9637c9e6fc19f84a7c",
+    "state_recovery_g.csv": "287de826e899778d61b0ffa76060835244d5e8d6b59bd3c5dde77f309ab5b496",
+    "nulls.csv": "679d329b528a6255051d2c6cccad223f1363b882eddf006e244ec982fb877f5e",
+    "bootstrap_summary.csv": "d7fadcf3361eedfb50c6cda32d1d67c8819cb7e3aaa8bdcb3f749e07ee660f00",
+    "context_heterogeneity.csv": "861329715fbaa479c05de516a54dae9215d58c403285c205c888908beedef0fe",
+    "state_embedding_geometry.csv": "f09c6781350bfb1e8e56de8e57ff72eee7ab525e60ad5b19acc834323aa912f4",
+    "raw_rna_geometry.csv": "34c00eedd5b3da00bb9d6e836f500beb6269a227bc4c4ac320b6c640f6b193ee",
+    "integrity_audit.json": "1c6fc8880ab537b1d28a8356d1648efddc71953bda59fc399710549a319229ba",
+    "verdict.json": "c2f06f01d3951f8cb453b1bf402b16a45efe0b65a35c90c258701ba1b89e786e"
+  },
+  "reports": [
+    "results/reports/cgc_state_artifact_audit.md",
+    "results/reports/cgc_state_embedding_audit.md",
+    "results/reports/cgc_state_geometry_audit.md",
+    "results/reports/cgc_state_official_reproduction.md",
+    "results/reports/cgc_state_phase_summary.md"
+  ],
+  "figures": 30,
+  "verdicts": {
+    "phase": "CGC-STATE-1",
+    "created_at": "2026-08-21T17:42:11.064837-04:00",
+    "reliability_status": "STATE_PARSE_OPERATOR_RELIABILITY_LIMITED",
+    "primary_variant": "ST_SE",
+    "primary_verdict": "STATE_CONTEXT_SPECIFIC_OPERATOR_RECOVERY_NOT_SUPPORTED",
+    "sensitivity_variant": "ST_HVG",
+    "sensitivity_verdict": "STATE_CONTEXT_SPECIFIC_OPERATOR_RECOVERY_NOT_SUPPORTED",
+    "manuscript_placement": "STATE_EXCLUDE_AS_POSITIVE_EVIDENCE_RETAIN_AS_NEGATIVE_AUDIT",
+    "deterministic_analogue_not_replicate_stable": true
+  }
+}

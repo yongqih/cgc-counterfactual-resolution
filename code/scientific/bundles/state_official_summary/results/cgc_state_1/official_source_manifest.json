@@ -1,0 +1,20 @@
+{
+  "phase": "CGC-STATE-1",
+  "official_only": true,
+  "sources": {
+    "state_github": "https://github.com/ArcInstitute/state",
+    "ST_SE": "https://huggingface.co/arcinstitute/ST-SE-Parse",
+    "ST_HVG": "https://huggingface.co/arcinstitute/ST-HVG-Parse"
+  },
+  "files": 59,
+  "downloaded_bytes": 434168727,
+  "downloaded_gb_decimal": 0.434168727,
+  "maximum_transfer_gb": 80,
+  "raw_or_cell_level_h5ad_downloaded": false,
+  "checkpoint_history_downloaded": false,
+  "eval_last_downloaded": false,
+  "official_eval_best_complete_de_tables_downloaded": true,
+  "minimum_free_disk_after_download_gb": 700,
+  "free_disk_bytes": 908057907200,
+  "accessed_at": "2026-08-21T17:31:49.721651-04:00"
+}

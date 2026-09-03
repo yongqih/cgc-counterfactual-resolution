@@ -1,0 +1,31 @@
+{
+  "available_support_contexts_per_heldout": 49,
+  "fold_counts": {
+    "0": 13,
+    "1": 10,
+    "2": 25,
+    "3": 19,
+    "4": 26
+  },
+  "frozen_before_coordinate_fitting": true,
+  "heldout_contexts": 50,
+  "intervention_fold_assignment": "sha256 identity hash; no outcome balancing",
+  "intervention_folds": 5,
+  "interventions": 93,
+  "n49_computationally_deduplicated": true,
+  "nested_prefix_design": true,
+  "response_values_read_during_design": false,
+  "support_base_seed": 202608203,
+  "support_sequences_per_heldout": 128,
+  "support_sizes": [
+    2,
+    4,
+    8,
+    16,
+    24,
+    32,
+    40,
+    49
+  ],
+  "timestamp_utc": "2026-08-20T18:43:53.583077+00:00"
+}

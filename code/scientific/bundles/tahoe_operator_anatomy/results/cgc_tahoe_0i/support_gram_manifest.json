@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-08-21T13:14:32.537961-04:00",
+  "method": "streaming sufficient Gram statistics; no dense case-by-gene design matrix",
+  "response_estimator": "delta_primary",
+  "gene_chunk": 256,
+  "folds": 5,
+  "cache_paths": {
+    "G_ALL_MAPPED": "results\\cgc_tahoe_0i\\support_grams_g_all_mapped.npz",
+    "G_PRIMARY": "results\\cgc_tahoe_0i\\support_grams_g_primary.npz",
+    "G_BROAD": "results\\cgc_tahoe_0i\\support_grams_g_broad.npz",
+    "G_STRICT": "results\\cgc_tahoe_0i\\support_grams_g_strict.npz",
+    "G_PRIMARY_NO_MITO": "results\\cgc_tahoe_0i\\support_grams_g_primary_no_mito.npz",
+    "G_PRIMARY_NO_MITO_RIBO": "results\\cgc_tahoe_0i\\support_grams_g_primary_no_mito_ribo.npz"
+  },
+  "intervention_fold_source": "results/cgc_tahoe_0c/intervention_folds.csv",
+  "support_sequence_source": "results/cgc_tahoe_0c/support_sequences.csv"
+}

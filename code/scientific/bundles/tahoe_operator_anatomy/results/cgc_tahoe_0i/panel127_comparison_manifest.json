@@ -1,0 +1,25 @@
+{
+  "diagnostic_only": true,
+  "gene_selection_changed": false,
+  "outcome_based_panel_not_used_for_primary_analysis": true,
+  "adjudication_rule": [
+    "overlap <120 -> inconclusive",
+    "else abs(raw_q49-official_q49)>0.15 or global Pearson<0.30 -> not representative",
+    "else median panel raw-effect percentile>=0.75 -> effect enriched",
+    "else raw counts resolve semantics"
+  ],
+  "summary": {
+    "panel_genes": 127,
+    "raw_overlap_genes": 127,
+    "global_response_pearson": 0.7675460652752885,
+    "global_response_spearman": 0.8939938462564307,
+    "median_condition_pearson": 0.9705100606994589,
+    "official_truth_signal": 0.014692138887053953,
+    "raw_panel_truth_signal": 0.007496905594783142,
+    "official_q49": 0.8445885011854263,
+    "raw_panel_q49": 0.8438602701331941,
+    "panel_median_dmso_expression_percentile": 0.995375538191676,
+    "panel_median_raw_effect_percentile": 0.6632275554138096,
+    "source_semantics_conclusion": "TAHOE_RAW_COUNTS_RESOLVE_READOUT_SEMANTICS"
+  }
+}

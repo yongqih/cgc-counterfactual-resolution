@@ -1,0 +1,10 @@
+{
+  "revisions": {
+    "state_github": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+    "ST_SE_Parse": "fa458ffda8690c5c5bdff080dfdc46b46713043b",
+    "ST_HVG_Parse": "827df657cd87063026d2abefd73e99036755ac1b"
+  },
+  "state_package_version": "0.11.3",
+  "git_branch": "cgc_state_zeroshot_geometry_audit",
+  "git_parent": "6b4ecc8cf3b5fa5799d612c37d6f96ea526c15cd"
+}

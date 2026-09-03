@@ -1,0 +1,62 @@
+{
+  "matrix_shape": [
+    25695,
+    5
+  ],
+  "singular_values": [
+    1.286410964295257,
+    1.2176814352542367,
+    0.8823045890920942,
+    0.7738446551117122,
+    0.696492508933293
+  ],
+  "rank_tolerance_absolute": 7.33953558541925e-12,
+  "pseudoinverse_rcond": 5.7054361235486795e-12,
+  "numerical_rank": 5,
+  "gram_eigenvalues": [
+    0.48510181500019245,
+    0.5988355502449644,
+    0.7784613879329685,
+    1.4827480777628192,
+    1.6548531690590538
+  ],
+  "condition_number_WtW": 3.411352252018264,
+  "condition_number_status": "finite_full_rank",
+  "rank_direction_discarded": false,
+  "orthonormality_max_abs_error": 1.3322676295501878e-15,
+  "weight_span_reconstruction_relative_error": 2.8210078815509913e-15,
+  "projector_implementation": "implicit Q @ Q.T from compact SVD; no GxG matrix materialized",
+  "authority_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
+  "pathways": [
+    "MAPK",
+    "PI3K",
+    "JAK-STAT",
+    "p53",
+    "NFkB"
+  ],
+  "gene_universe": 25695,
+  "episode": {
+    "m": 49,
+    "k": 92,
+    "sequence_count": 1,
+    "all_but_one_sources_verified": true
+  },
+  "input_sha256": {
+    "weights": "f5c4faa94fe03b2d088b72743da175380dfcf2edbfacd0077cc25eb19d2ca7e9",
+    "metadata": "f690be9e4a57bcf1fc2c70d1e458ea901950c5c42cc84c6d1fb7e728094c4960",
+    "indices": "efea7718149514c763fbbad86d2337fde3377bf6c977365f0046576a85b94343",
+    "truth": "005603c5a01c085762c9eecb266de6302f95356ca5eb4026f8c0380f57793f73",
+    "episode": "b0e410e9c0f5d0d9f0a4d3fbfd02cf247d171cd203c480083dc6fa666b68d928",
+    "utility": "bd3b4f5097b4f158f58da102849d52080bb9ae7b7a4c4325f37bf574fd1a7c08",
+    "bootstrap": "f0a9697175fe2d4b8bc800e4352d961ed349f9e9a33df138c793be24f982c9cf",
+    "split": "da3fc0f3422c12e2a1ec9fcdc6447cd137836a963290a262a82451430df1198d"
+  },
+  "full_vtruth_table_max_abs_error": 1.98804864681712e-07,
+  "full_vtruth_validation_tolerance": 5e-07,
+  "frozen_nonorthogonal_pathway_denominator_expected": 43699.70973805656,
+  "frozen_nonorthogonal_pathway_denominator_recomputed": 43699.70973805658,
+  "frozen_nonorthogonal_pathway_denominator_abs_error": 2.1827872842550278e-11,
+  "frozen_pathway_denominator_validation_tolerance": 1e-05,
+  "projection_precedes_cross_plate_aggregation": true,
+  "random_projection_control_run": false
+}

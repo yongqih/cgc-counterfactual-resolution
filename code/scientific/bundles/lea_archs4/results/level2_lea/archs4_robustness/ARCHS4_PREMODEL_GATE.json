@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-08-25T15:10:22.951425-04:00",
+  "authority_commit": "35cf07d8f3d90450b365893b56aa127dca7c4774",
+  "historical_implementation_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+  "version_protocol_commit": "8fad55f7a39ff64383c8a0440bcb8c4e3892c7ee",
+  "matched_core_lines": 340,
+  "excluded_lines": [
+    "Line223",
+    "LineNA"
+  ],
+  "fold_counts": {
+    "0": 67,
+    "1": 69,
+    "2": 68,
+    "3": 68,
+    "4": 68
+  },
+  "gene_axis": {
+    "matrix_path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\level2_lea_official\\GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+    "matrix_sha256": "55a504219b90b9c532d44462c3d49a3bf19606e12a2ae7b310aed1991214587b",
+    "historical_rows": 10157,
+    "historical_unique_geneids": 10120,
+    "archs4_gene_rows": 67186,
+    "archs4_unique_geneids": 67186,
+    "matched_one_to_one": 10110,
+    "coverage_fraction": 0.9990118577075099,
+    "excluded_missing": 10,
+    "excluded_ambiguous": 0,
+    "archs4_remote_metadata": {
+      "content_length": 47865298452,
+      "etag": "\"350f7e2f1096e77b8b8da50c6a91c509-9130\"",
+      "last_modified": "Sat, 13 Jun 2026 22:46:32 GMT",
+      "accept_ranges": "bytes",
+      "remote_url": "https://s3.dev.maayanlab.cloud/archs4/files/human_gene_v2.5.h5",
+      "range_requests": 18,
+      "range_bytes_transferred": 4718592
+    }
+  },
+  "input_provenance": {
+    "metadata_path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\data\\level2_lea_official\\31Mar21_all_runs_voom_resid_metadata.txt",
+    "metadata_sha256": "dd89a819740932af616465b2153e36b95ecd078090ca03e0b1ba70a0e03611d0",
+    "oof_path": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell\\results\\level2_lea\\LEVEL2_OOF_FROZEN.npz",
+    "oof_sha256": "f65e373534dbb1b1a89b50a69907251a4ea608dd2d5d432cf704aa6795b27284",
+    "candidate_mapping_path": "results/level2_lea/archs4_coverage_audit/ARCHS4_GSE207049_CANDIDATE_GSMS.csv",
+    "candidate_mapping_sha256": "614a0b36f46e9ee36471124b8fe9293be705b34e9ed996b438337e53d57a1fd1"
+  },
+  "expression_outcomes_loaded": false,
+  "model_outcomes_loaded": false,
+  "gate": "ARCHS4_MATCHED_340_PREMODEL_GATE_PASS"
+}

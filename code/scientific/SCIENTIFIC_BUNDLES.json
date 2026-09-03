@@ -1,0 +1,2318 @@
+{
+  "schema_version": 1,
+  "scope": "Exact immutable-source packaging, no analysis rerun",
+  "bundles": [
+    {
+      "id": "experimental_compression",
+      "analysis_name": "Strict target-hidden entrywise Experimental Compression",
+      "class": "FULL_ANALYSIS",
+      "commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_entrywise_foundation.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_entrywise_surface.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_entrywise_controls.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_entrywise_inference.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_entrywise_report.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_entrywise",
+        "scripts/cgc_entrywise_*.py",
+        "tests/test_cgc_entrywise.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
+        "results/cgc_entrywise_compression/ENTRYWISE_FOUNDATION_MANIFEST.json",
+        "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+        "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json",
+        "results/cgc_entrywise_compression/ENTRYWISE_INFORMATION_SET.json",
+        "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/cgc_entrywise_cache/same_plate6_float32.npy",
+          "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+          "bytes_if_known": 86490128,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_entrywise_cache/same_plate14_float32.npy",
+          "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+          "bytes_if_known": 86490128,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy",
+          "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+          "bytes_if_known": 86490128,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_entrywise_cache/sample_gene_sums_float64.npy",
+          "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+          "bytes_if_known": 74528,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/cgc_entrywise_compression"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [
+        {
+          "kind": "pytest",
+          "args": [
+            "tests/test_cgc_entrywise.py"
+          ],
+          "boundary": "synthetic tensors only; five tests; no frozen outcomes"
+        }
+      ]
+    },
+    {
+      "id": "low_rank_completion",
+      "analysis_name": "Additive versus CP low-rank interaction completion",
+      "class": "FULL_ANALYSIS",
+      "commit": "d734df721a7914c965d99af1a6955cff6f64209c",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_lowrank_run.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_lowrank_masks.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_lowrank_report.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_lowrank_completion",
+        "scripts/cgc_lowrank_*.py",
+        "tests/test_cgc_lowrank_completion.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_lowrank_interaction_completion/LOW_RANK_INTERACTION_PROTOCOL.md",
+        "results/cgc_lowrank_interaction_completion/LOW_RANK_MASK_MANIFEST.csv",
+        "results/cgc_lowrank_interaction_completion/LOW_RANK_OUTPUT_MANIFEST.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/cgc_entrywise_cache",
+          "authority": "LOW_RANK_INTERACTION_PROTOCOL.md; ENTRYWISE_FOUNDATION_MANIFEST.json",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Pass --source-root explicitly; three 86,490,128-byte Gram matrices plus sums and frozen affine selection metadata."
+        }
+      ],
+      "outputs": [
+        "results/cgc_lowrank_interaction_completion"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [
+        {
+          "kind": "pytest",
+          "args": [
+            "tests/test_cgc_lowrank_completion.py"
+          ],
+          "boundary": "four design/prediction-weight/Gram identities; no optimizer training"
+        }
+      ]
+    },
+    {
+      "id": "m1_secondary",
+      "analysis_name": "Frozen M1 secondary and post-selection correspondence adjudication",
+      "class": "FULL_ANALYSIS",
+      "commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_m1_secondary_audit.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_m1_m2k92_confirmation.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "scripts/cgc_m1_secondary_audit.py",
+        "scripts/cgc_m1_m2k92_confirmation.py",
+        "src/igc_virtual_cell/cgc_m1_secondary.py",
+        "src/igc_virtual_cell/cgc_m1_m2k92_confirmation.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_PROTOCOL.md",
+        "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_RUN_MANIFEST.json",
+        "results/cgc_entrywise_compression/ENTRYWISE_HYPERPARAMETERS.csv",
+        "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
+        "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+          "authority": "ENTRYWISE_RUN_MANIFEST.json",
+          "bytes_if_known": 27158852,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_entrywise_cache",
+          "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/cgc_m1_secondary_audit"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "claim_boundary": "Post-hoc descriptive point selection is jointly corrected; M1 remedy line remains closed. Pass --upstream-root explicitly."
+    },
+    {
+      "id": "context_anchoring",
+      "analysis_name": "Frozen-output context-anchoring contrasts and analytical figure",
+      "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+      "commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_context_anchoring.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "scripts/cgc_context_anchoring.py",
+        "src/igc_virtual_cell/cgc_context_anchoring.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FROZEN_PROTOCOL.md"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+          "authority": "ENTRYWISE_RUN_MANIFEST.json",
+          "bytes_if_known": 27158852,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "results/cgc_entrywise_compression/_cache/bootstrap_draws.npz",
+          "authority": "ENTRYWISE_RUN_MANIFEST.json",
+          "bytes_if_known": 43200800,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/cgc_context_anchoring_efficiency"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "claim_boundary": "The run command computes prespecified contrasts and emits Figure_Context_Anchoring PNG/SVG/source CSV from frozen utility/bootstrap tables. It does not refit predictors and does not reproduce manually edited R2 figures. Pass --authority-root explicitly."
+    },
+    {
+      "id": "mechanism_aligned",
+      "analysis_name": "Final BIO2 attribution and MULTI2 mechanism-aligned prediction",
+      "class": "FULL_ANALYSIS",
+      "commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_mechanism_bio2.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/cgc_mechanism_multi2.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_mechanism_followup",
+        "scripts/cgc_mechanism_bio2.py",
+        "scripts/cgc_mechanism_multi2.py",
+        "scripts/cgc_mechanism_finalize.py",
+        "scripts/freeze_cgc_mechanism_followup.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
+        "results/cgc_mechanism_followup/BIO2_FROZEN_INTERVENTION_ANNOTATIONS.csv",
+        "results/cgc_mechanism_followup/BIO2_HIERARCHICAL_ATTRIBUTION_PROTOCOL.md",
+        "results/cgc_mechanism_followup/BIO2_RUN_MANIFEST.json",
+        "results/cgc_mechanism_followup/CGC_MECHANISM_REPORTING_MANIFEST.json",
+        "results/cgc_mechanism_followup/MULTI2_ANNOTATION_PROVENANCE.json",
+        "results/cgc_mechanism_followup/MULTI2_FEATURE_MAP.json",
+        "results/cgc_mechanism_followup/MULTI2_MECHANISM_ALIGNED_PROTOCOL.md",
+        "results/cgc_mechanism_followup/MULTI2_RUN_MANIFEST.json",
+        "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
+        "results/cgc_mechanism_followup/BIO2_MATCHING_RULES.json",
+        "results/cgc_mechanism_followup/BIO2_NULL_DEFINITIONS.md",
+        "results/cgc_tahoe_0i/pseudobulk_sample_metadata.csv",
+        "results/cgc_tahoe_bio1/cellline_depmap_mapping.csv",
+        "results/cgc_tahoe_bio1/drug_target_moa_manifest.csv",
+        "results/cgc_tahoe_bio1/genotype_drug_match_manifest.csv",
+        "results/cgc_tahoe_bio1/program_manifest.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/cgc_bio1_official/bio1_gene_arrays.npz",
+          "authority": "MULTI2 SOURCE_HASHES; BIO2 EXPECTED_GENE_HASH",
+          "bytes_if_known": 1911708512,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_bio1_official/bio1_projected_programs.npz",
+          "authority": "BIO2 EXPECTED_PROGRAM_HASH",
+          "bytes_if_known": 191722116,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_multi1_official/rppa500-mclp_tahoe49.parquet",
+          "authority": "MULTI2 SOURCE_HASHES",
+          "bytes_if_known": 210556,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Shared prepared measurements reused by final MULTI2, not historical MULTI1 results."
+        },
+        {
+          "path": "data/cgc_multi1_official/harmonized_Sanger_MS_2022_tahoe49.parquet",
+          "authority": "MULTI2 SOURCE_HASHES",
+          "bytes_if_known": 2331840,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_multi1_official/Chronos_Combined_tahoe49.parquet",
+          "authority": "MULTI2 SOURCE_HASHES",
+          "bytes_if_known": 7068304,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_mechanism_followup",
+          "authority": "MULTI2_ANNOTATION_PROVENANCE.json",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+          "authority": "MULTI2 load_foundation baseline-only primary_dmso_cpm",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+          "authority": "gene_universe_hashes.json",
+          "bytes_if_known": 102908,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+          "authority": "MULTI2 SOURCE_HASHES",
+          "bytes_if_known": 2705687,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/cgc_mechanism_followup"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "claim_boundary": "Power denotes detection under oracle-aligned injected delta-g, not an unbiased fitted-effect MDE. Dependency is an oracle input, not deployment-available untreated biology.",
+      "path_adapter": "bio2: launcher sets only common/bio2 ROOT, SOURCE_ROOT and OUT before invoking unchanged run_bio2; multi2 accepts --root --source-root --out."
+    },
+    {
+      "id": "tahoe_operator_anatomy",
+      "analysis_name": "Tahoe full-transcriptome replicate geometry and operator anatomy",
+      "class": "FULL_ANALYSIS",
+      "commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_tahoe_0i_scaling.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_tahoe_0i",
+        "scripts/cgc_tahoe_0i_*.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_tahoe_0i/environment.json",
+        "results/cgc_tahoe_0i/extraction_manifest.json",
+        "results/cgc_tahoe_0i/panel127_comparison_manifest.json",
+        "results/cgc_tahoe_0i/raw_source_manifest.json",
+        "results/cgc_tahoe_0i/response_manifest.json",
+        "results/cgc_tahoe_0i/run_manifest.json",
+        "results/cgc_tahoe_0i/support_gram_manifest.json",
+        "results/cgc_tahoe_0c/intervention_folds.csv",
+        "results/cgc_tahoe_0c/readout_genes.csv",
+        "results/cgc_tahoe_0c/support_sequences.csv",
+        "results/cgc_tahoe_0i/gene_universe_hashes.json",
+        "results/cgc_tahoe_0i/raw_source_manifest.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+          "authority": "response_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+          "authority": "gene_universe_hashes.json",
+          "bytes_if_known": 102908,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/cgc_tahoe_0i"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "claim_boundary": "q_N is response-observed same-intervention support fidelity, not target-blind predictive recovery. R_dim is cross-plate remaining-residual energy. Original per-stage scripts resolve paths from their bundle root.",
+      "max_single_source_bytes": 16000000
+    },
+    {
+      "id": "tahoe_replicate_core",
+      "analysis_name": "Tahoe replicate-core inventory, pseudobulk extraction and truth",
+      "class": "FULL_ANALYSIS",
+      "commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_tahoe_0b_inventory.py",
+          "help_args": null,
+          "help_boundary": "No argument parser; use launcher --inspect-only, never pass --help directly."
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_tahoe_0b",
+        "src/igc_virtual_cell/cgc_tahoe_0c",
+        "scripts/cgc_tahoe_0b_*.py",
+        "scripts/cgc_tahoe_0c_*.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_tahoe_0c/core_tensor_manifest.json",
+        "results/cgc_tahoe_0c/design_manifest.json",
+        "results/cgc_tahoe_0c/run_manifest.json",
+        "results/cgc_tahoe_0c/shard_scan_manifest.json",
+        "results/cgc_tahoe_0c/source_manifest.json",
+        "results/cgc_tahoe_0c/temporary_shard_deletion_manifest.json",
+        "results/cgc_tahoe_0c/intervention_folds.csv",
+        "results/cgc_tahoe_0c/readout_genes.csv",
+        "results/cgc_tahoe_0c/support_sequences.csv",
+        "results/cgc_tahoe_0i/gene_universe_hashes.json",
+        "results/cgc_tahoe_0i/raw_source_manifest.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/tahoe100m_plate6_14_core",
+          "authority": "results/cgc_tahoe_0b and cgc_tahoe_0c frozen manifests",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared pseudobulk core only; downloading large raw resources is not part of this release repair."
+        }
+      ],
+      "outputs": [
+        "results/cgc_tahoe_0c"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "max_single_source_bytes": 16000000
+    },
+    {
+      "id": "held_context_scaling",
+      "analysis_name": "Target-hidden Tahoe context-support scaling",
+      "class": "FULL_ANALYSIS",
+      "commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "entrypoints": [
+        {
+          "path": "scripts/tahoe_held_context_scaling.py",
+          "help_args": [
+            "--help"
+          ]
+        },
+        {
+          "path": "scripts/tahoe_held_context_secondary.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "scripts/tahoe_held_context_*.py",
+        "src/igc_virtual_cell/tahoe_held_context_*.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_PROTOCOL.md",
+        "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_TARGET_MANIFEST.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+          "authority": "response_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/tahoe100m_control_state/control_wells_log1p_cpm_float32.npy",
+          "authority": "frozen control-state source manifest",
+          "bytes_if_known": 34018528,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "results/cgc_tahoe_0d/lineage_baseline.csv",
+          "authority": "frozen lineage metadata",
+          "bytes_if_known": 11137,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/tahoe_held_context_scaling"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "claim_boundary": "Historical finalize uses context-only uncertainty and is NOT final ED7 inference. The separately packaged ed7_hierarchical_repair must supply current context-then-intervention uncertainty. Point estimates/models remain frozen.",
+      "archival_entrypoints": [
+        {
+          "path": "scripts/tahoe_held_context_finalize.py",
+          "help_args": null,
+          "help_boundary": "No argument parser; use launcher --inspect-only, never pass --help directly."
+        }
+      ],
+      "active_execution_guard": "Old context-only finalizer is not allowlisted. Use ed7_hierarchical_repair for current inference."
+    },
+    {
+      "id": "five_pathway_scaling",
+      "analysis_name": "Predefined five-pathway held-context scaling",
+      "class": "FULL_ANALYSIS",
+      "commit": "22926886e3f87994492720ad2a529dd382596f09",
+      "entrypoints": [
+        {
+          "path": "scripts/tahoe_five_pathway_scaling.py",
+          "help_args": [
+            "--help"
+          ]
+        }
+      ],
+      "source_roots": [
+        "scripts/tahoe_five_pathway_scaling.py",
+        "src/igc_virtual_cell/tahoe_five_pathway_scaling.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "results/tahoe_five_pathway_scaling/TAHOE_FIVE_PATHWAY_SCALING_PATHWAY_MANIFEST.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+          "authority": "response_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+          "authority": "frozen pathway model source",
+          "bytes_if_known": 2705687,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "results/tahoe_five_pathway_scaling"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [],
+      "claim_boundary": "Externally predefined pathway set; no outcome-based selection. Historical uncertainty superseded by ed7_hierarchical_repair.",
+      "allowed_stage": "prepare",
+      "active_execution_guard": "Only the empirical prepare stage is allowlisted; original finalize/all produce superseded context-only intervals. Use ed7_hierarchical_repair for current inference."
+    },
+    {
+      "id": "ed7_hierarchical_repair",
+      "analysis_name": "Frozen-contribution ED7 hierarchical uncertainty repair",
+      "class": "FULL_ANALYSIS",
+      "commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
+      "entrypoints": [],
+      "source_roots": [
+        "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py"
+      ],
+      "extra_sources": [],
+      "configs": [],
+      "split_metadata": [
+        "audit/release_repair/ed7/ED7_OUTPUT_MANIFEST.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": ".worktrees/tahoe_held_context_scaling/results/tahoe_held_context_scaling",
+          "authority": "abb503e9f3cf75eaea7a075f81160db3d04de64d frozen Grams, hyperparameters and point estimates",
+          "bytes_if_known": null,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_DIRECTORY",
+          "notes": "Prepared input; external to the code-only export."
+        },
+        {
+          "path": ".worktrees/tahoe_five_pathway_scaling/results/tahoe_five_pathway_scaling/_cache/TAHOE_FIVE_PATHWAY_SCALING_CONTRIBUTIONS.npz",
+          "authority": "22926886e3f87994492720ad2a529dd382596f09",
+          "bytes_if_known": 28793698,
+          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+          "local_presence": "PRESENT_FILE",
+          "notes": "Prepared input; external to the code-only export."
+        }
+      ],
+      "outputs": [
+        "audit/release_repair/ed7"
+      ],
+      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "known_portability_constraints": [
+        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+      ],
+      "smoke_tests": [
+        {
+          "kind": "import",
+          "path": "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py",
+          "boundary": "import only; main never called"
+        }
+      ],
+      "claim_boundary": "Only frozen-contribution uncertainty; unchanged predictors, point definitions and draws. No CLI --help is advertised because the original script has no argument parser.",
+      "path_adapter": "ed7: launcher resolves GENE_WT/PATH_WT to exported frozen bundles or explicit prepared workspaces and patches directory constants only before unchanged main."
+    },
+    {
+      "id": "tcell_truth",
+      "analysis_name": "Primary CD4 T-cell pseudobulk truth construction and guide-disjoint reliability",
+      "class": "FULL_ANALYSIS",
+      "commit": "4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+      "implementation_commit": "4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+      "entrypoints": [
+        {
+          "path": "src/igc_virtual_cell/cgc_tcell/prepare.py",
+          "command": "python -m igc_virtual_cell.cgc_tcell.prepare --root . --config configs/cgc_tcell.yaml",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true,
+          "module": "igc_virtual_cell.cgc_tcell.prepare"
+        },
+        {
+          "path": "src/igc_virtual_cell/cgc_tcell/guide_disjoint.py",
+          "command": "python -m igc_virtual_cell.cgc_tcell.guide_disjoint --root . --config configs/cgc_tcell.yaml",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true,
+          "module": "igc_virtual_cell.cgc_tcell.guide_disjoint"
+        },
+        {
+          "path": "src/igc_virtual_cell/cgc_tcell/analysis.py",
+          "command": "python -m igc_virtual_cell.cgc_tcell.analysis --root . --config configs/cgc_tcell.yaml",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true,
+          "module": "igc_virtual_cell.cgc_tcell.analysis"
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_tcell"
+      ],
+      "extra_sources": [
+        "tests/test_cgc_tcell.py"
+      ],
+      "configs": [
+        "configs/cgc_tcell.yaml"
+      ],
+      "split_metadata": [
+        "results/cgc_tcell/download_manifest.json",
+        "results/cgc_tcell/donor_partition_manifest.csv",
+        "results/cgc_tcell/guide_disjoint_manifest.json",
+        "results/cgc_tcell/normalized_response_manifest.json",
+        "results/cgc_tcell/ntc_manifest.csv",
+        "results/cgc_tcell/strict_trans_gene_hash.txt"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/raw/cgc_tcell/GWCD4i.pseudobulk_merged.h5ad",
+          "authority": "Official processed guide x donor x culture pseudobulk; exact URL and checksum in download_manifest.json",
+          "bytes_if_known": 44566657140,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/cgc_tcell",
+        "data/processed/cgc_tcell"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "No per-cell prediction. Guide-disjoint donor-state contrasts are reconstructed from official pseudobulk input."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_tcell.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "tcell_lodo",
+      "analysis_name": "Strict leave-one-donor-out T-cell predictor benchmark",
+      "class": "FULL_ANALYSIS",
+      "commit": "f8f6b345fba8b90b834558834f26665b63300177",
+      "implementation_commit": "fdbe80ab9e39560aaf367d41fdc2f0728996d0da",
+      "entrypoints": [
+        {
+          "path": "src/igc_virtual_cell/cgc_tcell_1b/benchmark.py",
+          "command": "python -m igc_virtual_cell.cgc_tcell_1b.benchmark --root . --config configs/cgc_tcell_1b.yaml",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true,
+          "module": "igc_virtual_cell.cgc_tcell_1b.benchmark"
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_tcell_1b"
+      ],
+      "extra_sources": [
+        "tests/test_cgc_tcell_1b.py"
+      ],
+      "configs": [
+        "configs/cgc_tcell_1b.yaml"
+      ],
+      "split_metadata": [
+        "results/cgc_tcell_1b/context_feature_manifest.json",
+        "results/cgc_tcell_1b/inner_validation_manifest.csv",
+        "results/cgc_tcell_1b/intervention_anchor_manifest.json",
+        "results/cgc_tcell_1b/model_training_manifest.json",
+        "results/cgc_tcell_1b/outer_fold_manifest.csv",
+        "results/cgc_tcell_1b/response_basis_manifest.csv",
+        "results/cgc_tcell_1b/run_manifest.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/processed/cgc_tcell",
+          "authority": "T-cell truth freeze 4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/cgc_tcell",
+          "authority": "Frozen truth manifests, strict-trans genes, dataset_inventory.json and NTC manifest",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/raw/cgc_tcell/GWCD4i.pseudobulk_merged.h5ad",
+          "authority": "Required by NTC baseline extraction if data/processed/cgc_tcell_1b/ntc_context.float32.npy is not already valid",
+          "bytes_if_known": 44566657140,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/cgc_tcell_1b",
+        "data/processed/cgc_tcell_1b"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "CUDA-enabled Torch and a compatible GPU are required by this unchanged implementation; benchmark.run explicitly rejects unavailable CUDA. Substantial input caches are required.",
+        "Four donor-disjoint outer folds; response-basis protocol deviation is explicitly disclosed in original run_manifest.json, not hidden by source packaging."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_tcell_1b.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "tcell_decomposition",
+      "analysis_name": "Frozen T-cell predictions: alignment and shared-versus-donor-specific operators",
+      "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+      "commit": "6605b095fc5d17863bec11233418f10819ca03a5",
+      "implementation_commit": "6f6120bd18455be631b742d92791600d9cd4829c",
+      "entrypoints": [
+        {
+          "path": "src/igc_virtual_cell/cgc_tcell_1d/decompose.py",
+          "command": "python -m igc_virtual_cell.cgc_tcell_1d.decompose --root . --config configs/cgc_tcell_1d.yaml",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true,
+          "module": "igc_virtual_cell.cgc_tcell_1d.decompose"
+        }
+      ],
+      "source_roots": [
+        "src/igc_virtual_cell/cgc_tcell_1c",
+        "src/igc_virtual_cell/cgc_tcell_1d"
+      ],
+      "extra_sources": [
+        "tests/test_cgc_tcell_1c.py",
+        "tests/test_cgc_tcell_1d.py"
+      ],
+      "configs": [
+        "configs/cgc_tcell_1c.yaml",
+        "configs/cgc_tcell_1d.yaml"
+      ],
+      "split_metadata": [
+        "results/cgc_tcell_1d/run_manifest.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_tcell_1b",
+          "authority": "Frozen 1B predictions and model checkpoint manifest at f8f6b345fba8b90b834558834f26665b63300177",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/processed/cgc_tcell",
+          "authority": "Truth freeze 4f2e608d9814015de98cfbc9cbf358af54fbc45e",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/cgc_tcell_1c",
+        "results/cgc_tcell_1d"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "No predictor fitting or inference; computes operator metrics and frozen-table/bootstrap adjudication.",
+        "Integrity gate compares historical Git source paths. A source-only partial Git authority is not a full historical worktree; execution requires those original provenance refs and inputs.",
+        "Final branch includes explicit bootstrap-unit correction and shared-operator serialization fixes; use final source, not initial 1D implementation."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_tcell_1c.py",
+          "status": "packaged, not rerun by registry build"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_tcell_1d.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "state_official_summary",
+      "analysis_name": "STATE official held-context artifact geometry summary",
+      "class": "OFFICIAL_ARTIFACT_SUMMARY",
+      "commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "implementation_commit": "b817ffa3caf9eeef65183a11c3b8a2625a610f1e",
+      "entrypoints": [],
+      "source_roots": [
+        "scripts/cgc_state_1_analysis.py",
+        "scripts/cgc_state_1_inventory.py",
+        "src/igc_virtual_cell/cgc_state_1"
+      ],
+      "extra_sources": [
+        "tests/test_cgc_state_1.py"
+      ],
+      "configs": [
+        "configs/cgc_state_1.json"
+      ],
+      "split_metadata": [
+        "results/cgc_state_1/official_source_manifest.json",
+        "results/cgc_state_1/repository_revisions.json",
+        "results/cgc_state_1/license_acknowledgement.md",
+        "results/cgc_state_1/zero_shot_split_manifest.csv",
+        "results/cgc_state_1/artifact_inventory.csv",
+        "results/cgc_state_1/context_intervention_gene_manifest.json",
+        "results/cgc_state_1/run_manifest.json",
+        "results/cgc_state_1/zero_shot_split_manifest.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/state_official_predictions",
+          "authority": "ArcInstitute/state; HuggingFace ST-SE-Parse and ST-HVG-Parse official eval-best full-DE artifacts; 434168727 bytes recorded in source manifest",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/cgc_state_1"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Official artifact summary, not STATE model training or recreation of the official upstream predictions.",
+        "DO NOT run --help: this historical script has no argparse guard and would execute analysis.",
+        "Historical sampled context-null p-value is superseded in manuscript by conservative exact-unique-support 1/45=0.022222; unmodified legacy source may reproduce obsolete 1/5001. Frozen audit authority 21b08f02d3371129bb5cbf49704c65a271240c7c governs interpretation."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_state_1.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": [],
+      "archival_entrypoints": [
+        {
+          "path": "scripts/cgc_state_1_analysis.py",
+          "command": "python scripts/cgc_state_1_analysis.py",
+          "help_args": null,
+          "help_is_safe": false
+        }
+      ],
+      "release_entrypoint": "current_state_summary.py",
+      "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
+      "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
+      "claim_boundary": "Current summary reads actual official mean artifacts, computes existing audited metrics, and uses all44 exact context derangements with conservative plus-one p. Historical sampled p and historical main/rendering are not active; no State fitting or bootstrap intervals are claimed by the bounded summary."
+    },
+    {
+      "id": "state_independent_stability",
+      "analysis_name": "STATE independent Tahoe held-context artifact stability",
+      "class": "OFFICIAL_ARTIFACT_SUMMARY",
+      "commit": "490f3af2d199c51a6fd3031ef8f087076d3ba9ab",
+      "implementation_commit": "2c26f98a7dd839ee14cf4d52e0e2da07151c4580",
+      "entrypoints": [
+        {
+          "path": "scripts/cgc_state_stability_audit.py",
+          "command": "python scripts/cgc_state_stability_audit.py --analyze-only",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/cgc_state_stability_audit.py",
+        "src/igc_virtual_cell/cgc_state_1"
+      ],
+      "extra_sources": [
+        "tests/test_cgc_state_stability.py"
+      ],
+      "configs": [
+        "configs/cgc_state_1.json"
+      ],
+      "split_metadata": [
+        "results/cgc_state_stability/STATE_STABILITY_ARTIFACT_MANIFEST.json",
+        "results/cgc_state_stability/STATE_STABILITY_PROTOCOL.md",
+        "results/cgc_state_stability/STATE_STABILITY_RUN_MANIFEST.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/state_stability_official",
+          "authority": "Official Arc STATE Tahoe evaluation artifacts with source URLs and hashes in STATE_STABILITY_ARTIFACT_MANIFEST.json",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/cgc_state_1/context_heterogeneity.csv",
+          "authority": "Frozen discovery report overlay only",
+          "bytes_if_known": 1795,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/cgc_state_stability"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Use --analyze-only to avoid network/download path. No STATE training.",
+        "Final source contains arithmetic held-target-truth exclusion fix 2c26f98a7dd839ee14cf4d52e0e2da07151c4580; original implementation e4d9f977 is not final authority.",
+        "Five held contexts, 1136 interventions, 2000 features; official artifact-summary availability does not imply training deployment readiness."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_state_stability.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "lea_historical_analysis",
+      "analysis_name": "Lea RNA-only strict LCL-disjoint pilot and six-model battery (ARCHS4 dynamic source authority)",
+      "class": "FULL_ANALYSIS",
+      "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "implementation_commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+      "entrypoints": [
+        {
+          "path": "scripts/level2_lea_pilot.py",
+          "command": "python scripts/level2_lea_pilot.py --matrix <author-matrix> --metadata <sample-metadata> --integrity <passed-integrity-json> --truth <truth-directory> --output <results-directory>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        },
+        {
+          "path": "scripts/level2_lea_full_battery.py",
+          "command": "python scripts/level2_lea_full_battery.py --config configs/level2_lea_full_battery_frozen.json --pilot-oof <pilot.npz> --pilot-checkpoints <checkpoint-directory> --metadata <sample-metadata> --output <results-directory>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/level2_lea_pilot.py",
+        "scripts/level2_lea_full_battery.py",
+        "scripts/level2_lea_response_programs.py",
+        "scripts/level2_lea_data_integrity.py",
+        "scripts/level2_lea_pairing_audit.py",
+        "scripts/level2_lea_truth_gate.py",
+        "scripts/level2_lea_controls.py",
+        "scripts/level2_lea_program_controls.py",
+        "scripts/level2_lea_measurement_coupling.py",
+        "src/igc_virtual_cell/level2_lea.py",
+        "src/igc_virtual_cell/level2_full.py"
+      ],
+      "extra_sources": [
+        "tests/test_level2_lea.py"
+      ],
+      "configs": [
+        "configs/level2_lea_frozen.json",
+        "configs/level2_lea_full_battery_frozen.json"
+      ],
+      "split_metadata": [
+        "results/level2_lea/GSE207049_DATA_INTEGRITY.json",
+        "results/level2_lea/GSE207049_PAIRING_BY_LCL.csv",
+        "results/level2_lea/TRUTH_REPLICATE_LCLS.csv",
+        "results/level2_lea/DATA_PROVENANCE.md"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/level2_lea_official/GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+          "authority": "GEO GSE207049 official author residualized processed matrix",
+          "bytes_if_known": 217469362,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/level2_lea_official/31Mar21_all_runs_voom_resid_metadata.txt",
+          "authority": "Exact sample-to-LCL/ETOH/DEX mapping in integrity and pairing audit",
+          "bytes_if_known": 292921,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+          "authority": "Pilot output required by full battery; six-model battery reuses pilot predictions/checkpoints",
+          "bytes_if_known": 90490423,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+        "results/level2_lea/FULL_BATTERY_OOF.npz"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Raw reads not required. This representation is author post-SVA, not original HTSeq counts.",
+        "Five strict LCL-disjoint folds; full battery requires an already completed pilot, not a new random split.",
+        "Torch optional dependency required for neural models; no data or checkpoint arrays in source bundle."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_level2_lea.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "lea_archs4",
+      "analysis_name": "Independent ARCHS4 pre-SVA quantification robustness",
+      "class": "FULL_ANALYSIS",
+      "commit": "2fe0deaf3d7b07088488d3bcbe2676c46f2ab353",
+      "implementation_commit": "8096f976e4a84b866955c930e7e7d2f94f600d21",
+      "entrypoints": [
+        {
+          "path": "scripts/run_lea_archs4_robustness.py",
+          "command": "python scripts/run_lea_archs4_robustness.py --source-root <historical-Lea-root> --stage formal",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        },
+        {
+          "path": "scripts/prepare_lea_archs4_robustness.py",
+          "command": "python scripts/prepare_lea_archs4_robustness.py --source-root <historical-Lea-root>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/run_lea_archs4_robustness.py",
+        "scripts/prepare_lea_archs4_robustness.py",
+        "scripts/audit_lea_archs4_coverage.py",
+        "scripts/extract_lea_archs4_matched.py"
+      ],
+      "extra_sources": [
+        "tests/test_lea_archs4_robustness.py",
+        "tests/test_prepare_lea_archs4_robustness.py"
+      ],
+      "configs": [],
+      "split_metadata": [
+        "results/level2_lea/archs4_robustness/ARCHS4_EXTRACTION_MANIFEST.json",
+        "results/level2_lea/archs4_robustness/ARCHS4_HISTORICAL_IMPLEMENTATION_AUTHORITY.md",
+        "results/level2_lea/archs4_robustness/ARCHS4_PREMODEL_GATE.json",
+        "results/level2_lea/archs4_robustness/ARCHS4_ROBUSTNESS_RUN_MANIFEST.json",
+        "results/level2_lea/archs4_robustness/ARCHS4_VERSION_AGGREGATION_PROTOCOL.md",
+        "results/level2_lea/archs4_robustness/ARCHS4_MATCHED_340_FOLD_MANIFEST.csv",
+        "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/level2_lea_archs4_matched",
+          "authority": "ARCHS4 v2.5 matched count extraction and prepared matched 340-LCL/10110-gene representations; exact hashes in extraction/run manifests",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+          "authority": "Historical Lea frozen 342-LCL OOF and exact matched-core selection",
+          "bytes_if_known": 90490423,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/level2_lea_official/GSE207049_31Mar21_all_runs_voom_resid.txt.gz",
+          "authority": "Matched post-SVA comparator from author GEO matrix",
+          "bytes_if_known": 217469362,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/level2_lea/archs4_robustness"
+      ],
+      "runtime_git_sources": [
+        {
+          "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+          "path": "src/igc_virtual_cell/level2_lea.py"
+        },
+        {
+          "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+          "path": "scripts/level2_lea_pilot.py"
+        },
+        {
+          "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+          "path": "src/igc_virtual_cell/level2_full.py"
+        },
+        {
+          "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+          "path": "scripts/level2_lea_response_programs.py"
+        },
+        {
+          "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+          "path": "configs/level2_lea_full_battery_frozen.json"
+        },
+        {
+          "commit": "c3d074412ecc1be0958141726db16a1ed0036a04",
+          "path": "scripts/level2_lea_full_battery.py"
+        }
+      ],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Dynamic git-show source loading requires historical c3d074 source objects. A separate lea_historical_analysis bundle supplies its unchanged local-import closure.",
+        "Source-root is an explicit path; compiled historical modules may retain source-layout assumptions.",
+        "ARCHS4 uniform Kallisto-derived counts are not Lea original HTSeq counts. No full ARCHS4 matrix/raw reads are downloaded by this packaging.",
+        "Extraction entrypoints perform HTTP range access if executed; --help only is safe during packaging."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_lea_archs4_robustness.py",
+          "status": "packaged, not rerun by registry build"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_prepare_lea_archs4_robustness.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": [],
+      "path_adapter": "Unchanged source requests historical modules through git_source; launcher maps only this artifact lookup to exact SHA-verified runtime_sources blobs. No incomplete Git database and no scientific function replacement."
+    },
+    {
+      "id": "lea_full_span",
+      "analysis_name": "Fold-local full-training-span PCA oracle transfer sanity analysis",
+      "class": "FULL_ANALYSIS",
+      "commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "implementation_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "entrypoints": [
+        {
+          "path": "scripts/run_full_span_pca_sanity_audit.py",
+          "command": "python scripts/run_full_span_pca_sanity_audit.py --formal",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/run_full_span_pca_sanity_audit.py",
+        "scripts/run_wgcna_resolution_frontier.py"
+      ],
+      "extra_sources": [
+        "tests/test_full_span_pca_sanity_audit.py"
+      ],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
+        "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_SUMMARY.json",
+        "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_METRIC_RECONCILIATION.md"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/wgcna_frontier_official/MATCHED_POSTSVA_340_REPRESENTATION.npz",
+          "authority": "Matched Lea 340-LCL response representation and frozen folds",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/wgcna_frontier_official/MATCHED_POSTSVA_FULL_OOF.npz",
+          "authority": "Matched post-SVA six-model OOF archive",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+          "authority": "Frozen matched gene axis",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/cgc_dimension_matched_compression",
+          "authority": "Historical PCA curve/summary comparison required by reporting",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/cgc_full_span_pca_sanity"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Fits fold-local PCA only; it is an oracle geometry diagnostic, not a new prediction model.",
+        "run_wgcna_resolution_frontier.py is a dynamic data-loader authority required by the unchanged script; no WGCNA run or WGCNA manuscript claim is authorized.",
+        "Historical directory names remain unchanged to preserve exact source. They do not reintroduce abandoned WGCNA experiments."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_full_span_pca_sanity_audit.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "resolution_pathway_frozen",
+      "analysis_name": "Same frozen predictions, gene-versus-predefined-pathway readout and corrected inference",
+      "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+      "commit": "46b25eec4a97e3001cc43262980af8f69c533478",
+      "implementation_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
+      "entrypoints": [],
+      "source_roots": [
+        "scripts/cgc_resolution2_pathway.py",
+        "scripts/cgc_resolution2_inference.py",
+        "scripts/cgc_resolution2_report.py",
+        "src/igc_virtual_cell/cgc_resolution_poc"
+      ],
+      "extra_sources": [
+        "tests/test_cgc_resolution2_pathway.py",
+        "tests/test_cgc_resolution2_inference.py"
+      ],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_resolution_poc_v2/RESOLUTION2_FROZEN_PROTOCOL.md",
+        "results/cgc_resolution_poc_v2/RESOLUTION2_REPLAY_MANIFEST.json",
+        "results/cgc_resolution_poc_v2/RESOLUTION2_REPLAY_OUTPUT_MANIFEST.json",
+        "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv",
+          "authority": "46b25eec4a97e3001cc43262980af8f69c533478; valid contrast selected under21b08f02d3371129bb5cbf49704c65a271240c7c",
+          "redistribution": "included byte-exact frozen result table; active renderer discards every random-arm row",
+          "bytes_if_known": null
+        }
+      ],
+      "outputs": [
+        "results/cgc_resolution_poc_v2"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Historical random-projection arm is INVALID and excluded from manuscript inference. Source inclusion is archival, not endorsement or permission to execute that arm.",
+        "Valid pathway-minus-gene comparison is 0.27281393788398667 versus 0.11068053088808294; the claim authority is the corrected frozen interval, not random-projection results.",
+        "Default source/truth roots are author-machine Windows paths; override them explicitly. No automatic replay or scientific execution during packaging."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_resolution2_pathway.py",
+          "status": "packaged, not rerun by registry build"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_cgc_resolution2_inference.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": [],
+      "archival_entrypoints": [
+        {
+          "path": "scripts/cgc_resolution2_pathway.py",
+          "command": "python scripts/cgc_resolution2_pathway.py --formal --root . --truth-root <frozen-Tahoe-root>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        },
+        {
+          "path": "scripts/cgc_resolution2_inference.py",
+          "command": "python scripts/cgc_resolution2_inference.py --root . --source-root <frozen-entrywise-root>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "release_entrypoint": "render_valid_resolution.py",
+      "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
+      "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
+      "claim_boundary": "Current analytical renderer selects only two frozen pathway-minus-gene contrasts and their unchanged corrected intervals. Invalid random-projection code/results cannot be executed or rendered by the active release entrypoint. No prediction or null is regenerated; manual R2 layout is not reproduced.",
+      "archival_required_inputs": [
+        {
+          "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
+          "authority": "Frozen Tahoe replicate truth",
+          "bytes_if_known": 955854128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/m49_k92_predictions_float32.npy",
+          "authority": "Frozen all-but-one model predictions; no refit",
+          "bytes_if_known": 955854128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/m49_k92_frozen_weights.npz",
+          "authority": "Frozen prediction replay episode weights",
+          "bytes_if_known": 3455810,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy",
+          "authority": "Frozen shared hierarchical bootstrap weights",
+          "bytes_if_known": 93000128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+          "authority": "Frozen entrywise utility and support/sentinel assignment",
+          "bytes_if_known": 27158852,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+          "authority": "Frozen PROGENy weights and gene identifiers",
+          "bytes_if_known": 2705687,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_bio1_official/progeny",
+          "authority": "Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_metadata_frozen.csv",
+          "authority": "Frozen gene metadata axis",
+          "bytes_if_known": 5092546,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+          "authority": "Frozen primary gene indices",
+          "bytes_if_known": 102908,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ]
+    },
+    {
+      "id": "pathway_fidelity",
+      "analysis_name": "Fixed PROGENy pathway-specific fidelity and recoverability diagnostic",
+      "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+      "commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
+      "implementation_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
+      "entrypoints": [
+        {
+          "path": "scripts/progeny_pathway_fidelity_audit.py",
+          "command": "python scripts/progeny_pathway_fidelity_audit.py --formal --root . --source-root <frozen-Tahoe-root>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/progeny_pathway_fidelity_audit.py"
+      ],
+      "extra_sources": [
+        "tests/test_progeny_pathway_fidelity_audit.py"
+      ],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_progeny_pathway_fidelity/PROGENY_PATHWAY_FIDELITY_PROTOCOL.md",
+        "results/cgc_progeny_pathway_fidelity/PROGENY_PATHWAY_SPAN_AUDIT.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
+          "authority": "Frozen Tahoe replicate truth",
+          "bytes_if_known": 955854128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/m49_k92_predictions_float32.npy",
+          "authority": "Frozen all-but-one model predictions; no refit",
+          "bytes_if_known": 955854128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/m49_k92_frozen_weights.npz",
+          "authority": "Frozen prediction replay episode weights",
+          "bytes_if_known": 3455810,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy",
+          "authority": "Frozen shared hierarchical bootstrap weights",
+          "bytes_if_known": 93000128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+          "authority": "Frozen entrywise utility and support/sentinel assignment",
+          "bytes_if_known": 27158852,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+          "authority": "Frozen PROGENy weights and gene identifiers",
+          "bytes_if_known": 2705687,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_bio1_official/progeny",
+          "authority": "Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_metadata_frozen.csv",
+          "authority": "Frozen gene metadata axis",
+          "bytes_if_known": 5092546,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+          "authority": "Frozen primary gene indices",
+          "bytes_if_known": 102908,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/cgc_progeny_pathway_fidelity"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Recovery is undefined where replicate cross-product denominator is nonpositive (e.g. VEGF); this is not a missing plotting point.",
+        "Default --source-root is an author-machine Windows path; supply the arranged frozen-input root explicitly."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_progeny_pathway_fidelity_audit.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "pathway_composition",
+      "analysis_name": "All 16383 subsets of 14 predefined PROGENy pathways: fidelity and recoverability",
+      "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+      "commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "implementation_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
+      "entrypoints": [
+        {
+          "path": "scripts/pathway_resolution_scaling_audit.py",
+          "command": "python scripts/pathway_resolution_scaling_audit.py --formal --root . --source-root <frozen-Tahoe-root> --protocol-commit <frozen-protocol-commit>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/pathway_resolution_scaling_audit.py",
+        "src/igc_virtual_cell/pathway_resolution_scaling.py"
+      ],
+      "extra_sources": [
+        "tests/test_pathway_resolution_scaling.py"
+      ],
+      "configs": [],
+      "split_metadata": [
+        "results/cgc_pathway_resolution_scaling/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
+        "results/cgc_pathway_resolution_scaling/PATHWAY_ANCHOR_AUDIT.json",
+        "results/cgc_pathway_resolution_scaling/PATHWAY_METRIC_RECONCILIATION.md",
+        "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
+          "authority": "Frozen Tahoe replicate truth",
+          "bytes_if_known": 955854128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/m49_k92_predictions_float32.npy",
+          "authority": "Frozen all-but-one model predictions; no refit",
+          "bytes_if_known": 955854128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/m49_k92_frozen_weights.npz",
+          "authority": "Frozen prediction replay episode weights",
+          "bytes_if_known": 3455810,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy",
+          "authority": "Frozen shared hierarchical bootstrap weights",
+          "bytes_if_known": 93000128,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+          "authority": "Frozen entrywise utility and support/sentinel assignment",
+          "bytes_if_known": 27158852,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
+          "authority": "Frozen PROGENy weights and gene identifiers",
+          "bytes_if_known": 2705687,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "data/cgc_bio1_official/progeny",
+          "authority": "Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_metadata_frozen.csv",
+          "authority": "Frozen gene metadata axis",
+          "bytes_if_known": 5092546,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
+          "authority": "Frozen primary gene indices",
+          "bytes_if_known": 102908,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        }
+      ],
+      "outputs": [
+        "results/cgc_pathway_resolution_scaling/PATHWAY_SUBSET_METRICS.csv",
+        "results/cgc_pathway_resolution_scaling/PATHWAY_SCALING_BOOTSTRAP_SUMMARY.csv",
+        "results/cgc_pathway_resolution_scaling/PATHWAY_COMPOSITION_SUMMARY.csv"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "No model fit; computes full subset projection and 10000 frozen-prediction bootstrap statistics, not mere CSV checks.",
+        "Claim is composition-dependent recoverability, not a universal composition ceiling. Nonpositive denominators remain undefined.",
+        "Default --source-root is an author-machine Windows path; explicit input root is required for portability."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_pathway_resolution_scaling.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "crc_pdo_application",
+      "analysis_name": "Patient-disjoint ex-vivo functional drug prioritization and nested Ridge",
+      "class": "FULL_ANALYSIS",
+      "commit": "c2a5699bfb560ffb9f3ad8204ee4587d1cd03936",
+      "implementation_commit": "4e6600c62103ab5c3b6a6a26d8aa096661ea3801",
+      "entrypoints": [
+        {
+          "path": "scripts/run_crc_pdo_personalized_audit.py",
+          "command": "python scripts/run_crc_pdo_personalized_audit.py --help",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        },
+        {
+          "path": "scripts/run_crc_pdo_personalized_application.py",
+          "command": "python scripts/run_crc_pdo_personalized_application.py --root .",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/run_crc_pdo_personalized_audit.py",
+        "scripts/run_crc_pdo_personalized_application.py",
+        "src/igc_virtual_cell/crc_pdo_personalized"
+      ],
+      "extra_sources": [
+        "tests/test_crc_pdo_personalized.py"
+      ],
+      "configs": [
+        "configs/crc_pdo_personalized_application.json"
+      ],
+      "split_metadata": [
+        "data/crc_pdo_personalized_application/source_manifest.json",
+        "results/crc_pdo_personalized_drug_application/CRC_PDO_PATIENT_MANIFEST.csv",
+        "results/crc_pdo_personalized_drug_application/PRIMARY_DRUG_PANEL_MANIFEST.csv",
+        "results/crc_pdo_personalized_drug_application/MODEL_FOLD_MANIFEST.csv",
+        "results/crc_pdo_personalized_drug_application/CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+          "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+          "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/crc_pdo_personalized_drug_application",
+          "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/crc_pdo_personalized_application/raw",
+          "authority": "Official supplementary spreadsheets, GEO processed matrices and exact source-manifest hashes needed only for preparation",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/crc_pdo_personalized_application/processed/HTA2_PDO_public_processed.npz",
+          "authority": "Secondary HTA expression platform; full original application loops over RNAseq and HTA2.0",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/crc_pdo_personalized_drug_application"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Primary RNAseq cohort is 52 patients/91 PDOs/24 drugs/19421 genes. Secondary HTA is distinct; no clinical-response claim.",
+        "Patient-level aggregation and LOPO outer evaluation; alpha is selected within five-fold training data.",
+        "Final source includes corrected restudentization per shared sign-flip draw; initial implementation alone is not valid final inferential authority.",
+        "--postprocess-only requires frozen predictions/null draws; it is not a substitute for the complete analysis."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_crc_pdo_personalized.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "crc_pdo_conditioning",
+      "analysis_name": "Training-local biological conditioning-resolution comparison",
+      "class": "FULL_ANALYSIS",
+      "commit": "f3722de40a4b65d683d758ad9e6634a0443cc759",
+      "implementation_commit": "52bec9136373897d944a557fb9f7a23c6563e147",
+      "entrypoints": [
+        {
+          "path": "scripts/run_crc_pdo_conditioning_resolution.py",
+          "command": "python scripts/run_crc_pdo_conditioning_resolution.py --root . --application-root <PDO-root> --progeny-weights <weights-file> --implementation-commit 52bec9136373897d944a557fb9f7a23c6563e147",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/run_crc_pdo_conditioning_resolution.py",
+        "src/igc_virtual_cell/crc_pdo_personalized/conditioning_resolution.py"
+      ],
+      "extra_sources": [
+        "tests/test_crc_pdo_conditioning_resolution.py"
+      ],
+      "configs": [
+        "configs/crc_pdo_conditioning_resolution.json"
+      ],
+      "split_metadata": [
+        "results/crc_pdo_conditioning_resolution/CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json",
+        "results/crc_pdo_conditioning_resolution/OUTER_FOLD_TRANSFORM_AUDIT.csv",
+        "results/crc_pdo_conditioning_resolution/REPRESENTATION_MANIFEST.csv",
+        "results/crc_pdo_conditioning_resolution/BASELINE_GENE_AXIS_MANIFEST.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+          "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+          "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/crc_pdo_personalized_drug_application",
+          "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "PROGENy weights file",
+          "authority": "Official PROGENy v1.17.3 revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f; expected SHA256 59227c888c2bfa1ed89fe00109da7ce1bacffbb9b8b6b79215065d41f2476223",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/crc_pdo_conditioning_resolution"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "All transforms and model choices are training-local; no target DSS enters features.",
+        "HTA biological projection is NOT_EXECUTABLE without official probe-to-gene annotation; do not infer that annotation or claim successful HTA pathway validation."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_crc_pdo_conditioning_resolution.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "crc_pdo_pca",
+      "analysis_name": "Nested PCA conditioning-resolution sweep",
+      "class": "FULL_ANALYSIS",
+      "commit": "624e6f239459418f8d6a8792ff41d2dcc1c2c61c",
+      "implementation_commit": "684fcc1d67d0a34b87be03941479e52eb0884b84",
+      "entrypoints": [
+        {
+          "path": "scripts/run_crc_pdo_pca_resolution_sweep.py",
+          "command": "python scripts/run_crc_pdo_pca_resolution_sweep.py --root . --application-root <PDO-root> --implementation-commit <frozen-implementation-commit>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/run_crc_pdo_pca_resolution_sweep.py",
+        "src/igc_virtual_cell/crc_pdo_personalized/pca_resolution_sweep.py"
+      ],
+      "extra_sources": [
+        "tests/test_crc_pdo_pca_resolution_sweep.py"
+      ],
+      "configs": [
+        "configs/crc_pdo_pca_resolution_sweep.json",
+        "configs/crc_pdo_personalized_application.json"
+      ],
+      "split_metadata": [
+        "results/crc_pdo_pca_resolution_sweep/PCA_RESOLUTION_SWEEP_FINAL_QA.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+          "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+          "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/crc_pdo_personalized_drug_application",
+          "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/crc_pdo_conditioning_resolution/PCA14_OOF.csv",
+          "authority": "Frozen conditioning result 38adafd8601f3a0382baa88e03bf72e3dd0d3a62; accompanying CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json required",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/crc_pdo_pca_resolution_sweep/FIXED_K_OOF_PREDICTIONS.csv",
+        "results/crc_pdo_pca_resolution_sweep/PCA_STAR_OOF_PREDICTIONS.csv",
+        "results/crc_pdo_pca_resolution_sweep/FULL_RNA_REOPT_OOF.csv"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "LOPO/nested five-fold PCA and Ridge; inner selector uses training validation MSE, not outer scientific outcomes.",
+        "Frozen predictions in this sweep become prerequisites for dense saturation. Dense runner explicitly replays anchor fits and verifies them against those predictions rather than substituting a new split."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_crc_pdo_pca_resolution_sweep.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "crc_pdo_dense",
+      "analysis_name": "Dense conditioning-resolution saturation with matched-random controls",
+      "class": "FULL_ANALYSIS",
+      "commit": "76478cd5f30851c7376b7aa95a171fcfb7472645",
+      "implementation_commit": "21e627d96220b6f12da317597e4f748b334c8b64",
+      "entrypoints": [
+        {
+          "path": "scripts/run_crc_pdo_dense_resolution_plateau.py",
+          "command": "python scripts/run_crc_pdo_dense_resolution_plateau.py --root . --application-root <PDO-root> --implementation-commit 21e627d96220b6f12da317597e4f748b334c8b64",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/run_crc_pdo_dense_resolution_plateau.py",
+        "src/igc_virtual_cell/crc_pdo_personalized/dense_resolution_plateau.py"
+      ],
+      "extra_sources": [
+        "tests/test_crc_pdo_dense_resolution_plateau.py"
+      ],
+      "configs": [
+        "configs/crc_pdo_dense_resolution_plateau.json"
+      ],
+      "split_metadata": [
+        "results/crc_pdo_dense_resolution_plateau/DENSE_RESOLUTION_GRID_MANIFEST.csv",
+        "results/crc_pdo_dense_resolution_plateau/DENSE_CONDITIONING_RESOLUTION_FINAL_QA.json"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz",
+          "authority": "GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz",
+          "authority": "Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/crc_pdo_personalized_drug_application",
+          "authority": "Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        },
+        {
+          "path": "results/crc_pdo_pca_resolution_sweep",
+          "authority": "Prior frozen OOF: FIXED_K_OOF_PREDICTIONS.csv, PCA_STAR_OOF_PREDICTIONS.csv, FULL_RNA_REOPT_OOF.csv and FINAL_QA; result 1bb0e95b39c2181638d732097f8f868689f32c87, ledger 624e6f239459418f8d6a8792ff41d2dcc1c2c61c",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/crc_pdo_dense_resolution_plateau"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Dense fixed grid2,4,8,12,14,16,18,20,22,24,26,28,30,32; nested patient-disjoint selection; 100 matched-random controls at16,24,32 and10000 bootstrap draws.",
+        "Runner validates prior result/ledger Git references and hashes. A source-only export is not automatically a compatible full historical worktree.",
+        "No new model fit was executed for this release packaging."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_crc_pdo_dense_resolution_plateau.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    },
+    {
+      "id": "lea_semisynthetic",
+      "analysis_name": "Lea semi-synthetic baseline-encoded response identifiability control",
+      "class": "FULL_ANALYSIS",
+      "commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "implementation_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
+      "entrypoints": [
+        {
+          "path": "scripts/lea_semisynthetic_control.py",
+          "command": "python scripts/lea_semisynthetic_control.py run --root . --source-root <historical-Lea-root>",
+          "help_args": [
+            "--help"
+          ],
+          "help_is_safe": true
+        }
+      ],
+      "source_roots": [
+        "scripts/lea_semisynthetic_control.py",
+        "src/igc_virtual_cell/lea_semisynthetic.py",
+        "scripts/level2_lea_pilot.py"
+      ],
+      "extra_sources": [
+        "tests/test_lea_semisynthetic.py"
+      ],
+      "configs": [
+        "configs/lea_semisynthetic_control_frozen.json"
+      ],
+      "split_metadata": [
+        "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_PROTOCOL.md",
+        "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
+        "results/level2_lea/FULL_BATTERY_UNITS.csv",
+        "results/level2_lea/TRUTH_RELIABILITY.json",
+        "results/level2_lea/MODEL_SELECTED_HYPERPARAMETERS.csv",
+        "results/level2_lea/FULL_MODEL_SELECTED_HYPERPARAMETERS.csv"
+      ],
+      "environment_metadata": [
+        "pyproject.toml"
+      ],
+      "required_inputs": [
+        {
+          "path": "results/level2_lea/LEVEL2_OOF_FROZEN.npz",
+          "authority": "Historical response/base-state arrays and frozen LCL folds",
+          "bytes_if_known": 90490423,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
+          "local_presence": "PRESENT_FILE"
+        },
+        {
+          "path": "results/level2_lea/FULL_MODEL_BATTERY_RESULTS.csv",
+          "authority": "Frozen real-data results for side-by-side comparison only",
+          "bytes_if_known": null,
+          "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+        }
+      ],
+      "outputs": [
+        "results/lea_semisynthetic_identifiability_control"
+      ],
+      "runtime_git_sources": [],
+      "known_portability_constraints": [
+        "Frozen source export is not evidence that scientific execution has been rerun.",
+        "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+        "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+        "Simulated baseline-encoded rank4 response with fixed reliability and10 simulation seeds; not a new biological dataset or estimate of real biological information fraction.",
+        "Uses frozen real-data hyperparameters; source runs tiered model/signal sweep and can use CPU or CUDA. No simulation or fitting was executed in this release repair."
+      ],
+      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "smoke_tests": [
+        {
+          "kind": "EXACT_GIT_BLOB_SYNTAX",
+          "status": "performed by registry build; no scientific import"
+        },
+        {
+          "kind": "PYTEST_SYNTHETIC",
+          "path": "tests/test_lea_semisynthetic.py",
+          "status": "packaged, not rerun by registry build"
+        }
+      ],
+      "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+      "missing_metadata_provenance": []
+    }
+  ]
+}

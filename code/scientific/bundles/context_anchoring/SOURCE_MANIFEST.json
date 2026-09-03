@@ -1,0 +1,111 @@
+{
+  "id": "context_anchoring",
+  "analysis_name": "Frozen-output context-anchoring contrasts and analytical figure",
+  "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
+  "commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+  "entrypoints": [
+    {
+      "path": "scripts/cgc_context_anchoring.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "scripts/cgc_context_anchoring.py",
+    "src/igc_virtual_cell/cgc_context_anchoring.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FROZEN_PROTOCOL.md"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
+      "authority": "ENTRYWISE_RUN_MANIFEST.json",
+      "bytes_if_known": 27158852,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "results/cgc_entrywise_compression/_cache/bootstrap_draws.npz",
+      "authority": "ENTRYWISE_RUN_MANIFEST.json",
+      "bytes_if_known": 43200800,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "results/cgc_context_anchoring_efficiency"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [],
+  "claim_boundary": "The run command computes prespecified contrasts and emits Figure_Context_Anchoring PNG/SVG/source CSV from frozen utility/bootstrap tables. It does not refit predictors and does not reproduce manually edited R2 figures. Pass --authority-root explicitly.",
+  "exported_file_count": 5,
+  "exported_source_bytes": 39532,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FROZEN_PROTOCOL.md",
+      "source_file": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FROZEN_PROTOCOL.md",
+      "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "git_blob": "e1b874908d60cc584178526faec18df00e668ce6",
+      "sha256": "860fe653a89b07c315717483de05d38b2a549047fa9ac5baf80e31dceae16888",
+      "size_bytes": 5561,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_context_anchoring.py",
+      "source_file": "scripts/cgc_context_anchoring.py",
+      "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "git_blob": "1154d97834c6ea0baf02059e34ab820efe99815d",
+      "sha256": "9b251d4092624010cf2a371da3b2b29fc6ad8f38d0548322cbbe981efa932f59",
+      "size_bytes": 859,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_context_anchoring.py",
+      "source_file": "src/igc_virtual_cell/cgc_context_anchoring.py",
+      "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "git_blob": "3cf0a45e07cc4ff2dc85e1e5f2d0a7d42c728b46",
+      "sha256": "8c0b4226b19d277780eebb93f3470a337fb0daaad19b370ca3a2d0520e15d6e7",
+      "size_bytes": 32193,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

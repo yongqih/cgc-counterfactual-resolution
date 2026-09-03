@@ -1,0 +1,76 @@
+{
+  "draws": 10000,
+  "frozen_protocol_commit": "de548acea86b4da93b736feb0fcab9ebd830cf48",
+  "git_commit": "a623cd731be990bb79200f32266c3240b787697f",
+  "highest_robust_attribution_level": "NONE",
+  "nuisance_audit": {
+    "constant": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false
+    ],
+    "mad": [
+      0.0,
+      0.0,
+      0.03586736106405031,
+      0.04382993522254841,
+      0.027953480946097287,
+      0.03322681182775877,
+      0.0,
+      0.0,
+      0.5,
+      1.0
+    ],
+    "median": [
+      50.0,
+      50.0,
+      6.036650105226033,
+      0.0730482682178466,
+      6.271358230585708,
+      0.05494101510527427,
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "names": [
+      "context_overlap",
+      "available_context_count",
+      "mean_log_global_response_magnitude",
+      "absolute_log_global_response_magnitude_difference",
+      "mean_log_residual_energy",
+      "absolute_log_residual_energy_difference",
+      "absolute_log10_dose_difference_within_unit",
+      "lineage_composition_distance",
+      "mean_target_annotation_count",
+      "absolute_target_annotation_count_difference"
+    ],
+    "scaling": "median/raw-MAD; zero-MAD columns retained as zeros"
+  },
+  "nuisance_names": [
+    "context_overlap",
+    "available_context_count",
+    "mean_log_global_response_magnitude",
+    "absolute_log_global_response_magnitude_difference",
+    "mean_log_residual_energy",
+    "absolute_log_residual_energy_difference",
+    "absolute_log10_dose_difference_within_unit",
+    "lineage_composition_distance",
+    "mean_target_annotation_count",
+    "absolute_target_annotation_count_difference"
+  ],
+  "phase": "CGC-BIO-2",
+  "representations": [
+    "Gene",
+    "PROGENy",
+    "CollecTRI"
+  ],
+  "seed": 7201
+}

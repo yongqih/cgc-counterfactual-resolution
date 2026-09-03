@@ -1,0 +1,60 @@
+{
+  "status": "COMPLETE",
+  "files": [
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_BOOTSTRAP_IMPLEMENTATION_TEST.json",
+      "size_bytes": 512,
+      "sha256": "2d8775b3367563f906028bc85903ce3f1dfa1647a6acdfb9d1c9e22998951a51"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_BOOTSTRAP_REPAIR_RECONCILIATION.json",
+      "size_bytes": 19843,
+      "sha256": "e9774c3ee8730610510fc0eb880471868c9fd79d6e026366e5fcc4b2cfa85b8d"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_BOOTSTRAP_REPAIR_REPORT.md",
+      "size_bytes": 5353,
+      "sha256": "1245557cf67e321ce2ad944859f2ddf9946e76fadfbc2aed380bd92d71ec99ab"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_GENE_INTERVENTION_CONTRIBUTIONS.npz",
+      "size_bytes": 635633,
+      "sha256": "1ae9d4f3675a80940cdf462b90cee4ae1aa188400ce411ffb76442dac78c254b"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_GENE_INTERVENTION_RECONSTRUCTION.json",
+      "size_bytes": 7269,
+      "sha256": "17818eafccfa65d3f035792dda4c90bc5edb0655b4548cb4bfd30d15e10bd06a"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_GENE_VS_PATHWAY_HIERARCHICAL.csv",
+      "size_bytes": 764,
+      "sha256": "0c93dd4c5f263fcb522be4c1ae88fcc66b80f7f12da33e4d727205499948772c"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_HIERARCHICAL_BOOTSTRAP_CURVES.csv",
+      "size_bytes": 4357,
+      "sha256": "b05c3f6a20c4bfcac50f623e772a5f10825b2deddcf76368ba415064b3c75345"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_HIERARCHICAL_EXTRAPOLATION.csv",
+      "size_bytes": 1602,
+      "sha256": "870ec11b2ec20ad78fd72463a2158251564876e850ac0bfd685e8b28e39d0520"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\ED7_HIERARCHICAL_SCALING_PARAMETERS.csv",
+      "size_bytes": 1201,
+      "sha256": "451af3fc7c7ab96268e3519ee5b4b6e9cdda2c0e11e632e7057a700fbf17b248"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\Extended_Data_7_hierarchical_corrected_source_data.csv",
+      "size_bytes": 8363,
+      "sha256": "6039a9e2811001a3efd9b995646a6b5c06f1f2f663018843767220c74784829a"
+    },
+    {
+      "path": "audit\\release_repair\\ed7\\repair_ed7_hierarchical_bootstrap.py",
+      "size_bytes": 50764,
+      "sha256": "c30676486021b05ddd6dcdd8b040c0ef21d13da179e352abb63cc14a3ad5f462"
+    }
+  ]
+}

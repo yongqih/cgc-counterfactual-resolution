@@ -1,0 +1,232 @@
+{
+  "id": "state_official_summary",
+  "analysis_name": "STATE official held-context artifact geometry summary",
+  "class": "OFFICIAL_ARTIFACT_SUMMARY",
+  "commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+  "implementation_commit": "b817ffa3caf9eeef65183a11c3b8a2625a610f1e",
+  "entrypoints": [],
+  "source_roots": [
+    "scripts/cgc_state_1_analysis.py",
+    "scripts/cgc_state_1_inventory.py",
+    "src/igc_virtual_cell/cgc_state_1"
+  ],
+  "extra_sources": [
+    "tests/test_cgc_state_1.py"
+  ],
+  "configs": [
+    "configs/cgc_state_1.json"
+  ],
+  "split_metadata": [
+    "results/cgc_state_1/official_source_manifest.json",
+    "results/cgc_state_1/repository_revisions.json",
+    "results/cgc_state_1/license_acknowledgement.md",
+    "results/cgc_state_1/zero_shot_split_manifest.csv",
+    "results/cgc_state_1/artifact_inventory.csv",
+    "results/cgc_state_1/context_intervention_gene_manifest.json",
+    "results/cgc_state_1/run_manifest.json",
+    "results/cgc_state_1/zero_shot_split_manifest.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/state_official_predictions",
+      "authority": "ArcInstitute/state; HuggingFace ST-SE-Parse and ST-HVG-Parse official eval-best full-DE artifacts; 434168727 bytes recorded in source manifest",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    }
+  ],
+  "outputs": [
+    "results/cgc_state_1"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Official artifact summary, not STATE model training or recreation of the official upstream predictions.",
+    "DO NOT run --help: this historical script has no argparse guard and would execute analysis.",
+    "Historical sampled context-null p-value is superseded in manuscript by conservative exact-unique-support 1/45=0.022222; unmodified legacy source may reproduce obsolete 1/5001. Frozen audit authority 21b08f02d3371129bb5cbf49704c65a271240c7c governs interpretation."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_cgc_state_1.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "archival_entrypoints": [
+    {
+      "path": "scripts/cgc_state_1_analysis.py",
+      "command": "python scripts/cgc_state_1_analysis.py",
+      "help_args": null,
+      "help_is_safe": false
+    }
+  ],
+  "release_entrypoint": "current_state_summary.py",
+  "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
+  "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
+  "claim_boundary": "Current summary reads actual official mean artifacts, computes existing audited metrics, and uses all44 exact context derangements with conservative plus-one p. Historical sampled p and historical main/rendering are not active; no State fitting or bootstrap intervals are claimed by the bounded summary.",
+  "exported_file_count": 15,
+  "exported_source_bytes": 74693,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "configs/cgc_state_1.json",
+      "source_file": "configs/cgc_state_1.json",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "522dcdcf3d989a2c275523859f6cce0921f2f9cb",
+      "sha256": "051810206a46726281821a832e5cf16d8b472c1e2f1139a816686b06524608e0",
+      "size_bytes": 1611,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/artifact_inventory.csv",
+      "source_file": "results/cgc_state_1/artifact_inventory.csv",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "183019fb066800d28101d691c0c9545ba1810f52",
+      "sha256": "6621fd102619377500d6ee1f36c7aee60edded710db2a02bd8fca62cb80e646f",
+      "size_bytes": 13487,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/context_intervention_gene_manifest.json",
+      "source_file": "results/cgc_state_1/context_intervention_gene_manifest.json",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "54029a847d5bac984cf7398593527a119aa30ef2",
+      "sha256": "eaf8c95d89acacbccb1f88a8068a414462131bd6ea5af7c1e73e50ff41dd4133",
+      "size_bytes": 2003,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/license_acknowledgement.md",
+      "source_file": "results/cgc_state_1/license_acknowledgement.md",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "98e88475fab93bb78d9f073618311ac2dd5167d7",
+      "sha256": "fe23f63374b8d232679a098d6f12940d2cb68ea3a2c57079d12741e94bc7ea0d",
+      "size_bytes": 303,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/official_source_manifest.json",
+      "source_file": "results/cgc_state_1/official_source_manifest.json",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "3f06557450c0f5d3c6ec368a70762ac39961d0cd",
+      "sha256": "6962b10793a995b6cb13229b9ae061151742f0c210b7e68bee64dc4f66180ece",
+      "size_bytes": 696,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/repository_revisions.json",
+      "source_file": "results/cgc_state_1/repository_revisions.json",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "efe7bc7f46e9f5486a84f1366a41eb446a51217c",
+      "sha256": "f0b4bbba06e517c1761b16f4141bc98f8c92a607044b172de18a7d5efe13e51d",
+      "size_bytes": 365,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/run_manifest.json",
+      "source_file": "results/cgc_state_1/run_manifest.json",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "f87e052a07224b6fa4651ed3e984e8981673f1f2",
+      "sha256": "da06a59853fc8cdbd63390852596873026f75be399781cb5346d0525dae3e913",
+      "size_bytes": 3560,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_state_1/zero_shot_split_manifest.csv",
+      "source_file": "results/cgc_state_1/zero_shot_split_manifest.csv",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "3457aeb03868819dc200ec91146a51ca0a3a7c01",
+      "sha256": "b804ac8ea8964d9b96a844e23e6024e67c59010a4512625834f8a477bec53462",
+      "size_bytes": 2963,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/cgc_state_1_analysis.py",
+      "source_file": "scripts/cgc_state_1_analysis.py",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "3dc31385535590621d0d94cf5abcb93a180f5406",
+      "sha256": "f959aca38131012888b8875259845b218cc137fea642a75dbea459e11bf988cd",
+      "size_bytes": 35287,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/cgc_state_1_inventory.py",
+      "source_file": "scripts/cgc_state_1_inventory.py",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "4505ee69f0952b496a087e8b28f613ed0e30c959",
+      "sha256": "c56a872c386f9d8563833887dba3a2055ed725a468ed3c02572d995608cabe85",
+      "size_bytes": 6930,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_state_1/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_state_1/__init__.py",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "1bcb1ac8651abf29fc267182bc230a1221c9f7d6",
+      "sha256": "160983e304a59c1c23cc3a2217895d29d114670f6f290483bcf9e47430024a64",
+      "size_bytes": 46,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_state_1/analysis.py",
+      "source_file": "src/igc_virtual_cell/cgc_state_1/analysis.py",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "479dbc7a7437df54fd150942d667bdefef665cd9",
+      "sha256": "353c0bad35d8d1c6abed418417cb6e14eebfd025c6832fa295e93ab2cbbf6155",
+      "size_bytes": 5072,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_cgc_state_1.py",
+      "source_file": "tests/test_cgc_state_1.py",
+      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
+      "git_blob": "cae3901f24bb86e3158c39f59da9e4844b3142d3",
+      "sha256": "5f7acfad1ca2747ca745c9644df2bbc2b57ba767802ecb0a24a92618a805699f",
+      "size_bytes": 1451,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN",
+  "release_entrypoint_provenance": {
+    "path": "current_state_summary.py",
+    "sha256": "e316238edd09007f56748ebd24d04bf8c5fd205d62a3e27c0a97305cbfcda097",
+    "origin": "release-only bounded reporting adapter; not a historical source blob",
+    "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c"
+  }
+}

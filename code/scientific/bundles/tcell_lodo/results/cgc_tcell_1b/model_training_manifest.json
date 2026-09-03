@@ -1,0 +1,22 @@
+{
+  "models": [
+    "Ridge",
+    "Bilinear",
+    "MLP"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "inner_selection_objective": "response_mse_rank256_equivalent",
+  "response_pca_rank": 256,
+  "posthoc_rescue": false,
+  "transformer": false,
+  "genept": false,
+  "geometry_loss": false,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "peak_vram_bytes": 270625792
+}

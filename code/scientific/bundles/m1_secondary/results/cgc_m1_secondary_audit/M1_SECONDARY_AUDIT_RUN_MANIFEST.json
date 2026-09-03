@@ -1,0 +1,178 @@
+{
+  "phase": "CGC-EC-M1",
+  "created_at": "2026-08-22T16:46:57.634531-04:00",
+  "identity": "POST_HOC_SECONDARY_FROZEN_PREDICTION_ADJUDICATION",
+  "audit_branch": "codex/cgc_m1_secondary_adjudication",
+  "git_commit_at_generation": "971cf4ab36e793d9da263e0cfc1fb2b074b6637b",
+  "protocol_commit": "7abf99cd1c728be00bc242308480aa388682354b",
+  "expected_base": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+  "upstream_result_commit": "dad1ca9dc86a6e0104976026810a246c20feba52",
+  "upstream_root_read_only": "C:\\Users\\24119\\PyCharmMiscProject\\Virtual_Cell_CGC_entrywise",
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 202608225,
+  "model_refit": false,
+  "hyperparameter_selection": false,
+  "null_re_evaluation": "deterministic frozen alpha/information sets; no fit",
+  "m1_reconciliation_max_absolute_error": 2.220446049250313e-16,
+  "source_hashes": {
+    "utility": "bd3b4f5097b4f158f58da102849d52080bb9ae7b7a4c4325f37bf574fd1a7c08",
+    "same6": "90681a0429339581a329536036b9353cc1761feb76a34b5cb5c64df34b28281f",
+    "same14": "9c1703a17855545f0dad3ba3d34c60c5187780612051bace36545ecd204567fd",
+    "cross": "cece3ec0e2066bb46e9bc8bcdd11cb6666e486da3362358a15addaa1927909a3",
+    "sums": "1f266acbc9ef8d84a63fe9166dc32988e14b882df6356c127f143e1b71655ee1"
+  },
+  "artifacts": {
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-A_recovery_surfaces.pdf": {
+      "size_bytes": 24898,
+      "sha256": "0bcd80e0e8bfba163a14ff62c6cce4c4642ebec2d083dfee45c057bd7361ee96"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-A_recovery_surfaces.png": {
+      "size_bytes": 71950,
+      "sha256": "efb06a7295ce9509ba641a6e4856a7b1f90d7b28e2682e27b25a13b6c8102335"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-A_recovery_surfaces.svg": {
+      "size_bytes": 62821,
+      "sha256": "ff2626d28cf5de20cc54fcda2f162f95d484ee933995839203fcd69b2df31776"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-B_paired_gain_surface.pdf": {
+      "size_bytes": 20218,
+      "sha256": "4a601bdd83b528711096da88d6da23cf11d538012474d705b8901b8e1b5442f6"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-B_paired_gain_surface.png": {
+      "size_bytes": 45008,
+      "sha256": "19335065c23380ff9fdea56e07bf864215ad7b4be8eb2010cfa7a6bde9bfdb37"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-B_paired_gain_surface.svg": {
+      "size_bytes": 43594,
+      "sha256": "4ce0f5fdfc64076a3a1fc9e419e2aa7a4e419e3ee35c5e8dde4876d713b16bc1"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-C_sentinel_scaling.pdf": {
+      "size_bytes": 17560,
+      "sha256": "335c797534077eb90c64d8d1daf643412e9aacddf0a8629c58da47bfad9817e6"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-C_sentinel_scaling.png": {
+      "size_bytes": 70806,
+      "sha256": "48a9a55d65af897ebfb84f1cb0c209fb75eb01356c0e19b0f21c9864c4b0aa04"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-C_sentinel_scaling.svg": {
+      "size_bytes": 49454,
+      "sha256": "6f4230c128ad092352b697befd79285715b18033e1ba72b45fb5a975eb71141b"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-D_allbut_full_vs_context.pdf": {
+      "size_bytes": 12732,
+      "sha256": "516b963358e9bd57dc5ecfa86c2512dd6062d84380857ee93ff4570d03002ab8"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-D_allbut_full_vs_context.png": {
+      "size_bytes": 20996,
+      "sha256": "1620b9aed5ed0e86c5c6029d7141783062f9dc6693c3f0ad7bdfb8504b7628f6"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-D_allbut_full_vs_context.svg": {
+      "size_bytes": 22962,
+      "sha256": "0e1d9bcb3ab02499ef19ad05a81b71038fc02cd939b8eba330758d85105c64d6"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-E_heterogeneity.pdf": {
+      "size_bytes": 12405,
+      "sha256": "97175fa4f63b885cf73502ba93fe08cf94d7afa2339925afce189047f853a3df"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-E_heterogeneity.png": {
+      "size_bytes": 36209,
+      "sha256": "e76513c4b192ea90f204d5c98ba613874ad69234ff6152c2c59052d3428c03b5"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-E_heterogeneity.svg": {
+      "size_bytes": 36778,
+      "sha256": "88a0a51918888181bfffa779000bda4d7648ef780670c2abc5ae120231ab8459"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-F_component_decomposition.pdf": {
+      "size_bytes": 13380,
+      "sha256": "0cd50018935f4598f47eacaf3a75f1c5c43c94e4ed5d5bba2635d14f98f07386"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-F_component_decomposition.png": {
+      "size_bytes": 38167,
+      "sha256": "80eb4077bcd484846925691e2c0fc329ef7c0b5816c3a65fc3a0f99c13f876d9"
+    },
+    "results/cgc_m1_secondary_audit/figures/Figure_M1-F_component_decomposition.svg": {
+      "size_bytes": 39583,
+      "sha256": "6d3e5d2a25dfdbf3a64cf4ec5ae02c354f725fa8eb4466f8bedc69f1d14b6b24"
+    },
+    "results/cgc_m1_secondary_audit/M1_ALL_BUT_ONE_AUDIT.md": {
+      "size_bytes": 1101,
+      "sha256": "02d611e22279a824364fbbf0cff2892b5ed5ed3fe1fc134d1a7bdd6a46f706e5"
+    },
+    "results/cgc_m1_secondary_audit/M1_COMPRESSION_THRESHOLDS.csv": {
+      "size_bytes": 356,
+      "sha256": "01db1b76027b3fb8197abe0228437cbf0b11658018b9446799616f5be888afc1"
+    },
+    "results/cgc_m1_secondary_audit/M1_CONTEXT_HETEROGENEITY.csv": {
+      "size_bytes": 4890,
+      "sha256": "8762b0d352914a47b73346f5267576e4a799954c2075e8b1612e21cfcdfa314d"
+    },
+    "results/cgc_m1_secondary_audit/M1_CONTEXT_WIDE_VS_INTERVENTION_SPECIFIC.csv": {
+      "size_bytes": 21699,
+      "sha256": "f9aa7034149f7c95328f9cd9caa1e1d9fae1348a1bd89b700c2aef1cfc60ffa0"
+    },
+    "results/cgc_m1_secondary_audit/M1_CORRESPONDENCE_NULLS.csv": {
+      "size_bytes": 66687,
+      "sha256": "6cff0ce1b1d1efbd20af26eecf38ee34357193e84599a23ce6388cfeb60bace3"
+    },
+    "results/cgc_m1_secondary_audit/M1_CROSS_PLATE_ROBUSTNESS.csv": {
+      "size_bytes": 539430,
+      "sha256": "0a2abdf9e7cf7a2d519ecde1c11fd4af241cce96457057c08167193c7d26ebd8"
+    },
+    "results/cgc_m1_secondary_audit/M1_ESTIMATOR_FAMILY_CORRECTION.csv": {
+      "size_bytes": 74384,
+      "sha256": "303891c1550aa840ae41a9cef0cf4d83c7818d79b89233fa60ebb474e38be722"
+    },
+    "results/cgc_m1_secondary_audit/M1_EXECUTABILITY_AUDIT.csv": {
+      "size_bytes": 1556,
+      "sha256": "11133c0cee62a3b055f11f89725f6d98a5442ea727446581010ce2b5a716d5d4"
+    },
+    "results/cgc_m1_secondary_audit/M1_INTERVENTION_HETEROGENEITY.csv": {
+      "size_bytes": 10399,
+      "sha256": "947068c741e21e70b819ed23cbca753ed074c7483cab3ea955c4f7c5bce670b3"
+    },
+    "results/cgc_m1_secondary_audit/M1_NUMERICAL_RECONCILIATION.csv": {
+      "size_bytes": 232,
+      "sha256": "95781e66265d89d0707f77f41775abb1cc54ca1b74684c8a9a1452606b95b370"
+    },
+    "results/cgc_m1_secondary_audit/M1_REFERENCE_CONTEXT_SCALING.csv": {
+      "size_bytes": 5733,
+      "sha256": "3965e3d607119da72401f0efc72c13e5af344b11bc182068f929faa33af95c6a"
+    },
+    "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_FINAL.md": {
+      "size_bytes": 5263,
+      "sha256": "ac12e3cf9f46509f5466aad563bd43803439d4f8a0759c9a03b7b313c3820df4"
+    },
+    "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_PROTOCOL.md": {
+      "size_bytes": 6571,
+      "sha256": "0b94180eeef1cfa5958663fa95b6d1608239fa5c0f8345821447e325eb1fb283"
+    },
+    "results/cgc_m1_secondary_audit/M1_SENTINEL_SCALING.csv": {
+      "size_bytes": 8985,
+      "sha256": "62aa7bef6d3971848204306c0fe809353be65010aa5d6570e926ff573ba91b8e"
+    },
+    "results/cgc_m1_secondary_audit/M1_SIMULTANEOUS_GRID_INFERENCE.csv": {
+      "size_bytes": 19122,
+      "sha256": "24425ae7eaff8e9fca645de5b5862c9d85de8c5f8b74f2eb390c4f3903ec91b7"
+    },
+    "results/cgc_m1_secondary_audit/M1_VS_M2_PAIRED.csv": {
+      "size_bytes": 14448,
+      "sha256": "a06c57bd6d36d59973f8d2524c36cb7b52413078f22c9a637e11ea5765b79ad8"
+    }
+  },
+  "summary": {
+    "allbut_m1_g": 0.3104176208806467,
+    "allbut_m1_simultaneous_lower_95": -0.45281413488804845,
+    "allbut_m1_simultaneous_upper_95": 1.073649376649342,
+    "allbut_m1_minus_m2": 0.1997370899925638,
+    "allbut_m1_minus_m2_simultaneous_lower_95": -0.5110099569298322,
+    "allbut_full_g": 0.763123747455537,
+    "positive_context_fraction": 0.98,
+    "positive_intervention_fraction": 0.8064516129032258,
+    "all_four_nulls_passed": false,
+    "directional": {
+      "plate6_to_plate14": -0.2284628702036382,
+      "plate14_to_plate6": -0.4172264652188189
+    },
+    "verdict": "M1_DESCRIPTIVE_ADVANTAGE_NOT_CONFIRMATORY"
+  }
+}

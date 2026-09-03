@@ -1,0 +1,15 @@
+{
+  "packaging_version": "CGC_release_2026-09-03",
+  "source_integration_commit": "11fe9a7cc153272378a1f4f0f7418cfdb93e23ee",
+  "documents": [
+    {
+      "name": "The identifiable resolution of cellular counterfactual prediction.docx",
+      "bytes": 2473720
+    },
+    {
+      "name": "Supplementary figures.docx",
+      "bytes": 1557072
+    }
+  ],
+  "scope": "Data/code only. Author manuscripts, figures and all historical artwork remain unchanged."
+}

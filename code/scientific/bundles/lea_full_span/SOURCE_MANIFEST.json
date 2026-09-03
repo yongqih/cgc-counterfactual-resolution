@@ -1,0 +1,162 @@
+{
+  "id": "lea_full_span",
+  "analysis_name": "Fold-local full-training-span PCA oracle transfer sanity analysis",
+  "class": "FULL_ANALYSIS",
+  "commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+  "implementation_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+  "entrypoints": [
+    {
+      "path": "scripts/run_full_span_pca_sanity_audit.py",
+      "command": "python scripts/run_full_span_pca_sanity_audit.py --formal",
+      "help_args": [
+        "--help"
+      ],
+      "help_is_safe": true
+    }
+  ],
+  "source_roots": [
+    "scripts/run_full_span_pca_sanity_audit.py",
+    "scripts/run_wgcna_resolution_frontier.py"
+  ],
+  "extra_sources": [
+    "tests/test_full_span_pca_sanity_audit.py"
+  ],
+  "configs": [],
+  "split_metadata": [
+    "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
+    "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_SUMMARY.json",
+    "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_METRIC_RECONCILIATION.md"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "data/wgcna_frontier_official/MATCHED_POSTSVA_340_REPRESENTATION.npz",
+      "authority": "Matched Lea 340-LCL response representation and frozen folds",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "data/wgcna_frontier_official/MATCHED_POSTSVA_FULL_OOF.npz",
+      "authority": "Matched post-SVA six-model OOF archive",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/level2_lea/archs4_robustness/ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+      "authority": "Frozen matched gene axis",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    },
+    {
+      "path": "results/cgc_dimension_matched_compression",
+      "authority": "Historical PCA curve/summary comparison required by reporting",
+      "bytes_if_known": null,
+      "redistribution": "not bundled; third-party terms or separate frozen-input archive required"
+    }
+  ],
+  "outputs": [
+    "results/cgc_full_span_pca_sanity"
+  ],
+  "runtime_git_sources": [],
+  "known_portability_constraints": [
+    "Frozen source export is not evidence that scientific execution has been rerun.",
+    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
+    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
+    "Fits fold-local PCA only; it is an oracle geometry diagnostic, not a new prediction model.",
+    "run_wgcna_resolution_frontier.py is a dynamic data-loader authority required by the unchanged script; no WGCNA run or WGCNA manuscript claim is authorized.",
+    "Historical directory names remain unchanged to preserve exact source. They do not reintroduce abandoned WGCNA experiments."
+  ],
+  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "smoke_tests": [
+    {
+      "kind": "EXACT_GIT_BLOB_SYNTAX",
+      "status": "performed by registry build; no scientific import"
+    },
+    {
+      "kind": "PYTEST_SYNTHETIC",
+      "path": "tests/test_full_span_pca_sanity_audit.py",
+      "status": "packaged, not rerun by registry build"
+    }
+  ],
+  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "missing_metadata_provenance": [],
+  "exported_file_count": 7,
+  "exported_source_bytes": 104643,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "sklearn"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_METRIC_RECONCILIATION.md",
+      "source_file": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_METRIC_RECONCILIATION.md",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "3b3080add7c2a136912bed9483ce1aaab411d45a",
+      "sha256": "7f76804d9a173b8e317ee7d21cf74a74095a0313ee7756a498bcfcd3d22a90e2",
+      "size_bytes": 1126,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
+      "source_file": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "0fbdde02cbfab047f7a359230ae28d6d1a03eb13",
+      "sha256": "f55247cd401f34e72fb59540efe615904a858995a67ff520fa34661b48c6807d",
+      "size_bytes": 4151,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_SUMMARY.json",
+      "source_file": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_SUMMARY.json",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "1011b8415579bf01a8c9ef0c55119b9f26c8fc27",
+      "sha256": "b03b14fd5f2e8c24b2ec79f5867191a10ae4b8752c339c979dbb1be8f8499593",
+      "size_bytes": 1184,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/run_full_span_pca_sanity_audit.py",
+      "source_file": "scripts/run_full_span_pca_sanity_audit.py",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "59e6a43edbb627ae75670c06309465921e97dad9",
+      "sha256": "039293f98cacf1e4a9356db7273e88cbf5eb01a615ce987adb6104c18e500160",
+      "size_bytes": 23576,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/run_wgcna_resolution_frontier.py",
+      "source_file": "scripts/run_wgcna_resolution_frontier.py",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "e3ad965cfc2dd6c5d0075c33080cc8b85637d0ef",
+      "sha256": "15d58a9d958a9100b2e0b52cdd82cb18031da9caf0e6bd45ed32ccfe2cb9010c",
+      "size_bytes": 69413,
+      "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_full_span_pca_sanity_audit.py",
+      "source_file": "tests/test_full_span_pca_sanity_audit.py",
+      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
+      "git_blob": "d8f371b70adc7dd85c7e4e620685dabb37dcbdab",
+      "sha256": "07e3b8282ad4e77b5652c818c26d90e439a53d94a2338b6c8a10234d3cb7dc13",
+      "size_bytes": 4359,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

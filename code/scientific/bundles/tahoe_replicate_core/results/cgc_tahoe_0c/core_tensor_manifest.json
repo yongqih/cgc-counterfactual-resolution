@@ -1,0 +1,548 @@
+{
+  "accumulation_dtype": "float64",
+  "authorized_transfer_limit_bytes": 21600000000,
+  "axes_path": "data\\tahoe100m_plate6_14_core\\axes.json",
+  "axes_sha256": "2a60c8b1567cf4c7d218ecc04575efb3bf0cd2f2b653077ac22a6d2825a9d704",
+  "compact_vs_staging_values_verified": true,
+  "condition_count": 9300,
+  "expected_condition_count": 9300,
+  "footer_scan_bytes": 6028418141,
+  "full_source_shard_provenance": "results/cgc_tahoe_0c/shard_scan_manifest.json",
+  "initial_selective_extraction_bytes_conservative": 14200000000,
+  "maximum_finite_genes_per_source_condition": 36678,
+  "minimum_finite_genes_per_source_condition": 4876,
+  "outcome_based_gene_filtering": false,
+  "readout_gene_count": 127,
+  "readout_gene_hash": "d088b50cd36be4d896fef404469aa1539850f0421d754a50340750a25e64b2b8",
+  "readout_selection": [
+    "present in both plates",
+    "present in every frozen core condition",
+    "unique official gene name",
+    "finite log2FoldChange"
+  ],
+  "recovered_condition_count": 100,
+  "recovery_extraction_bytes_conservative": 881000000,
+  "recovery_reason": "Official DE drug field encodes Selinexor with trailing whitespace; stripped without altering frozen drug-dose identity.",
+  "recovery_source_shards": [
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00008-of-01026.parquet",
+      "shard_index": 8,
+      "source_lfs_sha256": "d590b1beb929a4ac3f5a7a57d0a22f988fc3632aee90591bfea5bb83afc6b8b5"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00020-of-01026.parquet",
+      "shard_index": 20,
+      "source_lfs_sha256": "83fcd58c0529d40734279daa2b18a9678cecc7c26db0329a694147b28bfabb3a"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00029-of-01026.parquet",
+      "shard_index": 29,
+      "source_lfs_sha256": "aced755eb6dd9c226d6f822f8e2bf5fe83c220db8ad9fc957d51b123a98ebaf5"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00040-of-01026.parquet",
+      "shard_index": 40,
+      "source_lfs_sha256": "2b74d5181832aaba8576d29cb2f3f84b630b371e85628471189ee518d3bfe8ae"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00049-of-01026.parquet",
+      "shard_index": 49,
+      "source_lfs_sha256": "dd561c7e3a47c5e77db5720e24f31c5d37868756a557260b905fba16fe9dcc30"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00061-of-01026.parquet",
+      "shard_index": 61,
+      "source_lfs_sha256": "f7093ebd41b7374a01cd704c5fcbefc9791a2a1cffe86074493ae19f40705c25"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00070-of-01026.parquet",
+      "shard_index": 70,
+      "source_lfs_sha256": "146287d36ac25cdf31419a993c3e6325f1fb8caccdc029a0bf10adbefe094c62"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00081-of-01026.parquet",
+      "shard_index": 81,
+      "source_lfs_sha256": "e689d78355b55609f17af09fe7c37b165b556ed36efc6a63000ac341a1c0d109"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00090-of-01026.parquet",
+      "shard_index": 90,
+      "source_lfs_sha256": "9ebe237736b18a82fbdca4ce760d99349b3dd0fc769a615e1f5421f623137170"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00102-of-01026.parquet",
+      "shard_index": 102,
+      "source_lfs_sha256": "555d89c5b1d25f8a67a163805450c5aeffcce8359913a4f92c794e4e091e08da"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00111-of-01026.parquet",
+      "shard_index": 111,
+      "source_lfs_sha256": "b1e44f72823b68a6d2b7c762a8365050e0a42aa0399977c907e4fd4870129886"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00123-of-01026.parquet",
+      "shard_index": 123,
+      "source_lfs_sha256": "f0f6a15e06df8924a89bee9aaac31714de627c5158810a6273d5520167338d05"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00131-of-01026.parquet",
+      "shard_index": 131,
+      "source_lfs_sha256": "41b8ce53f51e0e96d5144e26710f691c5a4e2cc3da94d0b0d5771da25ccc9fee"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00143-of-01026.parquet",
+      "shard_index": 143,
+      "source_lfs_sha256": "9c4fe2c0bccf724e728b4b2b8c9299494e7a02fd64231e17c01c93df4a8c24e7"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00152-of-01026.parquet",
+      "shard_index": 152,
+      "source_lfs_sha256": "0a563799f85a366a5b99e726bd6bdd4e60185ebe64129419d5b4ec2e4658e053"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00164-of-01026.parquet",
+      "shard_index": 164,
+      "source_lfs_sha256": "8e3b4ca5e8906617c3b6a017da89e07fa1af8396d7313eb2201a04fa69494a55"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00172-of-01026.parquet",
+      "shard_index": 172,
+      "source_lfs_sha256": "27e2963f336b6d8071fdc90b64a8311fcd63ed4dc78e045d1250aa4f5c778781"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00184-of-01026.parquet",
+      "shard_index": 184,
+      "source_lfs_sha256": "34df7571280b1109e84bd52a84d34327165a57d9b8a29bc4f43416a7dfb4eff3"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00193-of-01026.parquet",
+      "shard_index": 193,
+      "source_lfs_sha256": "5f05ed1673a451b6e418338179123fa60661fd45351b082dbcea3c92c1d52070"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00205-of-01026.parquet",
+      "shard_index": 205,
+      "source_lfs_sha256": "7275a8192949eab0249ec6818367c4426e7475895a094d5c2e987475aa12123b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00213-of-01026.parquet",
+      "shard_index": 213,
+      "source_lfs_sha256": "0d6f2a9d6509dad584b86123fa46943dcf61ec775b13940327402d7d2d18e12b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00225-of-01026.parquet",
+      "shard_index": 225,
+      "source_lfs_sha256": "01509b47323e4f8159ff6d3b7da86c78b3eb420850d226c9e968e71d5cf1574a"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00234-of-01026.parquet",
+      "shard_index": 234,
+      "source_lfs_sha256": "3f4b6efd99046b1df4f7c7765cf02aecf381005b2340556da4159456e797bca0"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00246-of-01026.parquet",
+      "shard_index": 246,
+      "source_lfs_sha256": "041a6b5f96e976876004f1e85dae630cd722346af0e082c1917063e284011501"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00254-of-01026.parquet",
+      "shard_index": 254,
+      "source_lfs_sha256": "adfd61b5657f73c252c50c26f2fd52df3667971a0856a2acc804506b76a9405b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00255-of-01026.parquet",
+      "shard_index": 255,
+      "source_lfs_sha256": "850e82c9e5f63d658399e4aa60dbea47361190f8ca16924ab48b20453ea85593"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00266-of-01026.parquet",
+      "shard_index": 266,
+      "source_lfs_sha256": "1ec7a9a307fe7fa4ff4be62f4d35631b73ec825e316be9ca112e2356b189209c"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00275-of-01026.parquet",
+      "shard_index": 275,
+      "source_lfs_sha256": "4ce81fe7cfb1e21a4b6262a118d1463082b08595f19c9be7e1278d9d621fbf76"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00287-of-01026.parquet",
+      "shard_index": 287,
+      "source_lfs_sha256": "b9ee61011aa6c29a25127168dbebff492febd72e188fa990b506383607fed8f0"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00296-of-01026.parquet",
+      "shard_index": 296,
+      "source_lfs_sha256": "a08366540596e4b7ab8898e134e2c83405be6ce16aa041bc7278e905690ec5c4"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00307-of-01026.parquet",
+      "shard_index": 307,
+      "source_lfs_sha256": "526ce40d1d826820ab2fceb4021a3fec25de746e04e6cc34bdbf212940376bbd"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00316-of-01026.parquet",
+      "shard_index": 316,
+      "source_lfs_sha256": "777d686022ffcbb006b9b2522f28894050e7c3282e88ba0e9bd6c9c74f5d67fd"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00328-of-01026.parquet",
+      "shard_index": 328,
+      "source_lfs_sha256": "183a72286bbc5a7887c6951d02118c2dccebd3a71330c37ec068115f3e30091c"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00337-of-01026.parquet",
+      "shard_index": 337,
+      "source_lfs_sha256": "33d18f21e4a031dcfafb3f013a7c860296e1f3df63fc480eade1cd4e76c7abdd"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00348-of-01026.parquet",
+      "shard_index": 348,
+      "source_lfs_sha256": "9305e20a884365b57afdda833874720baff0dc8417e76425fc74183495472259"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00357-of-01026.parquet",
+      "shard_index": 357,
+      "source_lfs_sha256": "6da83c0e9146a922f34f462490da62af257a8562478c8e3dcab665b0ee3bdf2b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00369-of-01026.parquet",
+      "shard_index": 369,
+      "source_lfs_sha256": "07d8f8803ede0050920473fd22662141968a81ad5acc4f457d8a31330d55dc15"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00378-of-01026.parquet",
+      "shard_index": 378,
+      "source_lfs_sha256": "14b5aa9953531043b88bba90276d1e32c29835b0884b108d728cb37ea6903b86"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00389-of-01026.parquet",
+      "shard_index": 389,
+      "source_lfs_sha256": "37d0c99cf60a1b48f3069dd072f8c7928679e12ac00c3c6970d7e4699f07a4a6"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00398-of-01026.parquet",
+      "shard_index": 398,
+      "source_lfs_sha256": "35d6ed29d66493851813ecb2d7e419d55ae1ab585be25cb794139f3c49d3011b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00410-of-01026.parquet",
+      "shard_index": 410,
+      "source_lfs_sha256": "5ed4a4b64dea1d6e84992177ae4fc2735040779c66ce93dae0ea5f327f0d042e"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00419-of-01026.parquet",
+      "shard_index": 419,
+      "source_lfs_sha256": "1dcfa5f73d6d34d1b55cd81fea4f9e1ef94b0490f662d1e58883134d0a385994"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00430-of-01026.parquet",
+      "shard_index": 430,
+      "source_lfs_sha256": "eb48a78e17be44454e87657105cd8241f7c7c64f9c390cf46c96c8a0da462934"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00439-of-01026.parquet",
+      "shard_index": 439,
+      "source_lfs_sha256": "df2c8f8d82bc87764d8cb02daf247eaf6719078ec6d02f6ff96b85d1a9a6192b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00451-of-01026.parquet",
+      "shard_index": 451,
+      "source_lfs_sha256": "f6726c7695e6957d1c619d07004aea0c7de1cc688e4bba451b5b78ac50121f8b"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00460-of-01026.parquet",
+      "shard_index": 460,
+      "source_lfs_sha256": "385dc52b6d3ed51b93dbb7c0445ba108933daa2f5a403cc99014080176d2e618"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00472-of-01026.parquet",
+      "shard_index": 472,
+      "source_lfs_sha256": "ed517bc588deca169518e3b356b607d82bf8de0ac23834d8b9ea4b9c0d500ca3"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00480-of-01026.parquet",
+      "shard_index": 480,
+      "source_lfs_sha256": "0d57109cc39f14208cb3ae82996181f5c59aae1ae476052b95364e5764156a27"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00492-of-01026.parquet",
+      "shard_index": 492,
+      "source_lfs_sha256": "e6111a11686c3cf35a265af134224a2344a588a640cb49e5cdd9c376cd390a23"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00501-of-01026.parquet",
+      "shard_index": 501,
+      "source_lfs_sha256": "384cde612c04788485e37b3fdc172ee80ef3e139d5593b6bc37d5379191b4bed"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00513-of-01026.parquet",
+      "shard_index": 513,
+      "source_lfs_sha256": "88236b6afc5781ad92cb1fff6fab63a353ea9553086ea4abe42f48e5c09746a7"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00521-of-01026.parquet",
+      "shard_index": 521,
+      "source_lfs_sha256": "7c6eccf81468261b884789d1bee00759395a2567cfb7848cb1d4aefd84cc8c2e"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00533-of-01026.parquet",
+      "shard_index": 533,
+      "source_lfs_sha256": "bd15767ac611284c9d5ef0c76975f5f67cf28d3da121be3c2f5162f4f03d2cf6"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00542-of-01026.parquet",
+      "shard_index": 542,
+      "source_lfs_sha256": "e9fb740202b15c004239cf39dcb47e752865093eaac3ea787200f7957be3bedd"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00554-of-01026.parquet",
+      "shard_index": 554,
+      "source_lfs_sha256": "b09ed78b7b202fc4305d7d87f55175fdb7b4f099da236991e6052b5a05a99859"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00562-of-01026.parquet",
+      "shard_index": 562,
+      "source_lfs_sha256": "743ffa949d3ee2a0a8f4af6ec3af529d09c0868265231fa1d9c3f84fccd32ede"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00574-of-01026.parquet",
+      "shard_index": 574,
+      "source_lfs_sha256": "29605ceac021217286b76e43edb3905aab08792747e5f0042b13fd6ecdcd13b3"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00583-of-01026.parquet",
+      "shard_index": 583,
+      "source_lfs_sha256": "8f8e8dd630c0b2607e6f0b4b864302b7a170541e7fba0b42912d677edb62ab5c"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00595-of-01026.parquet",
+      "shard_index": 595,
+      "source_lfs_sha256": "cda8e3935f0fa11545228ef0dd8d4b8de1501261765702bf55d527d0a0240705"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00603-of-01026.parquet",
+      "shard_index": 603,
+      "source_lfs_sha256": "5156ff97f60ac0e799de7fc34a67b4a14fc28cb0d250894ecfe2d4fc385391ea"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00615-of-01026.parquet",
+      "shard_index": 615,
+      "source_lfs_sha256": "8ecd00c552d10db46614b3598d762d2e68cdd5df8eba7e87d2a58fe49f195d53"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00624-of-01026.parquet",
+      "shard_index": 624,
+      "source_lfs_sha256": "5b0b502c0092cdb618e9bf77a88c703737d7e102460e6e6ebfeb3c28d488f5e7"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00636-of-01026.parquet",
+      "shard_index": 636,
+      "source_lfs_sha256": "3a9e4d2a3a121a1c3b32a3d10378f6730df1d49462768165452565cded7c4606"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00644-of-01026.parquet",
+      "shard_index": 644,
+      "source_lfs_sha256": "8e7090abf886a934021f9d1d3648bf5d581791107552e7aa890abef3960dd43c"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00656-of-01026.parquet",
+      "shard_index": 656,
+      "source_lfs_sha256": "1d4604b75fd65940086786ff0885d98bd570823e4f20ee73b90938103849d524"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00665-of-01026.parquet",
+      "shard_index": 665,
+      "source_lfs_sha256": "e94b972368e5ca2533ae3c32d10df248196df1d20722d974dc5d007d62bb3f96"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00677-of-01026.parquet",
+      "shard_index": 677,
+      "source_lfs_sha256": "3e16b99bebb48a6cb6e37a33a3d2c35204e90bb409691a1a637beb5b4c8e73b3"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00685-of-01026.parquet",
+      "shard_index": 685,
+      "source_lfs_sha256": "3b7532a08f7b6e479748197c4ec7361988b0efcebb2bcdc7c83444e507df2ab0"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00697-of-01026.parquet",
+      "shard_index": 697,
+      "source_lfs_sha256": "c5acc915282a77c7e94ccfe725c7d454ddbffbaa8d457eca4baf89bac588bd43"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00706-of-01026.parquet",
+      "shard_index": 706,
+      "source_lfs_sha256": "f537a8e1d8dae05e4d2cd5069ad186ab443a45863ab06c2e5d7f8017efa534d5"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00718-of-01026.parquet",
+      "shard_index": 718,
+      "source_lfs_sha256": "d4348f86f187488db729871c198dcdaa42a3711b7c794d5a2e8441769de7f91c"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00726-of-01026.parquet",
+      "shard_index": 726,
+      "source_lfs_sha256": "173fc4692b068e0c4cf7045f3c610455d1f9f70a968db262ddbabe351c309426"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00738-of-01026.parquet",
+      "shard_index": 738,
+      "source_lfs_sha256": "3c16bcdf2c0865b2b2959a4cf6def71e94397ad96d9e12cc0d92a9cb85d690bb"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00747-of-01026.parquet",
+      "shard_index": 747,
+      "source_lfs_sha256": "f6d3bcde8ac95a71104a83907f288b5d549ed98db4f11c691bde665425175ff7"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00759-of-01026.parquet",
+      "shard_index": 759,
+      "source_lfs_sha256": "fcfaedf1e49e0fb333d2729c6242833f68259478607ccb8144702e8a34d040fb"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00767-of-01026.parquet",
+      "shard_index": 767,
+      "source_lfs_sha256": "8bcb50fedb29e0bd4c794725eb9eefc8b76f912a1777478e21df510f2fa36f74"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00779-of-01026.parquet",
+      "shard_index": 779,
+      "source_lfs_sha256": "4b64133a0c161ccae6cb91d18981f01998b0df724749ca2047629fefb65b2238"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00788-of-01026.parquet",
+      "shard_index": 788,
+      "source_lfs_sha256": "4e411ef7dcded096e313cd3024dabc9bd2321469fd1f01055698adef5241e390"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00800-of-01026.parquet",
+      "shard_index": 800,
+      "source_lfs_sha256": "32f5f95da86b99c5731c6715821db5ade06b04f259f4bbcc6fe0d9a8d22aaa8e"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00808-of-01026.parquet",
+      "shard_index": 808,
+      "source_lfs_sha256": "1f1d3088aee1c409a8231c8d1c5fda68857614b727dfed44ed2bbdad5bfb0b6f"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00820-of-01026.parquet",
+      "shard_index": 820,
+      "source_lfs_sha256": "c25990f2810ebd4035c096dbf33819be8095322abad0256c611fe771e1b6bead"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00829-of-01026.parquet",
+      "shard_index": 829,
+      "source_lfs_sha256": "96bd7ceb49a4da2103864fae625ac31262da5e1a31b16e4da27954074a4f9879"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00841-of-01026.parquet",
+      "shard_index": 841,
+      "source_lfs_sha256": "b4a9f59754722c1292485bf9fe731913c4a7cd843d1743edd25644ee532fcc4e"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00849-of-01026.parquet",
+      "shard_index": 849,
+      "source_lfs_sha256": "645d8f79891b30786f52054f2639ce148496c4b5f8130f29d205ca50e1ca4ac1"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00861-of-01026.parquet",
+      "shard_index": 861,
+      "source_lfs_sha256": "3f679535477d43c8bfa169ba26595bd13c64fef6a0def05f469e19748e6d5900"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00870-of-01026.parquet",
+      "shard_index": 870,
+      "source_lfs_sha256": "83b0e53e9d6afb2616cca51e6672ec1220aff2e608cc110c9d2b67b2b0cefe4d"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00882-of-01026.parquet",
+      "shard_index": 882,
+      "source_lfs_sha256": "1746dc2849e3058f83af65a4fd999dc895ac7957667b8b9f367030488bd1c1dd"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00890-of-01026.parquet",
+      "shard_index": 890,
+      "source_lfs_sha256": "de8b9ae20d14d2e80d7bab35c12a0a6c4025724849a31858af2a44b15b8aa680"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00902-of-01026.parquet",
+      "shard_index": 902,
+      "source_lfs_sha256": "f96d44ea7b16873a83199a65a668d56f38d65662899922084d3b96f597e9eae0"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00911-of-01026.parquet",
+      "shard_index": 911,
+      "source_lfs_sha256": "93915e179633be2c1bec1debbaa6ebfe79cd195a9f9a0c111b3181f9ac35327a"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00923-of-01026.parquet",
+      "shard_index": 923,
+      "source_lfs_sha256": "17f3c39ee989f2e1abb1da4596036ac07f99143dbaf58002f91c33b75bf5ec0f"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00931-of-01026.parquet",
+      "shard_index": 931,
+      "source_lfs_sha256": "81738ffd7f933ea8af2384b8fa454036a8319b828c9b9141d6b6a1d389ff9e04"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00943-of-01026.parquet",
+      "shard_index": 943,
+      "source_lfs_sha256": "f23c6adeb1c700a0e3fb8c8fec475a4775992e8e9de7213f31681a460b0423a2"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00952-of-01026.parquet",
+      "shard_index": 952,
+      "source_lfs_sha256": "10b0f22208fca8884164f76d953d2a90642a211a1630f3d732a995230b84b2ea"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00964-of-01026.parquet",
+      "shard_index": 964,
+      "source_lfs_sha256": "b33f9e6d37a99b6e223903f7be3405418fd16396273b7acf6925f68be5bfe9e1"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00972-of-01026.parquet",
+      "shard_index": 972,
+      "source_lfs_sha256": "ca7e21aa5875729fc5a49764633c29caffcc66e019835c6210c660f53eca8d4e"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00984-of-01026.parquet",
+      "shard_index": 984,
+      "source_lfs_sha256": "adceeb15c09d27aa0c4552af32857886c2f170aacab8da8966a74a1f4d7d0da1"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-00993-of-01026.parquet",
+      "shard_index": 993,
+      "source_lfs_sha256": "1656018b57647b2a1aa5767a82c5af807420684996a195515e819fb42b2f27c5"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-01005-of-01026.parquet",
+      "shard_index": 1005,
+      "source_lfs_sha256": "f92d2a70f45e3f9a78eea21e3cf6b037ea24095e24d624ea26be385e154b790e"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-01013-of-01026.parquet",
+      "shard_index": 1013,
+      "source_lfs_sha256": "28268760ec5b82d4a6d6d631daa9e16f0654bdbefb1e403732e53dcea247b5e7"
+    },
+    {
+      "path": "metadata/pseudobulk_differential_expression/train-01025-of-01026.parquet",
+      "shard_index": 1025,
+      "source_lfs_sha256": "855b3a0acbaedd989349edb36f72bcdb9c6a0fe0fabbf3a31dadcd6ccfa2368b"
+    }
+  ],
+  "response_estimator": "official plate-resolved treatment-versus-control log2FoldChange",
+  "significance_filtering": false,
+  "source_revision": "2dc57900b7981cfcf5e211527169a0b006546a95",
+  "temporary_full_shards_downloaded": false,
+  "tensor_dtype": "float32",
+  "tensor_path": "data\\tahoe100m_plate6_14_core\\delta_float32.npy",
+  "tensor_sha256": "ecd4899d38a7877e29a608ab0c185f0260b567e971eef1ee3debc3e22655abb1",
+  "tensor_shape": [
+    2,
+    50,
+    93,
+    127
+  ],
+  "timestamp_utc": "2026-08-20T18:39:02.789397+00:00",
+  "total_remote_transfer_bytes_conservative": 21109418141
+}

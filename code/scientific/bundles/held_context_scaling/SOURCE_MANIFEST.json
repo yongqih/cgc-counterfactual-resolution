@@ -1,0 +1,208 @@
+{
+  "id": "held_context_scaling",
+  "analysis_name": "Target-hidden Tahoe context-support scaling",
+  "class": "FULL_ANALYSIS",
+  "commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+  "entrypoints": [
+    {
+      "path": "scripts/tahoe_held_context_scaling.py",
+      "help_args": [
+        "--help"
+      ]
+    },
+    {
+      "path": "scripts/tahoe_held_context_secondary.py",
+      "help_args": [
+        "--help"
+      ]
+    }
+  ],
+  "source_roots": [
+    "scripts/tahoe_held_context_*.py",
+    "src/igc_virtual_cell/tahoe_held_context_*.py"
+  ],
+  "extra_sources": [],
+  "configs": [],
+  "split_metadata": [
+    "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_PROTOCOL.md",
+    "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_TARGET_MANIFEST.csv"
+  ],
+  "environment_metadata": [
+    "pyproject.toml"
+  ],
+  "required_inputs": [
+    {
+      "path": "results/cgc_tahoe_0i/response_tensors.zarr",
+      "authority": "response_manifest.json",
+      "bytes_if_known": null,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_DIRECTORY",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "data/tahoe100m_control_state/control_wells_log1p_cpm_float32.npy",
+      "authority": "frozen control-state source manifest",
+      "bytes_if_known": 34018528,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    },
+    {
+      "path": "results/cgc_tahoe_0d/lineage_baseline.csv",
+      "authority": "frozen lineage metadata",
+      "bytes_if_known": 11137,
+      "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
+      "local_presence": "PRESENT_FILE",
+      "notes": "Prepared input; external to the code-only export."
+    }
+  ],
+  "outputs": [
+    "results/tahoe_held_context_scaling"
+  ],
+  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "known_portability_constraints": [
+    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
+    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+  ],
+  "smoke_tests": [],
+  "claim_boundary": "Historical finalize uses context-only uncertainty and is NOT final ED7 inference. The separately packaged ed7_hierarchical_repair must supply current context-then-intervention uncertainty. Point estimates/models remain frozen.",
+  "archival_entrypoints": [
+    {
+      "path": "scripts/tahoe_held_context_finalize.py",
+      "help_args": null,
+      "help_boundary": "No argument parser; use launcher --inspect-only, never pass --help directly."
+    }
+  ],
+  "active_execution_guard": "Old context-only finalizer is not allowlisted. Use ed7_hierarchical_repair for current inference.",
+  "exported_file_count": 13,
+  "exported_source_bytes": 141826,
+  "external_import_roots": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scipy",
+    "zarr"
+  ],
+  "runtime_git_authority": null,
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "source_file": "pyproject.toml",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "452d040210880a51781f1523c1b2c58455b6dd73",
+      "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d",
+      "size_bytes": 834,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_PROTOCOL.md",
+      "source_file": "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_PROTOCOL.md",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "cbc379100aede2be2ac2131761b971599c315c61",
+      "sha256": "e0ef789026a7e0d29fbfe01ebe4fff86897d8d66cae45d27daa39ec819dce984",
+      "size_bytes": 7926,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_TARGET_MANIFEST.csv",
+      "source_file": "results/tahoe_held_context_scaling/TAHOE_HELD_CONTEXT_SCALING_TARGET_MANIFEST.csv",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "0b855a91bfc36901bc9b64bff2d4856d2fd7d033",
+      "sha256": "efd8be671a5021d28e4d3762258a44925b78d41b49955cb5f79931441b2a7901",
+      "size_bytes": 3309,
+      "role": "frozen_configuration_or_metadata"
+    },
+    {
+      "path": "scripts/tahoe_held_context_finalize.py",
+      "source_file": "scripts/tahoe_held_context_finalize.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "f6f87bed3fa2f314c824e0c4d2ccbc3c843eae35",
+      "sha256": "89638221649af0fe268709d03cab03bf8294be3371f5838573babcfc946c8578",
+      "size_bytes": 220,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/tahoe_held_context_scaling.py",
+      "source_file": "scripts/tahoe_held_context_scaling.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "bcd441f710d778067ff447c114e33267428faea1",
+      "sha256": "0158291964e3d6d49ae086010b0615dbfb842ad685c880e16c9af739f054bb25",
+      "size_bytes": 2255,
+      "role": "scientific_source"
+    },
+    {
+      "path": "scripts/tahoe_held_context_secondary.py",
+      "source_file": "scripts/tahoe_held_context_secondary.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "950f2b88f8c9fc5f233463a1103114db8e0b7b98",
+      "sha256": "2f79f77a3dee378ae0b275e2b2086162c6acd7672a41bcc263d14aba8b33febf",
+      "size_bytes": 532,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/__init__.py",
+      "source_file": "src/igc_virtual_cell/__init__.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "cb4e216d67b57c303d36dd070ed2c913ea261f7c",
+      "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5",
+      "size_bytes": 85,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0i/__init__.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0i/__init__.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "b083c50f29b32fe55fa7e7dc5b7528da590630a2",
+      "sha256": "3e47ce5f7d31c0a140531355fdc808fba43553018b1d0fc91c2bf9bcd0d05bc7",
+      "size_bytes": 59,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0i/scaling.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0i/scaling.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "c9a7ab0f26b2e32f199ab1b1042f701b18ce1246",
+      "sha256": "7ced2dc901283dff77faf2d367069de1a88c45c53c6d49f97fe8fa5cb0c5679f",
+      "size_bytes": 27800,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/cgc_tahoe_0i/truth.py",
+      "source_file": "src/igc_virtual_cell/cgc_tahoe_0i/truth.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "3dfece624417cc5a006b9a40d220621cc13efd5a",
+      "sha256": "c01b7fb5b23ffe13ad8f4b4c5cc16bb55b6c8b93fd7a4043c3698f63341aed42",
+      "size_bytes": 11698,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/tahoe_held_context_finalize.py",
+      "source_file": "src/igc_virtual_cell/tahoe_held_context_finalize.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "7e75f39d4360cdcb228fded651d35aec132d8074",
+      "sha256": "5b3947a06c92e442575faeaeb2b37a96819432927c9fac8259c6e91efdeb8109",
+      "size_bytes": 40285,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/tahoe_held_context_scaling.py",
+      "source_file": "src/igc_virtual_cell/tahoe_held_context_scaling.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "a03e8beb3019ccd82b5b1cffbc4e47debb3b8828",
+      "sha256": "6e59a0e3a6c52fc16bb5bd20b78885a3e4e321a82dcf5dc8aa73758a20b82346",
+      "size_bytes": 36469,
+      "role": "scientific_source"
+    },
+    {
+      "path": "src/igc_virtual_cell/tahoe_held_context_secondary.py",
+      "source_file": "src/igc_virtual_cell/tahoe_held_context_secondary.py",
+      "source_commit": "abb503e9f3cf75eaea7a075f81160db3d04de64d",
+      "git_blob": "79113cdf6cf8d41481f60fbd9fee14c2b9fde543",
+      "sha256": "e6e5980eba39312ee1f00a9d981852a93193586e28e9a9b06aff63585f1fd582",
+      "size_bytes": 10354,
+      "role": "scientific_source"
+    }
+  ],
+  "source_modification": "NONE; byte-exact Git blobs",
+  "analysis_execution": "NOT_RUN"
+}

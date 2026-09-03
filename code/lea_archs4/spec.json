@@ -1,0 +1,31 @@
+{
+  "analysis_name": "Lea ARCHS4 robustness",
+  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
+  "files": [
+    "Extended_Data_Figure_5_source_data.csv"
+  ],
+  "checks": [
+    {
+      "file": "Extended_Data_Figure_5_source_data.csv",
+      "where": {
+        "kind": "representation_hierarchy",
+        "label": "Full gene",
+        "group": "ARCHS4 raw-read-derived, matched 340"
+      },
+      "column": "value",
+      "expected": 0.0107753596267029,
+      "tolerance": 1e-14
+    },
+    {
+      "file": "Extended_Data_Figure_5_source_data.csv",
+      "where": {
+        "kind": "representation_hierarchy",
+        "label": "PC1-4",
+        "group": "ARCHS4 raw-read-derived, matched 340"
+      },
+      "column": "value",
+      "expected": 0.1474840913426385,
+      "tolerance": 1e-14
+    }
+  ]
+}

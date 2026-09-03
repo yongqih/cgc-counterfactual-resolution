@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-08-21T13:11:23.093437-04:00",
+  "response_store": "results/cgc_tahoe_0i/response_tensors.zarr",
+  "shape_each_response": [
+    2,
+    50,
+    93,
+    62710
+  ],
+  "storage_dtype": "float32",
+  "normalization_computation_dtype": "float64",
+  "primary": "treatment log1p(CPM) minus equal-weight mean of two independently normalized DMSO-well log1p(CPM) profiles",
+  "secondary_sum_control": "sum two raw DMSO wells, normalize once, log1p(CPM), subtract",
+  "secondary_cell_weighted_control": "cell-count-weighted mean of independently normalized DMSO-well log1p(CPM)",
+  "secondary_log2fc": "log2((treatment CPM+1)/(equal-well primary DMSO CPM+1))",
+  "gene_universes": {
+    "G_ALL_MAPPED": 62710,
+    "G_PRIMARY": 25695,
+    "G_BROAD": 37554,
+    "G_STRICT": 20182,
+    "G_PRIMARY_NO_MITO": 25677,
+    "G_PRIMARY_NO_MITO_RIBO": 25497
+  },
+  "treated_response_used_for_selection": false,
+  "de_pvalue_used_for_selection": false
+}

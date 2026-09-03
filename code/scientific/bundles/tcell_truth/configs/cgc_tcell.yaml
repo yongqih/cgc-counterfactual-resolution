@@ -1,0 +1,82 @@
+phase: cgc_tcell_0a_primary_context_operator_discovery
+random_seed: 20260819
+
+storage:
+  raw_directory: data/raw/cgc_tcell
+  processed_directory: data/processed/cgc_tcell
+  minimum_free_disk_gb: 500
+  maximum_ram_gb: 32
+
+downloads:
+  GWCD4i.pseudobulk_merged.h5ad:
+    bytes: 44566657140
+    url: https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/GWCD4i.pseudobulk_merged.h5ad
+  sample_metadata.suppl_table.csv:
+    bytes: 2966
+    url: https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/suppl_tables/sample_metadata.suppl_table.csv
+  QC_summaries_per_sample_lane.csv:
+    bytes: 60515
+    url: https://raw.githubusercontent.com/emdann/GWT_perturbseq_analysis_2025/master/metadata/suppl_tables/QC_summaries_per_sample_lane.csv
+  sgrna_library_metadata.suppl_table.csv:
+    bytes: 9935249
+    url: https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/suppl_tables/sgrna_library_metadata.suppl_table.csv
+  guide_kd_efficiency.suppl_table.csv:
+    bytes: 13319852
+    url: https://raw.githubusercontent.com/emdann/GWT_perturbseq_analysis_2025/master/metadata/suppl_tables/guide_kd_efficiency.suppl_table.csv
+
+conditional_downloads:
+  authorization_gate: TCELL_STIMULATION_OPERATOR_SIGNAL_CONFIRMED
+  GWCD4i.DE_stats.by_guide.h5mu:
+    bytes: 29424424894
+    url: https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/GWCD4i.DE_stats.by_guide.h5mu
+  GWCD4i.DE_stats.by_donors.h5mu:
+    bytes: 16866278447
+    url: https://genome-scale-tcell-perturb-seq.s3.amazonaws.com/marson2025_data/GWCD4i.DE_stats.by_donors.h5mu
+
+frozen_states: [Rest, Stim8hr, Stim48hr]
+
+eligibility:
+  primary_observation_flags: [keep_min_cells, keep_total_counts, keep_test_genes]
+  effective_knockdown_secondary_flag: keep_effective_guides
+  require_valid_curated_target: true
+  require_all_donor_state_contexts: true
+  exclude_guide_library_problem_flags: true
+  cell_count_overlap_quantiles: [0.05, 0.95]
+
+normalization:
+  primary: log1p_cpm
+  cpm_scale: 1000000
+  chunk_genes: 256
+  chunk_rows: 8192
+
+bootstrap:
+  draws: 10000
+
+"null":
+  permutations: 5000
+  cell_count_bins: 5
+  gpu_batch_size: 250
+
+blocks:
+  intervention: 5
+  gene: 5
+  assignment: sha256_name_modulo_blocks
+
+guide_disjoint:
+  minimum_complete_targets: 300
+
+run_disjoint:
+  minimum_complete_targets: 300
+
+decision:
+  null_percentile: 0.95
+  empirical_p_max_exclusive: 0.05
+  positive_intervention_blocks_min: 4
+  maximum_single_gene_block_fraction: 0.50
+
+outputs:
+  directory: results/cgc_tcell
+  inventory_report: results/reports/cgc_tcell_inventory.md
+  truth_report: results/reports/cgc_tcell_truth_operator_audit.md
+  factorial_report: results/reports/cgc_tcell_factorial_decomposition.md
+  phase_report: results/reports/cgc_tcell_phase_summary.md
