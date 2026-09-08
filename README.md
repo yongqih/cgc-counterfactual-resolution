@@ -9,7 +9,7 @@ companion data archive.
 
 ## 8 September 2026 correction
 
-Hyperparameter selection is restricted to each observed support path, with sequence-aware downstream replay. Linked source data and Supplementary Table 5 are updated. The first detectable support budget, all-but-one point estimates and resolution conclusions remain unchanged. See [the correction guide](code/scientific/SUPPORT_BUDGET_CORRECTION.md). The previous v1.0.1 release is preserved.
+Hyperparameter selection is restricted to each observed support path, with sequence-aware downstream replay. Linked source data and Supplementary Table 5 are updated. The first detectable support budget, all-but-one point estimates and resolution conclusions remain unchanged. See [the correction guide](code/scientific/SUPPORT_BUDGET_CORRECTION.md). The previous v1.0.0 release is preserved.
 
 ## Start here
 
@@ -37,6 +37,12 @@ are documented in the code guide.
 - **Manuscript code release:** [v1.0.1](https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1).
 - **Prepared code archive:** [CGC_CODE_2026-09-08.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.1/CGC_CODE_2026-09-08.zip), attached to that release.
 - **Companion source data:** [CGC_DATA_2026-09-08.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.1/CGC_DATA_2026-09-08.zip), attached to the same release.
+- **Archived code (v1.0.1):** [10.5281/zenodo.22664234](https://doi.org/10.5281/zenodo.22664234).
+- **Archived source data (v1.0.1):** [10.5281/zenodo.22664304](https://doi.org/10.5281/zenodo.22664304).
+
+Please cite the code DOI when using the released implementation and the data DOI
+when reusing the source tables. These version-specific DOIs identify the corrected
+v1.0.1 archives; cite the relevant upstream studies when using their underlying data.
 
 If you clone this repository or use GitHub's **Code > Download ZIP**, the source
 files are already provided; no second code ZIP is required.
@@ -48,7 +54,7 @@ the contents of the data archive's `CGC_release_2026-09-08/` directory at the
 repository root. The data archive includes its own `DATA_README.md`.
 
 The prepared code archive retains its archive-specific README. This repository
-README provides GitHub-specific navigation; the corrected scientific implementations match the v1.0.1 archive. The original Zenodo deposits are retained; this patch does not replace them.
+README provides GitHub-specific navigation; the corrected scientific implementations match the v1.0.1 archive. The corrected code and data are archived at the version-specific Zenodo DOIs above. Earlier Zenodo versions remain available in each record's version history.
 
 ## License and attribution
 

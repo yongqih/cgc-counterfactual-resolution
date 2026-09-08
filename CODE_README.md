@@ -73,4 +73,4 @@ The archive contains no virtual environments, node_modules, Git repository,
 download credentials or model binaries. The support-budget and replay implementations are corrected in v1.0.1; other scientific implementations retain their recorded versions.
 
 
-Current patch: see `code/scientific/SUPPORT_BUDGET_CORRECTION.md` in the companion code archive. GitHub release: https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1. Original Zenodo deposits are retained; they have not been replaced by this patch.
+Current patch: see `code/scientific/SUPPORT_BUDGET_CORRECTION.md` in the companion code archive. GitHub release: https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1. Cite the corrected code archive at https://doi.org/10.5281/zenodo.22664234 and the companion source data at https://doi.org/10.5281/zenodo.22664304. Both records archive v1.0.1; earlier Zenodo versions remain available.
