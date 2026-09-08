@@ -394,10 +394,10 @@
   },
   {
     "bundle": "resolution_pathway_frozen",
-    "path": "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv",
-    "authority": "46b25eec4a97e3001cc43262980af8f69c533478; valid contrast selected under21b08f02d3371129bb5cbf49704c65a271240c7c",
-    "redistribution": "included byte-exact frozen result table; active renderer discards every random-arm row",
-    "bytes_if_known": null
+    "path": "results/cgc_resolution_poc_v2/RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv",
+    "authority": "2026-09-08 episode-reference-only correction",
+    "redistribution": "included corrected result table; active renderer selects six retained gene/pathway rows",
+    "bytes_if_known": 2066
   },
   {
     "bundle": "pathway_fidelity",

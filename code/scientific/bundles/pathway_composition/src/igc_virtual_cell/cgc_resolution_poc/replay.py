@@ -50,9 +50,29 @@ def _target_cache_aggregate(cache_root: Path) -> str:
     return hashlib.sha256(("\n".join(lines) + "\n").encode()).hexdigest()
 
 
+def load_support_correction(source_root: Path) -> dict[str, Any] | None:
+    """Verify the explicit correction authority, without relabelling old Git blobs."""
+    path = source_root / "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json"
+    if not path.exists():
+        return None
+    correction = json.loads(path.read_text(encoding="utf-8"))
+    if correction.get("protocol") != "EPISODE_REFERENCE_SUPPORT_ONLY_V2":
+        raise RuntimeError("RESOLUTION2_UNKNOWN_SUPPORT_CORRECTION")
+    for relative, entry in correction["artifacts"].items():
+        candidate = (source_root / relative).resolve()
+        if not candidate.is_relative_to(source_root.resolve()) or sha256(candidate) != entry["sha256"]:
+            raise RuntimeError(f"RESOLUTION2_CORRECTION_HASH_MISMATCH:{relative}")
+    if _target_cache_aggregate(source_root / "results/cgc_entrywise_compression/_cache") != correction["target_cache_aggregate"]:
+        raise RuntimeError("RESOLUTION2_CORRECTED_TARGET_CACHE_MISMATCH")
+    return correction
+
+
 def validate_sources(source_root: Path, truth_root: Path) -> dict[str, Any]:
     checks: dict[str, Any] = {}
+    correction = load_support_correction(source_root)
     for relative, expected in SOURCE_HASHES.items():
+        if correction is not None and relative in correction["artifacts"]:
+            expected = correction["artifacts"][relative]["sha256"]
         path = source_root / relative
         observed = sha256(path)
         if observed != expected:
@@ -60,7 +80,8 @@ def validate_sources(source_root: Path, truth_root: Path) -> dict[str, Any]:
         checks[relative] = observed
     cache_root = source_root / "results/cgc_entrywise_compression/_cache"
     aggregate = _target_cache_aggregate(cache_root)
-    if aggregate != TARGET_CACHE_AGGREGATE:
+    expected_aggregate = TARGET_CACHE_AGGREGATE if correction is None else correction["target_cache_aggregate"]
+    if aggregate != expected_aggregate:
         raise RuntimeError("RESOLUTION2_TARGET_CACHE_HASH_MISMATCH")
     checks["target_cache_aggregate"] = aggregate
     indices = truth_root / "results/cgc_tahoe_0i/gene_indices_g_primary.npy"
@@ -93,6 +114,7 @@ class ReplayContext:
     def __init__(self, analysis_root: Path, source_root: Path):
         self.analysis_root = analysis_root.resolve()
         self.source_root = source_root.resolve()
+        self.correction = load_support_correction(self.source_root)
         self.split = json.loads(
             (self.source_root / "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json").read_text(
                 encoding="utf-8"
@@ -107,12 +129,15 @@ class ReplayContext:
         self.matched_cross = matched_context_gram(self.cross4)
         self.parameters = self._load_parameters()
 
-    def _load_parameters(self) -> dict[tuple[int, int, int, int], FrozenParameters]:
-        result: dict[tuple[int, int, int, int], FrozenParameters] = {}
+    def _load_parameters(self) -> dict[tuple[int, int, int, int, int], FrozenParameters]:
+        result: dict[tuple[int, int, int, int, int], FrozenParameters] = {}
         cache_root = self.source_root / "results/cgc_entrywise_compression/_cache"
         for target, path in enumerate(sorted(cache_root.glob("target_*.npz"))):
             with np.load(path, allow_pickle=False) as archive:
                 rows = json.loads(str(archive["parameter_rows_json"]))
+                corrected = "tuning_protocol" in archive and str(archive["tuning_protocol"]) == "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
+                if corrected != (self.correction is not None):
+                    raise RuntimeError("RESOLUTION2_MIXED_SUPPORT_PROTOCOL")
             for row in rows:
                 m, k = int(row["m"]), int(row["k"])
                 if (m, k) not in {(49, 92), (40, 4)}:
@@ -120,11 +145,16 @@ class ReplayContext:
                 if int(row["target_context_index"]) != target or bool(row["target_outcome_used"]):
                     raise RuntimeError("RESOLUTION2_FROZEN_PARAMETER_LEAKAGE")
                 plate = PLATES.index(str(row["plate"]))
-                key = (target, plate, m, k)
-                if key in result:
-                    raise RuntimeError("RESOLUTION2_DUPLICATE_FROZEN_PARAMETER")
-                result[key] = FrozenParameters(float(row["ridge_lambda"]), int(row["rank"]))
-        if len(result) != CONTEXTS * 2 * 2:
+                sequence = int(row.get("support_sequence", -1))
+                if corrected and m < 49 and sequence < 0:
+                    raise RuntimeError("RESOLUTION2_POOLED_PARAMETER_OUTSIDE_SUPPORT")
+                sequences = range(8) if sequence == -1 else [sequence]
+                for sequence_index in sequences:
+                    key = (target, plate, m, k, sequence_index)
+                    if key in result or sequence_index not in range(8):
+                        raise RuntimeError("RESOLUTION2_DUPLICATE_OR_INVALID_FROZEN_PARAMETER")
+                    result[key] = FrozenParameters(float(row["ridge_lambda"]), int(row["rank"]))
+        if len(result) != CONTEXTS * 2 * 2 * 8:
             raise RuntimeError("RESOLUTION2_FROZEN_PARAMETER_COUNT_MISMATCH")
         return result
 
@@ -144,7 +174,7 @@ class ReplayContext:
         matched = self.matched_same if same_override is None else tuple(matched_context_gram(x) for x in same_override)
         weights: list[np.ndarray] = []
         for plate in range(2):
-            params = self.parameters[(target, plate, m, k)]
+            params = self.parameters[(target, plate, m, k, sequence)]
             batch = fit_batches(
                 matched[plate],
                 same_values[plate],
@@ -190,7 +220,7 @@ class ReplayContext:
                     ) / GENE_COUNT / sequence_count
             expected_truth, expected_after = frozen[(m, k)]
             g = 1.0 - float(after.sum(dtype=np.float64)) / float(truth.sum(dtype=np.float64))
-            expected_g = EXPECTED_G[(m, k)]
+            expected_g = EXPECTED_G[(m, k)] if self.correction is None else self.correction["expected_g"][f"m{m}_k{k}"]
             rows.extend(
                 [
                     {"check": f"gene_metric_m{m}_k{k}", "observed": g, "expected": expected_g,
@@ -240,11 +270,11 @@ def _prediction_path(replay_root: Path, m: int, k: int) -> Path:
     return replay_root / f"m{m}_k{k}_predictions_float32.npy"
 
 
-def materialize_predictions(context: ReplayContext, truth_path: Path, replay_root: Path) -> dict[str, Any]:
+def materialize_predictions(context: ReplayContext, truth_path: Path, replay_root: Path, *, budgets=None) -> dict[str, Any]:
     values = np.load(truth_path, mmap_mode="r")
     replay_root.mkdir(parents=True, exist_ok=True)
     manifest: dict[str, Any] = {"files": {}, "weights": {}}
-    for m, k, sequence_count in BUDGETS:
+    for m, k, sequence_count in (BUDGETS if budgets is None else budgets):
         path = _prediction_path(replay_root, m, k)
         shape = (2, sequence_count, CONTEXTS, INTERVENTIONS, GENE_COUNT)
         if path.exists():
@@ -269,7 +299,9 @@ def materialize_predictions(context: ReplayContext, truth_path: Path, replay_roo
             predictions.flush()
             print(f"RESOLUTION2 materialize m={m} k={k} target={target + 1}/{CONTEXTS}", flush=True)
         weights_path = replay_root / f"m{m}_k{k}_frozen_weights.npz"
-        np.savez_compressed(weights_path, weights=weights_all, sources=sources_all)
+        protocol = "LEGACY_POOLED_REFERENCE_TUNING" if context.correction is None else context.correction["protocol"]
+        np.savez_compressed(weights_path, weights=weights_all, sources=sources_all,
+                            tuning_protocol=np.asarray(protocol))
         manifest["files"][path.name] = {"shape": list(shape), "dtype": "float32", "size_bytes": path.stat().st_size}
         manifest["weights"][weights_path.name] = {"sha256": sha256(weights_path), "size_bytes": weights_path.stat().st_size}
     return manifest

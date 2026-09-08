@@ -182,18 +182,36 @@ def select_parameters(
     sentinel_orders: np.ndarray,
     folds: np.ndarray,
     geometry_cache: dict[tuple[int, tuple[int, ...]], object] | None = None,
+    support_sequence: int | None = None,
 ) -> SelectedParameters:
-    """Reference-only pseudo-target CV pooled over all eight frozen paths."""
+    """Select within the episode's observed reference-context support.
+
+    Pooling paths is allowed only when their reference information sets are
+    identical (in particular m=49). Otherwise the caller must name one path.
+    """
 
     if m <= 1 or k == 0:
         return SelectedParameters(0.0, float(LAMBDAS[0]), 0, np.nan, np.nan, np.nan, 0, 0)
+    if support_sequence is None:
+        allowed = set(map(int, support_orders[0, :m]))
+        if any(set(map(int, row[:m])) != allowed for row in support_orders):
+            raise ValueError("BUDGET_LEAKAGE: select one support_sequence before tuning")
+        sequences = range(support_orders.shape[0])
+    else:
+        if not 0 <= support_sequence < support_orders.shape[0]:
+            raise ValueError("Invalid support_sequence")
+        sequences = (support_sequence,)
+    for sequence in sequences:
+        support_set = support_orders[sequence, :m]
+        if len(set(map(int, support_set))) != m or target in support_set:
+            raise ValueError("Invalid or target-contaminated reference support")
     alpha_losses = np.zeros(len(ALPHAS), dtype=np.float64)
     ridge_losses = np.zeros(len(LAMBDAS), dtype=np.float64)
     rank_losses = np.zeros(len(RANKS), dtype=np.float64)
     rank_cases = np.zeros(len(RANKS), dtype=np.int64)
     pseudo_count = 0
     validation_cases = 0
-    for sequence in range(support_orders.shape[0]):
+    for sequence in sequences:
         support_set = np.asarray(support_orders[sequence, :m], dtype=np.int64)
         order = np.asarray(sentinel_orders[sequence], dtype=np.int64)
         for pseudo_target in support_set[: min(5, len(support_set))]:

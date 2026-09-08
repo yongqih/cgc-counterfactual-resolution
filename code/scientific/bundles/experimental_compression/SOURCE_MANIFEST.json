@@ -104,8 +104,8 @@
       "boundary": "synthetic tensors only; five tests; no frozen outcomes"
     }
   ],
-  "exported_file_count": 26,
-  "exported_source_bytes": 6908669,
+  "exported_file_count": 34,
+  "exported_source_bytes": 7181977,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -261,11 +261,15 @@
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
       "source_file": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
-      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
-      "git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
-      "sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
-      "size_bytes": 26890,
-      "role": "scientific_source"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "5a6edd314994c57d19befcdfdf41874fc6186a4236cc5fcc3208d9c87a018006",
+      "size_bytes": 28336,
+      "role": "scientific_source",
+      "pre_correction_sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
+      "base_source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "base_git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
+      "modification": "2026-09-08 audited support-budget/replay correction"
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/controls.py",
@@ -288,11 +292,15 @@
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
       "source_file": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
-      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
-      "git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
-      "sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
-      "size_bytes": 10967,
-      "role": "scientific_source"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "8153cc0340f847d8519cc168acab7df4ae706f63b521a5708eb0961797dd88cc",
+      "size_bytes": 11856,
+      "role": "scientific_source",
+      "pre_correction_sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
+      "base_source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
+      "base_git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
+      "modification": "2026-09-08 audited support-budget/replay correction"
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
@@ -347,8 +355,121 @@
       "sha256": "401db8cde2cf96cbcae7306b8273c77bc7d528e52efd05e7b1d8b1a192bf245a",
       "size_bytes": 6418,
       "role": "scientific_source"
+    },
+    {
+      "path": "tests/test_cgc_support_budget.py",
+      "source_file": "tests/test_cgc_support_budget.py",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "8b4e189039631a77502d58d369b18da3a4352757001a65e92ba16a08d4d69240",
+      "size_bytes": 2372,
+      "role": "scientific_source",
+      "modification": "2026-09-08 support-budget correction; newly generated, not a historical Git blob"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "b8ae71da2773a3793e29396450d57bfcd4870a4d7019a772f64684ce3c5483e1",
+      "size_bytes": 168056,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "1851b4a47f51c6370a85b4366665285f1ddee148107ff70c76fdbb07a6e2be51",
+      "size_bytes": 14075,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "a80e08473b61efe19d3b27f843ebc5e2d950f1cc905b74ebf7566b54cd84f67c",
+      "size_bytes": 11394,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FRONTIER.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FRONTIER.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "a1042cdc47db14c9a8a7bd59fea747eae626f71d696af98d469519ed143130ee",
+      "size_bytes": 15155,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "0e0f4bff362b700fd5090dbb12e8ab5f5fcde9c0654706d216a02c9ec15048d8",
+      "size_bytes": 1131,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/ENTRYWISE_NULL_CONTROLS.csv",
+      "source_file": "results/cgc_entrywise_compression/ENTRYWISE_NULL_CONTROLS.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "d56f0ea821a7b24e331a153799bb50f6255819f9b8baa02ca708a1b37f4dca34",
+      "size_bytes": 46916,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json",
+      "source_file": "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "f0553ac972e8ae7d0fd2f91106b77ba1e1258e2e9df62e6dfaea297bfccb7b12",
+      "size_bytes": 11874,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Audited 2026-09-08 correction. Modified/new files have null source_commit/git_blob; original provenance is retained in base_* and pre_correction_sha256 fields.",
+  "analysis_execution": "NOT_RUN",
+  "post_freeze_correction": {
+    "date": "2026-09-08",
+    "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+    "base_commit_is_historical": true,
+    "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+    "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+    "modified_files": [
+      "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FRONTIER.csv",
+      "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
+      "results/cgc_entrywise_compression/ENTRYWISE_NULL_CONTROLS.csv",
+      "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE.csv",
+      "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
+      "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
+      "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json",
+      "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+      "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+      "tests/test_cgc_support_budget.py"
+    ]
+  }
 }

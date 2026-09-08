@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Exact immutable-source packaging, no analysis rerun",
+  "scope": "Historical source bundles with explicitly recorded 2026-09-08 support-budget and downstream replay corrections.",
   "bundles": [
     {
       "id": "experimental_compression",
@@ -94,7 +94,7 @@
       "outputs": [
         "results/cgc_entrywise_compression"
       ],
-      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "runtime_readiness": "PREPARED_INPUTS_REQUIRED; full 50-target grid and 10000 hierarchical draws recomputed on 2026-09-08",
       "known_portability_constraints": [
         "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
         "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
@@ -107,7 +107,26 @@
           ],
           "boundary": "synthetic tensors only; five tests; no frozen outcomes"
         }
-      ]
+      ],
+      "post_freeze_correction": {
+        "date": "2026-09-08",
+        "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+        "base_commit_is_historical": true,
+        "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+        "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+        "modified_files": [
+          "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FRONTIER.csv",
+          "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
+          "results/cgc_entrywise_compression/ENTRYWISE_NULL_CONTROLS.csv",
+          "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE.csv",
+          "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
+          "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
+          "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json",
+          "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+          "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+          "tests/test_cgc_support_budget.py"
+        ]
+      }
     },
     {
       "id": "low_rank_completion",
@@ -289,13 +308,28 @@
       "outputs": [
         "results/cgc_context_anchoring_efficiency"
       ],
-      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+      "runtime_readiness": "CORRECTED_FROZEN_UTILITIES_REQUIRED; paired contrasts recomputed on 2026-09-08",
       "known_portability_constraints": [
         "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
         "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
       ],
       "smoke_tests": [],
-      "claim_boundary": "The run command computes prespecified contrasts and emits Figure_Context_Anchoring PNG/SVG/source CSV from frozen utility/bootstrap tables. It does not refit predictors and does not reproduce manually edited R2 figures. Pass --authority-root explicitly."
+      "claim_boundary": "The run command computes prespecified contrasts and emits Figure_Context_Anchoring PNG/SVG/source CSV from frozen utility/bootstrap tables. It does not refit predictors and does not reproduce manually edited R2 figures. Pass --authority-root explicitly.",
+      "post_freeze_correction": {
+        "date": "2026-09-08",
+        "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+        "base_commit_is_historical": true,
+        "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+        "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+        "modified_files": [
+          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_DELTA_G.csv",
+          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FULL_SATURATION.csv",
+          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_G_VALUES.csv",
+          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_MARGINAL_EFFICIENCY.csv",
+          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_SIMULTANEOUS_INFERENCE.csv",
+          "src/igc_virtual_cell/cgc_context_anchoring.py"
+        ]
+      }
     },
     {
       "id": "mechanism_aligned",
@@ -1500,10 +1534,10 @@
       ],
       "required_inputs": [
         {
-          "path": "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv",
-          "authority": "46b25eec4a97e3001cc43262980af8f69c533478; valid contrast selected under21b08f02d3371129bb5cbf49704c65a271240c7c",
-          "redistribution": "included byte-exact frozen result table; active renderer discards every random-arm row",
-          "bytes_if_known": null
+          "path": "results/cgc_resolution_poc_v2/RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv",
+          "authority": "2026-09-08 episode-reference-only correction",
+          "redistribution": "included corrected result table; active renderer selects six retained gene/pathway rows",
+          "bytes_if_known": 2066
         }
       ],
       "outputs": [
@@ -1518,7 +1552,7 @@
         "Valid pathway-minus-gene comparison is 0.27281393788398667 versus 0.11068053088808294; the claim authority is the corrected frozen interval, not random-projection results.",
         "Default source/truth roots are author-machine Windows paths; override them explicitly. No automatic replay or scientific execution during packaging."
       ],
-      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "runtime_readiness": "CORRECTED_CONTRAST_INPUT_INCLUDED; matched gene/pathway contrasts recomputed on 2026-09-08",
       "smoke_tests": [
         {
           "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -1558,7 +1592,7 @@
       "release_entrypoint": "render_valid_resolution.py",
       "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
       "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
-      "claim_boundary": "Current analytical renderer selects only two frozen pathway-minus-gene contrasts and their unchanged corrected intervals. Invalid random-projection code/results cannot be executed or rendered by the active release entrypoint. No prediction or null is regenerated; manual R2 layout is not reproduced.",
+      "claim_boundary": "Current renderer uses corrected episode-reference-only predictions and two retained pathway-minus-gene contrasts, preserving original four-term max-T multiplicity calibration. Invalid random-projection claims remain excluded. Historical tables are preserved but superseded.",
       "archival_required_inputs": [
         {
           "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
@@ -1622,7 +1656,21 @@
           "redistribution": "not bundled; third-party terms or separate frozen-input archive required",
           "local_presence": "PRESENT_FILE"
         }
-      ]
+      ],
+      "post_freeze_correction": {
+        "date": "2026-09-08",
+        "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+        "base_commit_is_historical": true,
+        "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+        "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+        "modified_files": [
+          "results/cgc_resolution_poc_v2/RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv",
+          "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+          "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+          "src/igc_virtual_cell/cgc_resolution_poc/inference.py",
+          "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
+        ]
+      }
     },
     {
       "id": "pathway_fidelity",
@@ -1729,7 +1777,7 @@
         "Recovery is undefined where replicate cross-product denominator is nonpositive (e.g. VEGF); this is not a missing plotting point.",
         "Default --source-root is an author-machine Windows path; supply the arranged frozen-input root explicitly."
       ],
-      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "runtime_readiness": "PREPARED_INPUTS_REQUIRED; all-but-one predictions unchanged; replay protocol corrected",
       "smoke_tests": [
         {
           "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -1742,7 +1790,19 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "post_freeze_correction": {
+        "date": "2026-09-08",
+        "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+        "base_commit_is_historical": true,
+        "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+        "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+        "modified_files": [
+          "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+          "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+          "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
+        ]
+      }
     },
     {
       "id": "pathway_composition",
@@ -1855,7 +1915,7 @@
         "Claim is composition-dependent recoverability, not a universal composition ceiling. Nonpositive denominators remain undefined.",
         "Default --source-root is an author-machine Windows path; explicit input root is required for portability."
       ],
-      "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+      "runtime_readiness": "PREPARED_INPUTS_REQUIRED; all-but-one predictions unchanged; replay protocol corrected",
       "smoke_tests": [
         {
           "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -1868,7 +1928,19 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "post_freeze_correction": {
+        "date": "2026-09-08",
+        "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+        "base_commit_is_historical": true,
+        "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+        "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+        "modified_files": [
+          "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+          "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+          "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
+        ]
+      }
     },
     {
       "id": "crc_pdo_application",

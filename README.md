@@ -1,12 +1,15 @@
-# The identifiable resolution of cellular counterfactual prediction
+# The recoverable resolution of cellular perturbation-response prediction
 
-Analysis code accompanying *The identifiable resolution of cellular
-counterfactual prediction*.
+Analysis code accompanying *The recoverable resolution of cellular perturbation-response prediction*.
 
-This repository contains 26 frozen scientific implementation bundles, their
+This repository contains 26 versioned scientific implementation bundles, their
 configurations, split metadata, input requirements and execution documentation.
 Figure source data and Supplementary Tables are distributed separately in the
 companion data archive.
+
+## 8 September 2026 correction
+
+Hyperparameter selection is restricted to each observed support path, with sequence-aware downstream replay. Linked source data and Supplementary Table 5 are updated. The first detectable support budget, all-but-one point estimates and resolution conclusions remain unchanged. See [the correction guide](code/scientific/SUPPORT_BUDGET_CORRECTION.md). The previous v1.0.1 release is preserved.
 
 ## Start here
 
@@ -31,22 +34,21 @@ are documented in the code guide.
 
 ## Downloads and version
 
-- **Manuscript code release:** [v1.0.0](https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.0).
-- **Prepared code archive:** [CGC_CODE_2026-09-03.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.0/CGC_CODE_2026-09-03.zip), attached to that release.
-- **Companion source data:** `CGC_DATA_2026-09-03.zip`, containing figure source data and Supplementary Tables. Its Zenodo link will be added after deposition; the data archive is not included in this code repository.
+- **Manuscript code release:** [v1.0.1](https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1).
+- **Prepared code archive:** [CGC_CODE_2026-09-08.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.1/CGC_CODE_2026-09-08.zip), attached to that release.
+- **Companion source data:** [CGC_DATA_2026-09-08.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.1/CGC_DATA_2026-09-08.zip), attached to the same release.
 
 If you clone this repository or use GitHub's **Code > Download ZIP**, the source
 files are already provided; no second code ZIP is required.
 
 The prepared code and data archives both use the top-level directory
-`CGC_release_2026-09-03/`. Once both archives are available, extract them into the
+`CGC_release_2026-09-08/`. Once both archives are available, extract them into the
 same parent directory to combine their contents. For a GitHub checkout, place
-the contents of the data archive's `CGC_release_2026-09-03/` directory at the
+the contents of the data archive's `CGC_release_2026-09-08/` directory at the
 repository root. The data archive includes its own `DATA_README.md`.
 
 The prepared code archive retains its archive-specific README. This repository
-README provides GitHub-specific navigation; the scientific implementations are
-unchanged. Permanent code and data DOI links will be added after Zenodo deposition.
+README provides GitHub-specific navigation; the corrected scientific implementations match the v1.0.1 archive. The original Zenodo deposits are retained; this patch does not replace them.
 
 ## License and attribution
 

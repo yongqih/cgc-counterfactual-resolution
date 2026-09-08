@@ -13,7 +13,7 @@
         "k_or_block": "2"
       },
       "column": "value",
-      "expected": 0.071798337214193,
+      "expected": 0.0766712865744218,
       "tolerance": 1e-14
     },
     {
@@ -24,7 +24,7 @@
         "k_or_block": "8"
       },
       "column": "value",
-      "expected": 0.08097044645818,
+      "expected": 0.0824672710788518,
       "tolerance": 1e-14
     }
   ]

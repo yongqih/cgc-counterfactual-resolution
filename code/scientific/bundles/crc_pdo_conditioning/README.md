@@ -25,7 +25,7 @@ For allowlisted argument-parsing scripts, replace `--execute` and arguments with
 - `data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz` — GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
 - `data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz` — Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
 - `results/crc_pdo_personalized_drug_application` — Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `PROGENy weights file` — Official PROGENy v1.17.3 revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `PROGENy weights file` — Official PROGENy v1.17.3 revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f; expected SHA256 59227c888c2bfa1ed89fe00109da7ce1bacffbb9b8b6b79215065d41f2476223. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
 
 Prepared paths are relative to the workspace or explicit source root used by the original CLI. The registry is not a claim that those data are embedded. Large inputs were neither copied nor downloaded. Use the source manifests and DATA_AVAILABILITY_FINAL.md to resolve provenance before running.
 

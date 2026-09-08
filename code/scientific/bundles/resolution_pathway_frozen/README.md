@@ -2,9 +2,9 @@
 
 Capability: `FIGURE_FROM_FROZEN_PREDICTIONS`. Source: `46b25eec4a97e3001cc43262980af8f69c533478`.
 
-Runtime: **FROZEN_CONTRAST_INPUT_INCLUDED; matplotlib/Arial runtime required; not rendered in this repair**.
+Runtime: **CORRECTED_CONTRAST_INPUT_INCLUDED; matplotlib/Arial runtime required**.
 
-The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. The launcher and any current bounded release reporting entry are separate, explicitly identified release code. No frozen scientific source was rewritten.
+The source commit above identifies the historical base. On 2026-09-08, episode-reference-only hyperparameter selection and its downstream replay were corrected. SOURCE_MANIFEST.json distinguishes corrected bytes from the original Git blobs and retains their pre-correction hashes. Historical result tables must not be substituted for corrected results. The public correction and reproduction guide is ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Safe inspection
 
@@ -12,7 +12,7 @@ The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. Th
 python code/scientific/launch.py resolution_pathway_frozen --inspect-only
 ```
 
-The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. No stage was run during this release repair.
+The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. The 2026-09-08 corrected runs and unchanged analyses are distinguished in ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Entry points
 
@@ -22,7 +22,7 @@ For allowlisted argument-parsing scripts, replace `--execute` and arguments with
 
 ## Input contract
 
-- `results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv` — 46b25eec4a97e3001cc43262980af8f69c533478; valid contrast selected under21b08f02d3371129bb5cbf49704c65a271240c7c. Size: not available bytes. included byte-exact frozen result table; active renderer discards every random-arm row.
+- `results/cgc_resolution_poc_v2/RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv` — included corrected six-row gene/pathway result table; this is the current renderer input.
 
 Prepared paths are relative to the workspace or explicit source root used by the original CLI. The registry is not a claim that those data are embedded. Large inputs were neither copied nor downloaded. Use the source manifests and DATA_AVAILABILITY_FINAL.md to resolve provenance before running.
 
@@ -34,5 +34,5 @@ Prepared paths are relative to the workspace or explicit source root used by the
 - Historical random-projection arm is INVALID and excluded from manuscript inference. Source inclusion is archival, not endorsement or permission to execute that arm.
 - Valid pathway-minus-gene comparison is 0.27281393788398667 versus 0.11068053088808294; the claim authority is the corrected frozen interval, not random-projection results.
 - Default source/truth roots are author-machine Windows paths; override them explicitly. No automatic replay or scientific execution during packaging.
-- claim_boundary: Current analytical renderer selects only two frozen pathway-minus-gene contrasts and their unchanged corrected intervals. Invalid random-projection code/results cannot be executed or rendered by the active release entrypoint. No prediction or null is regenerated; manual R2 layout is not reproduced.
+- claim_boundary: The current renderer prefers RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv: corrected support-budget predictions and the two retained pathway-minus-gene comparisons under the original four-term max-T calibration. Historical random terms are retained solely in the multiplicity maximum, not as biological control evidence. Historical tables are preserved for provenance, not current manuscript inference. Manual R2 layout is not reproduced.
 - active_execution_guard: Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.

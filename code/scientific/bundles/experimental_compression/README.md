@@ -2,9 +2,9 @@
 
 Capability: `FULL_ANALYSIS`. Source: `a893cc338c11f402a9ef9966bd376f2aca92cb88`.
 
-Runtime: **PREPARED_INPUTS_REQUIRED; scientific run not performed**.
+Runtime: **PREPARED_INPUTS_REQUIRED; full 50-target support grid and 10,000 hierarchical bootstrap draws recomputed in the 2026-09-08 correction**.
 
-The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. The launcher and any current bounded release reporting entry are separate, explicitly identified release code. No frozen scientific source was rewritten.
+The source commit above identifies the historical base. On 2026-09-08, episode-reference-only hyperparameter selection and its downstream replay were corrected. SOURCE_MANIFEST.json distinguishes corrected bytes from the original Git blobs and retains their pre-correction hashes. Historical result tables must not be substituted for corrected results. The public correction and reproduction guide is ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Safe inspection
 
@@ -12,7 +12,7 @@ The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. Th
 python code/scientific/launch.py experimental_compression --inspect-only
 ```
 
-The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. No stage was run during this release repair.
+The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. The 2026-09-08 corrected runs and unchanged analyses are distinguished in ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Entry points
 
@@ -26,10 +26,10 @@ For allowlisted argument-parsing scripts, replace `--execute` and arguments with
 
 ## Input contract
 
-- `data/cgc_entrywise_cache/same_plate6_float32.npy` — ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 86490128 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
-- `data/cgc_entrywise_cache/same_plate14_float32.npy` — ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 86490128 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
-- `data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy` — ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 86490128 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
-- `data/cgc_entrywise_cache/sample_gene_sums_float64.npy` — ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 74528 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
+- `data/cgc_entrywise_cache/same_plate6_float32.npy` â€” ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 86490128 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
+- `data/cgc_entrywise_cache/same_plate14_float32.npy` â€” ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 86490128 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
+- `data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy` â€” ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 86490128 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
+- `data/cgc_entrywise_cache/sample_gene_sums_float64.npy` â€” ENTRYWISE_FOUNDATION_MANIFEST.json. Size: 74528 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
 
 Prepared paths are relative to the workspace or explicit source root used by the original CLI. The registry is not a claim that those data are embedded. Large inputs were neither copied nor downloaded. Use the source manifests and DATA_AVAILABILITY_FINAL.md to resolve provenance before running.
 

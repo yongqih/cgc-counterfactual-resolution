@@ -118,7 +118,7 @@
   "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
   "missing_metadata_provenance": [],
   "exported_file_count": 16,
-  "exported_source_bytes": 130723,
+  "exported_source_bytes": 135485,
   "external_import_roots": [
     "numpy",
     "pandas",
@@ -183,11 +183,15 @@
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
       "source_file": "src/igc_virtual_cell/cgc_entrywise/analysis.py",
-      "source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
-      "git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
-      "sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
-      "size_bytes": 26890,
-      "role": "scientific_source"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "5a6edd314994c57d19befcdfdf41874fc6186a4236cc5fcc3208d9c87a018006",
+      "size_bytes": 28336,
+      "role": "scientific_source",
+      "pre_correction_sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
+      "base_source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
+      "base_git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
+      "modification": "2026-09-08 audited support-budget/replay correction"
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/core.py",
@@ -201,11 +205,15 @@
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
       "source_file": "src/igc_virtual_cell/cgc_entrywise/estimators.py",
-      "source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
-      "git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
-      "sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
-      "size_bytes": 10967,
-      "role": "scientific_source"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "8153cc0340f847d8519cc168acab7df4ae706f63b521a5708eb0961797dd88cc",
+      "size_bytes": 11856,
+      "role": "scientific_source",
+      "pre_correction_sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
+      "base_source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
+      "base_git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
+      "modification": "2026-09-08 audited support-budget/replay correction"
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
@@ -255,11 +263,15 @@
     {
       "path": "src/igc_virtual_cell/cgc_resolution_poc/replay.py",
       "source_file": "src/igc_virtual_cell/cgc_resolution_poc/replay.py",
-      "source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
-      "git_blob": "69259f186b09d3e9a34efed77079248598ebd669",
-      "sha256": "c0880daa0727b0c7e528e60386b342d1b21a86651f5fa4851dbec7b46d27f5ee",
-      "size_bytes": 18323,
-      "role": "scientific_source"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "0adbe4c583014981d3163ac5186fbc06d4fd7d527510d00b6e9edc01d4e5f3bb",
+      "size_bytes": 20750,
+      "role": "scientific_source",
+      "pre_correction_sha256": "c0880daa0727b0c7e528e60386b342d1b21a86651f5fa4851dbec7b46d27f5ee",
+      "base_source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
+      "base_git_blob": "69259f186b09d3e9a34efed77079248598ebd669",
+      "modification": "2026-09-08 audited support-budget/replay correction"
     },
     {
       "path": "tests/test_progeny_pathway_fidelity_audit.py",
@@ -271,6 +283,18 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Audited 2026-09-08 correction. Modified/new files have null source_commit/git_blob; original provenance is retained in base_* and pre_correction_sha256 fields.",
+  "analysis_execution": "NOT_RUN",
+  "post_freeze_correction": {
+    "date": "2026-09-08",
+    "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+    "base_commit_is_historical": true,
+    "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+    "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+    "modified_files": [
+      "src/igc_virtual_cell/cgc_entrywise/analysis.py",
+      "src/igc_virtual_cell/cgc_entrywise/estimators.py",
+      "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
+    ]
+  }
 }

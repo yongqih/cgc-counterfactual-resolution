@@ -144,12 +144,17 @@ class Exporter:
         return {"kind": "exact frozen source-lookup map, not a Git repository", "verified_sources": verified}
 
     def export(self, spec: dict) -> dict:
+        if spec.get("post_freeze_correction"):
+            raise RuntimeError(f"Bundle {spec['id']} has an audited post-freeze correction. A base-commit export would discard it; use the corrected source package and manifest.")
         if spec["class"] not in CLASSES:
             raise ValueError(f"Invalid scientific capability class: {spec['class']}")
         bundle_id, commit = spec["id"], spec["commit"]
         out = self.destination / safe_path(bundle_id)
         if out.parent != self.destination:
             raise ValueError("Bundle id must be a simple directory name")
+        existing = out / "SOURCE_MANIFEST.json"
+        if existing.exists() and json.loads(existing.read_text(encoding="utf-8")).get("post_freeze_correction"):
+            raise RuntimeError(f"Refusing to overwrite audited post-freeze correction: {bundle_id}. Use its recorded correction archive/manifest; a base Git export is historical only.")
         roots = self.expand(commit, spec.get("source_roots", []) + spec.get("extra_sources", []))
         sources, external = self.closure(commit, roots)
         metadata = self.expand(commit, spec.get("configs", []) + spec.get("split_metadata", []) + spec.get("environment_metadata", []))

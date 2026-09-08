@@ -153,6 +153,12 @@ def run_inference(root: Path, source_root: Path) -> dict[str, Any]:
     secondary_observed: list[float] = []
     secondary_draws: list[np.ndarray] = []
     with np.load(cache, allow_pickle=False) as archive:
+        correction = source_root / "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json"
+        if correction.exists():
+            # Historical utilities were built from pooled-reference tuning.
+            # The corrected, claim-eligible two-contrast replay is separate;
+            # never mix old projection utilities with corrected gene utilities.
+            raise RuntimeError("RESOLUTION2_STALE_LEGACY_INFERENCE: use the corrected valid pathway-minus-gene replay, not historical null utilities.")
         for m, k, _ in BUDGETS:
             real_vt = np.asarray(archive[f"real_vtruth_m{m}_k{k}"], dtype=np.float64)
             real_va = np.asarray(archive[f"real_vafter_m{m}_k{k}"], dtype=np.float64)

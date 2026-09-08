@@ -4,7 +4,7 @@ Capability: `FIGURE_FROM_FROZEN_PREDICTIONS`. Source: `ab44618011cd963cadfcc0702
 
 Runtime: **PREPARED_INPUTS_REQUIRED; scientific run not performed**.
 
-The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. The launcher and any current bounded release reporting entry are separate, explicitly identified release code. No frozen scientific source was rewritten.
+The source commit above identifies the historical base. On 2026-09-08, episode-reference-only hyperparameter selection and its downstream replay were corrected. SOURCE_MANIFEST.json distinguishes corrected bytes from the original Git blobs and retains their pre-correction hashes. Historical result tables must not be substituted for corrected results. The public correction and reproduction guide is ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Safe inspection
 
@@ -12,7 +12,7 @@ The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. Th
 python code/scientific/launch.py pathway_fidelity --inspect-only
 ```
 
-The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. No stage was run during this release repair.
+The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. The 2026-09-08 corrected runs and unchanged analyses are distinguished in ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Entry points
 
@@ -22,15 +22,15 @@ For allowlisted argument-parsing scripts, replace `--execute` and arguments with
 
 ## Input contract
 
-- `data/cgc_resolution2_replay/truth_g_primary_float32.npy` — Frozen Tahoe replicate truth. Size: 955854128 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/cgc_resolution2_replay/m49_k92_predictions_float32.npy` — Frozen all-but-one model predictions; no refit. Size: 955854128 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/cgc_resolution2_replay/m49_k92_frozen_weights.npz` — Frozen prediction replay episode weights. Size: 3455810 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy` — Frozen shared hierarchical bootstrap weights. Size: 93000128 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `results/cgc_entrywise_compression/_cache/frozen_utility_table.npz` — Frozen entrywise utility and support/sentinel assignment. Size: 27158852 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/cgc_bio1_official/frozen_program_weights.parquet` — Frozen PROGENy weights and gene identifiers. Size: 2705687 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/cgc_bio1_official/progeny` — Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `results/cgc_tahoe_0i/gene_metadata_frozen.csv` — Frozen gene metadata axis. Size: 5092546 bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `results/cgc_tahoe_0i/gene_indices_g_primary.npy` — Frozen primary gene indices. Size: 102908 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `data/cgc_resolution2_replay/truth_g_primary_float32.npy` â€” Frozen Tahoe replicate truth. Size: 955854128 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `data/cgc_resolution2_replay/m49_k92_predictions_float32.npy` â€” Frozen all-but-one model predictions; no refit. Size: 955854128 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `data/cgc_resolution2_replay/m49_k92_frozen_weights.npz` â€” Frozen prediction replay episode weights. Size: 3455810 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `data/cgc_resolution2_replay/hierarchical_bootstrap_weights_int16.npy` â€” Frozen shared hierarchical bootstrap weights. Size: 93000128 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `results/cgc_entrywise_compression/_cache/frozen_utility_table.npz` â€” Frozen entrywise utility and support/sentinel assignment. Size: 27158852 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `data/cgc_bio1_official/frozen_program_weights.parquet` â€” Frozen PROGENy weights and gene identifiers. Size: 2705687 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `data/cgc_bio1_official/progeny` â€” Official PROGENy source revision cad6be0514c3248b9465e48f1cfd2f6a4c3dfb6f version 1.17.3. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `results/cgc_tahoe_0i/gene_metadata_frozen.csv` â€” Frozen gene metadata axis. Size: 5092546 bytes. not bundled; third-party terms or separate frozen-input archive required.
+- `results/cgc_tahoe_0i/gene_indices_g_primary.npy` â€” Frozen primary gene indices. Size: 102908 bytes. not bundled; third-party terms or separate frozen-input archive required.
 
 Prepared paths are relative to the workspace or explicit source root used by the original CLI. The registry is not a claim that those data are embedded. Large inputs were neither copied nor downloaded. Use the source manifests and DATA_AVAILABILITY_FINAL.md to resolve provenance before running.
 

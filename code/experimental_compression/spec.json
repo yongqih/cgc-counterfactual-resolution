@@ -14,7 +14,7 @@
         "k": "4.0"
       },
       "column": "value",
-      "expected": 0.0771871166402123,
+      "expected": 0.0802958320411487,
       "tolerance": 1e-14
     },
     {
@@ -44,7 +44,7 @@
         "group": "m=40, k=4"
       },
       "column": "observed_g",
-      "expected": 0.0771871166402123,
+      "expected": 0.0802958320411487,
       "tolerance": 1e-14
     }
   ]

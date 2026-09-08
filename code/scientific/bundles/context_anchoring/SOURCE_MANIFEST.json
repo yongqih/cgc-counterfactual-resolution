@@ -51,8 +51,8 @@
   ],
   "smoke_tests": [],
   "claim_boundary": "The run command computes prespecified contrasts and emits Figure_Context_Anchoring PNG/SVG/source CSV from frozen utility/bootstrap tables. It does not refit predictors and does not reproduce manually edited R2 figures. Pass --authority-root explicitly.",
-  "exported_file_count": 5,
-  "exported_source_bytes": 39532,
+  "exported_file_count": 10,
+  "exported_source_bytes": 51210,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -99,13 +99,92 @@
     {
       "path": "src/igc_virtual_cell/cgc_context_anchoring.py",
       "source_file": "src/igc_virtual_cell/cgc_context_anchoring.py",
-      "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
-      "git_blob": "3cf0a45e07cc4ff2dc85e1e5f2d0a7d42c728b46",
-      "sha256": "8c0b4226b19d277780eebb93f3470a337fb0daaad19b370ca3a2d0520e15d6e7",
-      "size_bytes": 32193,
-      "role": "scientific_source"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "45b33bc6e4e4fe2aa31abac0d0d5929b5b59b275b8ef1deda6c80d9344333096",
+      "size_bytes": 33564,
+      "role": "scientific_source",
+      "pre_correction_sha256": "8c0b4226b19d277780eebb93f3470a337fb0daaad19b370ca3a2d0520e15d6e7",
+      "base_source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
+      "base_git_blob": "3cf0a45e07cc4ff2dc85e1e5f2d0a7d42c728b46",
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_G_VALUES.csv",
+      "source_file": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_G_VALUES.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "17506b8fbf20dfb2389e3cc64b0dccfbce836b604e193baaa12282f52fd57d51",
+      "size_bytes": 1462,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_DELTA_G.csv",
+      "source_file": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_DELTA_G.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "40ccf12f1f89b25c5c8959fda9ad73c75be327d8579c8397f10f8788232f9927",
+      "size_bytes": 1927,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_SIMULTANEOUS_INFERENCE.csv",
+      "source_file": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_SIMULTANEOUS_INFERENCE.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "210b8637d8dcbc4b3607eea74dbf221f9b9d8fc15348c9cb3886d48fac2690d1",
+      "size_bytes": 1748,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FULL_SATURATION.csv",
+      "source_file": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FULL_SATURATION.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "6415d57d456e8432b50215162c1add8a50b2519770d3c17cac2552a995338c0f",
+      "size_bytes": 3065,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
+    },
+    {
+      "path": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_MARGINAL_EFFICIENCY.csv",
+      "source_file": "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_MARGINAL_EFFICIENCY.csv",
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "a280392d1965c7922a3405edef15c59033aa6d25d1f29e45a83539492ca889fe",
+      "size_bytes": 2105,
+      "role": "corrected_result",
+      "base_source_commit": null,
+      "base_git_blob": null,
+      "modification": "2026-09-08 audited support-budget/replay correction"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Audited 2026-09-08 correction. Modified/new files have null source_commit/git_blob; original provenance is retained in base_* and pre_correction_sha256 fields.",
+  "analysis_execution": "NOT_RUN",
+  "post_freeze_correction": {
+    "date": "2026-09-08",
+    "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
+    "base_commit_is_historical": true,
+    "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
+    "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
+    "modified_files": [
+      "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_DELTA_G.csv",
+      "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FULL_SATURATION.csv",
+      "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_G_VALUES.csv",
+      "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_MARGINAL_EFFICIENCY.csv",
+      "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_SIMULTANEOUS_INFERENCE.csv",
+      "src/igc_virtual_cell/cgc_context_anchoring.py"
+    ]
+  }
 }

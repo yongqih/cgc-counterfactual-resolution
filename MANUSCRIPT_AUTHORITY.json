@@ -1,15 +1,17 @@
 {
-  "packaging_version": "CGC_release_2026-09-03",
+  "packaging_version": "CGC_release_2026-09-08",
   "source_integration_commit": "11fe9a7cc153272378a1f4f0f7418cfdb93e23ee",
   "documents": [
     {
-      "name": "The identifiable resolution of cellular counterfactual prediction.docx",
-      "bytes": 2473720
+      "name": "The recoverable resolution of cellular perturbation.docx",
+      "bytes": 2217339
     },
     {
       "name": "Supplementary figures.docx",
-      "bytes": 1557072
+      "bytes": 1534067
     }
   ],
-  "scope": "Data/code only. Author manuscripts, figures and all historical artwork remain unchanged."
+  "scope": "Code and source data only; original Word text corrected in place. Fig. 3, ED2 and ED4 exports are supplied separately for author insertion; embedded Word images remain author-managed.",
+  "manuscript_title": "The recoverable resolution of cellular perturbation-response prediction",
+  "public_version": "v1.0.1"
 }

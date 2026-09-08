@@ -70,4 +70,7 @@ do not select obsolete inference as a current manuscript result.
 CGC-authored code and documentation are MIT licensed. Third-party resources
 remain under their original terms. See LICENSE_SCOPE.md and THIRD_PARTY_NOTICES.md.
 The archive contains no virtual environments, node_modules, Git repository,
-download credentials or model binaries. Scientific implementations are unchanged.
+download credentials or model binaries. The support-budget and replay implementations are corrected in v1.0.1; other scientific implementations retain their recorded versions.
+
+
+Current patch: see `code/scientific/SUPPORT_BUDGET_CORRECTION.md` in the companion code archive. GitHub release: https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1. Original Zenodo deposits are retained; they have not been replaced by this patch.

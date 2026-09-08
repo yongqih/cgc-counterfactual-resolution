@@ -19,15 +19,19 @@ TABLE = "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv"
 
 def select_clean_rows(rows: list[dict[str, str]]) -> list[dict]:
     selected = []
+    corrected = any(row["family"] == "VALID_PATHWAY_MINUS_GENE_2_BUDGETS" for row in rows)
+    comparison_family = "VALID_PATHWAY_MINUS_GENE_2_BUDGETS" if corrected else "PATHWAY_PRIMARY_2BUDGET_X_2CONTRAST"
     for budget in ("m49_k92", "m40_k4"):
         keys = [("point_estimate", f"{budget}_g_gene"), ("point_estimate", f"{budget}_g_pathway"),
-                ("PATHWAY_PRIMARY_2BUDGET_X_2CONTRAST", f"{budget}_pathway_minus_gene")]
+                (comparison_family, f"{budget}_pathway_minus_gene")]
         for family, contrast in keys:
             matching = [row for row in rows if row["family"] == family and row["contrast"] == contrast]
             if len(matching) != 1:
                 raise ValueError(f"Expected one frozen valid contrast: {family}/{contrast}")
             row = matching[0]
-            selected.append({**row, "source_file": TABLE, "source_commit": SOURCE_COMMIT, "audit_authority": AUDIT_AUTHORITY})
+            selected.append({**row, "source_file": TABLE, "source_commit": SOURCE_COMMIT,
+                             "audit_authority": AUDIT_AUTHORITY,
+                             "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2" if corrected else ""})
     if any("random" in row["contrast"].lower() for row in selected):
         raise AssertionError("Invalid random-projection arm reached current rendering")
     return selected
@@ -35,19 +39,24 @@ def select_clean_rows(rows: list[dict[str, str]]) -> list[dict]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source-table", type=Path, default=HERE / "bundles/resolution_pathway_frozen" / TABLE)
+    corrected_table = TABLE.replace("RESOLUTION2_PAIRED_COMPARISONS.csv", "RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv")
+    default_table = corrected_table if (HERE / "bundles/resolution_pathway_frozen" / corrected_table).exists() else TABLE
+    parser.add_argument("--source-table", type=Path, default=HERE / "bundles/resolution_pathway_frozen" / default_table)
     parser.add_argument("--out-dir", type=Path, required=True, help="new output directory, never an existing manuscript figure directory")
     args = parser.parse_args()
     if args.out_dir.exists():
         parser.error("Output directory already exists; choose a new directory")
     bundle = HERE / "bundles/resolution_pathway_frozen"
     manifest = json.loads((bundle / "SOURCE_MANIFEST.json").read_text(encoding="utf-8"))
-    expected = next(row["sha256"] for row in manifest["files"] if row["path"] == TABLE)
+    table_relative = args.source_table.resolve().relative_to(bundle.resolve()).as_posix()
+    expected = next(row["sha256"] for row in manifest["files"] if row["path"] == table_relative)
     digest = hashlib.sha256(args.source_table.read_bytes()).hexdigest()
     if digest != expected:
         raise RuntimeError("Frozen resolution contrast-table hash mismatch")
     with args.source_table.open(newline="", encoding="utf-8-sig") as handle:
         rows = select_clean_rows(list(csv.DictReader(handle)))
+    for row in rows:
+        row["source_file"] = table_relative
     import matplotlib.pyplot as plt
     plt.rcParams.update({"font.family": "Arial", "font.size": 8, "axes.spines.top": False, "axes.spines.right": False, "figure.facecolor": "white"})
     fig, axes = plt.subplots(1, 2, figsize=(6.7, 2.25))

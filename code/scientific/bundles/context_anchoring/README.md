@@ -4,7 +4,7 @@ Capability: `FIGURE_FROM_FROZEN_PREDICTIONS`. Source: `358ca73bfd9eddb7afe3e02d0
 
 Runtime: **PREPARED_INPUTS_REQUIRED; scientific run not performed**.
 
-The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. The launcher and any current bounded release reporting entry are separate, explicitly identified release code. No frozen scientific source was rewritten.
+The source commit above identifies the historical base. On 2026-09-08, episode-reference-only hyperparameter selection and its downstream replay were corrected. SOURCE_MANIFEST.json distinguishes corrected bytes from the original Git blobs and retains their pre-correction hashes. Historical result tables must not be substituted for corrected results. The public correction and reproduction guide is ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Safe inspection
 
@@ -12,7 +12,7 @@ The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. Th
 python code/scientific/launch.py context_anchoring --inspect-only
 ```
 
-The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. No stage was run during this release repair.
+The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. The 2026-09-08 corrected runs and unchanged analyses are distinguished in ../../SUPPORT_BUDGET_CORRECTION.md.
 
 ## Entry points
 
@@ -22,8 +22,8 @@ For allowlisted argument-parsing scripts, replace `--execute` and arguments with
 
 ## Input contract
 
-- `results/cgc_entrywise_compression/_cache/frozen_utility_table.npz` — ENTRYWISE_RUN_MANIFEST.json. Size: 27158852 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
-- `results/cgc_entrywise_compression/_cache/bootstrap_draws.npz` — ENTRYWISE_RUN_MANIFEST.json. Size: 43200800 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
+- `results/cgc_entrywise_compression/_cache/frozen_utility_table.npz` â€” ENTRYWISE_RUN_MANIFEST.json. Size: 27158852 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
+- `results/cgc_entrywise_compression/_cache/bootstrap_draws.npz` â€” ENTRYWISE_RUN_MANIFEST.json. Size: 43200800 bytes. not copied into code bundle; see DATA_AVAILABILITY_FINAL.md.
 
 Prepared paths are relative to the workspace or explicit source root used by the original CLI. The registry is not a claim that those data are embedded. Large inputs were neither copied nor downloaded. Use the source manifests and DATA_AVAILABILITY_FINAL.md to resolve provenance before running.
 

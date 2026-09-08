@@ -4,14 +4,15 @@
     "analysis_name": "Strict target-hidden entrywise Experimental Compression",
     "classification": "FULL_ANALYSIS",
     "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
-    "source_files": 26,
-    "source_bytes": 6908669,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
+    "source_files": 34,
+    "source_bytes": 7181977,
+    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; full 50-target grid and 10000 hierarchical draws recomputed on 2026-09-08",
     "smoke_passed": 7,
     "smoke_total": 7,
     "entrypoint_template": "python code/scientific/launch.py experimental_compression --execute",
     "source_manifest": "code/scientific/bundles/experimental_compression/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main3; ED2"
+    "manuscript_scope": "Main3; ED2",
+    "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
     "bundle": "low_rank_completion",
@@ -46,14 +47,15 @@
     "analysis_name": "Frozen-output context-anchoring contrasts and analytical figure",
     "classification": "FIGURE_FROM_FROZEN_PREDICTIONS",
     "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
-    "source_files": 5,
-    "source_bytes": 39532,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
+    "source_files": 10,
+    "source_bytes": 51210,
+    "runtime_readiness": "CORRECTED_FROZEN_UTILITIES_REQUIRED; paired contrasts recomputed on 2026-09-08",
     "smoke_passed": 1,
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py context_anchoring --execute",
     "source_manifest": "code/scientific/bundles/context_anchoring/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED4"
+    "manuscript_scope": "ED4",
+    "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
     "bundle": "mechanism_aligned",
@@ -256,14 +258,15 @@
     "analysis_name": "Same frozen predictions, gene-versus-predefined-pathway readout and corrected inference",
     "classification": "FIGURE_FROM_FROZEN_PREDICTIONS",
     "source_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
-    "source_files": 22,
-    "source_bytes": 149112,
-    "runtime_readiness": "FROZEN_CONTRAST_INPUT_INCLUDED; matplotlib/Arial runtime required; not rendered in this repair",
+    "source_files": 23,
+    "source_bytes": 156468,
+    "runtime_readiness": "CORRECTED_CONTRAST_INPUT_INCLUDED; matched gene/pathway contrasts recomputed on 2026-09-08",
     "smoke_passed": 1,
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py resolution_pathway_frozen --execute -- --out-dir <new-output-dir>",
     "source_manifest": "code/scientific/bundles/resolution_pathway_frozen/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main6a; ED6"
+    "manuscript_scope": "Main6a; ED6",
+    "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
     "bundle": "pathway_fidelity",
@@ -271,13 +274,14 @@
     "classification": "FIGURE_FROM_FROZEN_PREDICTIONS",
     "source_commit": "ab44618011cd963cadfcc0702d9c9ec71b87a8c3",
     "source_files": 16,
-    "source_bytes": 130723,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
+    "source_bytes": 135485,
+    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; all-but-one predictions unchanged; replay protocol corrected",
     "smoke_passed": 1,
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py pathway_fidelity --execute",
     "source_manifest": "code/scientific/bundles/pathway_fidelity/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED6"
+    "manuscript_scope": "ED6",
+    "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
     "bundle": "pathway_composition",
@@ -285,13 +289,14 @@
     "classification": "FIGURE_FROM_FROZEN_PREDICTIONS",
     "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
     "source_files": 19,
-    "source_bytes": 6930718,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
+    "source_bytes": 6935480,
+    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; all-but-one predictions unchanged; replay protocol corrected",
     "smoke_passed": 1,
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py pathway_composition --execute",
     "source_manifest": "code/scientific/bundles/pathway_composition/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED9"
+    "manuscript_scope": "ED9",
+    "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
     "bundle": "crc_pdo_application",

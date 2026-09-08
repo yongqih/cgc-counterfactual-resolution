@@ -182,12 +182,15 @@ def _parameter_row(
     m: int,
     k: int,
     selected: SelectedParameters,
+    support_sequence: int = -1,
 ) -> dict[str, Any]:
     return {
         "target_context_index": target,
         "plate": PLATES[plate],
         "m": m,
         "k": k,
+        "support_sequence": support_sequence,
+        "selection_scope": "identical_reference_support_pool" if support_sequence == -1 else "episode_reference_support_only",
         "alpha": selected.alpha,
         "ridge_lambda": selected.ridge,
         "rank": selected.rank,
@@ -209,6 +212,9 @@ def run_target(
     root = root.resolve()
     cache_path = _target_cache_path(root, target, support_mode)
     if cache_path.exists() and not overwrite:
+        with np.load(cache_path, allow_pickle=False) as existing:
+            if "tuning_protocol" not in existing or str(existing["tuning_protocol"]) != "EPISODE_REFERENCE_SUPPORT_ONLY_V2":
+                raise RuntimeError("Stale pooled-support cache; archive then rerun with overwrite=True")
         return cache_path
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     split = _load_split(root)
@@ -237,25 +243,28 @@ def run_target(
     allbut_vtruth = np.full(93, np.nan, dtype=np.float64)
     allbut_vafter = np.full((len(MODELS), 93), np.nan, dtype=np.float64)
 
-    selected: dict[tuple[int, int, int], SelectedParameters] = {}
+    selected: dict[tuple[int, int, int, int], SelectedParameters] = {}
     for plate in range(2):
         geometry_cache: dict[tuple[int, tuple[int, ...]], object] = {}
         for m_index, m in enumerate(M_VALUES):
             for k_index, k in enumerate(K_VALUES):
-                value = select_parameters(
-                    matched_same[plate],
-                    same4[plate],
-                    np.asarray(sums[plate], dtype=np.float64),
-                    target,
-                    m,
-                    k,
-                    support_orders,
-                    sentinel_orders,
-                    folds,
-                    geometry_cache,
+                identical_support = all(
+                    set(map(int, row[:m])) == set(map(int, support_orders[0, :m]))
+                    for row in support_orders
                 )
-                selected[(plate, m_index, k_index)] = value
-                parameter_rows.append(_parameter_row(target, plate, m, k, value))
+                sequences = (-1,) if identical_support or m == 1 or k == 0 else range(8)
+                for sequence in sequences:
+                    value = select_parameters(
+                        matched_same[plate],
+                        same4[plate],
+                        np.asarray(sums[plate], dtype=np.float64),
+                        target, m, k, support_orders, sentinel_orders, folds,
+                        geometry_cache,
+                        support_sequence=None if sequence == -1 else sequence,
+                    )
+                    for destination in range(8) if sequence == -1 else (sequence,):
+                        selected[(plate, m_index, k_index, destination)] = value
+                    parameter_rows.append(_parameter_row(target, plate, m, k, value, sequence))
             print(f"entrywise tune target {target + 1}/50 {PLATES[plate]} m={m}", flush=True)
 
     full_truth_cross = np.asarray(
@@ -281,7 +290,7 @@ def run_target(
                 context_null, intervention_null, sentinel_null = _null_maps(split, target, sequence)
                 batches = []
                 for plate in range(2):
-                    params = selected[(plate, m_index, k_index)]
+                    params = selected[(plate, m_index, k_index, sequence)]
                     batches.append(
                         fit_batches(
                             matched_same[plate],
@@ -323,8 +332,8 @@ def run_target(
                         _accumulate_metrics(metric_sum, metric_count, model_index, m_index, k_index, 0, plate, full_metrics)
                         _accumulate_metrics(metric_sum, metric_count, model_index, m_index, k_index, 1, plate, excess_metrics)
 
-                alpha6 = selected[(0, m_index, k_index)].alpha
-                alpha14 = selected[(1, m_index, k_index)].alpha
+                alpha6 = selected[(0, m_index, k_index, sequence)].alpha
+                alpha14 = selected[(1, m_index, k_index, sequence)].alpha
                 offset_residual = offset_residual_cross(
                     cross_geometry.gram, sentinels, alpha6, alpha14
                 )
@@ -413,6 +422,7 @@ def run_target(
             )
 
     payload = {
+        "tuning_protocol": np.asarray("EPISODE_REFERENCE_SUPPORT_ONLY_V2"),
         "vtruth_sum": vtruth_sum,
         "vtruth_count": vtruth_count,
         "vafter_sum": vafter_sum,
@@ -462,6 +472,8 @@ def aggregate_targets(root: Path) -> dict[str, Any]:
     allbut_rows: list[dict[str, Any]] = []
     for target, path in enumerate(paths):
         cache = np.load(path, allow_pickle=False)
+        if "tuning_protocol" not in cache or str(cache["tuning_protocol"]) != "EPISODE_REFERENCE_SUPPORT_ONLY_V2":
+            raise RuntimeError(f"Mixed or stale tuning protocols at {path}")
         vtruth[:, target] = _safe_divide(cache["vtruth_sum"], cache["vtruth_count"])
         vafter[:, :, :, target] = _safe_divide(
             cache["vafter_sum"], cache["vafter_count"][None]
@@ -563,6 +575,8 @@ def aggregate_rna_targets(root: Path) -> dict[str, Any]:
     for target, path in enumerate(paths):
         cache = np.load(path, allow_pickle=False)
         vtruth[:, target] = _safe_divide(cache["vtruth_sum"], cache["vtruth_count"])
+        if "tuning_protocol" not in cache or str(cache["tuning_protocol"]) != "EPISODE_REFERENCE_SUPPORT_ONLY_V2":
+            raise RuntimeError(f"Mixed or stale RNA tuning protocols at {path}")
         vafter[:, :, :, target] = _safe_divide(
             cache["vafter_sum"], cache["vafter_count"][None]
         )
