@@ -1,1 +1,2 @@
+# Frozen source manifests require byte-identical files across platforms.
 * -text

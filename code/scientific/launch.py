@@ -128,19 +128,6 @@ def main() -> int:
         sys.argv = [str(root / selected), *remaining]
         module.main()
         return 0
-    if args.execute and args.bundle == "mechanism_aligned" and selected == "scripts/cgc_mechanism_bio2.py":
-        if remaining != ["--formal"] or args.input_root is None:
-            parser.error("BIO2 path adapter requires --input-root and exactly -- --formal")
-        work = (args.work_root or root).resolve()
-        source = args.input_root.resolve()
-        sys.path[:0] = [str(root / "src")]
-        common = importlib.import_module("igc_virtual_cell.cgc_mechanism_followup.common")
-        common.ROOT, common.SOURCE_ROOT, common.OUT = work, source, work / "results/cgc_mechanism_followup"
-        bio2 = importlib.import_module("igc_virtual_cell.cgc_mechanism_followup.bio2")
-        # Only paths are rebound; imported scientific constants/functions remain exact.
-        bio2.ROOT, bio2.SOURCE_ROOT, bio2.OUT = common.ROOT, common.SOURCE_ROOT, common.OUT
-        print(json.dumps(bio2.run_bio2(), indent=2))
-        return 0
     if args.execute and args.bundle == "ed7_hierarchical_repair":
         if remaining or args.gene_workspace is None or args.pathway_workspace is None or args.work_root is None:
             parser.error("ED7 path adapter requires --work-root --gene-workspace --pathway-workspace; no statistical overrides")

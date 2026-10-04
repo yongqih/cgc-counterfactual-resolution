@@ -1,0 +1,32 @@
+Current panels,Source table / selection
+Figure 1a-e,Figure_1.csv
+Figure 2a,code/figures/assets/Figure_2a_author.svg
+Figure 2b-e,Figure_2.csv
+"Figure 3a,e",code/figures/assets/Figure_3a_author.svg; Figure_3e_author.svg
+Figure 3b,Figure_3_reproducibility.csv
+"Figure 3c,d",Figure_3_LCL.csv
+Figure 3f,Figure_3_Tahoe.csv
+Figure 3g,Figure_3_fidelity.csv
+Figure 4a-d,Figure_4_PDO.csv
+"Figure 4e,f",Figure_4_representation.csv
+"Figure 5a,e",Design schematics in code/figures/figure_5_extended_3.py
+Figure 5b,Figure_5_library_composition.csv; clone_index = 1978
+Figure 5c,Figure_5_LARRY_clone_estimates.csv; variant = raw
+Figure 5d; Extended Data 3a,Figure_5_LARRY_aggregate_estimates.csv
+Figure 5f,Figure_5_CellTag_specificity.csv; nominal_coverage = 0.9
+"Figure 5g; Extended Data 3c,f",Figure_5_CellTag_summary.csv
+Extended Data 1a-c,Extended_Data_1_cytokine.csv
+"Extended Data 1d,e",Extended_Data_1_drug.csv
+Extended Data 2a,Extended_Data_2_observed_scaling.csv
+Extended Data 2b,Extended_Data_2_pathways.csv
+Extended Data 2c,Extended_Data_2_resolution_grid.csv
+Extended Data 2d,Extended_Data_2_gene_selection.json
+"Extended Data 3b,e",Extended_Data_3_class_results.csv
+Extended Data 3d,Figure_5_CellTag_paired_contrasts.csv
+Supplementary Figure 1,Supplementary_Figure_1.csv
+Supplementary Figure 2a-c,Supplementary_Figure_2_integrity.csv
+Supplementary Figure 2d,Supplementary_Figure_2_interaction.csv
+Supplementary Figure 3a-c,Supplementary_Figure_3_LCL.csv
+Supplementary Figure 3d,Supplementary_Figure_3_span.csv
+Supplementary Figure 4a-c,Supplementary_Figure_4_application.csv
+Supplementary Figure 4d,Supplementary_Figure_4_random_controls.csv; Figure_4_PDO.csv

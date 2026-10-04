@@ -1,0 +1,14 @@
+figure,panel,kind,label,value,x,y,note,ci_low,ci_high,group
+Extended Data Figure 1,a,context_g,C32,-1.062725216753587,1.078505533599014,3.219736283951619,official Tahoe held context; biological stability unit,,,
+Extended Data Figure 1,a,context_g,HOP62,-1.766916775652802,0.7348332676748334,3.236583311002475,official Tahoe held context; biological stability unit,,,
+Extended Data Figure 1,a,context_g,HepG2-C3A,0.0332582531852563,0.8975418768743485,1.7618255005634422,official Tahoe held context; biological stability unit,,,
+Extended Data Figure 1,a,context_g,Hs 766T,-0.5774104759175227,0.8923983594500026,2.3622071948175334,official Tahoe held context; biological stability unit,,,
+Extended Data Figure 1,a,context_g,PANC-1,-0.7828121731646334,0.721091833071584,2.2249958393078044,official Tahoe held context; biological stability unit,,,
+Extended Data Figure 1,a,pooled_g,Pooled ST-SE,-0.4968356112958052,,,1/5 contexts positive; median context g=-0.782812,-1.3342004656791686,-0.0835801094770432,
+Extended Data Figure 1,b,aggregate_g,Primary ST-SE,-0.4968356112958052,0.2,-0.7828121731646334,hierarchical-bootstrap interval; context-positive fraction and median retained,-1.3342004656791686,-0.0835801094770432,ST-SE Tahoe
+Extended Data Figure 1,b,aggregate_g,ST-HVG sensitivity,0.1616954481675251,0.6,0.1385623787949281,hierarchical-bootstrap interval; context-positive fraction and median retained,-0.0712956726551055,0.391391049325466,ST-HVG Tahoe
+Extended Data Figure 1,c,conventional_metric,State,0.5781693168364083,,,direction-sensitive diagnostic; not a rescue of calibrated operator recovery,,,Delta-Pearson
+Extended Data Figure 1,c,conventional_metric,Pert Mean,0.2191893679734068,,,direction-sensitive diagnostic; not a rescue of calibrated operator recovery,,,Delta-Pearson
+Extended Data Figure 1,c,conventional_metric,State,0.0856440067291259,,,direction-sensitive diagnostic; not a rescue of calibrated operator recovery,,,Delta-MSE
+Extended Data Figure 1,c,conventional_metric,Pert Mean,0.057216715067625,,,direction-sensitive diagnostic; not a rescue of calibrated operator recovery,,,Delta-MSE
+Extended Data Figure 1,c,scale_inflation,Predicted energy ratio κ,2.2877368502331303,,,scale inflation degrades calibrated operator recovery,,,

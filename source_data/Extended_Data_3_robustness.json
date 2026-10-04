@@ -1,0 +1,158 @@
+{
+  "n_tested_clones": 207,
+  "n_tests": 2277,
+  "potential_repeated_cell_screen": {
+    "n_late_records_excluded_as_potential_repeated_cells": 90,
+    "n_affected_clones": 29,
+    "clone1978_records_excluded": 0,
+    "clone1261_records_excluded": 2,
+    "screen": "Same family, day, well, clonal tag and droplet barcode; exclude every ambiguous copy.",
+    "remaining_interpretation": "Disjoint measured-cell records within the observed culture branches; not independent culture experiments."
+  },
+  "all_207_clone_family_significant_results": [
+    {
+      "clone_index": 1978,
+      "fate": "Neutrophil",
+      "p": 3.313189093671127e-07,
+      "n_well1": 17,
+      "n_well2": 33,
+      "hits_well1": 6,
+      "hits_well2": 33,
+      "p_holm_all_207_clones": 0.0007544131566289156
+    }
+  ],
+  "reference_corrected_full_gene_sensitivity": [
+    {
+      "clone_index": 1978,
+      "reference_cell_type": "Neutrophil",
+      "correction": "Subtract the same-library other-clone mean neutrophil profile",
+      "interpretation": "Sensitivity to library-associated shifts common to sampled neutrophils; this reference need not be biologically invariant.",
+      "controls": [
+        {
+          "library": "LK_d6_1_1",
+          "n_other_clone_neutrophils": 176
+        },
+        {
+          "library": "LK_d6_1_2",
+          "n_other_clone_neutrophils": 168
+        },
+        {
+          "library": "LK_d6_2_1",
+          "n_other_clone_neutrophils": 109
+        },
+        {
+          "library": "LK_d6_2_2",
+          "n_other_clone_neutrophils": 127
+        }
+      ],
+      "estimate": 29.835427924971302,
+      "conditional_bootstrap_CI95": [
+        13.95454507562782,
+        51.5374712988515
+      ],
+      "group_sample_sizes": {
+        "well1_A": 10,
+        "well1_B": 7,
+        "well2_A": 17,
+        "well2_B": 16
+      },
+      "n_bootstrap": 3000
+    },
+    {
+      "clone_index": 1261,
+      "reference_cell_type": "Neutrophil",
+      "correction": "Subtract the same-library other-clone mean neutrophil profile",
+      "interpretation": "Sensitivity to library-associated shifts common to sampled neutrophils; this reference need not be biologically invariant.",
+      "controls": [
+        {
+          "library": "LK_d6_1_1",
+          "n_other_clone_neutrophils": 146
+        },
+        {
+          "library": "LK_d6_1_2",
+          "n_other_clone_neutrophils": 133
+        },
+        {
+          "library": "LK_d6_2_1",
+          "n_other_clone_neutrophils": 112
+        },
+        {
+          "library": "LK_d6_2_2",
+          "n_other_clone_neutrophils": 123
+        }
+      ],
+      "estimate": 5.157498703477415,
+      "conditional_bootstrap_CI95": [
+        0.14449240150592596,
+        11.56637431117384
+      ],
+      "group_sample_sizes": {
+        "well1_A": 47,
+        "well1_B": 46,
+        "well2_A": 25,
+        "well2_B": 37
+      },
+      "n_bootstrap": 3000
+    }
+  ],
+  "stronger_droplet_barcode_screen": {
+    "clone_index": 1978,
+    "screen": "Exclude any same-family/day/well droplet barcode reuse across the full metadata, including different clones and unlabelled cells.",
+    "n_well1": 17,
+    "n_well2": 32,
+    "Neutrophil_well1": 6,
+    "Neutrophil_well2": 32,
+    "Neutrophil_p": 4.247678325219394e-07,
+    "Neutrophil_p_Bonferroni_2277_tests": 0.000967196354652456,
+    "full_gene_signal": {
+      "estimate": 29.957454115026444,
+      "conditional_bootstrap_CI95": [
+        14.656834669877476,
+        51.21039256975354
+      ],
+      "group_sample_sizes": {
+        "well1_A": 10,
+        "well1_B": 7,
+        "well2_A": 16,
+        "well2_B": 16
+      },
+      "n_bootstrap": 3000
+    }
+  },
+  "clone1978_early_records": [
+    {
+      "Library": "LK_d2",
+      "Cell barcode": "GAATCCCA-ATGGGCAC",
+      "Time point": 2.0,
+      "Starting population": "Lin-Kit+Sca1-",
+      "Cell type annotation": "Undifferentiated",
+      "Well": 0,
+      "SPRING-x": 321.633,
+      "SPRING-y": 285.824,
+      "clone_index": 1978,
+      "culture_family": "LK",
+      "original_cell_index": 68482
+    },
+    {
+      "Library": "LK_d2",
+      "Cell barcode": "GATTGGGA-GGCTACTA",
+      "Time point": 2.0,
+      "Starting population": "Lin-Kit+Sca1-",
+      "Cell type annotation": "Undifferentiated",
+      "Well": 0,
+      "SPRING-x": 293.44,
+      "SPRING-y": 356.628,
+      "clone_index": 1978,
+      "culture_family": "LK",
+      "original_cell_index": 69120
+    }
+  ],
+  "limits": [
+    "Correction is a post-hoc artifact check, not a deployment input.",
+    "Reference profiles can themselves differ biologically.",
+    "Confidence intervals condition on observed sampled cultures.",
+    "Bootstrap treats reference means as fixed; it omits reference-estimation uncertainty.",
+    "A well-specific biological effect is information absent from the recorded pre-split input.",
+    "A well-specific measurement artifact would not establish a true biological endpoint contrast."
+  ]
+}

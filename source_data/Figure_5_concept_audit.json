@@ -1,0 +1,109 @@
+{
+  "status": "Operational concept validated under explicit sampling and measurement assumptions",
+  "claim": "Measuring the full transcriptome of an available common antecedent does not guarantee identification of a unique realized future clonal branch transcriptome under a nominally matched protocol.",
+  "input": "All actual day-2 RNA records for a common clone, with all 25289 published gene features, before split culture; this includes two cells for clone 1978.",
+  "output": "Realized day-6 clonal population mean log1p RNA across all published genes, and cell composition, in each of two actual culture branches.",
+  "logical_reason": "Both branches share the same available pre-split record. If their true endpoint profiles differ, every deterministic function of that shared record has positive paired error. This does not depend on model training or choice.",
+  "algebra": "For any common vector prediction p: (||mu1-p||^2 + ||mu2-p||^2)/2 = ||p-(mu1+mu2)/2||^2 + ||mu1-mu2||^2/4.",
+  "evidence": {
+    "clone_index_zero_based": 1978,
+    "day6_well1": {
+      "n": 17,
+      "Neutrophil": 6,
+      "Monocyte": 8,
+      "Undifferentiated": 3
+    },
+    "day6_well2": {
+      "n": 33,
+      "Neutrophil": 33,
+      "Monocyte": 0,
+      "Undifferentiated": 0
+    },
+    "fate_test_family": "All 207 common clones by all 11 published annotation classes, 2277 tests",
+    "Neutrophil_p_Holm": 0.0007544131566289156,
+    "full_gene_cross_library_contrast": {
+      "clone_index": 1978,
+      "culture_family": "LK",
+      "estimate": 29.710786562946584,
+      "conditional_bootstrap_CI95": [
+        14.735816073543198,
+        51.62202725469856
+      ],
+      "group_sample_sizes": {
+        "well1_A": 10,
+        "well1_B": 7,
+        "well2_A": 17,
+        "well2_B": 16
+      },
+      "n_bootstrap": 3000
+    },
+    "stronger_cell_identity_check": {
+      "clone_index": 1978,
+      "screen": "Exclude any same-family/day/well droplet barcode reuse across the full metadata, including different clones and unlabelled cells.",
+      "n_well1": 17,
+      "n_well2": 32,
+      "Neutrophil_well1": 6,
+      "Neutrophil_well2": 32,
+      "Neutrophil_p": 4.247678325219394e-07,
+      "Neutrophil_p_Bonferroni_2277_tests": 0.000967196354652456,
+      "full_gene_signal": {
+        "estimate": 29.957454115026444,
+        "conditional_bootstrap_CI95": [
+          14.656834669877476,
+          51.21039256975354
+        ],
+        "group_sample_sizes": {
+          "well1_A": 10,
+          "well1_B": 7,
+          "well2_A": 16,
+          "well2_B": 16
+        },
+        "n_bootstrap": 3000
+      }
+    },
+    "duplicate_record_screen": {
+      "n_late_records_excluded_as_potential_repeated_cells": 90,
+      "n_affected_clones": 29,
+      "clone1978_records_excluded": 0,
+      "clone1261_records_excluded": 2,
+      "screen": "Same family, day, well, clonal tag and droplet barcode; exclude every ambiguous copy.",
+      "remaining_interpretation": "Disjoint measured-cell records within the observed culture branches; not independent culture experiments."
+    }
+  },
+  "noise_interpretation": "Input measurement noise or sampling can remove response-relevant information and therefore qualify as an operational information limit. Independent zero-mean endpoint noise alone is not evidence of a true biological endpoint difference. Repeated cell samples and control contrasts support the endpoint contrast; systematic well-associated measurement bias remains an assumption.",
+  "critical_assumptions": [
+    "Clonal linkage is valid after known cross-family collisions are excluded.",
+    "The sequenced cells adequately represent the two realized culture populations.",
+    "The endpoint contrast is not entirely a systematic well-associated measurement artifact.",
+    "For the cross-product interpretation, residual measurement/sampling errors have zero mean and are independent across disjoint library samples conditional on the realized populations."
+  ],
+  "not_established": [
+    "Insufficiency of ideal noiseless RNA from the individual daughter cell",
+    "Population Bayes-risk ceiling for all contexts",
+    "Inability to predict full-gene conditional means/distributions",
+    "Whether biological branching, incompletely sampled sister-cell states, or unmeasured culture conditions cause the ambiguity",
+    "A universally optimal numerical output resolution or a requirement to output fewer genes.",
+    "Two future daughter cells having exactly identical ideal biological starting states.",
+    "A decomposition of uncertainty into input measurement noise, missed starting-cell heterogeneity, future stochastic events and culture microenvironment."
+  ],
+  "inference_time_rule": "Use the real shared early record and known protocol/time. Late cell annotations, control references, branch profiles and the paired midpoint are only validation or theoretical quantities, never proposed deployment inputs.",
+  "publication_claim": "The biological specificity of a predicted realized outcome must be justified by information available at prediction time; full-gene measurement alone does not supply that justification.",
+  "primary_sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7608074/",
+    "https://doi.org/10.1126/science.aaw3381",
+    "https://github.com/AllonKleinLab/paper-data/tree/master/Lineage_tracing_on_transcriptional_landscapes_links_state_to_fate_during_differentiation",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140802"
+  ],
+  "source_matrix": {
+    "url": "https://kleintools.hms.harvard.edu/paper_websites/state_fate2020/stateFate_inVitro_normed_counts.mtx.gz",
+    "bytes": 2065554808,
+    "sha256": "afb42ce438e271aec07819a02d46cfc1e6157c0527f18f45911c7386c3c8b45e",
+    "measurement": "Published total-count-normalized UMI matrix, not integer raw UMI counts"
+  },
+  "verification": "Retained expression dimensions, all cell-metadata alignments to original source row indices, finite nonnegative counts, pre-split well label, endpoint sample sizes, duplicate exclusion and final test outputs checked.",
+  "retained_file_sha256": {
+    "branch_validation_full_gene.npz": "8ae458bbb0033b56353a000eeacf66cd8c5ae93901d94ce27ff77318d960bd9b",
+    "branch_validation_gene_names.json": "bede9701e757501b6065ead4255ea589f9a5405b289f8942284489fd1128001d",
+    "branch_validation_metadata.csv": "22200bab3c95fb9a894a01cd4a19dc6770f985f20f1cae0179399834a6c5b9e3"
+  }
+}

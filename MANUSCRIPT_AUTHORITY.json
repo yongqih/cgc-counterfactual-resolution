@@ -1,17 +1,14 @@
 {
-  "packaging_version": "CGC_release_2026-09-08",
-  "source_integration_commit": "11fe9a7cc153272378a1f4f0f7418cfdb93e23ee",
-  "documents": [
-    {
-      "name": "The recoverable resolution of cellular perturbation.docx",
-      "bytes": 2217339
-    },
-    {
-      "name": "Supplementary figures.docx",
-      "bytes": 1534067
-    }
-  ],
-  "scope": "Code and source data only; original Word text corrected in place. Fig. 3, ED2 and ED4 exports are supplied separately for author insertion; embedded Word images remain author-managed.",
-  "manuscript_title": "The recoverable resolution of cellular perturbation-response prediction",
-  "public_version": "v1.0.1"
+  "release": "CGC_recoverable_resolution_2026-10-04",
+  "manuscript_title": "The recoverable resolution of Virtual-Cell prediction",
+  "main_figures": 5,
+  "extended_data_figures": 3,
+  "supplementary_figures": 4,
+  "status": "Current manuscript code revision; updated Zenodo deposit pending",
+  "documents": {
+    "Main_manuscript.docx": "31bb1b2e785bf9b3220faca9b2d9b6cbe5d0472f33fefbaae29be304d45e9c9b",
+    "Supplementary_information.docx": "3179aa07ca175eed32520f7c82a35b7999de0d2dc99ff512bf2bae56985f2b43"
+  },
+  "previous_public_version": "v1.0.1",
+  "previous_public_doi": "10.5281/zenodo.22664234"
 }

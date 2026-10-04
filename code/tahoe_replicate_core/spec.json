@@ -1,9 +1,0 @@
-{
-  "analysis_name": "Tahoe replicate-core released-table integrity",
-  "entrypoint_classification": "NON_REPRODUCTION_INTEGRITY_CHECK",
-  "source_root": "supplementary_table_sources",
-  "row_counts": {
-    "Supplementary_Table_1_Datasets_and_Accessions.csv": 15
-  },
-  "checks": []
-}

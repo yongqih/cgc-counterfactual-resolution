@@ -1,0 +1,11 @@
+figure,panel,kind,label,value,note,ci_low,ci_high,model,x,group,y
+Main Figure 4,c,full_gene_model_r2,Ridge,0.002898149495299,strict biological-LCL OOF on post-SVA voom residuals,0.0025452455186836,0.0032568867165264,Ridge,0.002275648759678,,
+Main Figure 4,c,full_gene_model_r2,PCA + Ridge,0.00239046687979,strict biological-LCL OOF on post-SVA voom residuals,0.0021217782952476,0.0026882109870496,pca_ridge,0.0019420828903093,,
+Main Figure 4,c,full_gene_model_r2,Pilot MLP,0.0001614955370514,strict biological-LCL OOF on post-SVA voom residuals,-7.379085729442008e-06,0.0003378734061148,pilot_mlp,0.00222870381549,,
+Main Figure 4,c,full_gene_model_r2,RBF kernel Ridge,0.0035437508224818,strict biological-LCL OOF on post-SVA voom residuals,0.0030898632935574,0.0040115658883252,rbf_kernel_ridge,0.0050389231182634,,
+Main Figure 4,c,full_gene_model_r2,Boosting,-0.0032161590704498,strict biological-LCL OOF on post-SVA voom residuals,-0.0045673960255283,-0.0019683705509366,hist_gradient_boosting,0.0061192959547042,,
+Main Figure 4,c,full_gene_model_r2,Deep residual MLP,-0.0063168761591241,strict biological-LCL OOF on post-SVA voom residuals,-0.0069919958889934,-0.0057308966568762,deep_residual_mlp,0.0087434761226177,,
+Main Figure 4,d,resolution_rail,Full gene vector,0.0035437508224818,best tested full-gene model,,,,,,
+Main Figure 4,d,resolution_rail,PC1-4,0.1786633538389247,coarse response-program recovery,,,,,,
+Main Figure 4,d,resolution_rail,PC1-8,0.1689069336810457,coarse response-program recovery,,,,,,
+Main Figure 4,d,resolution_rail,PC1-16,0.1538938667272704,coarse response-program recovery,,,,,,

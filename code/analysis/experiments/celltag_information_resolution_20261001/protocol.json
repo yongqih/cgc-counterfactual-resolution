@@ -1,0 +1,24 @@
+{
+  "question": "Do complementary early measured molecular features support more specific predictions of independently observed clonal fate, with measurement granularity held at single-cell resolution?",
+  "status": "Frozen before fitting models; feasibility amendments must be recorded separately.",
+  "source": "CellTag-multi hematopoiesis, DOI 10.1038/s41587-023-01931-4, public processed ML files and clone table",
+  "unit": "One clone, never one cell or repeated sibling pair. All siblings of an evaluated clone are held out together.",
+  "outcome": "Published modal day-5 clonal fate. This is a clonal fate prediction, not the exact destiny of the sequenced cell.",
+  "cohorts": {
+    "primary": "Clones with early RNA and ATAC measurements and modal fate Mono or Neutro. Chosen before model fitting because these are the two adequately represented committed fates in the common cohort.",
+    "secondary": "All annotated fates in the common paired cohort, using the authors' six fate groups when feasible. Rare classes and missing-training-class failures must be reported, not silently excluded.",
+    "eligibility": "No filtering by prediction quality. Unknown/no-fate clones cannot supply an outcome and are enumerated. Features must come from early day-2.5 cells only."
+  },
+  "inputs": ["RNA", "ATAC", "RNA plus clone-matched ATAC", "RNA plus unrelated ATAC"],
+  "matching": "Use exactly the same clones, outcomes, and partitions for each input condition. Average early measured features within clone and assay for the primary analysis; audit how many cells each mean uses. A one-RNA/one-ATAC-cell sensitivity analysis addresses the effect of averaging.",
+  "preprocessing": "Inspect supplied matrices for gene/TF features, barcode alignment, normalization and imputation provenance before fitting. Scaling, supervised feature selection, hyperparameter selection, and calibration use training data only. Author-preprocessed representations are explicitly distinguished from a fully prospective end-to-end pipeline.",
+  "models": "L2 logistic regression and random forest; tune by inner cross-validation log loss with a small fixed grid. Include a training-prior predictor.",
+  "validation": "Repeated outer clone-disjoint cross-validation. Use paired per-clone Brier/log losses, accuracy, balanced accuracy, AUROC and minority recall. Average repeated losses within clone for paired bootstrap intervals; repetitions are not independent biological samples.",
+  "resolution": "On separate calibration clones, construct nominal 90% and 80% split-conformal label sets. Evaluate held-out coverage, average set size, singleton fraction, and class-specific coverage. A smaller set supports greater specificity only alongside acceptable held-out coverage. These are operational coverage levels, not biological information ceilings.",
+  "negative_control": "Break RNA-ATAC clone correspondence without using fate labels, independently within training, calibration and test partitions; refit the same model family. Also assess held-out ATAC permutation for a fixed fitted joint model if useful.",
+  "interpretation": {
+    "positive": "Joint early information improves proper held-out scores and can support narrower calibrated outcome sets on the same clones; consistent across simple model families and absent after correspondence is broken.",
+    "negative": "If gains disappear on a common clone-disjoint cohort, the published model comparison does not establish incremental predictive information for this task. Diagnose sampling, evaluation, feature provenance and power before judging the general concept.",
+    "boundary": "No finite model comparison establishes a universal RNA information ceiling. No later state, fate, or fate-informed embedding may enter prediction features. No assertion that a full-gene probability distribution is prohibited."
+  }
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+/prepared/
+/figures/
+/manuscript/
+/UPLOAD_READY/
+/rendered_figures/
+/reproduction/

@@ -1,63 +1,37 @@
-# The recoverable resolution of cellular perturbation-response prediction
+# The recoverable resolution of Virtual-Cell prediction
 
-Analysis code accompanying *The recoverable resolution of cellular perturbation-response prediction*.
+Code and data for the author-approved manuscript of 4 October 2026: **five main figures, three Extended Data figures and four supplementary figures**.
 
-This repository contains 26 versioned scientific implementation bundles, their
-configurations, split metadata, input requirements and execution documentation.
-Figure source data and Supplementary Tables are distributed separately in the
-companion data archive.
-
-## 8 September 2026 correction
-
-Hyperparameter selection is restricted to each observed support path, with sequence-aware downstream replay. Linked source data and Supplementary Table 5 are updated. The first detectable support budget, all-but-one point estimates and resolution conclusions remain unchanged. See [the correction guide](code/scientific/SUPPORT_BUDGET_CORRECTION.md). The previous v1.0.0 release is preserved.
+The experiments assess which biological detail is supported by the target, information available at prediction time and required reliability. The release includes T-cell prediction, State artifact evaluation, Tahoe experimental support and response resolution, LCL response programs, patient-derived organoid drug ranking, LARRY split-culture lineages and CellTag-multi fate prediction.
 
 ## Start here
 
-- [Code guide](CODE_README.md): implementation structure, environment and execution requirements.
-- [Scientific entrypoint index](code/scientific/SCIENTIFIC_ENTRYPOINT_INDEX.json): available analyses and their execution classes.
-- [Required inputs](REQUIRED_INPUT_DELIVERY.csv): supplied and external inputs for each analysis.
-- [Dataset accessions](DATASET_ACCESSION_MANIFEST.csv): upstream datasets and resource versions.
-- [Table checks and workbook generation](REPRODUCIBILITY_ENTRYPOINTS.md): checks on released source tables, distinct from scientific analysis runs.
+Extract the CODE and DATA archives into the same parent directory. Both contain `CGC/` and merge into one release. On Windows, use a short extraction path. The prepared-data analyses were checked with Python 3.10.20; exact package versions are recorded in `reproducibility/VALIDATION.json`. Install the requirements in a dedicated environment.
 
-From the repository root, inspect an analysis and its input requirements with:
-
-```bash
-python code/scientific/launch.py experimental_compression --inspect-only
+```text
+python -m pip install -r requirements.txt
+python code/verify_release.py
+python code/render_figures.py --output ../rendered_figures
+python code/reproduce.py larry --work-dir ../reproduction
+python code/reproduce.py celltag-calibration --work-dir ../reproduction
+python code/reproduce.py tahoe-summary --work-dir ../reproduction
 ```
 
-This command does not download data or run an analysis. For scientific execution,
-follow the relevant bundle README and input contract in
-[`code/scientific/`](code/scientific/), together with the [code guide](CODE_README.md).
-Large input arrays, predictions and model checkpoints are not included in this
-repository; analysis-specific environment and historical provenance requirements
-are documented in the code guide.
+`REPRODUCIBILITY.md` distinguishes full recomputation, analysis from frozen predictions, figure rendering and file-integrity checks. It lists the additional inputs and compute needed for refitting earlier models. Approved manuscript files and figures are read-only references; commands write to separate directories.
 
-## Downloads and version
+## Layout
 
-- **Manuscript code release:** [v1.0.1](https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1).
-- **Prepared code archive:** [CGC_CODE_2026-09-08.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.1/CGC_CODE_2026-09-08.zip), attached to that release.
-- **Companion source data:** [CGC_DATA_2026-09-08.zip](https://github.com/yongqih/cgc-counterfactual-resolution/releases/download/v1.0.1/CGC_DATA_2026-09-08.zip), attached to the same release.
-- **Archived code (v1.0.1):** [10.5281/zenodo.22664234](https://doi.org/10.5281/zenodo.22664234).
-- **Archived source data (v1.0.1):** [10.5281/zenodo.22664304](https://doi.org/10.5281/zenodo.22664304).
+| Directory | Contents |
+| --- | --- |
+| `code/figures/` | Portable renderers and the author's preserved SVG schematics |
+| `code/analysis/` | Current LARRY, CellTag and Tahoe analysis code and protocols |
+| `code/scientific/` | Twenty-two frozen scientific bundles supporting the retained experiments |
+| `source_data/` | Current figure-level numerical tables and mappings |
+| `prepared/` | Compact measured inputs, predictions, calibration records and sufficient statistics |
+| `figures/` | Approved PDF, SVG, PNG and TIFF figure exports |
+| `manuscript/` | Approved main and supplementary documents and figure review PDFs |
+| `reproducibility/` | Source provenance, input delivery and validation records |
 
-Please cite the code DOI when using the released implementation and the data DOI
-when reusing the source tables. These version-specific DOIs identify the corrected
-v1.0.1 archives; cite the relevant upstream studies when using their underlying data.
+`MANUSCRIPT_AUTHORITY.json` identifies this revision. The repository is [cgc-counterfactual-resolution](https://github.com/yongqih/cgc-counterfactual-resolution). The earlier archived release is v1.0.1, DOI [10.5281/zenodo.22664234](https://doi.org/10.5281/zenodo.22664234). Updated CODE and DATA archives have been prepared for this revision; their Zenodo deposition and new archival identifier are pending.
 
-If you clone this repository or use GitHub's **Code > Download ZIP**, the source
-files are already provided; no second code ZIP is required.
-
-The prepared code and data archives both use the top-level directory
-`CGC_release_2026-09-08/`. Once both archives are available, extract them into the
-same parent directory to combine their contents. For a GitHub checkout, place
-the contents of the data archive's `CGC_release_2026-09-08/` directory at the
-repository root. The data archive includes its own `DATA_README.md`.
-
-The prepared code archive retains its archive-specific README. This repository
-README provides GitHub-specific navigation; the corrected scientific implementations match the v1.0.1 archive. The corrected code and data are archived at the version-specific Zenodo DOIs above. Earlier Zenodo versions remain available in each record's version history.
-
-## License and attribution
-
-CGC-authored code, configurations and documentation are distributed under the
-[MIT License](LICENSE). Third-party resources retain their original terms; see
-[License scope](LICENSE_SCOPE.md) and [Third-party notices](THIRD_PARTY_NOTICES.md).
+CGC-authored code is MIT licensed. Dataset and third-party terms remain with their respective providers; see `THIRD_PARTY_NOTICES.md` and `DATASET_ACCESSION_MANIFEST.csv`.

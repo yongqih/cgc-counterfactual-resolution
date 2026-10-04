@@ -11,7 +11,7 @@
     "smoke_total": 7,
     "entrypoint_template": "python code/scientific/launch.py experimental_compression --execute",
     "source_manifest": "code/scientific/bundles/experimental_compression/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main3; ED2",
+    "manuscript_scope": "Figure 2; Supplementary Figure 2",
     "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
@@ -26,64 +26,7 @@
     "smoke_total": 4,
     "entrypoint_template": "python code/scientific/launch.py low_rank_completion --execute",
     "source_manifest": "code/scientific/bundles/low_rank_completion/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main3e; ED3"
-  },
-  {
-    "bundle": "m1_secondary",
-    "analysis_name": "Frozen M1 secondary and post-selection correspondence adjudication",
-    "classification": "FULL_ANALYSIS",
-    "source_commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
-    "source_files": 11,
-    "source_bytes": 7597659,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
-    "smoke_passed": 2,
-    "smoke_total": 2,
-    "entrypoint_template": "python code/scientific/launch.py m1_secondary --execute",
-    "source_manifest": "code/scientific/bundles/m1_secondary/SOURCE_MANIFEST.json",
-    "manuscript_scope": "SF2"
-  },
-  {
-    "bundle": "context_anchoring",
-    "analysis_name": "Frozen-output context-anchoring contrasts and analytical figure",
-    "classification": "FIGURE_FROM_FROZEN_PREDICTIONS",
-    "source_commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
-    "source_files": 10,
-    "source_bytes": 51210,
-    "runtime_readiness": "CORRECTED_FROZEN_UTILITIES_REQUIRED; paired contrasts recomputed on 2026-09-08",
-    "smoke_passed": 1,
-    "smoke_total": 1,
-    "entrypoint_template": "python code/scientific/launch.py context_anchoring --execute",
-    "source_manifest": "code/scientific/bundles/context_anchoring/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED4",
-    "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
-  },
-  {
-    "bundle": "mechanism_aligned",
-    "analysis_name": "Final BIO2 attribution and MULTI2 mechanism-aligned prediction",
-    "classification": "FULL_ANALYSIS",
-    "source_commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
-    "source_files": 29,
-    "source_bytes": 2657082,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
-    "smoke_passed": 2,
-    "smoke_total": 2,
-    "entrypoint_template": "python code/scientific/launch.py mechanism_aligned --execute",
-    "source_manifest": "code/scientific/bundles/mechanism_aligned/SOURCE_MANIFEST.json",
-    "manuscript_scope": "SF3-SF4; SupplementaryTable6"
-  },
-  {
-    "bundle": "tahoe_operator_anatomy",
-    "analysis_name": "Tahoe full-transcriptome replicate geometry and operator anatomy",
-    "classification": "FULL_ANALYSIS",
-    "source_commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
-    "source_files": 39,
-    "source_bytes": 14814180,
-    "runtime_readiness": "PREPARED_INPUTS_REQUIRED; scientific run not performed",
-    "smoke_passed": 1,
-    "smoke_total": 1,
-    "entrypoint_template": "python code/scientific/launch.py tahoe_operator_anatomy --execute",
-    "source_manifest": "code/scientific/bundles/tahoe_operator_anatomy/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main5"
+    "manuscript_scope": "Figure 2e; Supplementary Figure 2d"
   },
   {
     "bundle": "tahoe_replicate_core",
@@ -97,7 +40,7 @@
     "smoke_total": 0,
     "entrypoint_template": "python code/scientific/launch.py tahoe_replicate_core --execute",
     "source_manifest": "code/scientific/bundles/tahoe_replicate_core/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Methods; SupplementaryTables1-3"
+    "manuscript_scope": "Figures 2 and 3; Extended Data Figure 2; upstream replicate construction"
   },
   {
     "bundle": "held_context_scaling",
@@ -111,7 +54,7 @@
     "smoke_total": 2,
     "entrypoint_template": "python code/scientific/launch.py held_context_scaling --execute",
     "source_manifest": "code/scientific/bundles/held_context_scaling/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED7"
+    "manuscript_scope": "Extended Data Figure 2a"
   },
   {
     "bundle": "five_pathway_scaling",
@@ -125,7 +68,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py five_pathway_scaling --execute",
     "source_manifest": "code/scientific/bundles/five_pathway_scaling/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED7"
+    "manuscript_scope": "Extended Data Figure 2a"
   },
   {
     "bundle": "ed7_hierarchical_repair",
@@ -139,7 +82,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py ed7_hierarchical_repair --execute",
     "source_manifest": "code/scientific/bundles/ed7_hierarchical_repair/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED7"
+    "manuscript_scope": "Extended Data Figure 2a; hierarchical intervals"
   },
   {
     "bundle": "tcell_truth",
@@ -153,7 +96,7 @@
     "smoke_total": 3,
     "entrypoint_template": "python code/scientific/launch.py tcell_truth --execute",
     "source_manifest": "code/scientific/bundles/tcell_truth/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main1; SF1"
+    "manuscript_scope": "Figure 1a,b; Supplementary Figure 1"
   },
   {
     "bundle": "tcell_lodo",
@@ -167,7 +110,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py tcell_lodo --execute",
     "source_manifest": "code/scientific/bundles/tcell_lodo/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main1; SF1"
+    "manuscript_scope": "Figure 1c-e"
   },
   {
     "bundle": "tcell_decomposition",
@@ -181,7 +124,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py tcell_decomposition --execute",
     "source_manifest": "code/scientific/bundles/tcell_decomposition/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main1; SF1"
+    "manuscript_scope": "Figure 1c-e"
   },
   {
     "bundle": "state_official_summary",
@@ -195,7 +138,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py state_official_summary --execute -- --official-data-dir <official-data-dir> --out <new-summary.json>",
     "source_manifest": "code/scientific/bundles/state_official_summary/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main2"
+    "manuscript_scope": "Extended Data Figure 1a-c"
   },
   {
     "bundle": "state_independent_stability",
@@ -209,7 +152,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py state_independent_stability --execute",
     "source_manifest": "code/scientific/bundles/state_independent_stability/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED1"
+    "manuscript_scope": "Extended Data Figure 1d,e"
   },
   {
     "bundle": "lea_historical_analysis",
@@ -223,7 +166,7 @@
     "smoke_total": 2,
     "entrypoint_template": "python code/scientific/launch.py lea_historical_analysis --execute",
     "source_manifest": "code/scientific/bundles/lea_historical_analysis/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main4; ED5"
+    "manuscript_scope": "Figure 3b-d; Supplementary Figure 3"
   },
   {
     "bundle": "lea_archs4",
@@ -237,7 +180,7 @@
     "smoke_total": 3,
     "entrypoint_template": "python code/scientific/launch.py lea_archs4 --execute",
     "source_manifest": "code/scientific/bundles/lea_archs4/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED5"
+    "manuscript_scope": "Supplementary Figure 3a"
   },
   {
     "bundle": "lea_full_span",
@@ -251,7 +194,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py lea_full_span --execute",
     "source_manifest": "code/scientific/bundles/lea_full_span/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main4e; ED5"
+    "manuscript_scope": "Supplementary Figure 3d"
   },
   {
     "bundle": "resolution_pathway_frozen",
@@ -265,7 +208,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py resolution_pathway_frozen --execute -- --out-dir <new-output-dir>",
     "source_manifest": "code/scientific/bundles/resolution_pathway_frozen/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main6a; ED6",
+    "manuscript_scope": "Figure 3f; corrected paired contrasts",
     "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
@@ -280,7 +223,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py pathway_fidelity --execute",
     "source_manifest": "code/scientific/bundles/pathway_fidelity/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED6",
+    "manuscript_scope": "Figure 3g",
     "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
@@ -295,7 +238,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py pathway_composition --execute",
     "source_manifest": "code/scientific/bundles/pathway_composition/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED9",
+    "manuscript_scope": "Extended Data Figure 2b",
     "post_freeze_correction": "EPISODE_REFERENCE_SUPPORT_ONLY_V2"
   },
   {
@@ -310,7 +253,7 @@
     "smoke_total": 2,
     "entrypoint_template": "python code/scientific/launch.py crc_pdo_application --execute",
     "source_manifest": "code/scientific/bundles/crc_pdo_application/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main6e-f; ED8"
+    "manuscript_scope": "Figure 4a,b; Supplementary Figure 4a-c"
   },
   {
     "bundle": "crc_pdo_conditioning",
@@ -324,7 +267,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py crc_pdo_conditioning --execute",
     "source_manifest": "code/scientific/bundles/crc_pdo_conditioning/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main6; SF5"
+    "manuscript_scope": "Figure 4e,f"
   },
   {
     "bundle": "crc_pdo_pca",
@@ -338,7 +281,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py crc_pdo_pca --execute",
     "source_manifest": "code/scientific/bundles/crc_pdo_pca/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main6; SF5"
+    "manuscript_scope": "Figure 4c,d; supporting nested PCA sweep"
   },
   {
     "bundle": "crc_pdo_dense",
@@ -352,7 +295,7 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py crc_pdo_dense --execute",
     "source_manifest": "code/scientific/bundles/crc_pdo_dense/SOURCE_MANIFEST.json",
-    "manuscript_scope": "Main6b-d; SF5"
+    "manuscript_scope": "Figure 4c,d; Supplementary Figure 4d"
   },
   {
     "bundle": "lea_semisynthetic",
@@ -366,6 +309,6 @@
     "smoke_total": 1,
     "entrypoint_template": "python code/scientific/launch.py lea_semisynthetic --execute",
     "source_manifest": "code/scientific/bundles/lea_semisynthetic/SOURCE_MANIFEST.json",
-    "manuscript_scope": "ED5"
+    "manuscript_scope": "Supplementary Figure 3c"
   }
 ]

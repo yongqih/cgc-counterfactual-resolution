@@ -1,0 +1,210 @@
+{
+  "runtime": {
+    "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "sklearn": "1.7.2",
+    "torch": "2.11.0+cu128",
+    "matplotlib": "3.10.9",
+    "pymupdf": "1.28.2"
+  },
+  "numerical_recomputations": {
+    "larry_clone_estimates.csv": {
+      "rows": 63,
+      "numeric_max_absolute_difference": 0.0
+    },
+    "larry_aggregate_estimates.csv": {
+      "rows": 180,
+      "numeric_max_absolute_difference": 0.0
+    },
+    "celltag_specificity.csv": {
+      "rows": 20,
+      "numeric_max_absolute_difference": 0.0
+    },
+    "celltag_paired_contrasts.csv": {
+      "rows": 122,
+      "numeric_max_absolute_difference": 0.0
+    },
+    "tahoe_resolution": {
+      "rows": 182,
+      "numeric_max_absolute_difference": 2.842170943040401e-14
+    },
+    "tahoe_gene_selection": {
+      "contrasts": 8,
+      "simultaneous_intervals_reproduced": true,
+      "valid_draws": 10000
+    }
+  },
+  "figure_comparisons": [
+    {
+      "figure": "Extended_Data_1",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        995,
+        995
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Extended_Data_2",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        117,
+        117
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Extended_Data_3",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        170,
+        170
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Figure_1",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        136,
+        136
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Figure_2",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        777,
+        777
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Figure_3",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        175,
+        175
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Figure_4",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        117,
+        117
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Figure_5",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        218,
+        218
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Supplementary_Figure_1",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        34,
+        34
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Supplementary_Figure_2",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        49,
+        49
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Supplementary_Figure_3",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        101,
+        101
+      ],
+      "bbox_max_diff_pt": 0.0
+    },
+    {
+      "figure": "Supplementary_Figure_4",
+      "same_page_size": true,
+      "same_text": true,
+      "old_only": [],
+      "new_only": [],
+      "drawing_counts": [
+        129,
+        129
+      ],
+      "bbox_max_diff_pt": 0.0
+    }
+  ],
+  "full_legacy_model_refit": false,
+  "celltag_full_nested_refit": false,
+  "test_scope": "LARRY recomputation from measured cell-level RNA; CellTag calibration reconstruction from frozen held-out probabilities; Tahoe recomputation from frozen sufficient statistics; all twelve figure renders.",
+  "source_checks": {
+    "syntax_files": 320,
+    "frozen_files_verified": 411,
+    "errors": []
+  },
+  "path_adaptations": [
+    "Tahoe core accepts CGC_INPUT_ROOT for original prepared inputs. The default workspace path and scientific functions remain unchanged.",
+    "Plotting input/output paths are release-relative; approved plot primitives and text match all twelve reference PDFs."
+  ],
+  "clean_archive_checks": {
+    "file_integrity": {
+      "status": "PASS",
+      "files_verified": 700,
+      "mode": "CODE+DATA",
+      "scientific_recomputation": false,
+      "errors": []
+    },
+    "rendered_figures": 12,
+    "celltag_calibration_completed": true,
+    "fresh_dependency_installation_tested": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "question": "Does choosing output detail by training-side predictive support improve full-response prediction while withholding genuinely measurable detail?",
+  "scope": "Direct operational test of measurement resolution versus prediction-supported resolution. No saturation, low-rank structure, or zero predictability of all fine detail is required. No information-theoretic upper bound is claimed.",
+  "data": "Same 50 contexts, 93 known interventions, two plates, 25695 frozen response genes, full 42523-gene baseline inputs, and five held-context outer folds as tahoe_joint_resolution_20261001.",
+  "models": ["linear", "rbf"],
+  "predictions": "Reuse the previously nested-selected full-input model parameters and exact outer predictions. Form inner held-context predictions using outer-training data only to choose which gene-level context deviations to retain.",
+  "support_rule": "For each gene pool the inner cross-plate recovered contribution R_j=S_j-E_j across inner validation contexts and all 93 interventions. Retain that gene's context-specific prediction iff R_j>0; otherwise return the shared intervention response. This is output selection, not input gene selection.",
+  "controls": ["full context-specific output", "same-count output genes ranked by inner reproducible measurement signal S_j", "same-count uniformly sampled output genes, mean over 20 fixed random draws"],
+  "primary_contrasts": ["positive reproducible truth signal in withheld genes", "full-normalized recovery gain of support-selected versus full output", "gain versus measurement-selected output at the same gene count", "gain versus random output at the same gene count"],
+  "scoring": "One fixed full-response target and full-S denominator for every policy. Predictions return the training-intervention mean in withheld coordinates; true test coordinates are not removed from scoring. Sum energies before ratios. Signed contributions are not clipped.",
+  "uncertainty": "10000 paired context bootstrap draws; fixed intervention panel, fitted models and masks. Simultaneous intervals across 2 model families x 4 primary contrasts. No test-context selection.",
+  "followup_status": "New analysis motivated by the user's clarification after the prior PCA sweep. Protocol frozen before the new policy scores; not an independent validation dataset.",
+  "seed": 2026100201,
+  "no_go": "If support-selected output does not improve held-out full-response recovery, report failure of this policy. Do not change thresholds or search for a favorable result after test scoring.",
+  "available_at_inference": "Query baseline RNA, known intervention, reference responses, training-selected gene mask. No query treated response is needed for prediction or mask selection."
+}

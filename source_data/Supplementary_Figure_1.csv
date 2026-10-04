@@ -1,0 +1,31 @@
+figure,panel,kind,label,group,value,note,text,x,comparison,allowed,forbidden
+Supplementary Figure 1,a,construction_stage,guide-assigned cells,cells,0,cells are used only to construct pseudobulks; inference is not per-cell,,,,,
+Supplementary Figure 1,a,construction_stage,donor × state × run × guide pseudobulk,pseudobulk,1,cells are used only to construct pseudobulks; inference is not per-cell,,,,,
+Supplementary Figure 1,a,construction_stage,matched-NTC perturbation response,response,2,cells are used only to construct pseudobulks; inference is not per-cell,,,,,
+Supplementary Figure 1,a,construction_stage,context-specific response operator,operator,3,cells are used only to construct pseudobulks; inference is not per-cell,,,,,
+Supplementary Figure 1,a,construction_equation,perturbed state,,0,rendered with mathematical typography in the figure,"Y[p,c] = X[c] + Delta[p,c]",,,,
+Supplementary Figure 1,a,construction_equation,operator decomposition,,1,rendered with mathematical typography in the figure,"Delta[p,c] = mean_Delta[p] + Gamma[p,c]",,,,
+Supplementary Figure 1,a,construction_equation,matched control,,2,rendered with mathematical typography in the figure,"Delta[p,d,s,r] = PB[p,d,s,r] - NTC[d,s,r]",,,,
+Supplementary Figure 1,b,construction_count,donors,,4,biological contexts,,0.0,,,
+Supplementary Figure 1,b,construction_count,states,,3,"Rest, Stim8hr and Stim48hr",,1.0,,,
+Supplementary Figure 1,b,construction_count,runs,,2,CD4i_R1 and CD4i_R2,,2.0,,,
+Supplementary Figure 1,b,construction_count,strict trans genes,,9082,prespecified response-gene universe,,3.0,,,
+Supplementary Figure 1,b,construction_count,guide-disjoint truth targets,,3186,replicate-disjoint truth construction,,4.0,,,
+Supplementary Figure 1,b,construction_count,model-evaluation targets,,9386,strict LODO benchmark,,5.0,,,
+Supplementary Figure 1,c,truth_partition,partition 1,CE0006864|CE0008162,3,guide-disjoint truth; NTC matched within donor × state × run,,,CE0008678|CE0010866,,
+Supplementary Figure 1,c,truth_partition,partition 2,CE0006864|CE0008678,3,guide-disjoint truth; NTC matched within donor × state × run,,,CE0008162|CE0010866,,
+Supplementary Figure 1,c,truth_partition,partition 3,CE0006864|CE0010866,3,guide-disjoint truth; NTC matched within donor × state × run,,,CE0008162|CE0008678,,
+Supplementary Figure 1,c,truth_guardrail,guide-disjoint halves,,0,truth reliability is estimated from non-overlapping guide sets,,,,,
+Supplementary Figure 1,c,truth_guardrail,matched NTC,,1,controls are matched within donor × state × run,,,,,
+Supplementary Figure 1,c,truth_guardrail,equal guide weighting,,2,target and NTC guides receive equal weights,,,,,
+Supplementary Figure 1,c,truth_guardrail,separate benchmark,,3,truth construction is isolated from model evaluation,,,,,
+Supplementary Figure 1,d,lodo_fold,fold 1,CE0006864,3,three training donors; one held-out donor; held-out perturbation responses forbidden,,1.0,,held-out donor NTC state,held-out donor perturbation responses
+Supplementary Figure 1,d,lodo_fold,fold 2,CE0008162,3,three training donors; one held-out donor; held-out perturbation responses forbidden,,1.0,,held-out donor NTC state,held-out donor perturbation responses
+Supplementary Figure 1,d,lodo_fold,fold 3,CE0008678,3,three training donors; one held-out donor; held-out perturbation responses forbidden,,1.0,,held-out donor NTC state,held-out donor perturbation responses
+Supplementary Figure 1,d,lodo_fold,fold 4,CE0010866,3,three training donors; one held-out donor; held-out perturbation responses forbidden,,1.0,,held-out donor NTC state,held-out donor perturbation responses
+Supplementary Figure 1,d,lodo_rule,held-out donor NTC / untreated state,allowed,0,allowed and forbidden information are declared before model evaluation,,,,,
+Supplementary Figure 1,d,lodo_rule,training-donor perturbation responses,allowed,1,allowed and forbidden information are declared before model evaluation,,,,,
+Supplementary Figure 1,d,lodo_rule,training-derived response basis,allowed,2,allowed and forbidden information are declared before model evaluation,,,,,
+Supplementary Figure 1,d,lodo_rule,held-out donor perturbation outcomes,forbidden,0,allowed and forbidden information are declared before model evaluation,,,,,
+Supplementary Figure 1,d,lodo_rule,held-out response-derived preprocessing,forbidden,1,allowed and forbidden information are declared before model evaluation,,,,,
+Supplementary Figure 1,d,lodo_rule,held-out outcomes in hyperparameter selection,forbidden,2,allowed and forbidden information are declared before model evaluation,,,,,

@@ -1,0 +1,27 @@
+[
+  {
+    "stage": "Feature audit, before raw-count model fitting",
+    "change": "Add a comparison using day-2.5 RNA counts from GSM6681127 with per-cell normalization and training-only variance selection, plus the deposited TF score object in place of imputed ML CSV features.",
+    "reason": "The primary authors' exports contain integrated RNA and kNN-imputed TF scores. A prediction claim should not depend on inaccessible or retrospectively processed representations. The motif/peak reference remains author-defined."
+  },
+  {
+    "stage": "After processed-feature binary analysis",
+    "change": "Execute the planned all-fates sensitivity using six published groups, all 165 matched clones, 80% outer training and 20% test, with three repeated five-fold splits and nested model selection. No six-class conformal claim is made from the tiny rare classes.",
+    "reason": "A binary task may omit fate distinctions on which ATAC helps. Full-label evaluation addresses that task-scope limitation; the two-class result alone cannot decide it."
+  },
+  {
+    "stage": "After marginal-coverage audit",
+    "change": "Add class-conditional split-conformal label sets at the same nominal coverage levels. Refit the same binary models with identical data and seeds only to recover calibration predictions; check that probabilities match the earlier run.",
+    "reason": "High marginal coverage masked poor coverage of the minority fate. Smaller sets cannot support a broadly reliable distinction without this audit. The limited calibration sample can force an infinite quantile for a rare class."
+  },
+  {
+    "stage": "Preplanned one-cell sensitivity",
+    "change": "Use exactly one fate-blind selected early RNA cell and one early ATAC cell per clone on the same 142-clone cohort, with the raw-count preprocessing.",
+    "reason": "Test whether a result depends on averaging a variable number of sisters. Cell choices are fixed using the protocol seed before fitting this sensitivity."
+  },
+  {
+    "stage": "After binary-task deployment audit",
+    "change": "Run six-class calibrated outcome sets on all 165 matched annotated clones, with one RNA cell and one ATAC cell selected per clone using clone-specific, fate-blind seeds. Use 60% training, 20% calibration and 20% held-out test; all molecular inputs come from early cells.",
+    "reason": "The binary cohort is selected by eventual fate and supports only a conditional diagnostic. It cannot be used to claim an executable two-label forecast for an arbitrary new clone. The all-six-label task removes this binary outcome restriction. Unknown/unannotated fates remain outside the evaluated population."
+  }
+]

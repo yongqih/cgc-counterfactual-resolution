@@ -1,0 +1,5 @@
+clone_index,Library,Well,n_cells,n_Baso,n_Ccr7_DC,n_Eos,n_Erythroid,n_Lymphoid,n_Mast,n_Meg,n_Monocyte,n_Neutrophil,n_Undifferentiated,n_pDC,mean_Monocyte_program,mean_Neutrophil_program
+1978,LK_d6_1_1,1,10,0,0,0,0,0,0,0,4,4,2,0,0.3679538824261233,1.2514898593218964
+1978,LK_d6_1_2,1,7,0,0,0,0,0,0,0,4,2,1,0,0.8346731418100652,1.1565420239726734
+1978,LK_d6_2_1,2,17,0,0,0,0,0,0,0,0,17,0,0,0.0177114457272581,1.8235735318911488
+1978,LK_d6_2_2,2,16,0,0,0,0,0,0,0,0,16,0,0,0.0166667584885804,1.8431473034733408

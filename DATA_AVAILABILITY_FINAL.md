@@ -1,5 +1,5 @@
-See DATASET_ACCESSION_MANIFEST.csv for exact upstream sources.
-Source data are supplied in the companion DATA archive and archived at https://doi.org/10.5281/zenodo.22664304 (v1.0.1).
+# Data availability
 
+Figure-level source tables are in `source_data/`. The DATA archive additionally contains compact LARRY measurements, the 165-clone CellTag early-feature matrix and held-out predictions, and Tahoe sufficient statistics used to reproduce the current resolution and gene-selection results. `DATASET_ACCESSION_MANIFEST.csv` identifies the upstream studies and representations.
 
-Current patch: see `code/scientific/SUPPORT_BUDGET_CORRECTION.md` in the companion code archive. GitHub release: https://github.com/yongqih/cgc-counterfactual-resolution/releases/tag/v1.0.1. Cite the source-data DOI above when reusing these tables; the corrected companion code is archived at https://doi.org/10.5281/zenodo.22664234. Both records archive v1.0.1; earlier Zenodo versions remain available.
+Large original study archives and earlier model inputs are accessed through the cited providers and documented input contracts. They are retained in the author's working project where needed; they are not silently substituted by plotting tables. See `reproducibility/INPUT_DELIVERY.csv` for the boundary between delivered prepared data and additional inputs.

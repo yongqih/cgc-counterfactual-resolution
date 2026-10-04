@@ -1,0 +1,9 @@
+{
+  "numpy": "2.5.2",
+  "pandas": "3.0.5",
+  "scipy": "1.18.0",
+  "scikit-learn": "1.9.0",
+  "h5py": "3.16.0",
+  "matplotlib": "3.11.1",
+  "threadpoolctl": "3.6.0"
+}

@@ -1,0 +1,3 @@
+figure,panel,kind,label,value,note,ci_low,ci_high,model,x,group,y
+Main Figure 4,e,fullspan_heldout_fidelity,D256,0.0549447634290545,"pooled held-out projection fidelity; y is training cumulative variance and is annotation-only, not plotted on the held-out-fidelity axis",,,,256.0,,0.9927025824906914
+Main Figure 4,e,fullspan_heldout_fidelity,Full training span,0.0578441857609963,"pooled held-out projection fidelity; y is training cumulative variance and is annotation-only, not plotted on the held-out-fidelity axis",,,,271.0,,1.0

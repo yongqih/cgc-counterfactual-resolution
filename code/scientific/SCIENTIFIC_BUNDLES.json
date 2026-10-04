@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "scope": "Historical source bundles with explicitly recorded 2026-09-08 support-budget and downstream replay corrections.",
+  "schema_version": 2,
+  "scope": "Current manuscript scientific implementations; frozen source content retains original historical numbering. Use current_manuscript_scope for figure mapping.",
   "bundles": [
     {
       "id": "experimental_compression",
@@ -126,7 +126,8 @@
           "src/igc_virtual_cell/cgc_entrywise/estimators.py",
           "tests/test_cgc_support_budget.py"
         ]
-      }
+      },
+      "current_manuscript_scope": "Figure 2; Supplementary Figure 2"
     },
     {
       "id": "low_rank_completion",
@@ -194,344 +195,8 @@
           ],
           "boundary": "four design/prediction-weight/Gram identities; no optimizer training"
         }
-      ]
-    },
-    {
-      "id": "m1_secondary",
-      "analysis_name": "Frozen M1 secondary and post-selection correspondence adjudication",
-      "class": "FULL_ANALYSIS",
-      "commit": "e9bf9cdcfb8679670120479f32c3075daad5ebb1",
-      "entrypoints": [
-        {
-          "path": "scripts/cgc_m1_secondary_audit.py",
-          "help_args": [
-            "--help"
-          ]
-        },
-        {
-          "path": "scripts/cgc_m1_m2k92_confirmation.py",
-          "help_args": [
-            "--help"
-          ]
-        }
       ],
-      "source_roots": [
-        "scripts/cgc_m1_secondary_audit.py",
-        "scripts/cgc_m1_m2k92_confirmation.py",
-        "src/igc_virtual_cell/cgc_m1_secondary.py",
-        "src/igc_virtual_cell/cgc_m1_m2k92_confirmation.py"
-      ],
-      "extra_sources": [],
-      "configs": [],
-      "split_metadata": [
-        "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_PROTOCOL.md",
-        "results/cgc_m1_secondary_audit/M1_SECONDARY_AUDIT_RUN_MANIFEST.json",
-        "results/cgc_entrywise_compression/ENTRYWISE_HYPERPARAMETERS.csv",
-        "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
-        "results/cgc_entrywise_compression/ENTRYWISE_SPLIT_MANIFEST.json"
-      ],
-      "environment_metadata": [
-        "pyproject.toml"
-      ],
-      "required_inputs": [
-        {
-          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
-          "authority": "ENTRYWISE_RUN_MANIFEST.json",
-          "bytes_if_known": 27158852,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "data/cgc_entrywise_cache",
-          "authority": "ENTRYWISE_FOUNDATION_MANIFEST.json",
-          "bytes_if_known": null,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_DIRECTORY",
-          "notes": "Prepared input; external to the code-only export."
-        }
-      ],
-      "outputs": [
-        "results/cgc_m1_secondary_audit"
-      ],
-      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
-      "known_portability_constraints": [
-        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
-      ],
-      "smoke_tests": [],
-      "claim_boundary": "Post-hoc descriptive point selection is jointly corrected; M1 remedy line remains closed. Pass --upstream-root explicitly."
-    },
-    {
-      "id": "context_anchoring",
-      "analysis_name": "Frozen-output context-anchoring contrasts and analytical figure",
-      "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
-      "commit": "358ca73bfd9eddb7afe3e02d01bce7ec12d39bc8",
-      "entrypoints": [
-        {
-          "path": "scripts/cgc_context_anchoring.py",
-          "help_args": [
-            "--help"
-          ]
-        }
-      ],
-      "source_roots": [
-        "scripts/cgc_context_anchoring.py",
-        "src/igc_virtual_cell/cgc_context_anchoring.py"
-      ],
-      "extra_sources": [],
-      "configs": [],
-      "split_metadata": [
-        "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FROZEN_PROTOCOL.md"
-      ],
-      "environment_metadata": [
-        "pyproject.toml"
-      ],
-      "required_inputs": [
-        {
-          "path": "results/cgc_entrywise_compression/_cache/frozen_utility_table.npz",
-          "authority": "ENTRYWISE_RUN_MANIFEST.json",
-          "bytes_if_known": 27158852,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "results/cgc_entrywise_compression/_cache/bootstrap_draws.npz",
-          "authority": "ENTRYWISE_RUN_MANIFEST.json",
-          "bytes_if_known": 43200800,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        }
-      ],
-      "outputs": [
-        "results/cgc_context_anchoring_efficiency"
-      ],
-      "runtime_readiness": "CORRECTED_FROZEN_UTILITIES_REQUIRED; paired contrasts recomputed on 2026-09-08",
-      "known_portability_constraints": [
-        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
-      ],
-      "smoke_tests": [],
-      "claim_boundary": "The run command computes prespecified contrasts and emits Figure_Context_Anchoring PNG/SVG/source CSV from frozen utility/bootstrap tables. It does not refit predictors and does not reproduce manually edited R2 figures. Pass --authority-root explicitly.",
-      "post_freeze_correction": {
-        "date": "2026-09-08",
-        "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",
-        "base_commit_is_historical": true,
-        "reason": "Episode-reference-only hyperparameter selection and sequence-aware downstream replay.",
-        "reproduction": "code/scientific/SUPPORT_BUDGET_CORRECTION.md",
-        "modified_files": [
-          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_DELTA_G.csv",
-          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_FULL_SATURATION.csv",
-          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_G_VALUES.csv",
-          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_MARGINAL_EFFICIENCY.csv",
-          "results/cgc_context_anchoring_efficiency/CONTEXT_ANCHORING_SIMULTANEOUS_INFERENCE.csv",
-          "src/igc_virtual_cell/cgc_context_anchoring.py"
-        ]
-      }
-    },
-    {
-      "id": "mechanism_aligned",
-      "analysis_name": "Final BIO2 attribution and MULTI2 mechanism-aligned prediction",
-      "class": "FULL_ANALYSIS",
-      "commit": "0c8eeb48fbbf09b645e4e792bfe205158ca86ce3",
-      "entrypoints": [
-        {
-          "path": "scripts/cgc_mechanism_bio2.py",
-          "help_args": [
-            "--help"
-          ]
-        },
-        {
-          "path": "scripts/cgc_mechanism_multi2.py",
-          "help_args": [
-            "--help"
-          ]
-        }
-      ],
-      "source_roots": [
-        "src/igc_virtual_cell/cgc_mechanism_followup",
-        "scripts/cgc_mechanism_bio2.py",
-        "scripts/cgc_mechanism_multi2.py",
-        "scripts/cgc_mechanism_finalize.py",
-        "scripts/freeze_cgc_mechanism_followup.py"
-      ],
-      "extra_sources": [],
-      "configs": [],
-      "split_metadata": [
-        "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
-        "results/cgc_mechanism_followup/BIO2_FROZEN_INTERVENTION_ANNOTATIONS.csv",
-        "results/cgc_mechanism_followup/BIO2_HIERARCHICAL_ATTRIBUTION_PROTOCOL.md",
-        "results/cgc_mechanism_followup/BIO2_RUN_MANIFEST.json",
-        "results/cgc_mechanism_followup/CGC_MECHANISM_REPORTING_MANIFEST.json",
-        "results/cgc_mechanism_followup/MULTI2_ANNOTATION_PROVENANCE.json",
-        "results/cgc_mechanism_followup/MULTI2_FEATURE_MAP.json",
-        "results/cgc_mechanism_followup/MULTI2_MECHANISM_ALIGNED_PROTOCOL.md",
-        "results/cgc_mechanism_followup/MULTI2_RUN_MANIFEST.json",
-        "results/cgc_mechanism_followup/BIO2_ANNOTATION_PROVENANCE.json",
-        "results/cgc_mechanism_followup/BIO2_MATCHING_RULES.json",
-        "results/cgc_mechanism_followup/BIO2_NULL_DEFINITIONS.md",
-        "results/cgc_tahoe_0i/pseudobulk_sample_metadata.csv",
-        "results/cgc_tahoe_bio1/cellline_depmap_mapping.csv",
-        "results/cgc_tahoe_bio1/drug_target_moa_manifest.csv",
-        "results/cgc_tahoe_bio1/genotype_drug_match_manifest.csv",
-        "results/cgc_tahoe_bio1/program_manifest.csv"
-      ],
-      "environment_metadata": [
-        "pyproject.toml"
-      ],
-      "required_inputs": [
-        {
-          "path": "data/cgc_bio1_official/bio1_gene_arrays.npz",
-          "authority": "MULTI2 SOURCE_HASHES; BIO2 EXPECTED_GENE_HASH",
-          "bytes_if_known": 1911708512,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "data/cgc_bio1_official/bio1_projected_programs.npz",
-          "authority": "BIO2 EXPECTED_PROGRAM_HASH",
-          "bytes_if_known": 191722116,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "data/cgc_multi1_official/rppa500-mclp_tahoe49.parquet",
-          "authority": "MULTI2 SOURCE_HASHES",
-          "bytes_if_known": 210556,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Shared prepared measurements reused by final MULTI2, not historical MULTI1 results."
-        },
-        {
-          "path": "data/cgc_multi1_official/harmonized_Sanger_MS_2022_tahoe49.parquet",
-          "authority": "MULTI2 SOURCE_HASHES",
-          "bytes_if_known": 2331840,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "data/cgc_multi1_official/Chronos_Combined_tahoe49.parquet",
-          "authority": "MULTI2 SOURCE_HASHES",
-          "bytes_if_known": 7068304,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "data/cgc_mechanism_followup",
-          "authority": "MULTI2_ANNOTATION_PROVENANCE.json",
-          "bytes_if_known": null,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_DIRECTORY",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "results/cgc_tahoe_0i/response_tensors.zarr",
-          "authority": "MULTI2 load_foundation baseline-only primary_dmso_cpm",
-          "bytes_if_known": null,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_DIRECTORY",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
-          "authority": "gene_universe_hashes.json",
-          "bytes_if_known": 102908,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
-          "authority": "MULTI2 SOURCE_HASHES",
-          "bytes_if_known": 2705687,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        }
-      ],
-      "outputs": [
-        "results/cgc_mechanism_followup"
-      ],
-      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
-      "known_portability_constraints": [
-        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
-      ],
-      "smoke_tests": [],
-      "claim_boundary": "Power denotes detection under oracle-aligned injected delta-g, not an unbiased fitted-effect MDE. Dependency is an oracle input, not deployment-available untreated biology.",
-      "path_adapter": "bio2: launcher sets only common/bio2 ROOT, SOURCE_ROOT and OUT before invoking unchanged run_bio2; multi2 accepts --root --source-root --out."
-    },
-    {
-      "id": "tahoe_operator_anatomy",
-      "analysis_name": "Tahoe full-transcriptome replicate geometry and operator anatomy",
-      "class": "FULL_ANALYSIS",
-      "commit": "c96ee83bd59e3974bc42cd1cfc2aecf7b7dd9e70",
-      "entrypoints": [
-        {
-          "path": "scripts/cgc_tahoe_0i_scaling.py",
-          "help_args": [
-            "--help"
-          ]
-        }
-      ],
-      "source_roots": [
-        "src/igc_virtual_cell/cgc_tahoe_0i",
-        "scripts/cgc_tahoe_0i_*.py"
-      ],
-      "extra_sources": [],
-      "configs": [],
-      "split_metadata": [
-        "results/cgc_tahoe_0i/environment.json",
-        "results/cgc_tahoe_0i/extraction_manifest.json",
-        "results/cgc_tahoe_0i/panel127_comparison_manifest.json",
-        "results/cgc_tahoe_0i/raw_source_manifest.json",
-        "results/cgc_tahoe_0i/response_manifest.json",
-        "results/cgc_tahoe_0i/run_manifest.json",
-        "results/cgc_tahoe_0i/support_gram_manifest.json",
-        "results/cgc_tahoe_0c/intervention_folds.csv",
-        "results/cgc_tahoe_0c/readout_genes.csv",
-        "results/cgc_tahoe_0c/support_sequences.csv",
-        "results/cgc_tahoe_0i/gene_universe_hashes.json",
-        "results/cgc_tahoe_0i/raw_source_manifest.json"
-      ],
-      "environment_metadata": [
-        "pyproject.toml"
-      ],
-      "required_inputs": [
-        {
-          "path": "results/cgc_tahoe_0i/response_tensors.zarr",
-          "authority": "response_manifest.json",
-          "bytes_if_known": null,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_DIRECTORY",
-          "notes": "Prepared input; external to the code-only export."
-        },
-        {
-          "path": "results/cgc_tahoe_0i/gene_indices_g_primary.npy",
-          "authority": "gene_universe_hashes.json",
-          "bytes_if_known": 102908,
-          "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
-          "local_presence": "PRESENT_FILE",
-          "notes": "Prepared input; external to the code-only export."
-        }
-      ],
-      "outputs": [
-        "results/cgc_tahoe_0i"
-      ],
-      "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
-      "known_portability_constraints": [
-        "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-        "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
-      ],
-      "smoke_tests": [],
-      "claim_boundary": "q_N is response-observed same-intervention support fidelity, not target-blind predictive recovery. R_dim is cross-plate remaining-residual energy. Original per-stage scripts resolve paths from their bundle root.",
-      "max_single_source_bytes": 16000000
+      "current_manuscript_scope": "Figure 2e; Supplementary Figure 2d"
     },
     {
       "id": "tahoe_replicate_core",
@@ -588,7 +253,8 @@
         "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
       ],
       "smoke_tests": [],
-      "max_single_source_bytes": 16000000
+      "max_single_source_bytes": 16000000,
+      "current_manuscript_scope": "Figures 2 and 3; Extended Data Figure 2; upstream replicate construction"
     },
     {
       "id": "held_context_scaling",
@@ -665,7 +331,8 @@
           "help_boundary": "No argument parser; use launcher --inspect-only, never pass --help directly."
         }
       ],
-      "active_execution_guard": "Old context-only finalizer is not allowlisted. Use ed7_hierarchical_repair for current inference."
+      "active_execution_guard": "Old context-only finalizer is not allowlisted. Use ed7_hierarchical_repair for current inference.",
+      "current_manuscript_scope": "Extended Data Figure 2a"
     },
     {
       "id": "five_pathway_scaling",
@@ -721,7 +388,8 @@
       "smoke_tests": [],
       "claim_boundary": "Externally predefined pathway set; no outcome-based selection. Historical uncertainty superseded by ed7_hierarchical_repair.",
       "allowed_stage": "prepare",
-      "active_execution_guard": "Only the empirical prepare stage is allowlisted; original finalize/all produce superseded context-only intervals. Use ed7_hierarchical_repair for current inference."
+      "active_execution_guard": "Only the empirical prepare stage is allowlisted; original finalize/all produce superseded context-only intervals. Use ed7_hierarchical_repair for current inference.",
+      "current_manuscript_scope": "Extended Data Figure 2a"
     },
     {
       "id": "ed7_hierarchical_repair",
@@ -774,7 +442,8 @@
         }
       ],
       "claim_boundary": "Only frozen-contribution uncertainty; unchanged predictors, point definitions and draws. No CLI --help is advertised because the original script has no argument parser.",
-      "path_adapter": "ed7: launcher resolves GENE_WT/PATH_WT to exported frozen bundles or explicit prepared workspaces and patches directory constants only before unchanged main."
+      "path_adapter": "ed7: launcher resolves GENE_WT/PATH_WT to exported frozen bundles or explicit prepared workspaces and patches directory constants only before unchanged main.",
+      "current_manuscript_scope": "Extended Data Figure 2a; hierarchical intervals"
     },
     {
       "id": "tcell_truth",
@@ -864,7 +533,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 1a,b; Supplementary Figure 1"
     },
     {
       "id": "tcell_lodo",
@@ -950,7 +620,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 1c-e"
     },
     {
       "id": "tcell_decomposition",
@@ -1032,7 +703,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 1c-e"
     },
     {
       "id": "state_official_summary",
@@ -1110,7 +782,8 @@
       "release_entrypoint": "current_state_summary.py",
       "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
       "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
-      "claim_boundary": "Current summary reads actual official mean artifacts, computes existing audited metrics, and uses all44 exact context derangements with conservative plus-one p. Historical sampled p and historical main/rendering are not active; no State fitting or bootstrap intervals are claimed by the bounded summary."
+      "claim_boundary": "Current summary reads actual official mean artifacts, computes existing audited metrics, and uses all44 exact context derangements with conservative plus-one p. Historical sampled p and historical main/rendering are not active; no State fitting or bootstrap intervals are claimed by the bounded summary.",
+      "current_manuscript_scope": "Extended Data Figure 1a-c"
     },
     {
       "id": "state_independent_stability",
@@ -1186,7 +859,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Extended Data Figure 1d,e"
     },
     {
       "id": "lea_historical_analysis",
@@ -1290,7 +964,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 3b-d; Supplementary Figure 3"
     },
     {
       "id": "lea_archs4",
@@ -1418,7 +1093,8 @@
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
       "missing_metadata_provenance": [],
-      "path_adapter": "Unchanged source requests historical modules through git_source; launcher maps only this artifact lookup to exact SHA-verified runtime_sources blobs. No incomplete Git database and no scientific function replacement."
+      "path_adapter": "Unchanged source requests historical modules through git_source; launcher maps only this artifact lookup to exact SHA-verified runtime_sources blobs. No incomplete Git database and no scientific function replacement.",
+      "current_manuscript_scope": "Supplementary Figure 3a"
     },
     {
       "id": "lea_full_span",
@@ -1503,7 +1179,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Supplementary Figure 3d"
     },
     {
       "id": "resolution_pathway_frozen",
@@ -1670,7 +1347,8 @@
           "src/igc_virtual_cell/cgc_resolution_poc/inference.py",
           "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
         ]
-      }
+      },
+      "current_manuscript_scope": "Figure 3f; corrected paired contrasts"
     },
     {
       "id": "pathway_fidelity",
@@ -1802,7 +1480,8 @@
           "src/igc_virtual_cell/cgc_entrywise/estimators.py",
           "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
         ]
-      }
+      },
+      "current_manuscript_scope": "Figure 3g"
     },
     {
       "id": "pathway_composition",
@@ -1940,7 +1619,8 @@
           "src/igc_virtual_cell/cgc_entrywise/estimators.py",
           "src/igc_virtual_cell/cgc_resolution_poc/replay.py"
         ]
-      }
+      },
+      "current_manuscript_scope": "Extended Data Figure 2b"
     },
     {
       "id": "crc_pdo_application",
@@ -2045,7 +1725,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 4a,b; Supplementary Figure 4a-c"
     },
     {
       "id": "crc_pdo_conditioning",
@@ -2132,7 +1813,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 4e,f"
     },
     {
       "id": "crc_pdo_pca",
@@ -2219,7 +1901,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 4c,d; supporting nested PCA sweep"
     },
     {
       "id": "crc_pdo_dense",
@@ -2305,7 +1988,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Figure 4c,d; Supplementary Figure 4d"
     },
     {
       "id": "lea_semisynthetic",
@@ -2384,7 +2068,8 @@
         }
       ],
       "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
-      "missing_metadata_provenance": []
+      "missing_metadata_provenance": [],
+      "current_manuscript_scope": "Supplementary Figure 3c"
     }
   ]
 }

@@ -1,0 +1,3347 @@
+[
+  {
+    "source": "approved_submission/CURRENT_PANEL_MAP.csv",
+    "destination": "source_data\\CURRENT_PANEL_MAP.csv",
+    "sha256": "4ea9dffaf978527ce6a2466c2357d63ca1638551ae11ca736bd2b6558f998925"
+  },
+  {
+    "source": "approved_submission/EC_support_grid.csv",
+    "destination": "source_data\\EC_support_grid.csv",
+    "sha256": "adb66c3673084ff1c48db186789a7d0740cb5873bbc959baeda7462328982811"
+  },
+  {
+    "source": "approved_submission/Extended_Data_1_cytokine.csv",
+    "destination": "source_data\\Extended_Data_1_cytokine.csv",
+    "sha256": "4dd80341499661432aef798b547f752cb53abbfdb28f4774dd95a0598554303d"
+  },
+  {
+    "source": "approved_submission/Extended_Data_1_drug.csv",
+    "destination": "source_data\\Extended_Data_1_drug.csv",
+    "sha256": "426409dae9a0df30be5ade2df9aff501debe97b4e93dca5098d48164ec067972"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2_gene_selection.json",
+    "destination": "source_data\\Extended_Data_2_gene_selection.json",
+    "sha256": "f6a083eaaf4a52d5e46f896f90a8392d22ac7ce06d1e9667122ce9f335ebd4e7"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2_observed_scaling.csv",
+    "destination": "source_data\\Extended_Data_2_observed_scaling.csv",
+    "sha256": "d7bbd047dafeddb78f7f3666926046b4ee6cfb42f831ffecbf5ebefab280548c"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2_pathways.csv",
+    "destination": "source_data\\Extended_Data_2_pathways.csv",
+    "sha256": "e807e1ec18ca8bce83888bfc9b36a3370f5c2c8d3c869c1f396eb2108746a012"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2_resolution_grid.csv",
+    "destination": "source_data\\Extended_Data_2_resolution_grid.csv",
+    "sha256": "f04ac95fe71fda1c1d41ec4c240724773fa31adb51297227205c3c338238217c"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3_class_results.csv",
+    "destination": "source_data\\Extended_Data_3_class_results.csv",
+    "sha256": "d293cae6723a9b8540cc3d1c559b856e74e9d5c94ee56287461ff7f2e2b71dda"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3_RNA_contrasts.json",
+    "destination": "source_data\\Extended_Data_3_RNA_contrasts.json",
+    "sha256": "0a243f21fdde0aa49457cc92ad50ba633fcf6fa31a39079645ed5a4d787e76cb"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3_robustness.json",
+    "destination": "source_data\\Extended_Data_3_robustness.json",
+    "sha256": "cd4e90525d2d80450703f2813b142da3d562314e03962ad7e270f498e9a236ff"
+  },
+  {
+    "source": "approved_submission/Figure_1.csv",
+    "destination": "source_data\\Figure_1.csv",
+    "sha256": "3fe870636bc4823024d07e846e3de39e38ee01517516529bff173713532f575f"
+  },
+  {
+    "source": "approved_submission/Figure_2.csv",
+    "destination": "source_data\\Figure_2.csv",
+    "sha256": "5d5f467e49437cd95cc364b0589c009f558e87089a7ee827664a8fd0f26243f6"
+  },
+  {
+    "source": "approved_submission/Figure_3_fidelity.csv",
+    "destination": "source_data\\Figure_3_fidelity.csv",
+    "sha256": "c860ecc457804d609f8416c9e59b51e9ceb3bbb3dc9f85eff83feb9df8afbe9c"
+  },
+  {
+    "source": "approved_submission/Figure_3_LCL.csv",
+    "destination": "source_data\\Figure_3_LCL.csv",
+    "sha256": "d83d02fc2f6f21623c0ba2230da912e286b0560d42d7434174d5bab7d5892ea0"
+  },
+  {
+    "source": "approved_submission/Figure_3_reproducibility.csv",
+    "destination": "source_data\\Figure_3_reproducibility.csv",
+    "sha256": "b73b2a01350dfdc8c6468892bfb1baaf28e0826a7d76dbd5ef591f712b8f5d6b"
+  },
+  {
+    "source": "approved_submission/Figure_3_Tahoe.csv",
+    "destination": "source_data\\Figure_3_Tahoe.csv",
+    "sha256": "3f558d89ff9e281403641894292327a865bad8b4159c967870b5c1531ea644f4"
+  },
+  {
+    "source": "approved_submission/Figure_4_PDO.csv",
+    "destination": "source_data\\Figure_4_PDO.csv",
+    "sha256": "43de11739f7a574d44f37561bbeeb1021fea154014cb400610ca46879992a26f"
+  },
+  {
+    "source": "approved_submission/Figure_4_representation.csv",
+    "destination": "source_data\\Figure_4_representation.csv",
+    "sha256": "3d94f7ff04fbc664433918b0b60a4a622153fb7ddb96df99834cc65f1ffb05eb"
+  },
+  {
+    "source": "approved_submission/Figure_5_CellTag_contrasts.csv",
+    "destination": "source_data\\Figure_5_CellTag_contrasts.csv",
+    "sha256": "43a4ce07b81b3b16e5d0975da34436a3b8d98d5cd025866df2bae021ec64faf0"
+  },
+  {
+    "source": "approved_submission/Figure_5_CellTag_paired_contrasts.csv",
+    "destination": "source_data\\Figure_5_CellTag_paired_contrasts.csv",
+    "sha256": "3e0503e056eab0bc80b62d45ea903c32520939dcaf442cb4318035f59a5bdd5c"
+  },
+  {
+    "source": "approved_submission/Figure_5_CellTag_specificity.csv",
+    "destination": "source_data\\Figure_5_CellTag_specificity.csv",
+    "sha256": "9db7a90073783b21949c7d801cc8b67fab8b202e6dab6a2198b5704bb4c9540f"
+  },
+  {
+    "source": "approved_submission/Figure_5_CellTag_summary.csv",
+    "destination": "source_data\\Figure_5_CellTag_summary.csv",
+    "sha256": "c1d8577cd74c698cb459ce7e66dd43095e602396572ebb06c62c5bf75adbff44"
+  },
+  {
+    "source": "approved_submission/Figure_5_concept_audit.json",
+    "destination": "source_data\\Figure_5_concept_audit.json",
+    "sha256": "bd00079b45feb82b2be1ffd265605e1c7a2416053993e8b041bed782094b9810"
+  },
+  {
+    "source": "approved_submission/Figure_5_LARRY_aggregate_estimates.csv",
+    "destination": "source_data\\Figure_5_LARRY_aggregate_estimates.csv",
+    "sha256": "fc8090972c9e94a448c8a4faf461cc2fc75457b2941e051127291761e3ade5cf"
+  },
+  {
+    "source": "approved_submission/Figure_5_LARRY_clone_estimates.csv",
+    "destination": "source_data\\Figure_5_LARRY_clone_estimates.csv",
+    "sha256": "7b768bcaa5f80683b40372bd9de1939b93e73cca49427e433cd476c0956c8cc5"
+  },
+  {
+    "source": "approved_submission/Figure_5_LARRY_leave_one_out.csv",
+    "destination": "source_data\\Figure_5_LARRY_leave_one_out.csv",
+    "sha256": "ca682f1ca69437d970eaf294c09a59d6da3bba95ade062eb20072df2c3797e65"
+  },
+  {
+    "source": "approved_submission/Figure_5_library_composition.csv",
+    "destination": "source_data\\Figure_5_library_composition.csv",
+    "sha256": "abbaa78ad086032bfd32ef8f23dbb998fed70c999de661eccece7c5b8384db95"
+  },
+  {
+    "source": "approved_submission/Legacy_dataset_manifest.csv",
+    "destination": "source_data\\Legacy_dataset_manifest.csv",
+    "sha256": "63ba4c788a09a75aa7e17af3ac3860ba41714f86866c41f0d99fa0b11fdbceeb"
+  },
+  {
+    "source": "approved_submission/Legacy_retained_inference_details.csv",
+    "destination": "source_data\\Legacy_retained_inference_details.csv",
+    "sha256": "8fbb5c089208d5ac2dc19f544998ef28ff61855efe248863949abd14ce29237e"
+  },
+  {
+    "source": "approved_submission/PROGENy_weights.csv",
+    "destination": "source_data\\PROGENy_weights.csv",
+    "sha256": "770ecb7d17ac21e43f02fc61db7267bd3858409f9e1d44cf0848dd6bd922b7ac"
+  },
+  {
+    "source": "approved_submission/README.txt",
+    "destination": "source_data\\README.txt",
+    "sha256": "ca499025c88f23bcbe8aa76a72b202bcee9991a22ed86920de5deabab94e35e4"
+  },
+  {
+    "source": "approved_submission/SOURCE_DATA_MANIFEST.csv",
+    "destination": "source_data\\SOURCE_DATA_MANIFEST.csv",
+    "sha256": "74a4f44656f6057b6a277f1e74a74d1f1dd7d7bee4d8e73ac2cbd2b621f81664"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_1.csv",
+    "destination": "source_data\\Supplementary_Figure_1.csv",
+    "sha256": "8e82facd558bc2747843885b8d0998143c592829d0fb049301b12f9a2c0b4043"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_2_integrity.csv",
+    "destination": "source_data\\Supplementary_Figure_2_integrity.csv",
+    "sha256": "083e757ef4f98f841f7331a4b96b05cb64da72e150c0520c96036d55fc9fc4e0"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_2_interaction.csv",
+    "destination": "source_data\\Supplementary_Figure_2_interaction.csv",
+    "sha256": "f7fe905956f7570ec96eb61d22e4aebcb7737ef6a55d6595c750679a708bd3e3"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_3_LCL.csv",
+    "destination": "source_data\\Supplementary_Figure_3_LCL.csv",
+    "sha256": "7ef2a5238ae25140a574c0a06a3c4b329c4c2b1a5c98fd55f257fcff98563c34"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_3_span.csv",
+    "destination": "source_data\\Supplementary_Figure_3_span.csv",
+    "sha256": "a838ec95fb724b136caed7deb3a41d7bff48ce87f28b41ad2a804945312a9b72"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_4_application.csv",
+    "destination": "source_data\\Supplementary_Figure_4_application.csv",
+    "sha256": "8b438d761481e38ff4bb1943983716973ce873684d34919554e12ce6938dd308"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_4_random_controls.csv",
+    "destination": "source_data\\Supplementary_Figure_4_random_controls.csv",
+    "sha256": "70efb64e025b4b817acec81b42f5fa84da0e714bb2893b6abccf437309205147"
+  },
+  {
+    "source": "approved_submission/Extended_Data_1.pdf",
+    "destination": "figures\\Extended_Data_1.pdf",
+    "sha256": "8c79960f2352e241dd4ca98f09acab994d9b5f9550a0ef1ca862ee073e2e89e7"
+  },
+  {
+    "source": "approved_submission/Extended_Data_1.png",
+    "destination": "figures\\Extended_Data_1.png",
+    "sha256": "ba448de0ac72f6b4e592971f35bd1945ecfcdc2487b6b340ebc423c816c16dc3"
+  },
+  {
+    "source": "approved_submission/Extended_Data_1.svg",
+    "destination": "figures\\Extended_Data_1.svg",
+    "sha256": "9ed8c10f67370847135094a63e6546ced78001cccd2927c9a58f393c14e22c7a"
+  },
+  {
+    "source": "approved_submission/Extended_Data_1.tiff",
+    "destination": "figures\\Extended_Data_1.tiff",
+    "sha256": "01bcfcc024b1af935399886b6891593b4ce07ad1de0b9d4aed00bb6ba23f59d4"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2.pdf",
+    "destination": "figures\\Extended_Data_2.pdf",
+    "sha256": "922e56a6c914d51a0ae337e58349127c9ee2165b7cc5eb93a1b58b145d1be734"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2.png",
+    "destination": "figures\\Extended_Data_2.png",
+    "sha256": "2b768d940944dbd2f3894690206a6339fd84251bd0c08af4cd49328ceea3c5d0"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2.svg",
+    "destination": "figures\\Extended_Data_2.svg",
+    "sha256": "cf3136ca8beec2395c3cef84671869d1316395e03d31b2c8d5121b58ec75434a"
+  },
+  {
+    "source": "approved_submission/Extended_Data_2.tiff",
+    "destination": "figures\\Extended_Data_2.tiff",
+    "sha256": "ebd7aeea86d1f173bf8e317cbac508ae7c8b325bd93fa2e8a7473d1bc076df91"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3.pdf",
+    "destination": "figures\\Extended_Data_3.pdf",
+    "sha256": "7aff5cc50923a11fdb7246b3d7552d6d3a3c8dfbfbdf2dc1a7f89258828ce6c7"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3.png",
+    "destination": "figures\\Extended_Data_3.png",
+    "sha256": "1e27f619774b6ae402ce39df2d11bde354a1e2467fa83576148d673e630676fe"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3.svg",
+    "destination": "figures\\Extended_Data_3.svg",
+    "sha256": "4f0cc7ea8124e4476b660721af873c15e400cc723b2276dcf943b239fe06bfbb"
+  },
+  {
+    "source": "approved_submission/Extended_Data_3.tiff",
+    "destination": "figures\\Extended_Data_3.tiff",
+    "sha256": "8f672d7eacd5870375ea4eb26a2c5d928be5c9380e1842e85d3c8234e998679f"
+  },
+  {
+    "source": "approved_submission/Figure_1.pdf",
+    "destination": "figures\\Figure_1.pdf",
+    "sha256": "f1d79cc05ade74615427006c12dbb66026ac3724706f34a811b77e3cbb3241ce"
+  },
+  {
+    "source": "approved_submission/Figure_1.png",
+    "destination": "figures\\Figure_1.png",
+    "sha256": "5f8d53d21bc6f2c4c7ce36fa0710eb8dca5a98dfdb65bc0e96f0e79da1232858"
+  },
+  {
+    "source": "approved_submission/Figure_1.svg",
+    "destination": "figures\\Figure_1.svg",
+    "sha256": "3d1e4702a6c76a77f443ca7a70248d25fd99ddbb7891884b7ad7ffddd6fd7bb9"
+  },
+  {
+    "source": "approved_submission/Figure_1.tiff",
+    "destination": "figures\\Figure_1.tiff",
+    "sha256": "f80abe2b77991da0246a1fdac0277ffbe2f82574455bb8fd39bb468834f24dcc"
+  },
+  {
+    "source": "approved_submission/Figure_2.pdf",
+    "destination": "figures\\Figure_2.pdf",
+    "sha256": "e85dd1a16031d96e02d1df2d7657b4d1fb06cd5bf94daa15ce01b339b88f4084"
+  },
+  {
+    "source": "approved_submission/Figure_2.png",
+    "destination": "figures\\Figure_2.png",
+    "sha256": "21e81cb1fbeec9fadffb5a7f62cc354cb197bf57b45bb81104637dabb92b237f"
+  },
+  {
+    "source": "approved_submission/Figure_2.svg",
+    "destination": "figures\\Figure_2.svg",
+    "sha256": "b01de0f54d7335b1e4df833c37797eca3df0784ce6214822ba0fd4cc10d3cf69"
+  },
+  {
+    "source": "approved_submission/Figure_2.tiff",
+    "destination": "figures\\Figure_2.tiff",
+    "sha256": "1562f590f01c221195cdff70c17e018ce067aa7562ab211467c77104a8efbcd8"
+  },
+  {
+    "source": "approved_submission/Figure_3.pdf",
+    "destination": "figures\\Figure_3.pdf",
+    "sha256": "205349753e3740ae4b4019168af2a3fc7bb772234c42dbf3681ad2b225efe240"
+  },
+  {
+    "source": "approved_submission/Figure_3.png",
+    "destination": "figures\\Figure_3.png",
+    "sha256": "80e734cca3ca1f66b038ffbd09e344ba48bdb83fb42f73483ccd4d081f579591"
+  },
+  {
+    "source": "approved_submission/Figure_3.svg",
+    "destination": "figures\\Figure_3.svg",
+    "sha256": "19b1658afc55b455cd5d62b42908aca344c287987280028118a4dd9bbd9746ed"
+  },
+  {
+    "source": "approved_submission/Figure_3.tiff",
+    "destination": "figures\\Figure_3.tiff",
+    "sha256": "f3d2884a62731de84b08e341c1f8d80c7e8e81d843581a0258763df8df4ee903"
+  },
+  {
+    "source": "approved_submission/Figure_4.pdf",
+    "destination": "figures\\Figure_4.pdf",
+    "sha256": "9ef9083d6b81b036528fe2053bd60850438f0f16db2be5abd8020a26cc566b8c"
+  },
+  {
+    "source": "approved_submission/Figure_4.png",
+    "destination": "figures\\Figure_4.png",
+    "sha256": "21c4c8bce194f0e881726234610751dce6842555ca9a2f0c73f798c7911106ee"
+  },
+  {
+    "source": "approved_submission/Figure_4.svg",
+    "destination": "figures\\Figure_4.svg",
+    "sha256": "5d2eee58bbeeeee6999ab68ca21592345afff65945a0c5f5d6e4c2456247f7ba"
+  },
+  {
+    "source": "approved_submission/Figure_4.tiff",
+    "destination": "figures\\Figure_4.tiff",
+    "sha256": "796f754689a8ddb925641feb7b87bb437fac9a052f0205034fc5b26ec187dee7"
+  },
+  {
+    "source": "approved_submission/Figure_5.pdf",
+    "destination": "figures\\Figure_5.pdf",
+    "sha256": "e84470d83d627298087726a74cf9188b11c3aa7038b1b15acea2673d43c66116"
+  },
+  {
+    "source": "approved_submission/Figure_5.png",
+    "destination": "figures\\Figure_5.png",
+    "sha256": "52640d044d52f8b229ba6ac6ef6ae57668ddd39618312d54d9f973a06572e62b"
+  },
+  {
+    "source": "approved_submission/Figure_5.svg",
+    "destination": "figures\\Figure_5.svg",
+    "sha256": "dead67855aca2ddef6ad0aa8011e9e31413a36bdb5e918dea927ee4aeb75e393"
+  },
+  {
+    "source": "approved_submission/Figure_5.tiff",
+    "destination": "figures\\Figure_5.tiff",
+    "sha256": "b53e43a481489a6edd543d1c8ba4724bdf0a8fbcf9fa9e4dd6421b2c04310fe9"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_1.pdf",
+    "destination": "figures\\Supplementary_Figure_1.pdf",
+    "sha256": "30ba5fd81679d74cfe1897c9638e57fb69c5cf2a7f2ea2611de3f8e63371db86"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_1.png",
+    "destination": "figures\\Supplementary_Figure_1.png",
+    "sha256": "cfa71067d17f8d45d7bd056a66fe0888203576a3511777f5fd03716edb31c050"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_1.svg",
+    "destination": "figures\\Supplementary_Figure_1.svg",
+    "sha256": "8ad3d32df568689d69f2560f39e48e762588e50aa4c5ac97d5103c1de4ae0a50"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_1.tiff",
+    "destination": "figures\\Supplementary_Figure_1.tiff",
+    "sha256": "5083dab2818bf9209380ed1e81c1409e28464db941f65180439463dbce8f6098"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_2.pdf",
+    "destination": "figures\\Supplementary_Figure_2.pdf",
+    "sha256": "10e8479eb1cd01bc23e80ff0c86e9077bbc7fac64fb20f7dd208a687809e0ada"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_2.png",
+    "destination": "figures\\Supplementary_Figure_2.png",
+    "sha256": "75376737e071ed3ab09eb2a64bb8d3c9a6239c60028a072ba4dd773f570987c0"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_2.svg",
+    "destination": "figures\\Supplementary_Figure_2.svg",
+    "sha256": "608f89fd213cdc91a0d069b5b909fa8a9073c888d1da6ca545560546c5108333"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_2.tiff",
+    "destination": "figures\\Supplementary_Figure_2.tiff",
+    "sha256": "fc05105025ccbbaa1bfa65cbd1a7ab6ce71cac69d9c25079c58d3140c1af36d3"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_3.pdf",
+    "destination": "figures\\Supplementary_Figure_3.pdf",
+    "sha256": "4ed4dfc5b17d34f13ddde9604f51a9c94ed04f793e4ff358f71649292307a793"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_3.png",
+    "destination": "figures\\Supplementary_Figure_3.png",
+    "sha256": "7174c8b849e2aa779f0015f155210af23a3996044499d65392f109d13ae5cf04"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_3.svg",
+    "destination": "figures\\Supplementary_Figure_3.svg",
+    "sha256": "66ede56bf874983530e18c7ccc7cc145de5d95fe0e30859ef25fbcf27b1969b3"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_3.tiff",
+    "destination": "figures\\Supplementary_Figure_3.tiff",
+    "sha256": "c007dd133fb7025e8f43fc4866b1b10044fd155a264629c645f7399356985eb8"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_4.pdf",
+    "destination": "figures\\Supplementary_Figure_4.pdf",
+    "sha256": "2bfb2d489aa46fb6204b1e7fd84ee7f66252e9c18fed72a7b6580b778c0a87f0"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_4.png",
+    "destination": "figures\\Supplementary_Figure_4.png",
+    "sha256": "584552065ef7f90322cc54f2daa730298a8635c3769bdf650f12849f213cd6d5"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_4.svg",
+    "destination": "figures\\Supplementary_Figure_4.svg",
+    "sha256": "54871402e0ad4906bf5777b3626116dcaf590971f6c0e5f5b8c9f2be4bc1a9b4"
+  },
+  {
+    "source": "approved_submission/Supplementary_Figure_4.tiff",
+    "destination": "figures\\Supplementary_Figure_4.tiff",
+    "sha256": "572715b438afc7e1c4019e652bda968e2c48f90fc9c2a73fc9bd42fdddee3d0e"
+  },
+  {
+    "source": "approved_submission/Main_manuscript.docx",
+    "destination": "manuscript\\Main_manuscript.docx",
+    "sha256": "31bb1b2e785bf9b3220faca9b2d9b6cbe5d0472f33fefbaae29be304d45e9c9b"
+  },
+  {
+    "source": "approved_submission/Main_manuscript_restructured.pdf",
+    "destination": "manuscript\\Main_manuscript_restructured.pdf",
+    "sha256": "95fc21d1268caa65fb5cbb40220af8a28797402672be3e102d66bf82d2692420"
+  },
+  {
+    "source": "approved_submission/Supplementary_information.docx",
+    "destination": "manuscript\\Supplementary_information.docx",
+    "sha256": "3179aa07ca175eed32520f7c82a35b7999de0d2dc99ff512bf2bae56985f2b43"
+  },
+  {
+    "source": "approved_submission/Supplementary_information_restructured.pdf",
+    "destination": "manuscript\\Supplementary_information_restructured.pdf",
+    "sha256": "d60db7d53a5828adc410e6f10e61791c00d3e7dab4ab6c172b4d2350bd0f39ff"
+  },
+  {
+    "source": "approved_submission/All_figures_review.pdf",
+    "destination": "manuscript\\All_figures_review.pdf",
+    "sha256": "7778a796c42f9790eb7209015e3d85f9ef0aa314b1a0e7cbb168e19d7a04cba8"
+  },
+  {
+    "source": "approved_submission/Main_figures_review.pdf",
+    "destination": "manuscript\\Main_figures_review.pdf",
+    "sha256": "b33b55365979b08419e6127e05a24c43cdbd9d483f13d0c1ba45eec4fbd6a262"
+  },
+  {
+    "source": "approved_submission/LICENSE",
+    "destination": "LICENSE",
+    "sha256": "113d2af625a7b498fccc233ba6b64147b4d37cd4e88ab570d39a09d9b5dd5474"
+  },
+  {
+    "source": "approved_submission/LICENSE_SCOPE.md",
+    "destination": "LICENSE_SCOPE.md",
+    "sha256": "f3d25f7a5a2133f9ded45982becc68a10bdf344959bb3ca82b23cc0dc423f60d"
+  },
+  {
+    "source": "approved_submission/PROGENy_Apache-2.0_LICENSE.txt",
+    "destination": "third_party\\PROGENy_Apache-2.0_LICENSE.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\README.md",
+    "sha256": "593cbc2a3f6209c3ff7ab5ad7df56f03c25d586fd31c6dc9f34d0bd1f5571f2b"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\SOURCE_MANIFEST.json",
+    "sha256": "fb47bf29b03ddc656337030a0744a9cf527bc99941c4e32d5b9d92eab82884c8"
+  },
+  {
+    "source": "approved_submission/.gitignore",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\.pytest_cache\\.gitignore",
+    "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+  },
+  {
+    "source": "approved_submission/CACHEDIR.TAG",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\.pytest_cache\\CACHEDIR.TAG",
+    "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\.pytest_cache\\README.md",
+    "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_controls.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_controls.py",
+    "sha256": "6c63ab1573c9ee70155d0f397d40bfa1ba48bd88f4bbbe551b2cb1f8237bc4b0"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_foundation.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_foundation.py",
+    "sha256": "bb4b29af66eea1a5ebc06089bac8b8a85ddfa6dc0bcf20866a47fd6f9dca8857"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_freeze.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_freeze.py",
+    "sha256": "fc3355483692bbc3629f80e8dd38a8e1b4e76591c1ec917a63b81c5798d69b57"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_inference.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_inference.py",
+    "sha256": "1ecdbc432fedc8f6f489c01dd782e53e2529d1e0005e7c31555e4e33681b70bc"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_report.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_report.py",
+    "sha256": "8c06613e9736dd4659a8b46edda7a88ad0ace702f210f4ac3f934cf34d97c247"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_rna.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_rna.py",
+    "sha256": "e41e3dd765ceed08e3d7a5aac5d548c09a2a05f6e0d21bbf811350fbce6f4c89"
+  },
+  {
+    "source": "approved_submission/cgc_entrywise_surface.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\scripts\\cgc_entrywise_surface.py",
+    "sha256": "e0125daf92f085c285ca54bce9c32fda0ae14ec5377033fdd14a860e69bda04c"
+  },
+  {
+    "source": "approved_submission/test_cgc_entrywise.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\tests\\test_cgc_entrywise.py",
+    "sha256": "401db8cde2cf96cbcae7306b8273c77bc7d528e52efd05e7b1d8b1a192bf245a"
+  },
+  {
+    "source": "approved_submission/test_cgc_support_budget.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\tests\\test_cgc_support_budget.py",
+    "sha256": "8b4e189039631a77502d58d369b18da3a4352757001a65e92ba16a08d4d69240"
+  },
+  {
+    "source": "approved_submission/nodeids",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\.pytest_cache\\v\\cache\\nodeids",
+    "sha256": "96374751501113da58c7e426602d2d74bdac3e794f6a180c2e4f65be72cc0952"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_COMPRESSION_FRONTIER.csv",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_COMPRESSION_FRONTIER.csv",
+    "sha256": "a1042cdc47db14c9a8a7bd59fea747eae626f71d696af98d469519ed143130ee"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
+    "sha256": "c769e9cb5657a006c40d489ac1c8c2c69e6e65fc277c3429c44c70391aafed03"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
+    "sha256": "0e0f4bff362b700fd5090dbb12e8ab5f5fcde9c0654706d216a02c9ec15048d8"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_FOUNDATION_MANIFEST.json",
+    "sha256": "6122c74ba6fff0815f80d4aff58a2cf922449839ae9030ac14a4242799cdcf6f"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_INFORMATION_SET.json",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_INFORMATION_SET.json",
+    "sha256": "1b1c464bfbe6a8702c8e74271707ed888823d02cf8508db91382a611c95b5a19"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_METRIC_DEFINITIONS.md",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_METRIC_DEFINITIONS.md",
+    "sha256": "f8b8cfc01ca7018deb76ce96ed47f340ff8f8214ae127f78f026ca8c0621948c"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_NULL_CONTROLS.csv",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_NULL_CONTROLS.csv",
+    "sha256": "d56f0ea821a7b24e331a153799bb50f6255819f9b8baa02ca708a1b37f4dca34"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_RECOVERY_SURFACE.csv",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_RECOVERY_SURFACE.csv",
+    "sha256": "b8ae71da2773a3793e29396450d57bfcd4870a4d7019a772f64684ce3c5483e1"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
+    "sha256": "1851b4a47f51c6370a85b4366665285f1ddee148107ff70c76fdbb07a6e2be51"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
+    "sha256": "a80e08473b61efe19d3b27f843ebc5e2d950f1cc905b74ebf7566b54cd84f67c"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_RUN_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_RUN_MANIFEST.json",
+    "sha256": "0f73abebe6f3bdfc3270ad81ac937842fc6738a6dfbad934b5d9477cbe934f73"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_SPLIT_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\ENTRYWISE_SPLIT_MANIFEST.json",
+    "sha256": "25ece465029e157f5ee915762ef7a4728a2f7db57693c62b4729fde4f4e9048b"
+  },
+  {
+    "source": "approved_submission/SUPPORT_BUDGET_CORRECTION_20260908.json",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\results\\cgc_entrywise_compression\\SUPPORT_BUDGET_CORRECTION_20260908.json",
+    "sha256": "f0553ac972e8ae7d0fd2f91106b77ba1e1258e2e9df62e6dfaea297bfccb7b12"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\analysis.py",
+    "sha256": "5a6edd314994c57d19befcdfdf41874fc6186a4236cc5fcc3208d9c87a018006"
+  },
+  {
+    "source": "approved_submission/controls.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\controls.py",
+    "sha256": "15736feefea742ee8ba057ea8d2e6d09b51009579665c78388498a6d7eaf295d"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\core.py",
+    "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8"
+  },
+  {
+    "source": "approved_submission/estimators.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\estimators.py",
+    "sha256": "8153cc0340f847d8519cc168acab7df4ae706f63b521a5708eb0961797dd88cc"
+  },
+  {
+    "source": "approved_submission/foundation.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\foundation.py",
+    "sha256": "c8b389b164d91744cf701251d1733d62dd2a1bd5c8c66ea8eb797a3c6cb748e8"
+  },
+  {
+    "source": "approved_submission/inference.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\inference.py",
+    "sha256": "91ce4992fd6ada9e46a7248e73df1a6e7c8a6ade63ccd7076f21abd51165121e"
+  },
+  {
+    "source": "approved_submission/metrics.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\metrics.py",
+    "sha256": "b64b0ababafca6e1bc304926e48f192b42e8876317529eae56ac4822b4473287"
+  },
+  {
+    "source": "approved_submission/reporting.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\reporting.py",
+    "sha256": "8d874bbe1bcc23a5491ad8c057f8bf6ce4bdfd93b2525ef9342d8fc1b3919c9c"
+  },
+  {
+    "source": "approved_submission/secondary.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\secondary.py",
+    "sha256": "046198195b4eb85070d81cd932be0fdd8805bb9f642d8f1952d4b1fe9153b6e1"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\experimental_compression\\src\\igc_virtual_cell\\cgc_entrywise\\__init__.py",
+    "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\README.md",
+    "sha256": "1c12d79f24c2baf09258dd766ff008107c8e7d566905bb15d0f28b77f80bc047"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\SOURCE_MANIFEST.json",
+    "sha256": "38ecff3183f39e8be2c0f42f52376f50f1cafe819315b27359f5f0502b37fa3e"
+  },
+  {
+    "source": "approved_submission/cgc_lowrank_feasibility.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\scripts\\cgc_lowrank_feasibility.py",
+    "sha256": "f949ad70e85ed4b0fd220825bfc72a9d65cf29248ec3cd6503be59e388a2b61d"
+  },
+  {
+    "source": "approved_submission/cgc_lowrank_masks.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\scripts\\cgc_lowrank_masks.py",
+    "sha256": "e8c9e510f84989d6207a666c3b3628bc7e773b5b57328a8e74c8490ae9903e4f"
+  },
+  {
+    "source": "approved_submission/cgc_lowrank_report.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\scripts\\cgc_lowrank_report.py",
+    "sha256": "853d66421a76e40b8587876a2dbacbd4e12c721ac2f2ff01ba3e47a8f069ace9"
+  },
+  {
+    "source": "approved_submission/cgc_lowrank_run.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\scripts\\cgc_lowrank_run.py",
+    "sha256": "855323ab9213d62bae6b856cf4446cf0c71cc7cfcbf4d05fed5205e05ca35446"
+  },
+  {
+    "source": "approved_submission/test_cgc_lowrank_completion.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\tests\\test_cgc_lowrank_completion.py",
+    "sha256": "9b45de010a7acc2cdcdbc07f16cf50595436f87311a4898b9596401ee32c4bd5"
+  },
+  {
+    "source": "approved_submission/LOW_RANK_INTERACTION_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\results\\cgc_lowrank_interaction_completion\\LOW_RANK_INTERACTION_PROTOCOL.md",
+    "sha256": "6cbf4a89ecc56631f4967721b1dfd922ec9903e27e52e2c50a1880f99778b455"
+  },
+  {
+    "source": "approved_submission/LOW_RANK_MASK_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\results\\cgc_lowrank_interaction_completion\\LOW_RANK_MASK_MANIFEST.csv",
+    "sha256": "9355f375a3039b3bf5c953b54b66087af4b41d30bc234abae7dd98c18be64993"
+  },
+  {
+    "source": "approved_submission/LOW_RANK_OUTPUT_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\results\\cgc_lowrank_interaction_completion\\LOW_RANK_OUTPUT_MANIFEST.json",
+    "sha256": "ef4c2dd01c9aa5a171b116ab9039e2cae0afd1dc85f3c969045fddeee56c34f7"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_entrywise\\core.py",
+    "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_entrywise\\__init__.py",
+    "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b"
+  },
+  {
+    "source": "approved_submission/affine.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\affine.py",
+    "sha256": "2ce237d863fa7a1e54c37f01ba7bd487c63fe183395c7427d2f0d95e3e1e09af"
+  },
+  {
+    "source": "approved_submission/aggregate.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\aggregate.py",
+    "sha256": "f65abf8d6c6e05b207c2b4525ea72b79d4c1917b701c764d4a67b40610a07f2c"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\core.py",
+    "sha256": "4a9c3abdcda66dbc1eebc1e101d1d1c15089fc17d68b8cf0da8eb8831d865108"
+  },
+  {
+    "source": "approved_submission/design.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\design.py",
+    "sha256": "2d5c769e31b90041e0832e2675776500f6c6c31872faddd41b7b8b062f0aa388"
+  },
+  {
+    "source": "approved_submission/evaluation.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\evaluation.py",
+    "sha256": "9b1aa8bfea885007c9a3caffbee3d7f9c6345008979fd4b90a070af09b6097f4"
+  },
+  {
+    "source": "approved_submission/feasibility.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\feasibility.py",
+    "sha256": "0cc168e38a8fe0d239cca817826481b7d8eb1743e591560efccfccf4b1c16c8d"
+  },
+  {
+    "source": "approved_submission/fitting.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\fitting.py",
+    "sha256": "459f60a2b7f0dd18c7bfaf9ada998740cde9e06c2f427dc11efe6ba279965f1d"
+  },
+  {
+    "source": "approved_submission/reporting.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\reporting.py",
+    "sha256": "eb2509d1a5b8a8df70aac26d00ec73dc41f87fbf760005a8730a736573a635fa"
+  },
+  {
+    "source": "approved_submission/runner.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\runner.py",
+    "sha256": "7038b7412904790afe02b62db25ab3130a3aa57cb5e99838a1c6a3dfe2d3410e"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\low_rank_completion\\src\\igc_virtual_cell\\cgc_lowrank_completion\\__init__.py",
+    "sha256": "8a7cf51d853a558c7b414eea99e18e293ff4431917aabce6cb70e996f4f959d8"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\README.md",
+    "sha256": "5cb8ecd1d4bec7c85415ce21618b38ad52b571f7fd113b6f02405e62e5343132"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\SOURCE_MANIFEST.json",
+    "sha256": "7458909a1a27a16693ba1576a6f72276e7211e6455c9b7628c19b21df1bc6a6d"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0b_feasibility.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0b_feasibility.py",
+    "sha256": "edf5b24224ca5594cc96fff34e8669641054b30a2673d0a19ae63a01fc9ab5fc"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0b_inventory.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0b_inventory.py",
+    "sha256": "b1987ffd4c4e48c4cda3cf1f3ee5b9d52e745b54fd0ed8a5da9988c6b7cf238f"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0b_validate.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0b_validate.py",
+    "sha256": "837a786b419c00307e42761e34b8bcc732da35400ddb4e5fd37714551a7e3562"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_compact_fit_csv.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_compact_fit_csv.py",
+    "sha256": "3138ea16f04ae039e606a39e394ea722d0a38649456b55946520fd19dba39373"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_debug_condition.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_debug_condition.py",
+    "sha256": "2217d26f133df1226770e290a9f9a949b02c13ab3662b776836a6539897f7237"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_extract.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_extract.py",
+    "sha256": "020125a922278251d833608cc6bc03f99a4f237f76dd12725e27bab61cbf4fdf"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_figures.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_figures.py",
+    "sha256": "1399efda0730dcb9607fb1bf7827ef8366f768d6ad9fa16b09f13f5b45605f53"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_finalize.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_finalize.py",
+    "sha256": "8fef6f03c473936aa75714c01700c6e74a9261463d0aa7452c3091df635c72fd"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_finalize_tensor.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_finalize_tensor.py",
+    "sha256": "093713f87f17b9264c0da43dc2a7746434d21ee077eb3a9e6576ef54bb306832"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_freeze_design.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_freeze_design.py",
+    "sha256": "cefe5f7f0fc26c341365141b7a34604f5cd2c3ac6ee6c5813413125372c8d43a"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_freeze_source.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_freeze_source.py",
+    "sha256": "5afe08debd66c7dec100062823b5ee181d1979c3fb64196315e33e3609f3a722"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_probe_shards.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_probe_shards.py",
+    "sha256": "c74ced83e6fcff30fdbb6d76f4558c82acbfa25088a3313c88f90b6fbb105747"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_resume_missing.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_resume_missing.py",
+    "sha256": "1890d0f2a1384f0c2e59bb0effa625f1bfa48367c181001112d92b24193c6f1d"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_scaling.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_scaling.py",
+    "sha256": "bfec1e7be5ecd3430535dc1001bcb9486224155dc07f8d7f5ef7f294e740daa2"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_scan_shards.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_scan_shards.py",
+    "sha256": "5047af57f4145f41243204e47c841fe141fc88f4df8f86bebf43e0fceea11da0"
+  },
+  {
+    "source": "approved_submission/cgc_tahoe_0c_truth.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\scripts\\cgc_tahoe_0c_truth.py",
+    "sha256": "d2241d40d70cc200e3c6cb5b9350b93483a498d67e9d29a6fdfd6fefe3bb9ae8"
+  },
+  {
+    "source": "approved_submission/core_tensor_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\core_tensor_manifest.json",
+    "sha256": "8af84d561787904e500ba9e9489e2cf0cf03bba274fa51734bb20a9c720f428b"
+  },
+  {
+    "source": "approved_submission/design_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\design_manifest.json",
+    "sha256": "82b8123ec41e6ae282e230b3715ea0a5e3b798c98a5f3a3114ba451076807248"
+  },
+  {
+    "source": "approved_submission/intervention_folds.csv",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\intervention_folds.csv",
+    "sha256": "6012d9b3f7660b259fa21ca2ed9973d6172bde9b52024b53d6bc0d965d984831"
+  },
+  {
+    "source": "approved_submission/readout_genes.csv",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\readout_genes.csv",
+    "sha256": "b4e053c2d4d9c175cfdc2efaae87082963645e5780004e6496413f87debf1158"
+  },
+  {
+    "source": "approved_submission/run_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\run_manifest.json",
+    "sha256": "a43f3d66821aef7d26b462e8022ec7ea35a743e2dead20b768ea2c418a232067"
+  },
+  {
+    "source": "approved_submission/shard_scan_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\shard_scan_manifest.json",
+    "sha256": "e381c70a8f6a07e10fa6866a6c65957ec7ac6c92f009d1f2ae2b7e64c3e1261f"
+  },
+  {
+    "source": "approved_submission/source_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\source_manifest.json",
+    "sha256": "a9def77ae83d2ae9e6d6b153fbb2a293b26d158376efe6ff846b00b31c9732bb"
+  },
+  {
+    "source": "approved_submission/support_sequences.csv",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\support_sequences.csv",
+    "sha256": "0eaee3d3b676232a6c8552ad0eb6393a58514cd345d9a53a89b022cb94de7be9"
+  },
+  {
+    "source": "approved_submission/temporary_shard_deletion_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0c\\temporary_shard_deletion_manifest.json",
+    "sha256": "5df0a3efa0b7e63d1c4774461d6a002dd776395436470be61c440c82e793c16a"
+  },
+  {
+    "source": "approved_submission/gene_universe_hashes.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0i\\gene_universe_hashes.json",
+    "sha256": "ef7815db004b927cd49051b55da3ad4785e1de4bc6758d9c98c759ea4718667b"
+  },
+  {
+    "source": "approved_submission/raw_source_manifest.json",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\results\\cgc_tahoe_0i\\raw_source_manifest.json",
+    "sha256": "62d1e04742d1cbfe6d830672713babcdc42072b0232d46e7f8e8341f20a5944d"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0b\\analysis.py",
+    "sha256": "9c8bfd69ff487441561ccfbc90f653cd9a5b2b35e2854d27bb6204ce0f0c0293"
+  },
+  {
+    "source": "approved_submission/inventory.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0b\\inventory.py",
+    "sha256": "e80800b162431ba258e3c6fa5e17bf4582bf737ab52c09605186322009e6f43c"
+  },
+  {
+    "source": "approved_submission/validation.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0b\\validation.py",
+    "sha256": "cebee9b88d39c5652497299015efbb54cf45db3752fd98cd42aa2efbceaf501b"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0b\\__init__.py",
+    "sha256": "c9b0a8fe9ab7c1e3c6593ad6aa6ae6cf91a566ca8fb1a820ca8138491ad87617"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\analysis.py",
+    "sha256": "897541bc05cc7cf6245cdb883e729f0219d8d13595129d1a0489a28e851a3bfd"
+  },
+  {
+    "source": "approved_submission/design.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\design.py",
+    "sha256": "5feca9d615ef901d14f216cc912e9efa4ef97dc27a7e850b04b962524e7a7acd"
+  },
+  {
+    "source": "approved_submission/extraction.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\extraction.py",
+    "sha256": "f4922fd2157866096e9162985534a66fac5d2eba817c580a9dfce10979df2b8e"
+  },
+  {
+    "source": "approved_submission/figures.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\figures.py",
+    "sha256": "1ced029c7eb431df28dd3268a21d033182ea3c7bb7f28e7a946fcd4a9aa2cca8"
+  },
+  {
+    "source": "approved_submission/reporting.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\reporting.py",
+    "sha256": "74a0c498596353c7b7ad301d8cc02bd1491858b449542bcd6832fe7eaf930fcb"
+  },
+  {
+    "source": "approved_submission/scaling.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\scaling.py",
+    "sha256": "30c08a4d01ef093112103c77d0407bef23f44a7ab16122e7b251f0280085c95e"
+  },
+  {
+    "source": "approved_submission/source.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\source.py",
+    "sha256": "a872073658504735c11db20ed1db27c35eaea0a89c60e03a55ab363e7d5657d2"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tahoe_replicate_core\\src\\igc_virtual_cell\\cgc_tahoe_0c\\__init__.py",
+    "sha256": "36d9e8faac4d8d2c2602c5efb3a0a60c439830a09a65c0c51e9e7875f911a89a"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\README.md",
+    "sha256": "a14190e2ed7032ec4cfbb478c5921fb431cf48b8c6949b18ec9c805235cf88b8"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\SOURCE_MANIFEST.json",
+    "sha256": "59c5d63871566bde70eedf365c376be4eeea7b68a5d9d2acc202399f7fff07e7"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_finalize.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\scripts\\tahoe_held_context_finalize.py",
+    "sha256": "89638221649af0fe268709d03cab03bf8294be3371f5838573babcfc946c8578"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_scaling.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\scripts\\tahoe_held_context_scaling.py",
+    "sha256": "0158291964e3d6d49ae086010b0615dbfb842ad685c880e16c9af739f054bb25"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_secondary.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\scripts\\tahoe_held_context_secondary.py",
+    "sha256": "2f79f77a3dee378ae0b275e2b2086162c6acd7672a41bcc263d14aba8b33febf"
+  },
+  {
+    "source": "approved_submission/TAHOE_HELD_CONTEXT_SCALING_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\results\\tahoe_held_context_scaling\\TAHOE_HELD_CONTEXT_SCALING_PROTOCOL.md",
+    "sha256": "e0ef789026a7e0d29fbfe01ebe4fff86897d8d66cae45d27daa39ec819dce984"
+  },
+  {
+    "source": "approved_submission/TAHOE_HELD_CONTEXT_SCALING_TARGET_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\results\\tahoe_held_context_scaling\\TAHOE_HELD_CONTEXT_SCALING_TARGET_MANIFEST.csv",
+    "sha256": "efd8be671a5021d28e4d3762258a44925b78d41b49955cb5f79931441b2a7901"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_finalize.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\tahoe_held_context_finalize.py",
+    "sha256": "5b3947a06c92e442575faeaeb2b37a96819432927c9fac8259c6e91efdeb8109"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_scaling.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\tahoe_held_context_scaling.py",
+    "sha256": "6e59a0e3a6c52fc16bb5bd20b78885a3e4e321a82dcf5dc8aa73758a20b82346"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_secondary.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\tahoe_held_context_secondary.py",
+    "sha256": "e6e5980eba39312ee1f00a9d981852a93193586e28e9a9b06aff63585f1fd582"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/scaling.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\cgc_tahoe_0i\\scaling.py",
+    "sha256": "7ced2dc901283dff77faf2d367069de1a88c45c53c6d49f97fe8fa5cb0c5679f"
+  },
+  {
+    "source": "approved_submission/truth.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\cgc_tahoe_0i\\truth.py",
+    "sha256": "c01b7fb5b23ffe13ad8f4b4c5cc16bb55b6c8b93fd7a4043c3698f63341aed42"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\held_context_scaling\\src\\igc_virtual_cell\\cgc_tahoe_0i\\__init__.py",
+    "sha256": "3e47ce5f7d31c0a140531355fdc808fba43553018b1d0fc91c2bf9bcd0d05bc7"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\README.md",
+    "sha256": "ebe2eed3a2f89d3a9f4105d1c45bbccb2e8d85d9227a7ef570ef47e0f7eebf93"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\SOURCE_MANIFEST.json",
+    "sha256": "5f1e8f9a59717736fd91fce472e79d2bfdb9e5ebde255060c7d19d2ad23aa500"
+  },
+  {
+    "source": "approved_submission/tahoe_five_pathway_scaling.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\scripts\\tahoe_five_pathway_scaling.py",
+    "sha256": "3821b3831961db811c66394f13bc59002e9b4a907406338042712d8ec2afebab"
+  },
+  {
+    "source": "approved_submission/TAHOE_FIVE_PATHWAY_SCALING_PATHWAY_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\results\\tahoe_five_pathway_scaling\\TAHOE_FIVE_PATHWAY_SCALING_PATHWAY_MANIFEST.csv",
+    "sha256": "df576a6cc5b6304ff86eae195cda359041fdc7fdb2bc86710c10b3745ad4fd41"
+  },
+  {
+    "source": "approved_submission/tahoe_five_pathway_scaling.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\tahoe_five_pathway_scaling.py",
+    "sha256": "c758cbcda6069875c9847d5aa4250f2b6d2b24af3030c0f49634d6af7cd0efeb"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_finalize.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\tahoe_held_context_finalize.py",
+    "sha256": "5b3947a06c92e442575faeaeb2b37a96819432927c9fac8259c6e91efdeb8109"
+  },
+  {
+    "source": "approved_submission/tahoe_held_context_scaling.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\tahoe_held_context_scaling.py",
+    "sha256": "6e59a0e3a6c52fc16bb5bd20b78885a3e4e321a82dcf5dc8aa73758a20b82346"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/scaling.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\cgc_tahoe_0i\\scaling.py",
+    "sha256": "7ced2dc901283dff77faf2d367069de1a88c45c53c6d49f97fe8fa5cb0c5679f"
+  },
+  {
+    "source": "approved_submission/truth.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\cgc_tahoe_0i\\truth.py",
+    "sha256": "c01b7fb5b23ffe13ad8f4b4c5cc16bb55b6c8b93fd7a4043c3698f63341aed42"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\five_pathway_scaling\\src\\igc_virtual_cell\\cgc_tahoe_0i\\__init__.py",
+    "sha256": "3e47ce5f7d31c0a140531355fdc808fba43553018b1d0fc91c2bf9bcd0d05bc7"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\ed7_hierarchical_repair\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\ed7_hierarchical_repair\\README.md",
+    "sha256": "7758498f45b29b44dd5708891fd96702131ca70ba2a8ef89c7dc5ea0044c9428"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\ed7_hierarchical_repair\\SOURCE_MANIFEST.json",
+    "sha256": "915e208b68c41aa6d62ebdbfb3a9fe46d625df0594f605c28b12752313e50883"
+  },
+  {
+    "source": "approved_submission/ED7_OUTPUT_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\ed7_hierarchical_repair\\audit\\release_repair\\ed7\\ED7_OUTPUT_MANIFEST.json",
+    "sha256": "c64030426a291c42ccb6c7b0f8f58f59a277b29a751f74de6f7b581a73c885dc"
+  },
+  {
+    "source": "approved_submission/repair_ed7_hierarchical_bootstrap.py",
+    "destination": "code\\scientific\\bundles\\ed7_hierarchical_repair\\audit\\release_repair\\ed7\\repair_ed7_hierarchical_bootstrap.py",
+    "sha256": "c30676486021b05ddd6dcdd8b040c0ef21d13da179e352abb63cc14a3ad5f462"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\ed7_hierarchical_repair\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\pyproject.toml",
+    "sha256": "b7d57b9c126f6e71dfdb6d72763bb965d1f791aff4f94a2a52bb268eaa234a7f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\README.md",
+    "sha256": "052829eda962bc955980740aaa3072aa31dc2f1371830891e1157c10aa3c9497"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\SOURCE_MANIFEST.json",
+    "sha256": "eca9f1335fb29e411628549c702d7f2f2e6358dff90e525b7fcc4ce7c2f7ca76"
+  },
+  {
+    "source": "approved_submission/cgc_tcell.yaml",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\configs\\cgc_tcell.yaml",
+    "sha256": "37114333c08385244f164689bf4c77c9eedaecbc425552fc21a6e08997f5dca9"
+  },
+  {
+    "source": "approved_submission/test_cgc_tcell.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\tests\\test_cgc_tcell.py",
+    "sha256": "51fba5c72335d93848b5618cb12dcb4dfd99192c4a501b541ef3f06bbdc6760d"
+  },
+  {
+    "source": "approved_submission/donor_partition_manifest.csv",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\results\\cgc_tcell\\donor_partition_manifest.csv",
+    "sha256": "6d8c5f8fae0181a6424fb45d857bd520ce6bfd5e84942cd8c4cc2ee7940f2874"
+  },
+  {
+    "source": "approved_submission/download_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\results\\cgc_tcell\\download_manifest.json",
+    "sha256": "46c7ef681454fbf4d8d017da71556fdc9f887a38310321c614bb0a08e384e3f6"
+  },
+  {
+    "source": "approved_submission/guide_disjoint_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\results\\cgc_tcell\\guide_disjoint_manifest.json",
+    "sha256": "baac0b9ff8b0a69aa35534fe78f7906e556248c22ec737c262ead8667831c05b"
+  },
+  {
+    "source": "approved_submission/normalized_response_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\results\\cgc_tcell\\normalized_response_manifest.json",
+    "sha256": "ed440acb290af91d1fbd4f720a9757818485dbdb62e788fe82b0a3bb82835029"
+  },
+  {
+    "source": "approved_submission/ntc_manifest.csv",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\results\\cgc_tcell\\ntc_manifest.csv",
+    "sha256": "5062efbfd406bfdb519fa2623ec4637d1b626b0b912c386e50625c69a3ee13f6"
+  },
+  {
+    "source": "approved_submission/strict_trans_gene_hash.txt",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\results\\cgc_tcell\\strict_trans_gene_hash.txt",
+    "sha256": "dc9c650bc14e155585bb50e2a4c3e0f494e984dc812692d5ba383e16e2351a36"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc\\core.py",
+    "sha256": "7d5d91542bc48b9e3f55abe1846444fcc968316a21fa0b635b24225c5e9fb1e6"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc\\__init__.py",
+    "sha256": "91b8ea5a81769317618060d1bc91dcb8f8b9fb8fe3ad4a39320bff276531cd2b"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\analysis.py",
+    "sha256": "f8cdbfaa1b39725cc0100d914757a5b92b0a87170b6f37ac71289aa222e12c26"
+  },
+  {
+    "source": "approved_submission/conditional.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\conditional.py",
+    "sha256": "4f740b0b8f45a41f8aca5aa11ad312650854dd790b40e3ad24db97c365202ff2"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\core.py",
+    "sha256": "a07e7629396bcc52c22faac7b119fff822e7d0e11d3968704e9626b3470ae0ee"
+  },
+  {
+    "source": "approved_submission/finalize.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\finalize.py",
+    "sha256": "050913d441818e2bd875e2dd7d0d37f0730a3b55de287a99a206f7db4380f6cb"
+  },
+  {
+    "source": "approved_submission/guide_disjoint.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\guide_disjoint.py",
+    "sha256": "66d0590b57927b172db058b56aa3179916f76ae6c2f65d1bd10a4e95038d5142"
+  },
+  {
+    "source": "approved_submission/inventory.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\inventory.py",
+    "sha256": "1dff83f2678cfe4b7c99225ca757ec1bfea67f064f5cf1dbaab11937ca45f371"
+  },
+  {
+    "source": "approved_submission/prepare.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\prepare.py",
+    "sha256": "10fae3e3c9a543bf7e1f6a209a8557b56a659d9acc1e195eed262a41cecb3f54"
+  },
+  {
+    "source": "approved_submission/published_de.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\published_de.py",
+    "sha256": "11c48a81e7185728a8916f636a124ed22b5ce030bb9b794a9487ce7cc5940ec4"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\cgc_tcell\\__init__.py",
+    "sha256": "38fb2f5eda3986080dc71e6921fe85191a14cfb6190b81c466befe47e3692ab6"
+  },
+  {
+    "source": "approved_submission/ingest_feng.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\data\\ingest_feng.py",
+    "sha256": "699dffb32830a535179ee14fc620de691ff42406d45f024990150678f9d211e0"
+  },
+  {
+    "source": "approved_submission/materialize_feng.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\data\\materialize_feng.py",
+    "sha256": "c011a8c2e1697c1b5c4e0fe1b604b847399d19f131709313f856cd99fff185b2"
+  },
+  {
+    "source": "approved_submission/schema.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\data\\schema.py",
+    "sha256": "bace578e543ecb141e83ddbc758f27fcd63c81921c6e8596ecc16dd2c127da05"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\data\\__init__.py",
+    "sha256": "4afb2a20aa7e1ef461741819f5592b0e7fbc056b11eb7a4b4f578346380d8503"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\phase1\\analysis.py",
+    "sha256": "f67ee83ef117c6d0f71c45b703a6a56d4285910a10cc733489b41cdb00083e2b"
+  },
+  {
+    "source": "approved_submission/materialize.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\phase1\\materialize.py",
+    "sha256": "6bf36fe7d096bad7488fff9353d9207224ac2a4441a2fd47837bbafc76a694fa"
+  },
+  {
+    "source": "approved_submission/targeted_counts.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\phase1\\targeted_counts.py",
+    "sha256": "76c717ad887ccc73c7755b0833a90a9df0227ece254335b87764f495a4458ddc"
+  },
+  {
+    "source": "approved_submission/targeted_tensorized.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\phase1\\targeted_tensorized.py",
+    "sha256": "30856095a5847a902a07453ad39b8f7d4f3da8296279038f680e479caf745e2d"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\phase1\\__init__.py",
+    "sha256": "9a06603aac3ac32e1dd8dfbd24f051444305e6937846db000d4370868a474673"
+  },
+  {
+    "source": "approved_submission/decompose.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\programs\\decompose.py",
+    "sha256": "2d25dc02bfcd68e537292389a4264839a4c42b3ddc908a363064d02347911bd2"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_truth\\src\\igc_virtual_cell\\programs\\__init__.py",
+    "sha256": "5b2646b62bf10903606b99264056c97d300afb2c6bbbc6075b62222d942b748a"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\pyproject.toml",
+    "sha256": "b7d57b9c126f6e71dfdb6d72763bb965d1f791aff4f94a2a52bb268eaa234a7f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\README.md",
+    "sha256": "f778950aaca014dcd5131c99b8fb7f86a5ab0bfcb97e17ff2e37bf7af3aaf30d"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\SOURCE_MANIFEST.json",
+    "sha256": "8e2726df355e893234c8026a94665c9e52e7ff915f01f860178b16709839e7b7"
+  },
+  {
+    "source": "approved_submission/cgc_tcell_1b.yaml",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\configs\\cgc_tcell_1b.yaml",
+    "sha256": "13c3b3171e96c691b752276b27b1bace783da97b6730e99b0c352f193f262a0c"
+  },
+  {
+    "source": "approved_submission/test_cgc_tcell_1b.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\tests\\test_cgc_tcell_1b.py",
+    "sha256": "e5bbb4fed41a0a5ed5e53fe6865736de57282ee1bce21cdd09f1a6890f4b8999"
+  },
+  {
+    "source": "approved_submission/context_feature_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\context_feature_manifest.json",
+    "sha256": "b226ab064362478651ff3a924059d1ce108ddfcb6177234e97c0f5489e06c166"
+  },
+  {
+    "source": "approved_submission/inner_validation_manifest.csv",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\inner_validation_manifest.csv",
+    "sha256": "0c98570ab177f7fb54aa8660cdf82025feee8a0f1ea3876a67b72a9e75afdfc7"
+  },
+  {
+    "source": "approved_submission/intervention_anchor_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\intervention_anchor_manifest.json",
+    "sha256": "bfadfcb89030083c4733d381fa4ff1d70c92ab6c23e148537061dcd5cd296fc2"
+  },
+  {
+    "source": "approved_submission/model_training_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\model_training_manifest.json",
+    "sha256": "c269e570d75b13ea196c47edb98526d5791246f2dbdf834a9c5c8619da863926"
+  },
+  {
+    "source": "approved_submission/outer_fold_manifest.csv",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\outer_fold_manifest.csv",
+    "sha256": "88c5667f89b56abe22248a09552f67405cdf7c2153c5d706de349ef2db95892b"
+  },
+  {
+    "source": "approved_submission/response_basis_manifest.csv",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\response_basis_manifest.csv",
+    "sha256": "1a8863cf260c4a471255a6c128f030b5afc8d22af8fee331c3dc7502ff796d7b"
+  },
+  {
+    "source": "approved_submission/run_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\results\\cgc_tcell_1b\\run_manifest.json",
+    "sha256": "c766ed9abf664da2e6164029b88b8f97b7063deaa22c5de98c22927316c39eeb"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc\\core.py",
+    "sha256": "7d5d91542bc48b9e3f55abe1846444fcc968316a21fa0b635b24225c5e9fb1e6"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc\\__init__.py",
+    "sha256": "91b8ea5a81769317618060d1bc91dcb8f8b9fb8fe3ad4a39320bff276531cd2b"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell\\core.py",
+    "sha256": "a07e7629396bcc52c22faac7b119fff822e7d0e11d3968704e9626b3470ae0ee"
+  },
+  {
+    "source": "approved_submission/inventory.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell\\inventory.py",
+    "sha256": "1dff83f2678cfe4b7c99225ca757ec1bfea67f064f5cf1dbaab11937ca45f371"
+  },
+  {
+    "source": "approved_submission/prepare.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell\\prepare.py",
+    "sha256": "10fae3e3c9a543bf7e1f6a209a8557b56a659d9acc1e195eed262a41cecb3f54"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell\\__init__.py",
+    "sha256": "38fb2f5eda3986080dc71e6921fe85191a14cfb6190b81c466befe47e3692ab6"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell_1b\\audit.py",
+    "sha256": "5334717a500796cfd32e47cf3958f48ec3213ff85be23060190dbd437f939040"
+  },
+  {
+    "source": "approved_submission/benchmark.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell_1b\\benchmark.py",
+    "sha256": "635c20be02760b93697a69801ac26404a901eb040b01955272e14255149cf3fb"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\cgc_tcell_1b\\__init__.py",
+    "sha256": "00f06a6d4ee3d221cf4881287c617e480897593b6575d9f92d05ba628ef236a2"
+  },
+  {
+    "source": "approved_submission/ingest_feng.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\data\\ingest_feng.py",
+    "sha256": "699dffb32830a535179ee14fc620de691ff42406d45f024990150678f9d211e0"
+  },
+  {
+    "source": "approved_submission/materialize_feng.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\data\\materialize_feng.py",
+    "sha256": "c011a8c2e1697c1b5c4e0fe1b604b847399d19f131709313f856cd99fff185b2"
+  },
+  {
+    "source": "approved_submission/schema.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\data\\schema.py",
+    "sha256": "bace578e543ecb141e83ddbc758f27fcd63c81921c6e8596ecc16dd2c127da05"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\data\\__init__.py",
+    "sha256": "4afb2a20aa7e1ef461741819f5592b0e7fbc056b11eb7a4b4f578346380d8503"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\phase1\\analysis.py",
+    "sha256": "f67ee83ef117c6d0f71c45b703a6a56d4285910a10cc733489b41cdb00083e2b"
+  },
+  {
+    "source": "approved_submission/materialize.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\phase1\\materialize.py",
+    "sha256": "6bf36fe7d096bad7488fff9353d9207224ac2a4441a2fd47837bbafc76a694fa"
+  },
+  {
+    "source": "approved_submission/targeted_counts.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\phase1\\targeted_counts.py",
+    "sha256": "76c717ad887ccc73c7755b0833a90a9df0227ece254335b87764f495a4458ddc"
+  },
+  {
+    "source": "approved_submission/targeted_tensorized.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\phase1\\targeted_tensorized.py",
+    "sha256": "30856095a5847a902a07453ad39b8f7d4f3da8296279038f680e479caf745e2d"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\phase1\\__init__.py",
+    "sha256": "9a06603aac3ac32e1dd8dfbd24f051444305e6937846db000d4370868a474673"
+  },
+  {
+    "source": "approved_submission/decompose.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\programs\\decompose.py",
+    "sha256": "2d25dc02bfcd68e537292389a4264839a4c42b3ddc908a363064d02347911bd2"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_lodo\\src\\igc_virtual_cell\\programs\\__init__.py",
+    "sha256": "5b2646b62bf10903606b99264056c97d300afb2c6bbbc6075b62222d942b748a"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\pyproject.toml",
+    "sha256": "b7d57b9c126f6e71dfdb6d72763bb965d1f791aff4f94a2a52bb268eaa234a7f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\README.md",
+    "sha256": "e35fd27dd3aadf325e9bd36f745a7acb4bce2b50d953a48181b8325c794cf2b8"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\SOURCE_MANIFEST.json",
+    "sha256": "3d314c384c483e8ddf344d6a0986ab350664de41e11d8f512202593568a8ab9b"
+  },
+  {
+    "source": "approved_submission/cgc_tcell_1c.yaml",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\configs\\cgc_tcell_1c.yaml",
+    "sha256": "6f7a5ae73780967f6a7f570658e36f7507862106aa8eb27b06aed5b2cbdf715b"
+  },
+  {
+    "source": "approved_submission/cgc_tcell_1d.yaml",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\configs\\cgc_tcell_1d.yaml",
+    "sha256": "c880cca8187f9174d2a77ae499186d1a90460b4ba093a01d44b95a36fd072302"
+  },
+  {
+    "source": "approved_submission/test_cgc_tcell_1c.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\tests\\test_cgc_tcell_1c.py",
+    "sha256": "b033e10acb1fab7aeafa42d049d90d5aab6a02cb50ed45e8e17f4b4a81fa13aa"
+  },
+  {
+    "source": "approved_submission/test_cgc_tcell_1d.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\tests\\test_cgc_tcell_1d.py",
+    "sha256": "e4c06ec0db730274503f853d834c023b9ac0afbc51b37f6b6cec2ea6029c4cee"
+  },
+  {
+    "source": "approved_submission/run_manifest.json",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\results\\cgc_tcell_1d\\run_manifest.json",
+    "sha256": "f0400883e59628841c2d2ada7b3cb9125c430f9a21f976e11097843b7c19a2f5"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc\\core.py",
+    "sha256": "7d5d91542bc48b9e3f55abe1846444fcc968316a21fa0b635b24225c5e9fb1e6"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc\\__init__.py",
+    "sha256": "91b8ea5a81769317618060d1bc91dcb8f8b9fb8fe3ad4a39320bff276531cd2b"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell\\core.py",
+    "sha256": "a07e7629396bcc52c22faac7b119fff822e7d0e11d3968704e9626b3470ae0ee"
+  },
+  {
+    "source": "approved_submission/inventory.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell\\inventory.py",
+    "sha256": "1dff83f2678cfe4b7c99225ca757ec1bfea67f064f5cf1dbaab11937ca45f371"
+  },
+  {
+    "source": "approved_submission/prepare.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell\\prepare.py",
+    "sha256": "10fae3e3c9a543bf7e1f6a209a8557b56a659d9acc1e195eed262a41cecb3f54"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell\\__init__.py",
+    "sha256": "38fb2f5eda3986080dc71e6921fe85191a14cfb6190b81c466befe47e3692ab6"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1b\\audit.py",
+    "sha256": "5334717a500796cfd32e47cf3958f48ec3213ff85be23060190dbd437f939040"
+  },
+  {
+    "source": "approved_submission/benchmark.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1b\\benchmark.py",
+    "sha256": "635c20be02760b93697a69801ac26404a901eb040b01955272e14255149cf3fb"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1b\\__init__.py",
+    "sha256": "00f06a6d4ee3d221cf4881287c617e480897593b6575d9f92d05ba628ef236a2"
+  },
+  {
+    "source": "approved_submission/adjudicate.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1c\\adjudicate.py",
+    "sha256": "c30cdc22671043179a6b2f42c7a8bd1cb315976ba90f5f34e8cb004e12e2d3a8"
+  },
+  {
+    "source": "approved_submission/figures.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1c\\figures.py",
+    "sha256": "1b0ae0cd846ec49230394299f660f3187a221daba5610661db92ea36f5ec1d6a"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1c\\__init__.py",
+    "sha256": "ed77dce03c757dd365da5ea488a09e19b5a27c9ff80d54a7ac9d75d0906a0385"
+  },
+  {
+    "source": "approved_submission/decompose.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1d\\decompose.py",
+    "sha256": "811155c19c1cefe7d11c2d0c1b117a9334e139f16bff72169659bfd4d69b9d43"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\cgc_tcell_1d\\__init__.py",
+    "sha256": "46dcc8928853237e60218e75bad8dd30e5d11ba2d9b8d74733a152881b7b7291"
+  },
+  {
+    "source": "approved_submission/ingest_feng.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\data\\ingest_feng.py",
+    "sha256": "699dffb32830a535179ee14fc620de691ff42406d45f024990150678f9d211e0"
+  },
+  {
+    "source": "approved_submission/materialize_feng.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\data\\materialize_feng.py",
+    "sha256": "c011a8c2e1697c1b5c4e0fe1b604b847399d19f131709313f856cd99fff185b2"
+  },
+  {
+    "source": "approved_submission/schema.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\data\\schema.py",
+    "sha256": "bace578e543ecb141e83ddbc758f27fcd63c81921c6e8596ecc16dd2c127da05"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\data\\__init__.py",
+    "sha256": "4afb2a20aa7e1ef461741819f5592b0e7fbc056b11eb7a4b4f578346380d8503"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\phase1\\analysis.py",
+    "sha256": "f67ee83ef117c6d0f71c45b703a6a56d4285910a10cc733489b41cdb00083e2b"
+  },
+  {
+    "source": "approved_submission/materialize.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\phase1\\materialize.py",
+    "sha256": "6bf36fe7d096bad7488fff9353d9207224ac2a4441a2fd47837bbafc76a694fa"
+  },
+  {
+    "source": "approved_submission/targeted_counts.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\phase1\\targeted_counts.py",
+    "sha256": "76c717ad887ccc73c7755b0833a90a9df0227ece254335b87764f495a4458ddc"
+  },
+  {
+    "source": "approved_submission/targeted_tensorized.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\phase1\\targeted_tensorized.py",
+    "sha256": "30856095a5847a902a07453ad39b8f7d4f3da8296279038f680e479caf745e2d"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\phase1\\__init__.py",
+    "sha256": "9a06603aac3ac32e1dd8dfbd24f051444305e6937846db000d4370868a474673"
+  },
+  {
+    "source": "approved_submission/decompose.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\programs\\decompose.py",
+    "sha256": "2d25dc02bfcd68e537292389a4264839a4c42b3ddc908a363064d02347911bd2"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\tcell_decomposition\\src\\igc_virtual_cell\\programs\\__init__.py",
+    "sha256": "5b2646b62bf10903606b99264056c97d300afb2c6bbbc6075b62222d942b748a"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\README.md",
+    "sha256": "20a492c0de988ff3f12cdff694bf31e80c34d96c5858df2f50061454f212ceab"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\SOURCE_MANIFEST.json",
+    "sha256": "a368042641934bf45ca1ff852d5726845aa5349f4b5d3052ae70f6a1257734f1"
+  },
+  {
+    "source": "approved_submission/cgc_state_1.json",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\configs\\cgc_state_1.json",
+    "sha256": "051810206a46726281821a832e5cf16d8b472c1e2f1139a816686b06524608e0"
+  },
+  {
+    "source": "approved_submission/cgc_state_1_analysis.py",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\scripts\\cgc_state_1_analysis.py",
+    "sha256": "f959aca38131012888b8875259845b218cc137fea642a75dbea459e11bf988cd"
+  },
+  {
+    "source": "approved_submission/cgc_state_1_inventory.py",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\scripts\\cgc_state_1_inventory.py",
+    "sha256": "c56a872c386f9d8563833887dba3a2055ed725a468ed3c02572d995608cabe85"
+  },
+  {
+    "source": "approved_submission/test_cgc_state_1.py",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\tests\\test_cgc_state_1.py",
+    "sha256": "5f7acfad1ca2747ca745c9644df2bbc2b57ba767802ecb0a24a92618a805699f"
+  },
+  {
+    "source": "approved_submission/artifact_inventory.csv",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\artifact_inventory.csv",
+    "sha256": "6621fd102619377500d6ee1f36c7aee60edded710db2a02bd8fca62cb80e646f"
+  },
+  {
+    "source": "approved_submission/context_intervention_gene_manifest.json",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\context_intervention_gene_manifest.json",
+    "sha256": "eaf8c95d89acacbccb1f88a8068a414462131bd6ea5af7c1e73e50ff41dd4133"
+  },
+  {
+    "source": "approved_submission/license_acknowledgement.md",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\license_acknowledgement.md",
+    "sha256": "fe23f63374b8d232679a098d6f12940d2cb68ea3a2c57079d12741e94bc7ea0d"
+  },
+  {
+    "source": "approved_submission/official_source_manifest.json",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\official_source_manifest.json",
+    "sha256": "6962b10793a995b6cb13229b9ae061151742f0c210b7e68bee64dc4f66180ece"
+  },
+  {
+    "source": "approved_submission/repository_revisions.json",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\repository_revisions.json",
+    "sha256": "f0b4bbba06e517c1761b16f4141bc98f8c92a607044b172de18a7d5efe13e51d"
+  },
+  {
+    "source": "approved_submission/run_manifest.json",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\run_manifest.json",
+    "sha256": "da06a59853fc8cdbd63390852596873026f75be399781cb5346d0525dae3e913"
+  },
+  {
+    "source": "approved_submission/zero_shot_split_manifest.csv",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\results\\cgc_state_1\\zero_shot_split_manifest.csv",
+    "sha256": "b804ac8ea8964d9b96a844e23e6024e67c59010a4512625834f8a477bec53462"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\src\\igc_virtual_cell\\cgc_state_1\\analysis.py",
+    "sha256": "353c0bad35d8d1c6abed418417cb6e14eebfd025c6832fa295e93ab2cbbf6155"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\state_official_summary\\src\\igc_virtual_cell\\cgc_state_1\\__init__.py",
+    "sha256": "160983e304a59c1c23cc3a2217895d29d114670f6f290483bcf9e47430024a64"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\README.md",
+    "sha256": "f4e1357874e13275bbf2c802c4c89fb80bafd23af1ce17dbbefc4c1914e65a44"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\SOURCE_MANIFEST.json",
+    "sha256": "192b3d9c3701127c753b5f8599551490e8bfa338b2f730839015d2ebe5e48507"
+  },
+  {
+    "source": "approved_submission/cgc_state_1.json",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\configs\\cgc_state_1.json",
+    "sha256": "051810206a46726281821a832e5cf16d8b472c1e2f1139a816686b06524608e0"
+  },
+  {
+    "source": "approved_submission/cgc_state_stability_audit.py",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\scripts\\cgc_state_stability_audit.py",
+    "sha256": "163735d694f0ab5abfb19f220aa40a6242612822f4800659862c428adc68b6fb"
+  },
+  {
+    "source": "approved_submission/test_cgc_state_stability.py",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\tests\\test_cgc_state_stability.py",
+    "sha256": "054a485591df5ca9df328bea79feaed66fc8fca1b5e42f0271086fd7dfc31911"
+  },
+  {
+    "source": "approved_submission/STATE_STABILITY_ARTIFACT_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\results\\cgc_state_stability\\STATE_STABILITY_ARTIFACT_MANIFEST.json",
+    "sha256": "d7846f6c9e53126f569dc5d8f3a4a72b6d2b5cccec1cce4542415ba38857fd4d"
+  },
+  {
+    "source": "approved_submission/STATE_STABILITY_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\results\\cgc_state_stability\\STATE_STABILITY_PROTOCOL.md",
+    "sha256": "58aa3ea8b5993f83f64fd3efa66d216817938e94e3e3d521937d32e9d3dec3b8"
+  },
+  {
+    "source": "approved_submission/STATE_STABILITY_RUN_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\results\\cgc_state_stability\\STATE_STABILITY_RUN_MANIFEST.json",
+    "sha256": "af1f901912bd46fa42cb393cfd3ed48ae1a820e5f29ed8fbf5f0f2765fe4070f"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\src\\igc_virtual_cell\\cgc_state_1\\analysis.py",
+    "sha256": "353c0bad35d8d1c6abed418417cb6e14eebfd025c6832fa295e93ab2cbbf6155"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\state_independent_stability\\src\\igc_virtual_cell\\cgc_state_1\\__init__.py",
+    "sha256": "160983e304a59c1c23cc3a2217895d29d114670f6f290483bcf9e47430024a64"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\README.md",
+    "sha256": "c4f45b91435769be02b87e702e4790174df1b3de56a1ad3678ac7c8056ec250e"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\SOURCE_MANIFEST.json",
+    "sha256": "490d90663c99655696c7a4752268a12fae5a36e04afdbc75fcefc73cce90ffc0"
+  },
+  {
+    "source": "approved_submission/level2_lea_frozen.json",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\configs\\level2_lea_frozen.json",
+    "sha256": "813fc4f51b593467fad24cbde2015303a6fc5d74dfa5abcd50ec7032a88ad72b"
+  },
+  {
+    "source": "approved_submission/level2_lea_full_battery_frozen.json",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\configs\\level2_lea_full_battery_frozen.json",
+    "sha256": "3262c078a0aae1abf324c84b3929c8e6728ca213d54fdc46ad13fb22e94fb413"
+  },
+  {
+    "source": "approved_submission/level2_lea_controls.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_controls.py",
+    "sha256": "ed69dcb8518139de955241a17a988af858e460020fd001be93a1e0b1a5d0ddd7"
+  },
+  {
+    "source": "approved_submission/level2_lea_data_integrity.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_data_integrity.py",
+    "sha256": "9586279b24f60a1e70d547ca06864c72a98f4ca40876b2928d22ae68261822a9"
+  },
+  {
+    "source": "approved_submission/level2_lea_full_battery.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_full_battery.py",
+    "sha256": "5fec26a92b0a32645d2b973cd379edd0543ba1ffc636201e24972e2f423622e8"
+  },
+  {
+    "source": "approved_submission/level2_lea_measurement_coupling.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_measurement_coupling.py",
+    "sha256": "f477fbd7183a75916a8387718e1ceafc2b3d00df09dbc8ad66aeec054afb90af"
+  },
+  {
+    "source": "approved_submission/level2_lea_pairing_audit.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_pairing_audit.py",
+    "sha256": "72ecadb7ecd3b5e91ba9af3a699cbcc1f92987965e295f92c3adb07f926c874b"
+  },
+  {
+    "source": "approved_submission/level2_lea_pilot.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_pilot.py",
+    "sha256": "db3fa07123670d0c6331ef08515883714b6e71d581fcfeda193eec0803b83ad1"
+  },
+  {
+    "source": "approved_submission/level2_lea_program_controls.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_program_controls.py",
+    "sha256": "803b57367332c846e76636f9a48a11cea10b119010c98f43d87f4d0421e6c29a"
+  },
+  {
+    "source": "approved_submission/level2_lea_response_programs.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_response_programs.py",
+    "sha256": "125026cfc39e0254bb8768517e692080f27f43c9689bab022dc57b2b8afdf755"
+  },
+  {
+    "source": "approved_submission/level2_lea_truth_gate.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\scripts\\level2_lea_truth_gate.py",
+    "sha256": "c60858c7c3429e5333bbe35d05755fa974306df556077e5b547c63dc4cb5dffc"
+  },
+  {
+    "source": "approved_submission/test_level2_lea.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\tests\\test_level2_lea.py",
+    "sha256": "2e854c91d4d8512dbd8df5c62539a13c45aab32901c3e14e929a8d37d265ced3"
+  },
+  {
+    "source": "approved_submission/DATA_PROVENANCE.md",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\results\\level2_lea\\DATA_PROVENANCE.md",
+    "sha256": "54800e3b2bb457c7a7409d80733ac2876888239248d9d7c4ed9c91654386ccc3"
+  },
+  {
+    "source": "approved_submission/GSE207049_DATA_INTEGRITY.json",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\results\\level2_lea\\GSE207049_DATA_INTEGRITY.json",
+    "sha256": "5cdb59dc33816a99194441cc7749a293ee6f8947321600f2b3af6c12e7ac7289"
+  },
+  {
+    "source": "approved_submission/GSE207049_PAIRING_BY_LCL.csv",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\results\\level2_lea\\GSE207049_PAIRING_BY_LCL.csv",
+    "sha256": "f0f14ba6bfd1826c3f063897e5bff6e33872e5cd8d6b17dda4643f394912419f"
+  },
+  {
+    "source": "approved_submission/TRUTH_REPLICATE_LCLS.csv",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\results\\level2_lea\\TRUTH_REPLICATE_LCLS.csv",
+    "sha256": "46ae87d27aa5491469969545ce025e185dbb2e9a3acb9c9234c7f62ef492e626"
+  },
+  {
+    "source": "approved_submission/level2_full.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\src\\igc_virtual_cell\\level2_full.py",
+    "sha256": "dcf79af7d937b9001a9de9a71ec40d3e2e8aa94f4ee351d5f29fb897aa776564"
+  },
+  {
+    "source": "approved_submission/level2_lea.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\src\\igc_virtual_cell\\level2_lea.py",
+    "sha256": "d435a3b3d71595a21b80047ad259f1b5c65459330a0cce578f321748f30fba9e"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\lea_historical_analysis\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\README.md",
+    "sha256": "66b200395d0b02bed80b23019eec75d0af1bcb820cf4f5a51462582de3e2250f"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\SOURCE_MANIFEST.json",
+    "sha256": "d23b5b013cebf7bddfda7d73aae7f773c4a8654d024e7001d754d6bffd8b3ee8"
+  },
+  {
+    "source": "approved_submission/audit_lea_archs4_coverage.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\scripts\\audit_lea_archs4_coverage.py",
+    "sha256": "87d59bf8638dbee9392d258a00abe773a91600228c96d884be3c03b7de26c416"
+  },
+  {
+    "source": "approved_submission/extract_lea_archs4_matched.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\scripts\\extract_lea_archs4_matched.py",
+    "sha256": "fdac488affb0a6c6e5d87b0061e6fe86f3a25b2589e759fe8d29cd2600cf6cbb"
+  },
+  {
+    "source": "approved_submission/prepare_lea_archs4_robustness.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\scripts\\prepare_lea_archs4_robustness.py",
+    "sha256": "015bbc4c37ba159811c8ca38b706ba046128b4d35bfcf853fcc096f4a9a42c59"
+  },
+  {
+    "source": "approved_submission/run_lea_archs4_robustness.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\scripts\\run_lea_archs4_robustness.py",
+    "sha256": "ff1778f0efb331fbcd0ce015b57b7c8391c6fa6251c1b5390a3cba81471a7f0d"
+  },
+  {
+    "source": "approved_submission/test_lea_archs4_robustness.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\tests\\test_lea_archs4_robustness.py",
+    "sha256": "fa468cc9603bbef07e49c862a15d6ef047734bc5f7f8a820b88987d9ec381bd8"
+  },
+  {
+    "source": "approved_submission/test_prepare_lea_archs4_robustness.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\tests\\test_prepare_lea_archs4_robustness.py",
+    "sha256": "80aef8308c3268fd306987f155c9fc8913e1c916bf86fa4e64d9daeb7854eb2d"
+  },
+  {
+    "source": "approved_submission/ARCHS4_EXTRACTION_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_EXTRACTION_MANIFEST.json",
+    "sha256": "d9a5a5e7f2b5f21bf851359b4ae182173d246b28a730937059ff69a24422b8d7"
+  },
+  {
+    "source": "approved_submission/ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_GENE_AXIS_RECONCILIATION.csv",
+    "sha256": "3949adac40a48ffb94aa20cb93429818c1cfc52246ecf3e95f0078efa37e208a"
+  },
+  {
+    "source": "approved_submission/ARCHS4_HISTORICAL_IMPLEMENTATION_AUTHORITY.md",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_HISTORICAL_IMPLEMENTATION_AUTHORITY.md",
+    "sha256": "906f1a9cd42a10215007e0824a42dccf1af25027b6fe8081e1400e7bf5b0b918"
+  },
+  {
+    "source": "approved_submission/ARCHS4_MATCHED_340_FOLD_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_MATCHED_340_FOLD_MANIFEST.csv",
+    "sha256": "f25f82f03d946b4698621e33eae52b93cf842f0bb26fd3bdb001e46826ac1c26"
+  },
+  {
+    "source": "approved_submission/ARCHS4_PREMODEL_GATE.json",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_PREMODEL_GATE.json",
+    "sha256": "e1bd3f8a733fe229be560defcbf74448ffc8105488632f367e3f848c373fdf7e"
+  },
+  {
+    "source": "approved_submission/ARCHS4_ROBUSTNESS_RUN_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_ROBUSTNESS_RUN_MANIFEST.json",
+    "sha256": "3dbd7e8a0336a82bb55a12bd1556c11aa44ac4f2bee4b632b1f8e674f094c8ea"
+  },
+  {
+    "source": "approved_submission/ARCHS4_VERSION_AGGREGATION_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\results\\level2_lea\\archs4_robustness\\ARCHS4_VERSION_AGGREGATION_PROTOCOL.md",
+    "sha256": "273410e615b32a29a75f679a2af561ad60e7499587aebea3e55c77d5a535443b"
+  },
+  {
+    "source": "approved_submission/level2_lea_full_battery_frozen.json",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\runtime_sources\\c3d074412ecc1be0958141726db16a1ed0036a04\\configs\\level2_lea_full_battery_frozen.json",
+    "sha256": "3262c078a0aae1abf324c84b3929c8e6728ca213d54fdc46ad13fb22e94fb413"
+  },
+  {
+    "source": "approved_submission/level2_lea_full_battery.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\runtime_sources\\c3d074412ecc1be0958141726db16a1ed0036a04\\scripts\\level2_lea_full_battery.py",
+    "sha256": "5fec26a92b0a32645d2b973cd379edd0543ba1ffc636201e24972e2f423622e8"
+  },
+  {
+    "source": "approved_submission/level2_lea_pilot.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\runtime_sources\\c3d074412ecc1be0958141726db16a1ed0036a04\\scripts\\level2_lea_pilot.py",
+    "sha256": "db3fa07123670d0c6331ef08515883714b6e71d581fcfeda193eec0803b83ad1"
+  },
+  {
+    "source": "approved_submission/level2_lea_response_programs.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\runtime_sources\\c3d074412ecc1be0958141726db16a1ed0036a04\\scripts\\level2_lea_response_programs.py",
+    "sha256": "125026cfc39e0254bb8768517e692080f27f43c9689bab022dc57b2b8afdf755"
+  },
+  {
+    "source": "approved_submission/level2_full.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\runtime_sources\\c3d074412ecc1be0958141726db16a1ed0036a04\\src\\igc_virtual_cell\\level2_full.py",
+    "sha256": "dcf79af7d937b9001a9de9a71ec40d3e2e8aa94f4ee351d5f29fb897aa776564"
+  },
+  {
+    "source": "approved_submission/level2_lea.py",
+    "destination": "code\\scientific\\bundles\\lea_archs4\\runtime_sources\\c3d074412ecc1be0958141726db16a1ed0036a04\\src\\igc_virtual_cell\\level2_lea.py",
+    "sha256": "d435a3b3d71595a21b80047ad259f1b5c65459330a0cce578f321748f30fba9e"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\README.md",
+    "sha256": "b38eb115015d5a8b36ea6c66bbdaab084fc11e53dd32e230c5ec379fe94e506b"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\SOURCE_MANIFEST.json",
+    "sha256": "fb9a65501910ecb53cd9e12fafe32278f580ffb7ddb80d0e70b0b95e5816d154"
+  },
+  {
+    "source": "approved_submission/run_full_span_pca_sanity_audit.py",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\scripts\\run_full_span_pca_sanity_audit.py",
+    "sha256": "039293f98cacf1e4a9356db7273e88cbf5eb01a615ce987adb6104c18e500160"
+  },
+  {
+    "source": "approved_submission/run_wgcna_resolution_frontier.py",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\scripts\\run_wgcna_resolution_frontier.py",
+    "sha256": "15d58a9d958a9100b2e0b52cdd82cb18031da9caf0e6bd45ed32ccfe2cb9010c"
+  },
+  {
+    "source": "approved_submission/test_full_span_pca_sanity_audit.py",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\tests\\test_full_span_pca_sanity_audit.py",
+    "sha256": "07e3b8282ad4e77b5652c818c26d90e439a53d94a2338b6c8a10234d3cb7dc13"
+  },
+  {
+    "source": "approved_submission/FULL_SPAN_PCA_METRIC_RECONCILIATION.md",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\results\\cgc_full_span_pca_sanity\\FULL_SPAN_PCA_METRIC_RECONCILIATION.md",
+    "sha256": "7f76804d9a173b8e317ee7d21cf74a74095a0313ee7756a498bcfcd3d22a90e2"
+  },
+  {
+    "source": "approved_submission/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\results\\cgc_full_span_pca_sanity\\FULL_SPAN_PCA_SANITY_PROTOCOL.md",
+    "sha256": "f55247cd401f34e72fb59540efe615904a858995a67ff520fa34661b48c6807d"
+  },
+  {
+    "source": "approved_submission/FULL_SPAN_PCA_SANITY_SUMMARY.json",
+    "destination": "code\\scientific\\bundles\\lea_full_span\\results\\cgc_full_span_pca_sanity\\FULL_SPAN_PCA_SANITY_SUMMARY.json",
+    "sha256": "b03b14fd5f2e8c24b2ec79f5867191a10ae4b8752c339c979dbb1be8f8499593"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\README.md",
+    "sha256": "92495ae4c5dc98b9559d6b2614ee787223a9f0e78a6542885de9f5c05f1096df"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\SOURCE_MANIFEST.json",
+    "sha256": "63fefde887b599ef29f1ac045ebd4b1b46c2bf9e2267470f18ca9c75e083e222"
+  },
+  {
+    "source": "approved_submission/cgc_resolution2_inference.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\scripts\\cgc_resolution2_inference.py",
+    "sha256": "1491d976cef90d7a4f75178f54b787b997907efe0e38f971e66edf401935a41a"
+  },
+  {
+    "source": "approved_submission/cgc_resolution2_pathway.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\scripts\\cgc_resolution2_pathway.py",
+    "sha256": "926c7e9bdaaf2b6a61099dc1fd138431c17f435fd9567e43a475ab5294d2a16c"
+  },
+  {
+    "source": "approved_submission/cgc_resolution2_report.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\scripts\\cgc_resolution2_report.py",
+    "sha256": "fdf98ac19b5d475781ed42ae7d2f7e6035053693f3350f426b319c384553c387"
+  },
+  {
+    "source": "approved_submission/test_cgc_resolution2_inference.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\tests\\test_cgc_resolution2_inference.py",
+    "sha256": "042cc8a1296157e8bf3623006756b194f3eae29bcd00d60b091b2f9e524363d8"
+  },
+  {
+    "source": "approved_submission/test_cgc_resolution2_pathway.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\tests\\test_cgc_resolution2_pathway.py",
+    "sha256": "ce0ae8f66ace100bd2a52c93b2634bf99ae278599de2cde2defaad352b5d5f32"
+  },
+  {
+    "source": "approved_submission/RESOLUTION2_FROZEN_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\results\\cgc_resolution_poc_v2\\RESOLUTION2_FROZEN_PROTOCOL.md",
+    "sha256": "b199b98a7f764cb0e1833838f69d68544a6277c47585f569b7fdb23f1eb77b53"
+  },
+  {
+    "source": "approved_submission/RESOLUTION2_PAIRED_COMPARISONS.csv",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\results\\cgc_resolution_poc_v2\\RESOLUTION2_PAIRED_COMPARISONS.csv",
+    "sha256": "049d2ac68939d230c1cb2324ad476c925ed366bbada68a72c17bc99ee24b9037"
+  },
+  {
+    "source": "approved_submission/RESOLUTION2_REPLAY_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\results\\cgc_resolution_poc_v2\\RESOLUTION2_REPLAY_MANIFEST.json",
+    "sha256": "c7a7dabccfe6040ce1c0612a14deffef6e8500ec88d6c7903696e7c92a1060f2"
+  },
+  {
+    "source": "approved_submission/RESOLUTION2_REPLAY_OUTPUT_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\results\\cgc_resolution_poc_v2\\RESOLUTION2_REPLAY_OUTPUT_MANIFEST.json",
+    "sha256": "b1cfb8b1f5e3c2a8b40081e9a5a9a5e2250457d8c2131046662865506d2ae87a"
+  },
+  {
+    "source": "approved_submission/RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\results\\cgc_resolution_poc_v2\\RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv",
+    "sha256": "7190899cd3c146989f6c855c8c0ac5b8c8708c11572a563ae58b9867f14fa131"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_entrywise\\analysis.py",
+    "sha256": "5a6edd314994c57d19befcdfdf41874fc6186a4236cc5fcc3208d9c87a018006"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_entrywise\\core.py",
+    "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8"
+  },
+  {
+    "source": "approved_submission/estimators.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_entrywise\\estimators.py",
+    "sha256": "8153cc0340f847d8519cc168acab7df4ae706f63b521a5708eb0961797dd88cc"
+  },
+  {
+    "source": "approved_submission/foundation.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_entrywise\\foundation.py",
+    "sha256": "c8b389b164d91744cf701251d1733d62dd2a1bd5c8c66ea8eb797a3c6cb748e8"
+  },
+  {
+    "source": "approved_submission/metrics.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_entrywise\\metrics.py",
+    "sha256": "b64b0ababafca6e1bc304926e48f192b42e8876317529eae56ac4822b4473287"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_entrywise\\__init__.py",
+    "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_resolution_poc\\audit.py",
+    "sha256": "7f3b8c321bec8546cd04e581743d33c940e98b0aef92d7dd6ab9e7f79864cd22"
+  },
+  {
+    "source": "approved_submission/inference.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_resolution_poc\\inference.py",
+    "sha256": "5017be22a071a6278bc3f05f7f13669db3e1a6669c70b42ac7b7634d85d8095d"
+  },
+  {
+    "source": "approved_submission/pathway.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_resolution_poc\\pathway.py",
+    "sha256": "2f3e6137bc64ca9f528cc396260b97e65dd8dccf5b961f347fb7c63f8f6f8920"
+  },
+  {
+    "source": "approved_submission/replay.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_resolution_poc\\replay.py",
+    "sha256": "0adbe4c583014981d3163ac5186fbc06d4fd7d527510d00b6e9edc01d4e5f3bb"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\resolution_pathway_frozen\\src\\igc_virtual_cell\\cgc_resolution_poc\\__init__.py",
+    "sha256": "1e2feebcce3f977f09f70b4b6636cd078a6abdc8cfb9340022bb7066d2397f36"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\README.md",
+    "sha256": "85137af594af7042ad84787757f843d7c5caadb5b6b6b3f34ef6a43f28776c40"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\SOURCE_MANIFEST.json",
+    "sha256": "529bc6bacc4208e209ce052c7d33b70876dda04e3e0966ce8b865b964494db28"
+  },
+  {
+    "source": "approved_submission/progeny_pathway_fidelity_audit.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\scripts\\progeny_pathway_fidelity_audit.py",
+    "sha256": "cbec2ea16eb39aaab0f50754c8b91ee8ed81d35fb70ebc0500ff16d033eb470f"
+  },
+  {
+    "source": "approved_submission/test_progeny_pathway_fidelity_audit.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\tests\\test_progeny_pathway_fidelity_audit.py",
+    "sha256": "aab0069198837300c2144f84d7e84ddc7372873039bec7f770cb8e42f481d364"
+  },
+  {
+    "source": "approved_submission/PROGENY_PATHWAY_FIDELITY_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\results\\cgc_progeny_pathway_fidelity\\PROGENY_PATHWAY_FIDELITY_PROTOCOL.md",
+    "sha256": "94b44fb923113f541d886c3221d7d3a531bba282c181168be55db848d8c0186f"
+  },
+  {
+    "source": "approved_submission/PROGENY_PATHWAY_SPAN_AUDIT.json",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\results\\cgc_progeny_pathway_fidelity\\PROGENY_PATHWAY_SPAN_AUDIT.json",
+    "sha256": "50e937eff9b32861652018131fd4bd5c0a50becc9816ade6e600a1646e676e3d"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_entrywise\\analysis.py",
+    "sha256": "5a6edd314994c57d19befcdfdf41874fc6186a4236cc5fcc3208d9c87a018006"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_entrywise\\core.py",
+    "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8"
+  },
+  {
+    "source": "approved_submission/estimators.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_entrywise\\estimators.py",
+    "sha256": "8153cc0340f847d8519cc168acab7df4ae706f63b521a5708eb0961797dd88cc"
+  },
+  {
+    "source": "approved_submission/foundation.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_entrywise\\foundation.py",
+    "sha256": "c8b389b164d91744cf701251d1733d62dd2a1bd5c8c66ea8eb797a3c6cb748e8"
+  },
+  {
+    "source": "approved_submission/metrics.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_entrywise\\metrics.py",
+    "sha256": "b64b0ababafca6e1bc304926e48f192b42e8876317529eae56ac4822b4473287"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_entrywise\\__init__.py",
+    "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_resolution_poc\\audit.py",
+    "sha256": "7f3b8c321bec8546cd04e581743d33c940e98b0aef92d7dd6ab9e7f79864cd22"
+  },
+  {
+    "source": "approved_submission/pathway.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_resolution_poc\\pathway.py",
+    "sha256": "2f3e6137bc64ca9f528cc396260b97e65dd8dccf5b961f347fb7c63f8f6f8920"
+  },
+  {
+    "source": "approved_submission/replay.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_resolution_poc\\replay.py",
+    "sha256": "0adbe4c583014981d3163ac5186fbc06d4fd7d527510d00b6e9edc01d4e5f3bb"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\pathway_fidelity\\src\\igc_virtual_cell\\cgc_resolution_poc\\__init__.py",
+    "sha256": "1e2feebcce3f977f09f70b4b6636cd078a6abdc8cfb9340022bb7066d2397f36"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\README.md",
+    "sha256": "5328b0f5cd009d90e88d9b4e69b67ba6860220497ebbabed812eba7dd8805e0e"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\SOURCE_MANIFEST.json",
+    "sha256": "4e12d566ba009b049fa4daeb1fa26c9bc8bd888e9401478608bd0d85eee1834e"
+  },
+  {
+    "source": "approved_submission/pathway_resolution_scaling_audit.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\scripts\\pathway_resolution_scaling_audit.py",
+    "sha256": "657ce84b997b220df712dc660da3ff3ba473a53ecde7f0138bc3911bb0847a4f"
+  },
+  {
+    "source": "approved_submission/test_pathway_resolution_scaling.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\tests\\test_pathway_resolution_scaling.py",
+    "sha256": "5e713c18635fd851a7b84f5213170401760c75c97ac2773b1cfa9b2ef5a8846b"
+  },
+  {
+    "source": "approved_submission/ENTRYWISE_SPLIT_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\results\\cgc_entrywise_compression\\ENTRYWISE_SPLIT_MANIFEST.json",
+    "sha256": "25ece465029e157f5ee915762ef7a4728a2f7db57693c62b4729fde4f4e9048b"
+  },
+  {
+    "source": "approved_submission/PATHWAY_ANCHOR_AUDIT.json",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\results\\cgc_pathway_resolution_scaling\\PATHWAY_ANCHOR_AUDIT.json",
+    "sha256": "2b5dd2258001a32f6a7e5cfe6d343cbad549e493a2498afacaf620c830ef522e"
+  },
+  {
+    "source": "approved_submission/PATHWAY_METRIC_RECONCILIATION.md",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\results\\cgc_pathway_resolution_scaling\\PATHWAY_METRIC_RECONCILIATION.md",
+    "sha256": "3a8d7ee521afd453a1956c75146045af16b5c1ccf9c028f796fcf8c6bc097113"
+  },
+  {
+    "source": "approved_submission/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\results\\cgc_pathway_resolution_scaling\\PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
+    "sha256": "b621e01795aa5c68c1b38af135c384d0fd74bb80f1ba57cc608bcddbada9fd7d"
+  },
+  {
+    "source": "approved_submission/pathway_resolution_scaling.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\pathway_resolution_scaling.py",
+    "sha256": "87010c1399d9ece76e83fae11536bc03810de16436d6eaef3e11b0c8fb2f2699"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/analysis.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_entrywise\\analysis.py",
+    "sha256": "5a6edd314994c57d19befcdfdf41874fc6186a4236cc5fcc3208d9c87a018006"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_entrywise\\core.py",
+    "sha256": "f0cce2f65d35a69096eb1f40bd9c6e49c4dc4bf427514b349caaffa403fe56b8"
+  },
+  {
+    "source": "approved_submission/estimators.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_entrywise\\estimators.py",
+    "sha256": "8153cc0340f847d8519cc168acab7df4ae706f63b521a5708eb0961797dd88cc"
+  },
+  {
+    "source": "approved_submission/foundation.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_entrywise\\foundation.py",
+    "sha256": "c8b389b164d91744cf701251d1733d62dd2a1bd5c8c66ea8eb797a3c6cb748e8"
+  },
+  {
+    "source": "approved_submission/metrics.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_entrywise\\metrics.py",
+    "sha256": "b64b0ababafca6e1bc304926e48f192b42e8876317529eae56ac4822b4473287"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_entrywise\\__init__.py",
+    "sha256": "23aeb29705720e315a3c4760906ce01f3e1d649747d194f10cb6a46e0168e77b"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_resolution_poc\\audit.py",
+    "sha256": "7f3b8c321bec8546cd04e581743d33c940e98b0aef92d7dd6ab9e7f79864cd22"
+  },
+  {
+    "source": "approved_submission/pathway.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_resolution_poc\\pathway.py",
+    "sha256": "2f3e6137bc64ca9f528cc396260b97e65dd8dccf5b961f347fb7c63f8f6f8920"
+  },
+  {
+    "source": "approved_submission/replay.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_resolution_poc\\replay.py",
+    "sha256": "0adbe4c583014981d3163ac5186fbc06d4fd7d527510d00b6e9edc01d4e5f3bb"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\pathway_composition\\src\\igc_virtual_cell\\cgc_resolution_poc\\__init__.py",
+    "sha256": "1e2feebcce3f977f09f70b4b6636cd078a6abdc8cfb9340022bb7066d2397f36"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\pyproject.toml",
+    "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\README.md",
+    "sha256": "b0e1f20ea56eca53adfef327ba5f700c18752414ac724fe179c9717e660a8834"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\SOURCE_MANIFEST.json",
+    "sha256": "b32beb407e23f80754ae441a721b634890a45edf26c5ff528346a587321a28b5"
+  },
+  {
+    "source": "approved_submission/crc_pdo_personalized_application.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\configs\\crc_pdo_personalized_application.json",
+    "sha256": "97c7d2e86984686a657a0043f31926af3df84036583593073ce2dd6d0cb843a9"
+  },
+  {
+    "source": "approved_submission/run_crc_pdo_personalized_application.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\scripts\\run_crc_pdo_personalized_application.py",
+    "sha256": "72511c90488dee095cccfcd990ba646ff0450cf14692acaf894143904bfeb105"
+  },
+  {
+    "source": "approved_submission/run_crc_pdo_personalized_audit.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\scripts\\run_crc_pdo_personalized_audit.py",
+    "sha256": "f847272dff331db74f40861248d21b6c027e175197c05ac6cd609ff40246eeac"
+  },
+  {
+    "source": "approved_submission/test_crc_pdo_personalized.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\tests\\test_crc_pdo_personalized.py",
+    "sha256": "e085d82f3d1b8ec49dae8ea9d7ead81de89abd4b18fe0b6708f4d3518c179cc5"
+  },
+  {
+    "source": "approved_submission/source_manifest.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\data\\crc_pdo_personalized_application\\source_manifest.json",
+    "sha256": "b87f02e35ffb672bb6e98c28ca80885a46aa663fb9c317f497112e5db795aebf"
+  },
+  {
+    "source": "approved_submission/CRC_PDO_PATIENT_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\results\\crc_pdo_personalized_drug_application\\CRC_PDO_PATIENT_MANIFEST.csv",
+    "sha256": "1246a407bf7322b8bb19a29e7d0d492545448bdecf7318ffc27715e2af3a7565"
+  },
+  {
+    "source": "approved_submission/CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\results\\crc_pdo_personalized_drug_application\\CRC_PDO_PERSONALIZED_APPLICATION_FINAL_QA.json",
+    "sha256": "e99ba89b44ddb4394b2399c264ccda3712246054a7c5fa06627246228d393af6"
+  },
+  {
+    "source": "approved_submission/MODEL_FOLD_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\results\\crc_pdo_personalized_drug_application\\MODEL_FOLD_MANIFEST.csv",
+    "sha256": "084feac9039f85ac5439636f968702ca1ba893901babbbb8688b2482ce37f9af"
+  },
+  {
+    "source": "approved_submission/PRIMARY_DRUG_PANEL_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\results\\crc_pdo_personalized_drug_application\\PRIMARY_DRUG_PANEL_MANIFEST.csv",
+    "sha256": "7a64c3290381af889985047ec5a9e69e2c784d4d9e2688295301c387e02fb020"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\src\\igc_virtual_cell\\crc_pdo_personalized\\audit.py",
+    "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b"
+  },
+  {
+    "source": "approved_submission/modeling.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\src\\igc_virtual_cell\\crc_pdo_personalized\\modeling.py",
+    "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7"
+  },
+  {
+    "source": "approved_submission/reporting.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\src\\igc_virtual_cell\\crc_pdo_personalized\\reporting.py",
+    "sha256": "4788045629c2c7cdce83a8703884821aa6f73312dcf90a8686e8bc5e66737068"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_application\\src\\igc_virtual_cell\\crc_pdo_personalized\\__init__.py",
+    "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\pyproject.toml",
+    "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\README.md",
+    "sha256": "e7b05c7e1a5967e0a63b035226f3a9c1e9025f505039d8e60afe8f023ba8556f"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\SOURCE_MANIFEST.json",
+    "sha256": "0b6a9c2fa21c535e64f03170609ca75d08f1e8c717fd39ec19c336ec12a29782"
+  },
+  {
+    "source": "approved_submission/crc_pdo_conditioning_resolution.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\configs\\crc_pdo_conditioning_resolution.json",
+    "sha256": "f2f50ef3df6c683679369dff5f56d06ffa6d84cb4e0c8a34234fcb761f8861c3"
+  },
+  {
+    "source": "approved_submission/run_crc_pdo_conditioning_resolution.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\scripts\\run_crc_pdo_conditioning_resolution.py",
+    "sha256": "9865a0d9e5ab723152543ad0d44e6e6c5ffae5c3a26bcf147ae454709ffa249d"
+  },
+  {
+    "source": "approved_submission/test_crc_pdo_conditioning_resolution.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\tests\\test_crc_pdo_conditioning_resolution.py",
+    "sha256": "8b09ea126e6aa70e0e63ac9b222b2c1fbb614043434bf7cc4975cebb999127d9"
+  },
+  {
+    "source": "approved_submission/BASELINE_GENE_AXIS_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\results\\crc_pdo_conditioning_resolution\\BASELINE_GENE_AXIS_MANIFEST.csv",
+    "sha256": "c5acae0b8fb94496fb74161bedcb7f582acb91f24fd5ab4dc814a724d766f111"
+  },
+  {
+    "source": "approved_submission/CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\results\\crc_pdo_conditioning_resolution\\CRC_PDO_CONDITIONING_RESOLUTION_FINAL_QA.json",
+    "sha256": "7304569c754cace790ef5335247163aeb4bfbd99316df48b116fe3c5ba33131e"
+  },
+  {
+    "source": "approved_submission/OUTER_FOLD_TRANSFORM_AUDIT.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\results\\crc_pdo_conditioning_resolution\\OUTER_FOLD_TRANSFORM_AUDIT.csv",
+    "sha256": "41fc9c45ef9c418d9bdab10739db5ccd044be46fdc94e2f1e5d88fcfd1bdc785"
+  },
+  {
+    "source": "approved_submission/REPRESENTATION_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\results\\crc_pdo_conditioning_resolution\\REPRESENTATION_MANIFEST.csv",
+    "sha256": "aa7fad0f70d50cc6f7a4a551f1ca5c85c40370b5fda357465c9654b485e2da4b"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\src\\igc_virtual_cell\\crc_pdo_personalized\\audit.py",
+    "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b"
+  },
+  {
+    "source": "approved_submission/conditioning_resolution.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\src\\igc_virtual_cell\\crc_pdo_personalized\\conditioning_resolution.py",
+    "sha256": "628e2ad2e6d3626e866ed3e4a808b1fb62ba9193c56820969e1f61835caeacc7"
+  },
+  {
+    "source": "approved_submission/modeling.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\src\\igc_virtual_cell\\crc_pdo_personalized\\modeling.py",
+    "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_conditioning\\src\\igc_virtual_cell\\crc_pdo_personalized\\__init__.py",
+    "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\pyproject.toml",
+    "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\README.md",
+    "sha256": "10a8c53ec92fadca0ab4c2de3de4aaae9e8882a2cb7a0ba27c94ef9f9b3c7029"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\SOURCE_MANIFEST.json",
+    "sha256": "093acb2a527f6ae5d443bcf6ca6baad0325650bf31b8a8957ec040d5fc69fdea"
+  },
+  {
+    "source": "approved_submission/crc_pdo_pca_resolution_sweep.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\configs\\crc_pdo_pca_resolution_sweep.json",
+    "sha256": "178554d54b4cbb7e389d3ce7f732f9ce7ea84cdb724646ea4b90f9252a968aab"
+  },
+  {
+    "source": "approved_submission/crc_pdo_personalized_application.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\configs\\crc_pdo_personalized_application.json",
+    "sha256": "97c7d2e86984686a657a0043f31926af3df84036583593073ce2dd6d0cb843a9"
+  },
+  {
+    "source": "approved_submission/run_crc_pdo_pca_resolution_sweep.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\scripts\\run_crc_pdo_pca_resolution_sweep.py",
+    "sha256": "83c97d8e2162447dd21076d4923feddd2ffc2f8eaaf7233ab938530d3d6e6c1b"
+  },
+  {
+    "source": "approved_submission/test_crc_pdo_pca_resolution_sweep.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\tests\\test_crc_pdo_pca_resolution_sweep.py",
+    "sha256": "eff8f98d6f6f7d0b506b72716b24b25b9f6c5d0aa3b5cb24f9cf613c664c18c4"
+  },
+  {
+    "source": "approved_submission/PCA_RESOLUTION_SWEEP_FINAL_QA.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\results\\crc_pdo_pca_resolution_sweep\\PCA_RESOLUTION_SWEEP_FINAL_QA.json",
+    "sha256": "f4cf8d02fb10956fae75e2d22e2b98d38597bea1be21fc33591c1e1798a1c992"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\src\\igc_virtual_cell\\crc_pdo_personalized\\audit.py",
+    "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b"
+  },
+  {
+    "source": "approved_submission/conditioning_resolution.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\src\\igc_virtual_cell\\crc_pdo_personalized\\conditioning_resolution.py",
+    "sha256": "628e2ad2e6d3626e866ed3e4a808b1fb62ba9193c56820969e1f61835caeacc7"
+  },
+  {
+    "source": "approved_submission/modeling.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\src\\igc_virtual_cell\\crc_pdo_personalized\\modeling.py",
+    "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7"
+  },
+  {
+    "source": "approved_submission/pca_resolution_sweep.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\src\\igc_virtual_cell\\crc_pdo_personalized\\pca_resolution_sweep.py",
+    "sha256": "d5dcdbd12fe7dbe014f2492a3b66e25096523eddb78f1e28577fd3253009eea7"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_pca\\src\\igc_virtual_cell\\crc_pdo_personalized\\__init__.py",
+    "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\pyproject.toml",
+    "sha256": "27c7c4736a6319da72601afc321721e099b56f9d947c9fd5eeb93f62ff90937f"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\README.md",
+    "sha256": "313ecf60cfb9963847912f34c7857358a569bea58fc34c1f8600fe02ddf5534f"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\SOURCE_MANIFEST.json",
+    "sha256": "d2ebcf54029f5347dfa5a9a1e314d26642deb7dba057005a19801086bcd7a7da"
+  },
+  {
+    "source": "approved_submission/crc_pdo_dense_resolution_plateau.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\configs\\crc_pdo_dense_resolution_plateau.json",
+    "sha256": "eb5d1ab6216976efb9b27e90f15f4d62c23f4bd5e3bc549d705675aab3eaf497"
+  },
+  {
+    "source": "approved_submission/run_crc_pdo_dense_resolution_plateau.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\scripts\\run_crc_pdo_dense_resolution_plateau.py",
+    "sha256": "66c05a7238fe2418be8efd6bfd27a4cdeac213c5f8d86e88fc71664938d2a493"
+  },
+  {
+    "source": "approved_submission/test_crc_pdo_dense_resolution_plateau.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\tests\\test_crc_pdo_dense_resolution_plateau.py",
+    "sha256": "f6c4757c4d00d7213abbe88724ae010d1df7052fbf92f1c8ececfb2bb5f8627c"
+  },
+  {
+    "source": "approved_submission/DENSE_CONDITIONING_RESOLUTION_FINAL_QA.json",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\results\\crc_pdo_dense_resolution_plateau\\DENSE_CONDITIONING_RESOLUTION_FINAL_QA.json",
+    "sha256": "cf81c797a6bcda0f4b3136c894504a911a3aa8caa9ca403a8fdb4c6ba3754af9"
+  },
+  {
+    "source": "approved_submission/DENSE_RESOLUTION_GRID_MANIFEST.csv",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\results\\crc_pdo_dense_resolution_plateau\\DENSE_RESOLUTION_GRID_MANIFEST.csv",
+    "sha256": "fb324ea3e90e9755cf7635734ef7ce27cba33165bf1e8f10582eeeaa6b138d27"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/audit.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\crc_pdo_personalized\\audit.py",
+    "sha256": "c6e6b8e0100925eed76ac5e21b97f0e99e088604758f46cb97c4ffae78ca082b"
+  },
+  {
+    "source": "approved_submission/conditioning_resolution.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\crc_pdo_personalized\\conditioning_resolution.py",
+    "sha256": "628e2ad2e6d3626e866ed3e4a808b1fb62ba9193c56820969e1f61835caeacc7"
+  },
+  {
+    "source": "approved_submission/dense_resolution_plateau.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\crc_pdo_personalized\\dense_resolution_plateau.py",
+    "sha256": "eac607ec59a512d732c8f257aa7b395652d273a8bd77c2f32b796f57c4805e45"
+  },
+  {
+    "source": "approved_submission/modeling.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\crc_pdo_personalized\\modeling.py",
+    "sha256": "61d66f7ad8ff4eaf96d9909d18d955befb619fb9ac4a3299c55675b0e2ec3ce7"
+  },
+  {
+    "source": "approved_submission/pca_resolution_sweep.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\crc_pdo_personalized\\pca_resolution_sweep.py",
+    "sha256": "d5dcdbd12fe7dbe014f2492a3b66e25096523eddb78f1e28577fd3253009eea7"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\crc_pdo_dense\\src\\igc_virtual_cell\\crc_pdo_personalized\\__init__.py",
+    "sha256": "a1bd6558bbc91ce54413dee3789e4f406548e378f4e003f866237360c02431dd"
+  },
+  {
+    "source": "approved_submission/pyproject.toml",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\pyproject.toml",
+    "sha256": "8b3f36d347d6d76de7d66258221895e6c50fd1bdfba5278d3aea5d840159696d"
+  },
+  {
+    "source": "approved_submission/README.md",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\README.md",
+    "sha256": "18651e965d015f16a2afee2899089d18dfaaeb903b8260684ae4e31161dc258b"
+  },
+  {
+    "source": "approved_submission/SOURCE_MANIFEST.json",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\SOURCE_MANIFEST.json",
+    "sha256": "62d54ef649bd3a9c95db606662afdf451c0716daa5966657580f3c0058d17310"
+  },
+  {
+    "source": "approved_submission/lea_semisynthetic_control_frozen.json",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\configs\\lea_semisynthetic_control_frozen.json",
+    "sha256": "404a732cda25fe579955cfc0e084959aaba6fb881418ccc5abde4984b4e43982"
+  },
+  {
+    "source": "approved_submission/lea_semisynthetic_control.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\scripts\\lea_semisynthetic_control.py",
+    "sha256": "6649f53b611461c1080464d53f79d0634948051fc1b090ce71c4a85541429f5c"
+  },
+  {
+    "source": "approved_submission/level2_lea_pilot.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\scripts\\level2_lea_pilot.py",
+    "sha256": "db3fa07123670d0c6331ef08515883714b6e71d581fcfeda193eec0803b83ad1"
+  },
+  {
+    "source": "approved_submission/test_lea_semisynthetic.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\tests\\test_lea_semisynthetic.py",
+    "sha256": "97865c6b15340f63f98e9f8b04130493ff1c83f23e49967a701b496da1a5179d"
+  },
+  {
+    "source": "approved_submission/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\results\\lea_semisynthetic_identifiability_control\\SEMISYNTHETIC_INPUT_RECONCILIATION.md",
+    "sha256": "6a8b65856d52fa8d8d8cd0e283dbac78aea2d63275d4c5ac3764e0914af8931c"
+  },
+  {
+    "source": "approved_submission/SEMISYNTHETIC_PROTOCOL.md",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\results\\lea_semisynthetic_identifiability_control\\SEMISYNTHETIC_PROTOCOL.md",
+    "sha256": "cf3f5872a8af0d748f6275a30efceebf695b67047a56c52327483ef62b1d7534"
+  },
+  {
+    "source": "approved_submission/FULL_BATTERY_UNITS.csv",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\results\\level2_lea\\FULL_BATTERY_UNITS.csv",
+    "sha256": "e211d9622cec963d0f0999a07cdf731e3a6b6a755f51586f516b3ddbcda80ef3"
+  },
+  {
+    "source": "approved_submission/FULL_MODEL_SELECTED_HYPERPARAMETERS.csv",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\results\\level2_lea\\FULL_MODEL_SELECTED_HYPERPARAMETERS.csv",
+    "sha256": "a12d2ff4160f81694f4649359e9867a061a95d0a20b5bb63ccbb4db196902bb3"
+  },
+  {
+    "source": "approved_submission/MODEL_SELECTED_HYPERPARAMETERS.csv",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\results\\level2_lea\\MODEL_SELECTED_HYPERPARAMETERS.csv",
+    "sha256": "59dc601a6fb9224082b4367a3e2eadc253ca677bc91fdff8eec358151cad4886"
+  },
+  {
+    "source": "approved_submission/TRUTH_RELIABILITY.json",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\results\\level2_lea\\TRUTH_RELIABILITY.json",
+    "sha256": "12e5c4d5509d27b7279342a6fb2c4e08dd27b6743f223415cad85a2313462a9b"
+  },
+  {
+    "source": "approved_submission/lea_semisynthetic.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\src\\igc_virtual_cell\\lea_semisynthetic.py",
+    "sha256": "29fccd4dd053945222b54ec3838909d69122050a64349e4cff8efb5bf109ed7f"
+  },
+  {
+    "source": "approved_submission/level2_full.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\src\\igc_virtual_cell\\level2_full.py",
+    "sha256": "dcf79af7d937b9001a9de9a71ec40d3e2e8aa94f4ee351d5f29fb897aa776564"
+  },
+  {
+    "source": "approved_submission/level2_lea.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\src\\igc_virtual_cell\\level2_lea.py",
+    "sha256": "d435a3b3d71595a21b80047ad259f1b5c65459330a0cce578f321748f30fba9e"
+  },
+  {
+    "source": "approved_submission/__init__.py",
+    "destination": "code\\scientific\\bundles\\lea_semisynthetic\\src\\igc_virtual_cell\\__init__.py",
+    "sha256": "0af103f41166ef32a1bff6ae74f40d19b8900a3db7c970ea7583c8a1bd8efbd5"
+  },
+  {
+    "source": "approved_submission/launch.py",
+    "destination": "code\\scientific\\launch.py",
+    "sha256": "eadf33a454dfb99287254daa23ff30aad6679d2b340d17ef313462214003dfb0"
+  },
+  {
+    "source": "approved_submission/current_state_summary.py",
+    "destination": "code\\scientific\\current_state_summary.py",
+    "sha256": "e316238edd09007f56748ebd24d04bf8c5fd205d62a3e27c0a97305cbfcda097"
+  },
+  {
+    "source": "approved_submission/render_valid_resolution.py",
+    "destination": "code\\scientific\\render_valid_resolution.py",
+    "sha256": "9a9c6cda9a73c863dcb3bbf092fee93640c8d0ed54ccae08475ac4f80420ffb5"
+  },
+  {
+    "source": "approved_submission/recompute_corrected_pathway.py",
+    "destination": "code\\scientific\\recompute_corrected_pathway.py",
+    "sha256": "86099d14839b7f5b5f6c0b45a696e209fb44f1cb6a2028a72f0366260f8c1b6d"
+  },
+  {
+    "source": "approved_submission/SUPPORT_BUDGET_CORRECTION.md",
+    "destination": "code\\scientific\\SUPPORT_BUDGET_CORRECTION.md",
+    "sha256": "3c7574c788bed184a1e2dc24486d38765a4769b629790d406d87f387de465e35"
+  },
+  {
+    "source": "approved_submission/SMOKE_ENVIRONMENT.json",
+    "destination": "code\\scientific\\SMOKE_ENVIRONMENT.json",
+    "sha256": "a38d175d38ba217f31d66f6c39ce3598db676f790c2e833ac6f3664be327b6db"
+  },
+  {
+    "source": "approved_submission/prepare_larry_branch_validation.py",
+    "destination": "code\\analysis\\experiments\\baseline_sufficiency_data_audit_20261002\\prepare_larry_branch_validation.py",
+    "sha256": "d55faaa6ac342df1fde558b53a477552901ddedd3298640c1a5265eef7c2f837"
+  },
+  {
+    "source": "approved_submission/validate_larry_branches.py",
+    "destination": "code\\analysis\\experiments\\baseline_sufficiency_data_audit_20261002\\validate_larry_branches.py",
+    "sha256": "24490a1a4a89cbc7fd3b38f34890728e75b9e815b098349f1f35a93f846a42d7"
+  },
+  {
+    "source": "approved_submission/audit_larry_branch_robustness.py",
+    "destination": "code\\analysis\\experiments\\baseline_sufficiency_data_audit_20261002\\audit_larry_branch_robustness.py",
+    "sha256": "0e2b3999275c2817e582ea925e9570396c461983a94a7840603a9e6108f873c6"
+  },
+  {
+    "source": "approved_submission/audit_larry_library_identity.py",
+    "destination": "code\\analysis\\experiments\\baseline_sufficiency_data_audit_20261002\\audit_larry_library_identity.py",
+    "sha256": "626914b6bba37fa02a3d6586a673fb013f0ad47e962955ecf6f73800684d47ac"
+  },
+  {
+    "source": "approved_submission/finalize_larry_validation.py",
+    "destination": "code\\analysis\\experiments\\baseline_sufficiency_data_audit_20261002\\finalize_larry_validation.py",
+    "sha256": "874d0a66c0d5fb56adc8e0fb5953708d4bf370549b6716c1f46931181be0669f"
+  },
+  {
+    "source": "approved_submission/analyze.py",
+    "destination": "code\\analysis\\experiments\\larry_information_scale_20261003\\analyze.py",
+    "sha256": "f38ecb2b8a0c302399277cdd84e02ccbd7f37bfc572c889452886d84a4ccb268"
+  },
+  {
+    "source": "approved_submission/reuse_celltag.py",
+    "destination": "code\\analysis\\experiments\\larry_information_scale_20261003\\reuse_celltag.py",
+    "sha256": "6b88f7249bf242d83e201d992ac4ae5c2fcd572984157676185b79349003d2dd"
+  },
+  {
+    "source": "approved_submission/ANALYSIS_PLAN.md",
+    "destination": "code\\analysis\\experiments\\larry_information_scale_20261003\\ANALYSIS_PLAN.md",
+    "sha256": "6e935806d3487d5fbf7070805d796c375e48bfae908e8a31bee8d017dc9c39e3"
+  },
+  {
+    "source": "approved_submission/analyze.py",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\analyze.py",
+    "sha256": "a13f3dd0634e0dd8b83ca62db7e727f69a0ee774f905255057f59eea70467923"
+  },
+  {
+    "source": "approved_submission/check_six_fates.py",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\check_six_fates.py",
+    "sha256": "8e7bdc70c7eb28158f7c6a365ff94dfe97cf1737c71bbd5cc13e6dfa470ceae9"
+  },
+  {
+    "source": "approved_submission/six_resolution.py",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\six_resolution.py",
+    "sha256": "76e23cadb353e1c1f1de09841abf5a7bf726b705873d121f0aa8104c31596022"
+  },
+  {
+    "source": "approved_submission/prepare.py",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\prepare.py",
+    "sha256": "4edfc39ef9b6c478aaf2e9bdafe2f4c69d5750b472675b38414c10bd5a5ecce9"
+  },
+  {
+    "source": "approved_submission/prepare_early_counts.py",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\prepare_early_counts.py",
+    "sha256": "28c8383be6951a76e19f5f9e04ef432ca0eb7691591f5e63088e42d48e0f3a14"
+  },
+  {
+    "source": "approved_submission/fetch_data.py",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\fetch_data.py",
+    "sha256": "3f35dcc6e250593f9b28d2215237e2ca02787e69cc2d8f392e048a52ea5c55c4"
+  },
+  {
+    "source": "approved_submission/protocol.json",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\protocol.json",
+    "sha256": "17a89671d2210b336dc0a65a6238064a24cf16a61f86fc9a83c0245d0e3c80f7"
+  },
+  {
+    "source": "approved_submission/amendments.json",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\amendments.json",
+    "sha256": "4bca52e152c43839075b8b0125a66b1b080ea9cd592ff45c0e0d125255f51ebf"
+  },
+  {
+    "source": "approved_submission/software_versions.json",
+    "destination": "code\\analysis\\experiments\\celltag_information_resolution_20261001\\software_versions.json",
+    "sha256": "883d730acba8b0311857cc0844a836816416bebac955847bbbc4c7fd354e5a89"
+  },
+  {
+    "source": "approved_submission/core.py",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\core.py",
+    "sha256": "b27c3e0589bce16ebacba61a5ee18d81ecf771efd93b43ef107ee6470952660b"
+  },
+  {
+    "source": "approved_submission/prepare.py",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\prepare.py",
+    "sha256": "1456619c1ab15949a0e1fa0e0c7d7a0ff9d30e9cd524a520f5e42980797f3309"
+  },
+  {
+    "source": "approved_submission/run.py",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\run.py",
+    "sha256": "be0c4754f86127abc12794b935a07daff366217f7e8af4e3f1afacb03c46f2af"
+  },
+  {
+    "source": "approved_submission/summarize.py",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\summarize.py",
+    "sha256": "35e5b1ebc1db22bd7760127b432cefd645ea24b592f301daec7df5b2d108098c"
+  },
+  {
+    "source": "approved_submission/verify.py",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\verify.py",
+    "sha256": "7220060e8de39911acbe308c0c7a6218980c4245fd46be21fd1aa8d80dea3655"
+  },
+  {
+    "source": "approved_submission/test_core.py",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\test_core.py",
+    "sha256": "d747979fc4eba36f098c51ac25d70d19fb0d037d182da615c67be84ef307055a"
+  },
+  {
+    "source": "approved_submission/protocol.json",
+    "destination": "code\\analysis\\experiments\\tahoe_joint_resolution_20261001\\protocol.json",
+    "sha256": "5caba07ac75b85b002b77387ba00fff36e68e2f571baf4ed92bb88c29bb4d978"
+  },
+  {
+    "source": "approved_submission/run.py",
+    "destination": "code\\analysis\\experiments\\tahoe_supported_detail_20261002\\run.py",
+    "sha256": "14a1618f1826fc8e0a6884b3c90b741b702253bdb8510fbd6e51d34967afa713"
+  },
+  {
+    "source": "approved_submission/protocol.json",
+    "destination": "code\\analysis\\experiments\\tahoe_supported_detail_20261002\\protocol.json",
+    "sha256": "6c5b1c34e2da87ad76bc9e87069a559806d59ebbe7723577de962ed1bfb40063"
+  },
+  {
+    "source": "approved_submission/branch_baseline_records.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_baseline_records.csv",
+    "sha256": "f39635846ff4b50d56bd207accd59455201fcfc88d89121ef2fd92bfe926f975"
+  },
+  {
+    "source": "approved_submission/branch_duplicate_record_screen.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_duplicate_record_screen.json",
+    "sha256": "931d37b0e50a8c2a0805f5901bf01201441baeb26c355983153b3c863c31befc"
+  },
+  {
+    "source": "approved_submission/branch_fate_tests.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_fate_tests.csv",
+    "sha256": "9305c5d6df4dab31acaf01f218dc18a764dcb8f1db0e27bd049b2f79dda224f0"
+  },
+  {
+    "source": "approved_submission/branch_fate_tests_all_207_clones.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_fate_tests_all_207_clones.csv",
+    "sha256": "086432af80acd456b61f4446889906dfa85251647dc6144a6b4251486bf71ac9"
+  },
+  {
+    "source": "approved_submission/branch_full_gene_signal.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_full_gene_signal.json",
+    "sha256": "0a243f21fdde0aa49457cc92ad50ba633fcf6fa31a39079645ed5a4d787e76cb"
+  },
+  {
+    "source": "approved_submission/branch_library_cell_identity_audit.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_library_cell_identity_audit.json",
+    "sha256": "fb8db1070c1854564339801581607b6edbec92f10024a18937e1f644540fc4e7"
+  },
+  {
+    "source": "approved_submission/branch_library_replication.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_library_replication.csv",
+    "sha256": "7fbb2ba9499063dd261220e8c275e41949ffef6e82b90a4bf0db1f04e45887a3"
+  },
+  {
+    "source": "approved_submission/branch_marker_detection_controls.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_marker_detection_controls.csv",
+    "sha256": "7a6553fddd24151edf77df93c0b37b4776654e69a363e7ab9ebc23c891020592"
+  },
+  {
+    "source": "approved_submission/branch_marker_program_tests.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_marker_program_tests.csv",
+    "sha256": "47e48c030feee1d26de30b5355db8ee1f216ee066700b8a5468bce1454480ba5"
+  },
+  {
+    "source": "approved_submission/branch_robustness_results.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_robustness_results.json",
+    "sha256": "cd4e90525d2d80450703f2813b142da3d562314e03962ad7e270f498e9a236ff"
+  },
+  {
+    "source": "approved_submission/branch_robustness_run_log.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_robustness_run_log.json",
+    "sha256": "084ab1c1e5a8c7e7e4b35042b5def7b840f6e84673455652b38aa0fca6ade3bf"
+  },
+  {
+    "source": "approved_submission/branch_validation_design.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_validation_design.json",
+    "sha256": "47492cbe3f4741f5555a327b2db831f29b801afc68de1c578ab6f05c7557c19a"
+  },
+  {
+    "source": "approved_submission/branch_validation_full_gene.npz",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_validation_full_gene.npz",
+    "sha256": "8ae458bbb0033b56353a000eeacf66cd8c5ae93901d94ce27ff77318d960bd9b"
+  },
+  {
+    "source": "approved_submission/branch_validation_gene_names.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_validation_gene_names.json",
+    "sha256": "bede9701e757501b6065ead4255ea589f9a5405b289f8942284489fd1128001d"
+  },
+  {
+    "source": "approved_submission/branch_validation_metadata.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_validation_metadata.csv",
+    "sha256": "22200bab3c95fb9a894a01cd4a19dc6770f985f20f1cae0179399834a6c5b9e3"
+  },
+  {
+    "source": "approved_submission/branch_validation_results.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_validation_results.json",
+    "sha256": "0c18efa3d501789ac85459c38bf94a14cc2f6dee72e47add2df75241d244eab4"
+  },
+  {
+    "source": "approved_submission/branch_validation_run_log.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\branch_validation_run_log.json",
+    "sha256": "cd73aa39f6ace90b444328b10c210bd85e63d85406419efab8198a5bd7234a3c"
+  },
+  {
+    "source": "approved_submission/cleanup_full_source_manifest.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\cleanup_full_source_manifest.json",
+    "sha256": "2782bff646ba1c1dadb6d5a160f73921977173df32790997fbf08b93b7309a90"
+  },
+  {
+    "source": "approved_submission/cohort_audit.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\cohort_audit.json",
+    "sha256": "3bf1720336e811c1582a1cab8ccfd1300ab57cb69f3ac049ec8d9900b09af1d0"
+  },
+  {
+    "source": "approved_submission/complete_triple_clone_ids.csv",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\complete_triple_clone_ids.csv",
+    "sha256": "55456eba82bd1820a29dcbae0d9b1e01a6f1a9f4eb44441b0788f54c3486b312"
+  },
+  {
+    "source": "approved_submission/download_manifest.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\download_manifest.json",
+    "sha256": "f438ff06b55bdfc064e2e43b70c18f76544a507f2775d11030c143d76d8817d1"
+  },
+  {
+    "source": "approved_submission/expression_source_manifest.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\expression_source_manifest.json",
+    "sha256": "39be7cc10c958fabed79c4ae94821f39a96b0e061a8dbbe67c666f0b02ad3314"
+  },
+  {
+    "source": "approved_submission/stateFate_inVitro_clone_matrix.mtx.gz",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\stateFate_inVitro_clone_matrix.mtx.gz",
+    "sha256": "26258702f8ccb7c98884d4f91bdcd1d6f552d7f2dd5125358efe7ade2fdcc50d"
+  },
+  {
+    "source": "approved_submission/stateFate_inVitro_gene_names.txt.gz",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\stateFate_inVitro_gene_names.txt.gz",
+    "sha256": "5672e137bcac196851b8dc44311b40fe61c428d6fd726dfae320b3fe5ddfffcd"
+  },
+  {
+    "source": "approved_submission/stateFate_inVitro_metadata.txt.gz",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\stateFate_inVitro_metadata.txt.gz",
+    "sha256": "c88e02cc512205e7033e28bf512f5d0dd43b98ba547fdd4a196b4bd9b62d7c07"
+  },
+  {
+    "source": "approved_submission/validated_concept_audit.json",
+    "destination": "prepared\\experiments\\baseline_sufficiency_data_audit_20261002\\larry\\validated_concept_audit.json",
+    "sha256": "bd00079b45feb82b2be1ffd265605e1c7a2416053993e8b041bed782094b9810"
+  },
+  {
+    "source": "approved_submission/aggregate_estimates.csv",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\aggregate_estimates.csv",
+    "sha256": "fc8090972c9e94a448c8a4faf461cc2fc75457b2941e051127291761e3ade5cf"
+  },
+  {
+    "source": "approved_submission/barcode_conditional_draws.npz",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\barcode_conditional_draws.npz",
+    "sha256": "4ad984a0f2135b295f9d16f53f48c8b5c9b04611eded0af6939d1131a2011f8f"
+  },
+  {
+    "source": "approved_submission/celltag_paired_contrasts.csv",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\celltag_paired_contrasts.csv",
+    "sha256": "3e0503e056eab0bc80b62d45ea903c32520939dcaf442cb4318035f59a5bdd5c"
+  },
+  {
+    "source": "approved_submission/celltag_reuse_audit.json",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\celltag_reuse_audit.json",
+    "sha256": "bee1edb106f257c682d3cf1bf2211a68d9504a642ea18f5ab74ac60b2389964a"
+  },
+  {
+    "source": "approved_submission/celltag_specificity.csv",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\celltag_specificity.csv",
+    "sha256": "9db7a90073783b21949c7d801cc8b67fab8b202e6dab6a2198b5704bb4c9540f"
+  },
+  {
+    "source": "approved_submission/clone_estimates.csv",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\clone_estimates.csv",
+    "sha256": "7b768bcaa5f80683b40372bd9de1939b93e73cca49427e433cd476c0956c8cc5"
+  },
+  {
+    "source": "approved_submission/raw_conditional_draws.npz",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\raw_conditional_draws.npz",
+    "sha256": "dfccac4957b6504ee0437e21e9913ee4ecb7eed308d7b61a6b37c4e92d621cc2"
+  },
+  {
+    "source": "approved_submission/reference_conditional_draws.npz",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\reference_conditional_draws.npz",
+    "sha256": "09d84aa281026c9eac665ce6509436555c0e07917ed37439cbd4abaa7a7b832f"
+  },
+  {
+    "source": "approved_submission/results.json",
+    "destination": "prepared\\experiments\\larry_information_scale_20261003\\results.json",
+    "sha256": "2be604b10d71b9844bb82d638e56e219d3aa46f15ab8184c1180516a0be1994c"
+  },
+  {
+    "source": "approved_submission/dataset_early_onecell_six.npz",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\dataset_early_onecell_six.npz",
+    "sha256": "e1ed07bb8fe7439bd484cd512a39b47f06251f01f4ddd03c27da3f82e3656ee7"
+  },
+  {
+    "source": "approved_submission/dataset_tf_object_six.npz",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\dataset_tf_object_six.npz",
+    "sha256": "b2ccc21271637580dd1fbf00f4aed7c755053efb52b540cc0d1d56325b7080ae"
+  },
+  {
+    "source": "approved_submission/six_onecell_cohort.csv",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\six_onecell_cohort.csv",
+    "sha256": "da74167d0493300afeb914c9010fea3322c9dd5f8210b159c7be65cfa88cb55a"
+  },
+  {
+    "source": "approved_submission/early_counts_audit_six.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\early_counts_audit_six.json",
+    "sha256": "84449ec5b6aa9c98c300fa575df5d28072aa035815e4fa1b2e60c6f10e58dfa9"
+  },
+  {
+    "source": "approved_submission/feature_audit.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\feature_audit.json",
+    "sha256": "574920c4bac33374c3e0a0c3d8f6b6aced38d6e7bb77788059dcbe9e58b8f4f9"
+  },
+  {
+    "source": "approved_submission/metadata_audit.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\metadata_audit.json",
+    "sha256": "1926c2bf76f9ccd0be52d8a35f7abe178915bebbb13e56e193036b5feb23fad5"
+  },
+  {
+    "source": "approved_submission/download_manifest.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\data\\download_manifest.json",
+    "sha256": "53933df01ebddd2ec1df8cdd63c6328fe95157cde86c12977a96ef7b8fa05502"
+  },
+  {
+    "source": "approved_submission/day2_rna_source.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\data\\day2_rna_source.json",
+    "sha256": "e9e3abb5c8d0390fc3d6fa16730743ff34b02ce91f0ca56ca2519d511ff63dad"
+  },
+  {
+    "source": "approved_submission/figshare_metadata.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\data\\figshare_metadata.json",
+    "sha256": "376d23865f6c8b32a68e8f8087cf84d227d28686a0f3d8795329b236fd959359"
+  },
+  {
+    "source": "approved_submission/archive_inventory.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\data\\archive_inventory.json",
+    "sha256": "22419d619c2f7a93e0e499409e7c965efd8711fbf860adc0e02cc8b5d18aa2fa"
+  },
+  {
+    "source": "approved_submission/class_summary.csv",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\outputs_six_resolution\\class_summary.csv",
+    "sha256": "c6356e37f28a42b605858e4c40ca7efd311782e9cbc5e5384edbd4516cfd958a"
+  },
+  {
+    "source": "approved_submission/contrasts.csv",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\outputs_six_resolution\\contrasts.csv",
+    "sha256": "38dcf87b396f968a6d82b3eaf8f610f2356f3551a811de4eabcb7a5412526e58"
+  },
+  {
+    "source": "approved_submission/fit_diagnostics.json",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\outputs_six_resolution\\fit_diagnostics.json",
+    "sha256": "1f2dc81dde990c4c6df83dffb94f1f255842e325d518ca1acc8ca83a5e35fccf"
+  },
+  {
+    "source": "approved_submission/predictions.csv",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\outputs_six_resolution\\predictions.csv",
+    "sha256": "fb2e8b6064340270825bf281f955b50ce577f84246e2cfcb0ddc37582779dd96"
+  },
+  {
+    "source": "approved_submission/summary.csv",
+    "destination": "prepared\\experiments\\celltag_information_resolution_20261001\\outputs_six_resolution\\summary.csv",
+    "sha256": "1dfe5e8dd265bc62686dc422d342690b8d0697e2d4a5b14ca47e3200b7042a3e"
+  },
+  {
+    "source": "approved_submission/baseline.npy",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\cache\\baseline.npy",
+    "sha256": "62fa8af023dbe1a1e1e9a48deb81d6954377e87eb43253132eeda893d6f32a13"
+  },
+  {
+    "source": "approved_submission/axes.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\cache\\axes.json",
+    "sha256": "347de7f465b26ccc2ce4d0bd8bcf02c0cfd340da4bbacf21237c5c326f0dfc19"
+  },
+  {
+    "source": "approved_submission/contributions.npz",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\contributions.npz",
+    "sha256": "978a387f00e17d8b86eee0e1e4d8697e4a17f7e9c56da47ff3f145905eda26e8"
+  },
+  {
+    "source": "approved_submission/bootstrap_summaries.npz",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\bootstrap_summaries.npz",
+    "sha256": "7e67a2fc437f69ad7e5062cf3bcf723a7728305502431d05d4af4b1d825c9280"
+  },
+  {
+    "source": "approved_submission/training_selection.csv",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\training_selection.csv",
+    "sha256": "bedf1418ac41fd971819e2a49bde5db7bef99e321f03598690d190f21ee81539"
+  },
+  {
+    "source": "approved_submission/basis_diagnostics.csv",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\basis_diagnostics.csv",
+    "sha256": "4b644413d2ac2fbdd23980fa459583238fcbd4134c93ecebf241bc7dfe3a0fe0"
+  },
+  {
+    "source": "approved_submission/inputs_and_feasibility.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\inputs_and_feasibility.json",
+    "sha256": "77aae9494fd0cc662c1f07a026439e8fe1e91a8e026718b450c0ecb15a09cd42"
+  },
+  {
+    "source": "approved_submission/analysis_freeze.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\analysis_freeze.json",
+    "sha256": "519226cda95cdc1edbeff8e974d06f10653cd3f4cf2debef619992119d4e3110"
+  },
+  {
+    "source": "approved_submission/design_freeze.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\design_freeze.json",
+    "sha256": "d0df2603762c180375d72cd75d93c8b3ad311f9e777655ddee67343bd81854e4"
+  },
+  {
+    "source": "approved_submission/joint_resolution_results.csv",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\joint_resolution_results.csv",
+    "sha256": "c713826a6d8a705127d4b6569b83f2d668ab643dd73fff7c5a1e6ac84458d1b6"
+  },
+  {
+    "source": "approved_submission/output_contrasts_simultaneous.csv",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\output_contrasts_simultaneous.csv",
+    "sha256": "91973eb8e8a2a114321044c3bc8586884d017268f1080985e4139b38662e4ff5"
+  },
+  {
+    "source": "approved_submission/primary_results.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\primary_results.json",
+    "sha256": "c9b843f07dac8f646941bc61e1f8baad3fb486f75195c1b412b68c8381cf9cf4"
+  },
+  {
+    "source": "approved_submission/selected_policy.csv",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\selected_policy.csv",
+    "sha256": "ebb6b4bbc8d568f3ea5dd75dbe5b36b85307ea2089b34301faacaa6036464ccc"
+  },
+  {
+    "source": "approved_submission/verification.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\verification.json",
+    "sha256": "1528746748747fd9cf0e8e069e5da887bbd6ad3a3badfbec5e0baf3a18a97c7c"
+  },
+  {
+    "source": "approved_submission/runtime.json",
+    "destination": "prepared\\experiments\\tahoe_joint_resolution_20261001\\outputs\\runtime.json",
+    "sha256": "a70742b14d851e8fadcb67d83b84b158ffa887dd3673458cfbd24db085f0c726"
+  },
+  {
+    "source": "approved_submission/contributions.npz",
+    "destination": "prepared\\experiments\\tahoe_supported_detail_20261002\\outputs\\contributions.npz",
+    "sha256": "ab5c3f73a04a1a8db93019e9f04a659175e3a102e6d7aac9be5de2513dd93770"
+  },
+  {
+    "source": "approved_submission/results.json",
+    "destination": "prepared\\experiments\\tahoe_supported_detail_20261002\\outputs\\results.json",
+    "sha256": "f6a083eaaf4a52d5e46f896f90a8392d22ac7ce06d1e9667122ce9f335ebd4e7"
+  },
+  {
+    "source": "approved_submission/training_selection.csv",
+    "destination": "prepared\\experiments\\tahoe_supported_detail_20261002\\outputs\\training_selection.csv",
+    "sha256": "1dc02f80d07ca93a3114827dfc7e2f75e6854d3cd0662ab96af88e3c9fc1cf13"
+  },
+  {
+    "source": "approved_submission/design_freeze.json",
+    "destination": "prepared\\experiments\\tahoe_supported_detail_20261002\\outputs\\design_freeze.json",
+    "sha256": "0dda1508a7c148a06cbe62739ec82debcc4fe3c6e1b942e8dabb0e79801d1970"
+  },
+  {
+    "source": "approved_submission/author_panel_a.py",
+    "destination": "code\\figures\\author_panel_a.py",
+    "sha256": "a41f14b6255875807ac1ba65c57de6671a9090ac69a599184814bbee8d2630b9"
+  },
+  {
+    "source": "approved_submission/figure3_author_panels.py",
+    "destination": "code\\figures\\figure3_author_panels.py",
+    "sha256": "7b0fe2bc1870030055f94a564ad7f53e607bfc3227ca60d2f7e1104d729c4abf"
+  },
+  {
+    "source": "approved_submission/Figure_2a_author.svg",
+    "destination": "code\\figures\\assets\\Figure_2a_author.svg",
+    "sha256": "a423616f5250796d472c35e1328297ddb8cb2b8a74f88445c301071ae8ec638d"
+  },
+  {
+    "source": "approved_submission/Figure_3a_author.svg",
+    "destination": "code\\figures\\assets\\Figure_3a_author.svg",
+    "sha256": "bf248926bc5467ecff574a48e21c98ae646d761ae43ff54a783a6f7b9b7066a1"
+  },
+  {
+    "source": "approved_submission/Figure_3e_author.svg",
+    "destination": "code\\figures\\assets\\Figure_3e_author.svg",
+    "sha256": "f1f4d44f6d1397a47c51ceea5dd809d9594fb7268b136a4fe1e6dd608dab9d1e"
+  },
+  {
+    "source": "approved_submission/random_output64.npy",
+    "destination": "prepared/experiments/tahoe_joint_resolution_20261001/cache/random_output64.npy",
+    "sha256": "5e017444f0ad4b8f84a7399d659fb43b2770cd19e05e384776768502c3325ab1"
+  }
+]

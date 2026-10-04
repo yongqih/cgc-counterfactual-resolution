@@ -1,0 +1,27 @@
+{
+  "larry_clone_estimates.csv": {
+    "rows": 63,
+    "numeric_max_absolute_difference": 0.0
+  },
+  "larry_aggregate_estimates.csv": {
+    "rows": 180,
+    "numeric_max_absolute_difference": 0.0
+  },
+  "celltag_specificity.csv": {
+    "rows": 20,
+    "numeric_max_absolute_difference": 0.0
+  },
+  "celltag_paired_contrasts.csv": {
+    "rows": 122,
+    "numeric_max_absolute_difference": 0.0
+  },
+  "tahoe_resolution": {
+    "rows": 182,
+    "numeric_max_absolute_difference": 2.842170943040401e-14
+  },
+  "tahoe_gene_selection": {
+    "contrasts": 8,
+    "simultaneous_intervals_reproduced": true,
+    "valid_draws": 10000
+  }
+}
