@@ -1,7 +1,4 @@
-"""Render only the valid frozen pathway-minus-gene result, never the invalid null.
-
-This reconstructs an analytical figure from prediction-derived frozen contrasts,
-not the manual R2 manuscript SVG layout. No prediction, bootstrap or null is run.
+"""Render pathway-minus-gene contrasts from saved inference tables.
 """
 from __future__ import annotations
 
@@ -42,7 +39,7 @@ def main() -> None:
     corrected_table = TABLE.replace("RESOLUTION2_PAIRED_COMPARISONS.csv", "RESOLUTION2_VALID_COMPARISONS_CORRECTED.csv")
     default_table = corrected_table if (HERE / "bundles/resolution_pathway_frozen" / corrected_table).exists() else TABLE
     parser.add_argument("--source-table", type=Path, default=HERE / "bundles/resolution_pathway_frozen" / default_table)
-    parser.add_argument("--out-dir", type=Path, required=True, help="new output directory, never an existing manuscript figure directory")
+    parser.add_argument("--out-dir", type=Path, required=True, help="directory for the rendered comparison")
     args = parser.parse_args()
     if args.out_dir.exists():
         parser.error("Output directory already exists; choose a new directory")

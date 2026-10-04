@@ -65,8 +65,3 @@ new prior contrasts use clone-averaged repeated predictions and paired
 conditional clone bootstrap. More specific means fewer admissible fates.
 No individual-conditional coverage or RNA/ATAC synergy claim.
 
-## Stop rule
-
-After these analyses, revise the Figure 5 evidence hierarchy and associated
-text according to results. No new data collection, model sweep, or Tahoe
-frontier promotion is part of this analysis.

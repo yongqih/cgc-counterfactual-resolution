@@ -13,7 +13,7 @@
   "lea_historical_analysis": "Figure 3b-d; Supplementary Figure 3",
   "lea_archs4": "Supplementary Figure 3a",
   "lea_full_span": "Supplementary Figure 3d",
-  "resolution_pathway_frozen": "Figure 3f; corrected paired contrasts",
+  "resolution_pathway_frozen": "Figure 3f; paired pathway-minus-gene contrasts",
   "pathway_fidelity": "Figure 3g",
   "pathway_composition": "Extended Data Figure 2b",
   "crc_pdo_application": "Figure 4a,b; Supplementary Figure 4a-c",

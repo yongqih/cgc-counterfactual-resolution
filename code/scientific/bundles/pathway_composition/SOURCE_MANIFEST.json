@@ -102,14 +102,13 @@
   ],
   "runtime_git_sources": [],
   "known_portability_constraints": [
-    "Frozen source export is not evidence that scientific execution has been rerun.",
-    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
-    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
-    "No model fit; computes full subset projection and 10000 frozen-prediction bootstrap statistics, not mere CSV checks.",
-    "Claim is composition-dependent recoverability, not a universal composition ceiling. Nonpositive denominators remain undefined.",
-    "Default --source-root is an author-machine Windows path; explicit input root is required for portability."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Computes projection statistics for all 16,383 nonempty subsets and 10,000 bootstrap draws from fixed predictions.",
+    "Recovery is undefined for nonpositive cross-replicate denominators.",
+    "Supply --source-root explicitly."
   ],
-  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "smoke_tests": [
     {
       "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -121,10 +120,10 @@
       "status": "packaged, not rerun by registry build"
     }
   ],
-  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "source_policy": "Per-file SHA-256 checksums identify the distributed sources; commit identifiers record source provenance.",
   "missing_metadata_provenance": [],
   "exported_file_count": 19,
-  "exported_source_bytes": 6935480,
+  "exported_source_bytes": 6935486,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -163,20 +162,20 @@
     {
       "path": "results/cgc_pathway_resolution_scaling/PATHWAY_METRIC_RECONCILIATION.md",
       "source_file": "results/cgc_pathway_resolution_scaling/PATHWAY_METRIC_RECONCILIATION.md",
-      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
-      "git_blob": "f739be7e6e9aee28058e0e599baf6adfc4048dde",
-      "sha256": "3a8d7ee521afd453a1956c75146045af16b5c1ccf9c028f796fcf8c6bc097113",
-      "size_bytes": 1521,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "41dfd37d153776118a18510772f1f4d76a6942aa30f1938a61c875fdaac244c1",
+      "size_bytes": 1471,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_pathway_resolution_scaling/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
       "source_file": "results/cgc_pathway_resolution_scaling/PATHWAY_RESOLUTION_SCALING_PROTOCOL.md",
-      "source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
-      "git_blob": "5ab39bad1f1800a2c784a69fea980ae1558224ba",
-      "sha256": "b621e01795aa5c68c1b38af135c384d0fd74bb80f1ba57cc608bcddbada9fd7d",
-      "size_bytes": 8309,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "5f370adccf0c42ec580f5fda259ead3d5b4d15b39ad27350420893fd7d6ed4bf",
+      "size_bytes": 8365,
+      "role": "documentation"
     },
     {
       "path": "scripts/pathway_resolution_scaling_audit.py",
@@ -216,7 +215,7 @@
       "pre_correction_sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
       "base_source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
       "base_git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/core.py",
@@ -238,7 +237,7 @@
       "pre_correction_sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
       "base_source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
       "base_git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
@@ -296,7 +295,7 @@
       "pre_correction_sha256": "c0880daa0727b0c7e528e60386b342d1b21a86651f5fa4851dbec7b46d27f5ee",
       "base_source_commit": "ce1a35649d80205035231e5fc305e857c79acfa1",
       "base_git_blob": "69259f186b09d3e9a34efed77079248598ebd669",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/pathway_resolution_scaling.py",
@@ -317,8 +316,8 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "Audited 2026-09-08 correction. Modified/new files have null source_commit/git_blob; original provenance is retained in base_* and pre_correction_sha256 fields.",
-  "analysis_execution": "NOT_RUN",
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
   "post_freeze_correction": {
     "date": "2026-09-08",
     "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",

@@ -3,26 +3,97 @@
   "status": "DESIGN_FROZEN_BEFORE_NEW_JOINT_RESULTS",
   "scope": "Operational evidence for measurement resolution versus task-useful information and supported prediction resolution; no information-theoretic upper bound.",
   "seed": 2026100101,
-  "data": {"contexts": 50, "interventions": 93, "input_genes": 42523, "output_genes": 25695, "plates": 2},
+  "data": {
+    "contexts": 50,
+    "interventions": 93,
+    "input_genes": 42523,
+    "output_genes": 25695,
+    "plates": 2
+  },
   "split": "Five deterministic balanced context-disjoint outer folds; five balanced context-disjoint inner folds. All target treated responses on both plates excluded from every baseline-only fit and basis.",
-  "input_dimensions": [2, 4, 8, 16, 24, "span", "full"],
+  "input_dimensions": [
+    2,
+    4,
+    8,
+    16,
+    24,
+    "span",
+    "full"
+  ],
   "input_normalization": "Existing per-profile gene centering and L2 normalization. PCA trained separately on each plate and recomputed inside each inner split; no score whitening. Linear kernel scaled by training mean squared norm.",
-  "models": ["linear", "rbf"],
-  "linear_alphas": [0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000],
-  "rbf_alphas": [0.001, 0.01, 0.1, 1, 10],
-  "rbf_bandwidth_factors": [0.25, 0.5, 1, 2, 4],
+  "models": [
+    "linear",
+    "rbf"
+  ],
+  "linear_alphas": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1,
+    10,
+    100,
+    1000
+  ],
+  "rbf_alphas": [
+    0.001,
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "rbf_bandwidth_factors": [
+    0.25,
+    0.5,
+    1,
+    2,
+    4
+  ],
   "model_selection": "For each input dimension and family minimize pooled inner cross-plate full-response error; shared hyperparameters, separately fitted plate weights. No outer-outcome selection.",
-  "output_ranks": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, "span", "full"],
+  "output_ranks": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    "span",
+    "full"
+  ],
   "output_basis": "Training-context intervention-specific centered true responses; one plate at a time, reverse plate roles, same orthogonal projector for paired scoring. Exact training-row Gram eigendecomposition; numerical span eigenvalue cutoff 1e-8 times maximum, positive eigenvalues only. Frozen rank cap 1024 for intermediate ranks; complete numerical span additionally scored.",
   "response_target": "Delta[c,p] minus intervention-specific mean over outer-training contexts, per plate. Same target, references, folds and units for every input/model/output comparison.",
-  "metrics": ["input_crossplate_fidelity", "output_F=S_r/S_full", "output_g=1-E_r/S_r", "output_U=(S_r-E_r)/S_full"],
+  "metrics": [
+    "input_crossplate_fidelity",
+    "output_F=S_r/S_full",
+    "output_g=1-E_r/S_r",
+    "output_U=(S_r-E_r)/S_full"
+  ],
   "aggregation": "Pool energies before ratios; average plate-basis directions at contribution level; do not clip signed energies or ratios. Nonpositive ratio denominators undefined.",
-  "primary_contrasts": {"input": "RBF PCA16 versus RBF full RNA; additional measured signal and recovery difference", "output": "RBF full RNA rank64 versus full response; added truth signal and full-normalized recovery difference", "practical_recovery_margin": 0.02},
+  "primary_contrasts": {
+    "input": "RBF PCA16 versus RBF full RNA; additional measured signal and recovery difference",
+    "output": "RBF full RNA rank64 versus full response; added truth signal and full-normalized recovery difference",
+    "practical_recovery_margin": 0.02
+  },
   "adaptive_policy": "Select input dimension within each family using inner full-response error: smallest available representation within 0.02 of maximum inner normalized recovery. Choose smallest output rank preserving at least 95% of maximum positive inner U for that input/model. If maximum U is nonpositive, report no supported resolution. Inner response bases exclude inner-validation contexts. Evaluate frozen choices on outer contexts.",
   "uncertainty": "10000 paired context-then-intervention bootstrap draws; no refits. Pointwise intervals for frozen primary contrasts; simultaneous max-standardized absolute-deviation intervals for displayed model/input/output contrast families. Conditional on fitted models. Fold/plate-direction sensitivity reported.",
-  "controls": ["shared-response zero-deviation reference", "linear versus RBF", "full input and numerical training-span input", "full response and numerical training-span output", "target-response mutation invariance", "direct-vector versus Gram scoring", "orthogonal projection/U identity", "measurement and residual positive controls", "outcome-blind random output subspaces"],
+  "controls": [
+    "shared-response zero-deviation reference",
+    "linear versus RBF",
+    "full input and numerical training-span input",
+    "full response and numerical training-span output",
+    "target-response mutation invariance",
+    "direct-vector versus Gram scoring",
+    "orthogonal projection/U identity",
+    "measurement and residual positive controls",
+    "outcome-blind random output subspaces"
+  ],
   "followup_information_test": "After the baseline joint analysis, fixed 4/16/92 target anchors may be evaluated with training-only shrinkage of an additive response residual, with target intervention excluded. Report separately and do not use it to select the baseline analysis.",
   "interpretation": "Input compactness alone does not imply coarse outputs. Support requires nontrivial reproducible omitted structure plus preserved or improved held-out prediction under explicit uncertainty. Failure of equivalence due to wide intervals is inconclusive. Superior alternative estimator indicates estimator limitation. No forced monotonic curves or post-hoc threshold changes.",
-  "compute_gate": "Pilot runtime and memory only, before held-out scoring. Aim under 2 hours and 8 GiB GPU; implementation optimization allowed without changing mathematical analysis.",
-  "preservation": "Create isolated experiment files only. Do not edit manuscripts, figures, release artifacts or earlier results. This is a new analysis on a previously studied dataset, not an independent preregistered validation cohort."
+  "compute_gate": "Runtime and memory are assessed before held-out scoring; implementation optimizations preserve the mathematical analysis.",
+  "preservation": "This analysis uses a previously studied dataset; it is an exploratory analysis rather than an independent validation cohort."
 }

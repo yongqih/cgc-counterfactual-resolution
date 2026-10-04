@@ -1,41 +1,41 @@
-# Reproducing the current manuscript
+# Reproducing the analyses
 
-## Current analysis entrypoints
+## Prepared-data analyses
 
-Run from the release root after extracting both archives. Each command preserves the approved source data and writes to a separate workspace.
+Run commands from the release root. Each computation writes to a separate workspace.
 
-| Command after `python code/reproduce.py` | Computation | Inputs delivered |
+| Command after `python code/reproduce.py` | Computation | Required inputs |
 | --- | --- | --- |
-| `larry --work-dir ../reproduction` | All 21 clones, paired-error floors and three bootstrap sensitivity variants | Cell-level normalized RNA, metadata, gene identities, cohort and barcode provenance |
-| `celltag-calibration --work-dir ../reproduction` | Probabilities, 150 disjoint splits, calibration sets, held-out coverage, specificity and paired contrasts | All 4,950 prediction rows, fitting records, 165-clone labels and early feature matrix |
-| `celltag-fit --work-dir ../reproduction` | LR/RF nested model fitting with matched and shuffled information | Prepared early RNA/ATAC matrix and six-fate labels; uses CPU parallelism |
-| `tahoe-summary --work-dir ../reproduction` | Joint-resolution metrics and bootstrap inference | Frozen prediction contributions, train-only basis diagnostics and selection records |
-| `tahoe-fit --work-dir ../reproduction --input-root PATH` | Refit the original joint-resolution experiment | Additional prepared Gram caches at PATH; CUDA required |
-| `tahoe-gene-selection --work-dir ../reproduction --input-root PATH` | Refit the output-selection controls | Original response tensors, gene indices and baseline cache at PATH; CUDA required |
+| `larry --work-dir ../reproduction` | Paired-error bounds for all 21 clones and three bootstrap sensitivity variants | Cell-level normalized RNA, cell metadata, gene identities, cohort and barcode provenance; included in DATA |
+| `celltag-calibration --work-dir ../reproduction` | Calibration sets, held-out coverage, specificity and paired contrasts | 4,950 prediction rows, 150 split records and 165-clone labels; included in DATA |
+| `celltag-fit --work-dir ../reproduction` | LR/RF nested model fitting with matched and shuffled information | Early RNA/ATAC features and six-fate labels; included in DATA; uses CPU parallelism |
+| `tahoe-summary --work-dir ../reproduction` | Joint-resolution metrics and bootstrap inference | Prediction contributions, training-basis diagnostics and selection records; included in DATA |
+| `tahoe-fit --work-dir ../reproduction --input-root PATH` | Joint-resolution model fitting | Prepared Gram caches at PATH; CUDA required |
+| `tahoe-gene-selection --work-dir ../reproduction --input-root PATH` | Output-selection model fitting | Response tensors, gene indices and baseline cache at PATH; CUDA required |
 
-`--inspect` describes a task without executing it. Compact prepared inputs allow the first four routes to run without downloading full source archives. Original download and feature-preparation code is included with its accessions and checksums.
+`--inspect` describes a task without executing it. Data preparation scripts, accessions and checksums are included with the corresponding analysis.
 
-## Earlier experiments retained in the manuscript
+## Scientific source bundles
 
-`code/scientific/SCIENTIFIC_ENTRYPOINT_INDEX.json` maps 22 source bundles to the current figures. `INPUT_CONTRACTS.json` records their required prepared inputs; each bundle's `SOURCE_MANIFEST.json` fixes its scientific sources and historical provenance.
+`code/scientific/SCIENTIFIC_ENTRYPOINT_INDEX.json` maps 22 implementation bundles to the figures. `INPUT_CONTRACTS.json` specifies required inputs, and each `SOURCE_MANIFEST.json` records implementation provenance and file checksums.
 
 ```text
 python code/scientific/launch.py experimental_compression --inspect-only
 python code/scientific/launch.py lea_archs4 --inspect-only
 ```
 
-These bundles retain their original execution contracts. In particular, the T-cell prediction and decomposition stages require original historical Git provenance and CUDA, and several earlier analyses require larger prepared inputs available from the cited upstream resources. Their source code is delivered, but the compact archive is not a replacement for those inputs. Earlier artifact summaries and corrected pathway contrasts remain distinct from refitting models.
+Provide the listed inputs before executing an analysis. The T-cell prediction and decomposition stages require the recorded Git source objects and CUDA. Other bundles can require larger prepared arrays from the cited upstream studies. `reproducibility/INPUT_DELIVERY.csv` identifies these dependencies. To reproduce the figures from numerical tables, use the figure command below.
 
-## Figures and source tables
+## Figures
 
 ```text
 python code/render_figures.py --output ../rendered_figures
 ```
 
-This renders all twelve final figures using only released source tables and three preserved author SVG panels. Figure rendering does not refit models. Arial was used for approved exports; a sans-serif fallback can change text metrics on systems without Arial. The approved exports remain the visual reference.
+This renders all twelve figures from the source tables and three included SVG schematics. Arial was used for the supplied exports; a sans-serif fallback can change text metrics on systems without Arial.
 
-All current panels are listed in `source_data/CURRENT_PANEL_MAP.csv`. Legacy internal figure labels in numerical tables are retained as provenance; current panel labels are authoritative.
+`source_data/CURRENT_PANEL_MAP.csv` maps analysis tables to figure panels. Table identifiers are stable analysis identifiers; the panel map provides the display labels.
 
-## Interpretation of verification
+## Computational checks
 
-`code/verify_release.py` verifies SHA-256 file integrity and figure coverage. `reproducibility/VALIDATION.json` records the separate numerical recomputations and figure comparisons performed for this release. Randomized analyses retain their recorded seeds, splits and original numerical precision.
+`code/verify_release.py --code-only` checks a GitHub checkout. After extracting the DATA archive, `code/verify_release.py` checks the complete package. These commands verify SHA-256 integrity and figure coverage. `reproducibility/VALIDATION.json` records numerical recomputations, figure comparisons and software versions. Randomized analyses use the recorded seeds, splits and numerical precision.

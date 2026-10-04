@@ -985,13 +985,13 @@ def score() -> None:
             partial_names.append(row.representation)
     if supported_names:
         verdict = "RESOLUTION_FRONTIER_SUPPORTED"
-        placement = "Main Figure 6 candidate; manuscript remains unchanged pending explicit user decision."
+        placement = "The specified intermediate-resolution criteria are satisfied."
     elif partial_names:
         verdict = "WGCNA_INTERMEDIATE_RESOLUTION_PARTIAL"
-        placement = "Extended Data only."
+        placement = "The specified intermediate-resolution criteria are partially satisfied."
     else:
         verdict = "WGCNA_RESOLUTION_FRONTIER_NOT_SUPPORTED"
-        placement = "Remain internal; do not modify the manuscript."
+        placement = "The specified intermediate-resolution criteria are not satisfied."
 
     manifest.to_csv(OUT / "WGCNA_OUTER_FOLD_MODULE_MANIFEST.csv", index=False)
     ladder_table.to_csv(OUT / "WGCNA_RESOLUTION_LADDER.csv", index=False)
@@ -1054,15 +1054,15 @@ This is a scientifically negative but diagnostically sharp result. The frozen co
 - **Do modules correspond to recognizable biology?** Within the small assigned subset, mean annotated-module fraction is `{mean_annotated_fraction:.3f}` and annotated modules carry mean training energy fraction `{mean_annotated_energy:.3f}`. Pathway coherence was not the failure mode; coverage and retained full-gene biology were.
 - **Is there a meaningful Pareto frontier?** Global nondominated representations: `{nondominated_text}`. The prespecified three-point/span condition is `{frontier_span_ok}`.
 - **Which verdict applies?** `{verdict}`.
-- **Manuscript placement?** {placement}
+- **Criteria assessment:** {placement}
 
-## Adversarial interpretation
+## Interpretation
 
 The secondary coordinate-only view looks superficially encouraging: mean fold-level module macro R2 is `{macro_coordinate_r2:.6f}` and training-energy-weighted R2 is `{weighted_coordinate_r2:.6f}`. Those values describe only the assigned modules. Once reconstructed onto the complete 10,110-gene truth, predictive R2 and oracle fidelity collapse. This discrepancy is exactly why raw module-space R2 was preregistered as secondary.
 
 The failure is not evidence that coherent response biology is absent and does not falsify CGC or the broader resolution principle. It is a failure of this frozen signed-WGCNA construction to create the intended intermediate-resolution representation under strict fold-local fitting. The specific WGCNA-frontier claim is not supported; no parameter rescue is permitted.
 
-## Provenance and stop
+## Provenance
 
 - Representation: `{REPRESENTATION.relative_to(ROOT)}`, SHA-256 `{sha256_file(REPRESENTATION)}`.
 - Frozen full-gene RBF OOF: `{FROZEN_OOF.relative_to(ROOT)}`, SHA-256 `{sha256_file(FROZEN_OOF)}`.
@@ -1071,7 +1071,7 @@ The failure is not evidence that coherent response biology is absent and does no
 - WGCNA implementation reference: https://cran.r-project.org/web/packages/WGCNA/WGCNA.pdf
 - Annotation reference: https://www.gsea-msigdb.org/gsea/msigdb/human/collections.jsp#H
 
-The prespecified ladder is complete. No parameter rescue, alternative clustering, estimator, dataset or ontology is authorized.
+The analysis evaluates the prespecified ladder.
 """
     (OUT / "WGCNA_RESOLUTION_FRONTIER_REPORT.md").write_text(report, encoding="utf-8")
     write_json(OUT / "WGCNA_FINAL_VERDICT.json", {

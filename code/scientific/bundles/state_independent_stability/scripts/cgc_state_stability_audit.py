@@ -775,7 +775,7 @@ This audit does not identify mechanisms of heterogeneous recovery and does not s
 {provenance}
 """
     (OUT / "STATE_STABILITY_REPORT.md").write_text(report, encoding="utf-8")
-    manuscript = f"""# Recommended manuscript wording after the STATE stability audit
+    manuscript = f"""# State response recovery
 
 ## Recommended section title
 

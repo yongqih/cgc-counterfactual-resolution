@@ -1201,9 +1201,9 @@ def _write_final_report(
             "cannot replace the protocol-selected result."
         )
     recommendation = (
-        "Strong enough for a bounded CGC main-text integration review. The text must call both context counts projections, foreground the order-of-magnitude contrast rather than a precise threshold, and retain the m≤49 observational boundary."
+        "The fitted context-count contrast describes resolution dependence beyond the observed m≤49 range. Both counts are projections."
         if substantial_main_text
-        else "The requested N(g=0.50) context-requirement claim is not strong enough for the CGC main text. However, the observed-range resolution effect is clear and may be manuscript-relevant in bounded form: at m=49, five-pathway g exceeds full-gene g without changing predictions. Use that empirical result, if needed, and keep any projected context-count contrast in a sensitivity or supplement."
+        else "At m=49, five-pathway recovery exceeds full-gene recovery from the same predictions. The projected context-count contrast is a sensitivity analysis; the observed data do not determine a threshold for g=0.50."
     )
     report = f"""# Tahoe five-pathway held-context scaling
 
@@ -1213,7 +1213,7 @@ def _write_final_report(
 
 `{asymptote_verdict}`
 
-The exact frozen CGC manuscript pathways are **{', '.join(PATHWAYS)}**. The current publication-release and manuscript-analysis CSVs agreed exactly gene-for-gene and weight-for-weight; the compiled binary analysis archive agreed within `<1e-15` export round-trip tolerance. All five mapped vectors have unit L2 norm on the fixed 25,695-gene axis. The original manuscript pathway sanity case was reproduced at `g = {sanity['reproduced_pooled_g']:.12g}` versus the frozen `{FROZEN_PATHWAY_SANITY_G:.12g}` (absolute error `{sanity['absolute_g_error']:.3g}`).
+The predefined pathways are **{', '.join(PATHWAYS)}**. The current publication-release and manuscript-analysis CSVs agreed exactly gene-for-gene and weight-for-weight; the compiled binary analysis archive agreed within `<1e-15` export round-trip tolerance. All five mapped vectors have unit L2 norm on the fixed 25,695-gene axis. The all-but-one pathway reference calculation was reproduced at `g = {sanity['reproduced_pooled_g']:.12g}` versus the frozen `{FROZEN_PATHWAY_SANITY_G:.12g}` (absolute error `{sanity['absolute_g_error']:.3g}`).
 
 The completed gene-level analysis had persisted truth and scalar energy summaries, but not every full-gene prediction/reference vector. Therefore this analysis performed a **deterministic reconstruction of frozen predictions** using the exact saved ladders, baseline kernels, hyperparameters and model implementation. It did not retune or reselect a model. Reconstructed full-gene energies agreed with the frozen cache to maximum absolute error `{reconciliation['maximum_full_gene_energy_absolute_reconciliation_error']:.3g}` and maximum relative error `{reconciliation['maximum_full_gene_energy_relative_reconciliation_error']:.3g}` before any pathway result was interpreted.
 
@@ -1239,11 +1239,11 @@ Within the observed range, the resolution effect is unambiguous at maximal suppo
 
 The primary claim concerns the magnitude and robustness of the resolution dependence, not false precision in either extrapolated count.
 
-## Recommendation
+## Interpretation
 
 {recommendation}
 
-No manuscript, author affiliation, original figure, Extended Data, supplement or publication table was modified.
+The analysis uses fixed predictions and prespecified pathway weights.
 """
     (out / "TAHOE_FIVE_PATHWAY_SCALING_FINAL.md").write_text(report, encoding="utf-8")
     if qa["status"] != "PASS":

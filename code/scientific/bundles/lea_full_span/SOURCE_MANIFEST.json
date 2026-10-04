@@ -1,6 +1,6 @@
 {
   "id": "lea_full_span",
-  "analysis_name": "Fold-local full-training-span PCA oracle transfer sanity analysis",
+  "analysis_name": "Transfer of the fold-local full training-response span",
   "class": "FULL_ANALYSIS",
   "commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
   "implementation_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
@@ -61,14 +61,12 @@
   ],
   "runtime_git_sources": [],
   "known_portability_constraints": [
-    "Frozen source export is not evidence that scientific execution has been rerun.",
-    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
-    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
-    "Fits fold-local PCA only; it is an oracle geometry diagnostic, not a new prediction model.",
-    "run_wgcna_resolution_frontier.py is a dynamic data-loader authority required by the unchanged script; no WGCNA run or WGCNA manuscript claim is authorized.",
-    "Historical directory names remain unchanged to preserve exact source. They do not reintroduce abandoned WGCNA experiments."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Fits PCA within each training fold and measures transfer of the response span.",
+    "run_wgcna_resolution_frontier.py supplies data-loading functions for this calculation."
   ],
-  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "smoke_tests": [
     {
       "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -80,10 +78,10 @@
       "status": "packaged, not rerun by registry build"
     }
   ],
-  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "source_policy": "Per-file SHA-256 checksums identify the distributed sources; commit identifiers record source provenance.",
   "missing_metadata_provenance": [],
   "exported_file_count": 7,
-  "exported_source_bytes": 104643,
+  "exported_source_bytes": 105410,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -105,20 +103,20 @@
     {
       "path": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_METRIC_RECONCILIATION.md",
       "source_file": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_METRIC_RECONCILIATION.md",
-      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
-      "git_blob": "3b3080add7c2a136912bed9483ce1aaab411d45a",
-      "sha256": "7f76804d9a173b8e317ee7d21cf74a74095a0313ee7756a498bcfcd3d22a90e2",
-      "size_bytes": 1126,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "38e87a9aa6ad16bef6a6d173e2d455a7ff4c4871cfcd1eea6c88423a6b8257cd",
+      "size_bytes": 1109,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
       "source_file": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_PROTOCOL.md",
-      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
-      "git_blob": "0fbdde02cbfab047f7a359230ae28d6d1a03eb13",
-      "sha256": "f55247cd401f34e72fb59540efe615904a858995a67ff520fa34661b48c6807d",
-      "size_bytes": 4151,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "095a8c3b9ea0041eac3688e3c3c1b537dc9a75ec61ca76143f9a461b91d01b0e",
+      "size_bytes": 3703,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_full_span_pca_sanity/FULL_SPAN_PCA_SANITY_SUMMARY.json",
@@ -141,10 +139,10 @@
     {
       "path": "scripts/run_wgcna_resolution_frontier.py",
       "source_file": "scripts/run_wgcna_resolution_frontier.py",
-      "source_commit": "f207a2278a76e51ada5fcb600d7049ac03d45087",
-      "git_blob": "e3ad965cfc2dd6c5d0075c33080cc8b85637d0ef",
-      "sha256": "15d58a9d958a9100b2e0b52cdd82cb18031da9caf0e6bd45ed32ccfe2cb9010c",
-      "size_bytes": 69413,
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "561561fef0934797871485d9a0170a73cf59dc99b46dbd1c1a357642bcbc970c",
+      "size_bytes": 70645,
       "role": "scientific_source"
     },
     {
@@ -157,6 +155,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

@@ -1,6 +1,6 @@
 {
   "id": "ed7_hierarchical_repair",
-  "analysis_name": "Frozen-contribution ED7 hierarchical uncertainty repair",
+  "analysis_name": "Hierarchical uncertainty for held-context response recovery",
   "class": "FULL_ANALYSIS",
   "commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
   "entrypoints": [],
@@ -22,7 +22,7 @@
       "bytes_if_known": null,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_DIRECTORY",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     },
     {
       "path": ".worktrees/tahoe_five_pathway_scaling/results/tahoe_five_pathway_scaling/_cache/TAHOE_FIVE_PATHWAY_SCALING_CONTRIBUTIONS.npz",
@@ -30,16 +30,18 @@
       "bytes_if_known": 28793698,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_FILE",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     }
   ],
   "outputs": [
     "audit/release_repair/ed7"
   ],
-  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "known_portability_constraints": [
-    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Computes context-then-intervention bootstrap intervals from saved prediction contributions.",
+    "The entrypoint has no command-line help parser; inspect requirements through the launcher."
   ],
   "smoke_tests": [
     {
@@ -48,10 +50,10 @@
       "boundary": "import only; main never called"
     }
   ],
-  "claim_boundary": "Only frozen-contribution uncertainty; unchanged predictors, point definitions and draws. No CLI --help is advertised because the original script has no argument parser.",
+  "claim_boundary": "Hierarchical bootstrap inference uses fixed prediction contributions and the recorded resampling draws.",
   "path_adapter": "ed7: launcher resolves GENE_WT/PATH_WT to exported frozen bundles or explicit prepared workspaces and patches directory constants only before unchanged main.",
   "exported_file_count": 4,
-  "exported_source_bytes": 54001,
+  "exported_source_bytes": 53107,
   "external_import_roots": [
     "numpy",
     "pandas"
@@ -70,10 +72,10 @@
     {
       "path": "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py",
       "source_file": "audit/release_repair/ed7/repair_ed7_hierarchical_bootstrap.py",
-      "source_commit": "c2ffd06e44be10c77f3b68dbae880ccdf22f6f1f",
-      "git_blob": "9f821e421285b6a477efc3eebc1df3896937c545",
-      "sha256": "c30676486021b05ddd6dcdd8b040c0ef21d13da179e352abb63cc14a3ad5f462",
-      "size_bytes": 50764,
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "60c4e30a01a426350718ceecf851340e0cff5d6c50195caacfc4b7fe6174c9ce",
+      "size_bytes": 49870,
       "role": "scientific_source"
     },
     {
@@ -95,6 +97,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

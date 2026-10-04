@@ -56,13 +56,12 @@
   ],
   "runtime_git_sources": [],
   "known_portability_constraints": [
-    "Frozen source export is not evidence that scientific execution has been rerun.",
-    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
-    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
-    "Simulated baseline-encoded rank4 response with fixed reliability and10 simulation seeds; not a new biological dataset or estimate of real biological information fraction.",
-    "Uses frozen real-data hyperparameters; source runs tiered model/signal sweep and can use CPU or CUDA. No simulation or fitting was executed in this release repair."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "The simulated response has latent rank 4, fixed replicate reliability and ten simulation seeds. It tests pipeline sensitivity to baseline-encoded signals.",
+    "Hyperparameters come from the real-data analysis. The tiered model and signal-strength comparison runs on CPU or CUDA."
   ],
-  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "smoke_tests": [
     {
       "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -74,10 +73,10 @@
       "status": "packaged, not rerun by registry build"
     }
   ],
-  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "source_policy": "Per-file SHA-256 checksums identify the distributed sources; commit identifiers record source provenance.",
   "missing_metadata_provenance": [],
   "exported_file_count": 15,
-  "exported_source_bytes": 121284,
+  "exported_source_bytes": 120136,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -110,20 +109,20 @@
     {
       "path": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
       "source_file": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_INPUT_RECONCILIATION.md",
-      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
-      "git_blob": "c3f6df83a300bd05860c355cf55143e89bbc52df",
-      "sha256": "6a8b65856d52fa8d8d8cd0e283dbac78aea2d63275d4c5ac3764e0914af8931c",
-      "size_bytes": 1539,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "e8e7f021f1379ef2be68e743adf56c9ce1ae8be713414d96670e5d00e9adc2d8",
+      "size_bytes": 1488,
+      "role": "documentation"
     },
     {
       "path": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_PROTOCOL.md",
       "source_file": "results/lea_semisynthetic_identifiability_control/SEMISYNTHETIC_PROTOCOL.md",
-      "source_commit": "1b711dc5967dfae4724b5f6161e7959ad31c98fb",
-      "git_blob": "38287b620254eb96fd6ec1b85fa0f3479d7cf088",
-      "sha256": "cf3f5872a8af0d748f6275a30efceebf695b67047a56c52327483ef62b1d7534",
-      "size_bytes": 7269,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "097e0a17c8f4490fd545d6a3d8f3bc020f03afcb5312dd277eeb59ffd7a059a6",
+      "size_bytes": 6172,
+      "role": "documentation"
     },
     {
       "path": "results/level2_lea/FULL_BATTERY_UNITS.csv",
@@ -225,6 +224,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

@@ -1,30 +1,30 @@
 # ARCHS4 matched-340 version aggregation and representation protocol
 
-Frozen before ARCHS4 or matched post-SVA model outcomes were calculated.  
-Coverage authority: `35cf07d8f3d90450b365893b56aa127dca7c4774`  
+Fixed before ARCHS4 or matched post-SVA model outcomes were calculated.  
+Coverage provenance: `35cf07d8f3d90450b365893b56aa127dca7c4774`  
 Branch: `codex/lea_archs4_robustness`  
 Dataset object: ARCHS4 human gene v2.5, `human_gene_v2.5.h5`, remote ETag `350f7e2f1096e77b8b8da50c6a91c509-9130`.
 
-## Frozen biological core
+## Fixed biological core
 
-- Retain exactly the 340 title-resolved historical paired LCLs.
+- Retain exactly the 340 title-resolved recorded paired LCLs.
 - Permanently exclude `LineNA` and `Line223`; no heuristic identity rescue is allowed.
-- Apply the exact historical five-fold LCL assignment from `LEVEL2_OOF_FROZEN.npz` after deleting the two excluded rows. No reshuffling or rebalancing.
+- Apply the exact recorded five-fold LCL assignment from `LEVEL2_OOF_FROZEN.npz` after deleting the two excluded rows. No reshuffling or rebalancing.
 - Every retained LCL contributes one ETOH vector and one DEX vector downstream and therefore one unit of model weight.
 
-## Frozen per-GSM transformation
+## Fixed per-GSM transformation
 
-For each of the 1,026 ARCHS4-v2.5-present candidate GSMs assigned confidently by the frozen GEO-title rules:
+For each of the 1,026 ARCHS4-v2.5-present candidate GSMs assigned confidently by the fixed GEO-title rules:
 
 1. Read the Kallisto-derived ARCHS4 integer pseudocount column over all 67,186 ARCHS4 genes.
 2. Define the library size as the sum over all 67,186 genes. A non-finite or zero library fails the representation gate; it is not imputed or removed post hoc.
 3. Compute counts per million with the fixed constant 1,000,000.
 4. Apply the natural-log variance-stabilizing transform `log1p(CPM)` independently to each sample.
-5. Select the frozen one-to-one matched GeneID axis only after library-size normalization, so the denominator is not changed by matching coverage.
+5. Select the fixed one-to-one matched GeneID axis only after library-size normalization, so the denominator is not changed by matching coverage.
 
 No cohort statistic, DEX outcome, held-fold statistic, or model outcome enters this transformation. No alternative normalization is permitted after outcomes are seen.
 
-## Frozen raw-version aggregation
+## Fixed raw-version aggregation
 
 Within every LCL-by-treatment group, take the arithmetic mean of all confidently assigned ARCHS4-present GSM log1p-CPM vectors with equal weight:
 
@@ -32,24 +32,24 @@ Within every LCL-by-treatment group, take the arithmetic mean of all confidently
 
 Do not select a deepest, best-correlated, v1, `.x`, `.y`, or otherwise preferred GSM. Do not sum pseudocounts across versions. Different version multiplicities do not change the LCL's downstream model weight.
 
-## Frozen gene axis
+## Fixed gene axis
 
-- Historical axis authority: first-appearance order of the 10,120 unique Ensembl GeneIDs in the 10,157-row Lea matrix.
+- Recorded axis provenance: first-appearance order of the 10,120 unique Ensembl GeneIDs in the 10,157-row Lea matrix.
 - ARCHS4 key: exact version-free `meta/genes/ensembl_gene` string.
 - Retain only exact one-to-one identifiers present once in ARCHS4 and at least once historically.
 - ARCHS4 duplicate GeneIDs fail closed. Missing or ambiguous identifiers are excluded before outcomes.
-- For the matched post-SVA control, multiple historical rows sharing one GeneID are collapsed by an arithmetic mean across those rows. This outcome-independent rule yields one post-SVA feature for the same GeneID represented once in ARCHS4.
+- For the matched post-SVA control, multiple recorded rows sharing one GeneID are collapsed by an arithmetic mean across those rows. This outcome-independent rule yields one post-SVA feature for the same GeneID represented once in ARCHS4.
 - Missing genes are not zero-filled in the primary comparison; both representations use the same maximum safe exact intersection in the same order.
 
 Unexpectedly poor exact coverage triggers review before modeling. The coverage gate is evaluated only from identifiers, never expression outcomes.
 
-## Frozen target and models
+## Fixed target and models
 
 - Predictor: the LCL's ETOH vector.
 - Response: DEX minus ETOH.
-- Residual target in each historical outer fold: response minus the outer-training LCL mean response.
-- Full-gene models: exact historical Ridge, PCA+Ridge, MLP, exact RBF kernel Ridge, histogram gradient boosting, and deep residual MLP implementations from commit `c3d074412ecc1be0958141726db16a1ed0036a04`; their historical inner-CV grids, seeds, and training rules remain unchanged.
-- Program analysis: fold-local 16-component response PCA fit on outer-training responses only; project the exact RBF kernel-Ridge OOF prediction and truth, then report pooled PC1-16, PC1-8, and PC1-4 residual R2 exactly as the historical response-program evaluator does.
+- Residual target in each recorded outer fold: response minus the outer-training LCL mean response.
+- Full-gene models: exact recorded Ridge, PCA+Ridge, MLP, exact RBF kernel Ridge, histogram gradient boosting, and deep residual MLP implementations from commit `c3d074412ecc1be0958141726db16a1ed0036a04`; their recorded inner-CV grids, seeds, and training rules remain unchanged.
+- Program analysis: fold-local 16-component response PCA fit on outer-training responses only; project the exact RBF kernel-Ridge OOF prediction and truth, then report pooled PC1-16, PC1-8, and PC1-4 residual R2 exactly as the recorded response-program evaluator does.
 - Run the same battery separately for matched post-SVA and ARCHS4. No model sees or pools the other representation.
 
 ## Leakage rule
@@ -64,9 +64,9 @@ Use HTTP byte ranges against the v2.5 HDF5 and store only selected GSM/matched-g
 
 Raw `.x/.y` correspondence is not recoverable for all ambiguous version groups. The primary all-version equal-mean aggregation is not a replicate reconstruction. Unless exact pairing emerges independently of outcomes, report `ARCHS4_REPLICATE_TRUTH_RECONSTRUCTION_NOT_EXECUTED_DUE_TO_RAW_VERSION_IDENTITY_AMBIGUITY`.
 
-## Frozen numerical adjudication
+## Fixed numerical adjudication
 
-These operational rules are frozen before either matched representation is modeled. They translate the task's qualitative terms into an outcome-independent decision and do not create a new verdict class.
+These operational rules are fixed before either matched representation is modeled. They translate the task's qualitative terms into an outcome-independent decision and do not create a new verdict class.
 
 For each representation define
 

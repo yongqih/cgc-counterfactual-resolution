@@ -1,4 +1,4 @@
-# CGC-EC-2 frozen metric definitions
+# CGC-EC-2 fixed metric definitions
 
 Let `G=25,695`. Plate-specific predictions are fit independently. Dot products below are divided by `G`; ratios use unrounded sums.
 
@@ -50,7 +50,7 @@ This is never substituted for Target-B recovery.
 
 ## Confidence intervals
 
-The frozen episode utility table is averaged over the eight support trajectories for each context-by-intervention entry. Each of 10,000 bootstrap draws:
+The fixed episode utility table is averaged over the eight support trajectories for each context-by-intervention entry. Each of 10,000 bootstrap draws:
 
 1. samples 50 context indices with replacement;
 2. for each sampled context, samples 93 intervention indices with replacement;
@@ -67,7 +67,7 @@ With `q=.95 quantile(T)`, the simultaneous lower band is
 
 `LCB_j = g_hat_j - q*s_j`.
 
-The analogous upper band is retained for plots/null comparison. The family contains all 90 frozen `(m,k)` points; no point is dropped after inspection.
+The analogous upper band is retained for plots/null comparison. The family contains all 90 fixed `(m,k)` points; no point is dropped after inspection.
 
 ## Experimental-budget thresholds
 
@@ -88,4 +88,3 @@ At every grid point, each deterministic correspondence null produces its own pai
 ## All-but-one summaries
 
 At `(49,92)`, one unique prediction per `(context,intervention,plate,estimator)` is evaluated. Report global ratio-of-sums recovery, full-response and excess-response per-entry metrics, context-stratified ratio-of-sums, intervention-stratified ratio-of-sums, simultaneous confidence, and distributions. Support-seed duplication is prohibited.
-

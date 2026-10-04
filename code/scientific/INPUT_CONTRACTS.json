@@ -6,7 +6,7 @@
     "bytes_if_known": 86490128,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "experimental_compression",
@@ -15,7 +15,7 @@
     "bytes_if_known": 86490128,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "experimental_compression",
@@ -24,7 +24,7 @@
     "bytes_if_known": 86490128,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "experimental_compression",
@@ -33,7 +33,7 @@
     "bytes_if_known": 74528,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "low_rank_completion",
@@ -51,7 +51,7 @@
     "bytes_if_known": null,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_DIRECTORY",
-    "notes": "Prepared pseudobulk core only; downloading large raw resources is not part of this release repair."
+    "notes": "Prepared pseudobulk core; raw study archives are available from the cited providers."
   },
   {
     "bundle": "held_context_scaling",
@@ -60,7 +60,7 @@
     "bytes_if_known": null,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_DIRECTORY",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "held_context_scaling",
@@ -69,7 +69,7 @@
     "bytes_if_known": 34018528,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "held_context_scaling",
@@ -78,7 +78,7 @@
     "bytes_if_known": 11137,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "five_pathway_scaling",
@@ -87,7 +87,7 @@
     "bytes_if_known": null,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_DIRECTORY",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "five_pathway_scaling",
@@ -96,7 +96,7 @@
     "bytes_if_known": 2705687,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "ed7_hierarchical_repair",
@@ -105,7 +105,7 @@
     "bytes_if_known": null,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_DIRECTORY",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "ed7_hierarchical_repair",
@@ -114,7 +114,7 @@
     "bytes_if_known": 28793698,
     "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
     "local_presence": "PRESENT_FILE",
-    "notes": "Prepared input; external to the code-only export."
+    "notes": "Prepared input supplied separately from source code."
   },
   {
     "bundle": "tcell_truth",

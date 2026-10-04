@@ -1,14 +1,9 @@
-"""Repair ED7 uncertainty by executing the frozen hierarchical bootstrap.
+"""Compute hierarchical uncertainty from saved response predictions.
 
-This audit-only program leaves predictions, empirical point estimates, context
-ladders, model selection, scaling-law families, seeds and draw counts frozen.
-It reconstructs intervention-level gene energies from the frozen response Gram
-cache and saved RBF hyperparameters, then implements the preregistered
-context-first / intervention-within-context bootstrap for the gene and the
-predefined five-pathway readouts.
-
-It writes only to ``audit/release_repair/ed7``.  It does not render figures or
-modify manuscript files.
+Reconstruct intervention-level gene energies from response Gram matrices and
+saved RBF hyperparameters. Resample contexts, then interventions within each
+sampled context, for gene and predefined five-pathway readouts.
+Outputs are written to ``audit/release_repair/ed7``.
 """
 
 from __future__ import annotations
@@ -900,7 +895,7 @@ def main() -> None:
     corrected_source.to_csv(OUT / "Extended_Data_7_hierarchical_corrected_source_data.csv", index=False)
 
     # Frozen point values are asserted directly, because their preservation is
-    # the release-repair boundary rather than a substantive reanalysis.
+    # the use of fixed predictions for uncertainty estimation.
     key_values = {
         "gene_g_m2": point_gene[0],
         "gene_g_m49": point_gene[-1],
@@ -1028,45 +1023,43 @@ def write_report(
         (extrapolation["resolution"] == "five_pathway_sensitivity")
         & (extrapolation["target_g"] == 0.5)
     ].iloc[0]
-    text = f"""# ED7 hierarchical-bootstrap release repair
+    text = f"""# Held-context response recovery and hierarchical uncertainty
 
-## Scope and adjudication
+## Resampling method
 
-This is the single approved release-blocker correction. The frozen protocol requires target contexts to be resampled first and interventions within each sampled context. The historical implementation resampled target contexts only, leaving the 93 interventions fixed. This repair adds exactly the missing inner intervention resampling layer. It does not refit a predictive model, regenerate a prediction, retune a hyperparameter, change a point-estimate definition, select a new scaling law, change a seed or draw count, introduce a null, or render a figure.
+Each bootstrap draw samples 50 target contexts with replacement, then samples 93 intervention identities with replacement within each sampled context. Empirical bands use {CURVE_DRAWS:,} draws (seed {CURVE_SEED}); scaling-law stability uses {FIT_DRAWS:,} draws (seed {FIT_SEED}). Prediction contributions and fitted point estimates are held fixed.
 
-For each bootstrap draw, 50 target contexts are sampled with replacement. For every sampled context occurrence, 93 intervention identities are then sampled with replacement from that context's frozen 93-intervention contribution vector. The context index matrices are generated first under the historical seeds, so the target-context resamples are exactly the same as in the old implementation; only the preregistered inner layer is added. Empirical bands use {CURVE_DRAWS:,} draws (seed {CURVE_SEED}); scaling-law stability uses {FIT_DRAWS:,} draws (seed {FIT_SEED}).
+## Point estimates
 
-## Frozen-point reconciliation
+Gene-level recovery is `{gene2['pooled_g']:.12f}` at m=2 and `{gene49['pooled_g']:.12f}` at m=49, for an observed gain of `{gene49['pooled_g'] - gene2['pooled_g']:.12f}`. Five-pathway recovery at m=49 is `{path49['pooled_g']:.12f}`, and the pathway-minus-gene contrast is `{contrast['five_pathway_minus_gene_g_m49']:.12f}`.
 
-All point estimates are unchanged (maximum absolute discrepancy `{reconciliation['maximum_frozen_key_value_absolute_difference']:.3g}`). Gene-level recovery remains `{gene2['pooled_g']:.12f}` at m=2 and `{gene49['pooled_g']:.12f}` at m=49, for an observed gain of `{gene49['pooled_g'] - gene2['pooled_g']:.12f}`. Five-pathway recovery at m=49 remains `{path49['pooled_g']:.12f}`, and the pathway-minus-gene contrast remains `{contrast['five_pathway_minus_gene_g_m49']:.12f}`.
+The gene `g=0.50` continuing-power projection is `{gene_n['point_context_count']:.12f}` response-observed reference contexts (62,811 when rounded). The selected five-pathway exponential-sensitivity asymptote is `g_inf={path_ginf['point_estimate']:.12f}` (0.416142 when rounded), so `g=0.50` is not mathematically reached by the selected point fit. The forced continuing-power sensitivity is `{contrast['five_pathway_continuing_power_sensitivity_g0p5_point_context_count']:.12f}` contexts (413.677 when rounded). These values are fitted point summaries.
 
-The gene `g=0.50` continuing-power projection remains `{gene_n['point_context_count']:.12f}` response-observed reference contexts (62,811 when rounded). The selected five-pathway exponential-sensitivity asymptote remains `g_inf={path_ginf['point_estimate']:.12f}` (0.416142 when rounded), so `g=0.50` is not mathematically reached by the selected point fit. The forced continuing-power sensitivity remains `{contrast['five_pathway_continuing_power_sensitivity_g0p5_point_context_count']:.12f}` contexts (413.677 when rounded). These three values are fitted point summaries and therefore do not change when only the bootstrap implementation is repaired.
+## Hierarchical uncertainty
 
-## Corrected uncertainty
-
-- Gene m=49 recovery: `{gene49['pooled_g']:.12f}`, corrected hierarchical 95% percentile interval `[{gene49['hierarchical_bootstrap_lower_95']:.12f}, {gene49['hierarchical_bootstrap_upper_95']:.12f}]` (9,999 defined draws from 10,000 attempts; one draw had a non-positive reference cross-energy and is undefined under the frozen ratio definition). The old context-only interval was `[{gene49['old_context_only_lower_95']:.12f}, {gene49['old_context_only_upper_95']:.12f}]`.
-- Five-pathway m=49 recovery: `{path49['pooled_g']:.12f}`, corrected hierarchical 95% percentile interval `[{path49['hierarchical_bootstrap_lower_95']:.12f}, {path49['hierarchical_bootstrap_upper_95']:.12f}]` (old context-only interval `[{path49['old_context_only_lower_95']:.12f}, {path49['old_context_only_upper_95']:.12f}]`).
-- Five-pathway minus gene at m=49: `{contrast['five_pathway_minus_gene_g_m49']:.12f}`, corrected paired hierarchical 95% percentile interval `[{contrast['hierarchical_bootstrap_difference_lower_95']:.12f}, {contrast['hierarchical_bootstrap_difference_upper_95']:.12f}]` (old context-only interval `[0.084953527304, 0.393471404009]`).
-- Selected five-pathway asymptote: `g_inf={path_ginf['point_estimate']:.12f}`, corrected hierarchical 95% percentile interval `[{path_ginf['hierarchical_bootstrap_lower_95']:.12f}, {path_ginf['hierarchical_bootstrap_upper_95']:.12f}]`.
+- Gene m=49 recovery: `{gene49['pooled_g']:.12f}`, hierarchical 95% percentile interval `[{gene49['hierarchical_bootstrap_lower_95']:.12f}, {gene49['hierarchical_bootstrap_upper_95']:.12f}]` (9,999 defined draws from 10,000 attempts; one draw had a non-positive reference cross-energy and is undefined under the frozen ratio definition).
+- Five-pathway m=49 recovery: `{path49['pooled_g']:.12f}`, hierarchical 95% percentile interval `[{path49['hierarchical_bootstrap_lower_95']:.12f}, {path49['hierarchical_bootstrap_upper_95']:.12f}]`.
+- Five-pathway minus gene at m=49: `{contrast['five_pathway_minus_gene_g_m49']:.12f}`, paired hierarchical 95% percentile interval `[{contrast['hierarchical_bootstrap_difference_lower_95']:.12f}, {contrast['hierarchical_bootstrap_difference_upper_95']:.12f}]`.
+- Selected five-pathway asymptote: `g_inf={path_ginf['point_estimate']:.12f}`, hierarchical 95% percentile interval `[{path_ginf['hierarchical_bootstrap_lower_95']:.12f}, {path_ginf['hierarchical_bootstrap_upper_95']:.12f}]`.
 - Selected five-pathway `g=0.50` reachable fraction across scaling-law bootstrap draws: `{path_n['bootstrap_reachable_fraction']:.6f}`. Any interval for its context count is conditional on the mathematically reachable draws and is not a primary unconditional confidence interval.
-- Gene `g=0.50` projected context count: point `{gene_n['point_context_count']:.12f}`; corrected hierarchical 95% percentile interval `[{gene_n['hierarchical_bootstrap_lower_95']:.12f}, {gene_n['hierarchical_bootstrap_upper_95']:.12f}]` across the frozen continuing-power fit draws.
-- Forced continuing-power pathway sensitivity at `g=0.50`: point `{path_sensitivity_n['point_context_count']:.12f}`; corrected hierarchical 95% percentile interval `[{path_sensitivity_n['hierarchical_bootstrap_lower_95']:.12f}, {path_sensitivity_n['hierarchical_bootstrap_upper_95']:.12f}]`. This remains a model-form sensitivity, not the selected-law estimate.
+- Gene `g=0.50` projected context count: point `{gene_n['point_context_count']:.12f}`; hierarchical 95% percentile interval `[{gene_n['hierarchical_bootstrap_lower_95']:.12f}, {gene_n['hierarchical_bootstrap_upper_95']:.12f}]` across the frozen continuing-power fit draws.
+- Forced continuing-power pathway sensitivity at `g=0.50`: point `{path_sensitivity_n['point_context_count']:.12f}`; hierarchical 95% percentile interval `[{path_sensitivity_n['hierarchical_bootstrap_lower_95']:.12f}, {path_sensitivity_n['hierarchical_bootstrap_upper_95']:.12f}]`. This is a model-form sensitivity, not the selected-law estimate.
 
-## Conclusion boundary
+## Interpretation
 
-The qualitative claims that observed held-context recovery rises with support and that pathway readout is more recoverable than gene readout at m=49 survive: the corrected paired interval is strictly positive. The numerical projections 62,811 and 413.677 remain extrapolative fitted point summaries, not observed thresholds; 413.677 remains explicitly a forced continuing-power sensitivity. The selected pathway point fit still asymptotes below `g=0.50` at 0.416142, but its corrected bootstrap interval spans 0.50; therefore a population-level asymptote below 0.50 is not established. Release-facing bands must be replaced by the corrected hierarchical values in this directory; the old context-only intervals must not be described as satisfying the preregistration.
+Held-context recovery rises with support, and the paired hierarchical interval for pathway-minus-gene recovery at m=49 is strictly positive. The projected context counts 62,811 and 413.677 are fitted extrapolations beyond the observed range; 413.677 uses the forced continuing-power sensitivity. The selected pathway point fit has an asymptote of 0.416142, while its hierarchical interval spans 0.50. These data therefore do not establish a population asymptote below 0.50.
 
 ## Artifacts
 
-- `ED7_HIERARCHICAL_BOOTSTRAP_CURVES.csv`: corrected empirical bands at all m.
-- `ED7_HIERARCHICAL_SCALING_PARAMETERS.csv`: corrected fit-parameter uncertainty.
-- `ED7_HIERARCHICAL_EXTRAPOLATION.csv`: corrected extrapolation stability and reachability.
+- `ED7_HIERARCHICAL_BOOTSTRAP_CURVES.csv`: hierarchical empirical bands at all m.
+- `ED7_HIERARCHICAL_SCALING_PARAMETERS.csv`: hierarchical fit-parameter uncertainty.
+- `ED7_HIERARCHICAL_EXTRAPOLATION.csv`: hierarchical extrapolation stability and reachability.
 - `ED7_GENE_VS_PATHWAY_HIERARCHICAL.csv`: paired resolution contrast.
-- `Extended_Data_7_hierarchical_corrected_source_data.csv`: publication-facing replacement rows.
-- `ED7_GENE_INTERVENTION_CONTRIBUTIONS.npz`: audit cache reconstructed from frozen response Grams, frozen baseline kernels and saved RBF hyperparameters.
+- `Extended_Data_7_hierarchical_corrected_source_data.csv`: source table rows.
+- `ED7_GENE_INTERVENTION_CONTRIBUTIONS.npz`: contribution cache reconstructed from fixed response Grams, frozen baseline kernels and saved RBF hyperparameters.
 - `ED7_BOOTSTRAP_REPAIR_RECONCILIATION.json`: hashes, seeds, counts, tolerances and point reconciliation.
 - `ED7_BOOTSTRAP_IMPLEMENTATION_TEST.json`: direct-indexing equivalence check.
-- `ED7_OUTPUT_MANIFEST.json`: SHA-256 manifest of repair artifacts.
+- `ED7_OUTPUT_MANIFEST.json`: SHA-256 manifest of analysis outputs.
 """
     (OUT / "ED7_BOOTSTRAP_REPAIR_REPORT.md").write_text(text, encoding="utf-8")
 

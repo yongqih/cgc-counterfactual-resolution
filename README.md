@@ -1,37 +1,45 @@
 # The recoverable resolution of Virtual-Cell prediction
 
-Code and data for the author-approved manuscript of 4 October 2026: **five main figures, three Extended Data figures and four supplementary figures**.
+Analysis code, source data and figure-generation scripts for **The recoverable resolution of Virtual-Cell prediction**.
 
-The experiments assess which biological detail is supported by the target, information available at prediction time and required reliability. The release includes T-cell prediction, State artifact evaluation, Tahoe experimental support and response resolution, LCL response programs, patient-derived organoid drug ranking, LARRY split-culture lineages and CellTag-multi fate prediction.
+The study examines which biological detail can be predicted from a specified target, the information available at prediction time and a required level of reliability. Analyses cover T-cell perturbations, State predictions, Tahoe experimental support and response resolution, LCL response programs, organoid drug ranking, LARRY lineages and CellTag-multi fate prediction.
 
-## Start here
+## Getting started
 
-Extract the CODE and DATA archives into the same parent directory. Both contain `CGC/` and merge into one release. On Windows, use a short extraction path. The prepared-data analyses were checked with Python 3.10.20; exact package versions are recorded in `reproducibility/VALIDATION.json`. Install the requirements in a dedicated environment.
+The GitHub repository contains code and figure-level source tables. Figure rendering requires this repository alone. The CODE and DATA archives share a `CGC/` directory; extract them into the same location to use the prepared numerical inputs. On Windows, use a short extraction path.
+
+The prepared-data analyses were tested with Python 3.10.20. Package versions and computational checks are recorded in `reproducibility/VALIDATION.json`.
 
 ```text
 python -m pip install -r requirements.txt
-python code/verify_release.py
+python code/verify_release.py --code-only
 python code/render_figures.py --output ../rendered_figures
+```
+
+With the DATA archive extracted:
+
+```text
+python code/verify_release.py
 python code/reproduce.py larry --work-dir ../reproduction
 python code/reproduce.py celltag-calibration --work-dir ../reproduction
 python code/reproduce.py tahoe-summary --work-dir ../reproduction
 ```
 
-`REPRODUCIBILITY.md` distinguishes full recomputation, analysis from frozen predictions, figure rendering and file-integrity checks. It lists the additional inputs and compute needed for refitting earlier models. Approved manuscript files and figures are read-only references; commands write to separate directories.
+`REPRODUCIBILITY.md` describes each computation, including the inputs and hardware required for model fitting. Commands write to separate output directories.
 
-## Layout
+## Contents
 
 | Directory | Contents |
 | --- | --- |
-| `code/figures/` | Portable renderers and the author's preserved SVG schematics |
-| `code/analysis/` | Current LARRY, CellTag and Tahoe analysis code and protocols |
-| `code/scientific/` | Twenty-two frozen scientific bundles supporting the retained experiments |
-| `source_data/` | Current figure-level numerical tables and mappings |
-| `prepared/` | Compact measured inputs, predictions, calibration records and sufficient statistics |
-| `figures/` | Approved PDF, SVG, PNG and TIFF figure exports |
-| `manuscript/` | Approved main and supplementary documents and figure review PDFs |
-| `reproducibility/` | Source provenance, input delivery and validation records |
+| `code/figures/` | Renderers for five main figures, three Extended Data figures and four supplementary figures |
+| `code/analysis/` | LARRY, CellTag-multi and Tahoe resolution analyses |
+| `code/scientific/` | T-cell, State, LCL, organoid and perturbation-response implementations |
+| `source_data/` | Numerical figure tables, pathway weights and panel mapping |
+| `prepared/` | Processed measurements, predictions, calibration records and sufficient statistics in the DATA archive |
+| `figures/` | PDF, SVG, PNG and TIFF figure exports in the DATA archive |
+| `manuscript/` | Main article and Supplementary Information in the DATA archive |
+| `reproducibility/` | Input specifications, software versions and computational checks |
 
-`MANUSCRIPT_AUTHORITY.json` identifies this revision. The repository is [cgc-counterfactual-resolution](https://github.com/yongqih/cgc-counterfactual-resolution). The earlier archived release is v1.0.1, DOI [10.5281/zenodo.22664234](https://doi.org/10.5281/zenodo.22664234). Updated CODE and DATA archives have been prepared for this revision; their Zenodo deposition and new archival identifier are pending.
+Repository: [cgc-counterfactual-resolution](https://github.com/yongqih/cgc-counterfactual-resolution). Upstream datasets are listed in `DATASET_ACCESSION_MANIFEST.csv`; input requirements are listed in `reproducibility/INPUT_DELIVERY.csv`.
 
-CGC-authored code is MIT licensed. Dataset and third-party terms remain with their respective providers; see `THIRD_PARTY_NOTICES.md` and `DATASET_ACCESSION_MANIFEST.csv`.
+CGC-authored code is MIT licensed. Third-party data and software retain their providers' terms; see `THIRD_PARTY_NOTICES.md`.

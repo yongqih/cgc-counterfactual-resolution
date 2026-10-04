@@ -4,11 +4,8 @@
   "main_figures": 5,
   "extended_data_figures": 3,
   "supplementary_figures": 4,
-  "status": "Current manuscript code revision; updated Zenodo deposit pending",
   "documents": {
-    "Main_manuscript.docx": "31bb1b2e785bf9b3220faca9b2d9b6cbe5d0472f33fefbaae29be304d45e9c9b",
-    "Supplementary_information.docx": "3179aa07ca175eed32520f7c82a35b7999de0d2dc99ff512bf2bae56985f2b43"
-  },
-  "previous_public_version": "v1.0.1",
-  "previous_public_doi": "10.5281/zenodo.22664234"
+    "Main_manuscript.docx": "7820794cbc70d37573eeca9851d27d5d423e864f2dc8b6968ceb9a9b75715905",
+    "Supplementary_information.docx": "789030df577a72cddfe2787174d405f5603cba222fbce911f67955ca0e8acd9d"
+  }
 }

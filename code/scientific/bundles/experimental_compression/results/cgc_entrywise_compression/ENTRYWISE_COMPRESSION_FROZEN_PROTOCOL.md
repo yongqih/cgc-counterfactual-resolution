@@ -1,6 +1,6 @@
 # CGC-EC-2 strict prospective leave-one-entry-out experimental compression
 
-Status: **FROZEN BEFORE NEW OUTCOME INSPECTION**
+Analysis specification: observed-support hyperparameter selection.
 
 ## Scientific estimand
 
@@ -10,17 +10,16 @@ For every Tahoe perturbation-matrix entry `(target_context, target_intervention)
 
 changes prospective recovery of the sealed response. DMSO controls are assumed observed in every context and are not counted among the 4,650 perturbation entries.
 
-This is a new experiment. Historical CGC-0J remains `TRANSDUCTIVE_TWO_WAY_CENTERED_ANATOMY`; no CGC-0J target, cache, result, or verdict is overwritten or reinterpreted as prospective.
 
-## Frozen data axis
+## Fixed data axis
 
-- Study: Tahoe-100M frozen replicate core.
+- Study: Tahoe-100M fixed replicate core.
 - Contexts: 50.
 - Exact drug-by-dose interventions: 93.
 - Plates: Plate 6 and Plate 14, kept separate for fitting and paired only during evaluation.
 - Response: `delta_primary`, treatment `log1p(CPM)` minus the equal-weight mean of the two independently normalized DMSO-well `log1p(CPM)` profiles.
 - Gene universe: `G_PRIMARY`, exactly 25,695 coverage-only genes; gene hash is recorded in `ENTRYWISE_INFORMATION_SET.json`.
-- No raw H5AD is reprocessed. The audited CGC-0I response Zarr is read-only.
+- No raw H5AD is reprocessed. The analysis CGC-0I response Zarr is read-only.
 - Baseline RNA for the secondary analysis is the four-well control-state artifact; treated outcomes never select RNA neighbors.
 
 ## Hide-first dependency rule
@@ -31,11 +30,11 @@ Any cached global sufficient statistic is an input acceleration artifact, not a 
 
 No full-matrix two-way-centering, target-context intervention mean, target truth normalization, outcome-balanced support selection, or target-truth model selection is permitted.
 
-## Frozen experimental-support grid
+## Fixed experimental-support grid
 
 - Reference contexts: `m = [1,2,4,8,16,24,32,40,49]`.
 - Target-context sentinels: `k = [0,1,2,4,8,16,32,64,80,92]`.
-- Primary support: eight fixed, nested, outcome-independent context trajectories, reusing sequences 0--7 from the frozen CGC-SUPPORT-0C manifest.
+- Primary support: eight fixed, nested, outcome-independent context trajectories, reusing sequences 0--7 from the fixed CGC-SUPPORT-0C manifest.
 - Primary sentinels: eight fixed, nested, outcome-independent intervention permutations. For target `p*`, the first `k` identities after filtering out `p*` are observed.
 - The paired context/sentinel trajectory index is the support-seed unit. All 50 contexts and all 93 interventions are evaluated.
 - At `(m=49,k=92)`, all support seeds reduce to the same all-but-one information set; it is evaluated once per target entry.
@@ -52,7 +51,7 @@ All orders, seeds, inner folds, and correspondence-null maps are recorded in `EN
 
 `M3_LOWRANK_CONTEXT` restricts affine context weights to a reference-only context covariance eigenspace. Candidate ranks are `[1,2,4,8,16,24,32]`, capped at `m-1`; rank is selected by the same reference-only pseudo-target procedure. It never factors the completed 50-by-93 target matrix.
 
-For M1--M3, hyperparameters are selected separately by plate, target context, `m`, and `k`, pooling the eight frozen support trajectories. Selection uses only the 49 non-target reference contexts. Five frozen intervention folds provide inner train/validation partitions. For each fold, target-budget-matched sentinel identities are drawn from the training folds; validation is on the held fold. Up to five deterministic reference contexts are pseudo-targets. No response from `c*` enters hyperparameter selection. Degenerate cases (`m=1`, insufficient rank, or `k=0`) use the predeclared M0/equal-weight limit.
+For M1--M3, hyperparameters are selected separately by plate, target context, `m`, `k` and observed reference set. Support trajectories can be pooled only when their observed reference sets are identical. Selection uses only response-observed reference contexts within that support path. Five fixed intervention folds provide inner train/validation partitions. For each fold, target-budget-matched sentinel identities are drawn from the training folds; validation is on the held fold. Up to five deterministic reference contexts are pseudo-targets. No response from `c*` enters hyperparameter selection. Degenerate cases (`m=1`, insufficient rank, or `k=0`) use the predeclared M0/equal-weight limit.
 
 The operational comparison may report a reference-CV-selected estimator, but all primary thresholds are defined on `M2_AFFINE_RIDGE`; estimator choice cannot be made from sealed-entry outcomes.
 
@@ -74,9 +73,9 @@ The predicted excess is `D_hat = Delta_hat - B`. All quantities use only the epi
 
 - Bootstrap draws: 10,000.
 - Bootstrap seed: 202608225.
-- Unit preservation: resample contexts, then interventions within resampled contexts; Plate 6/14 pairing is never broken. Frozen support trajectories are averaged within entry before resampling.
+- Unit preservation: resample contexts, then interventions within resampled contexts; Plate 6/14 pairing is never broken. Fixed support trajectories are averaged within entry before resampling.
 - Pointwise intervals: percentile 95% intervals.
-- Primary simultaneous band: studentized bootstrap max-T lower band across all 90 frozen `(m,k)` points for M2 Target B.
+- Primary simultaneous band: studentized bootstrap max-T lower band across all 90 fixed `(m,k)` points for M2 Target B.
 - Thresholds: `tau = [0,0.25,0.50,0.80,0.95]`; the minimum observed `B(m,k)` whose simultaneous lower band reaches `tau`. No interpolation or extrapolation. Missing thresholds are `NOT_REACHED_WITHIN_FULL_GRID`.
 - The raw discrete surface and Pareto non-dominated frontier are both retained; no monotonic smoothing is used for threshold claims.
 
@@ -88,21 +87,20 @@ Positive control B is a 50-context, 93-intervention, two-plate synthetic matrix 
 
 Positive control C is the explicitly illegal-deployment `REPLICATE_ORACLE_CEILING`: one plate's sealed entry predicts the other plate. It calibrates assay noise only and is never an eligible estimator.
 
-Four correspondence nulls are frozen for the full grid: intervention identity, context identity, sentinel identity, and reference-context identity. Each uses deterministic derangements in the split manifest. A positive biological claim must report whether the corresponding observed configuration exceeds every null; a confidence interval above zero alone is not described as correspondence-specific success.
+Four correspondence nulls are fixed for the full grid: intervention identity, context identity, sentinel identity, and reference-context identity. Each uses deterministic derangements in the split manifest. A positive biological claim must report whether the corresponding observed configuration exceeds every null; a confidence interval above zero alone is not described as correspondence-specific success.
 
 ## Secondary experimental design
 
-Only after the invariance and positive-control gates pass and the primary random-support surface is frozen:
+Only after the invariance and positive-control gates pass and the primary random-support surface is fixed:
 
 1. `RNA_NEAREST`: rank reference contexts by Euclidean distance in a rank-32 SVD of baseline control RNA. Gene centering/scaling and SVD use baseline controls only.
 2. `REFERENCE_DOPT_SENTINELS`: greedy D-optimal/diversity selection using reference-context responses and target baseline RNA only.
 
 RNA-informed thresholds are recomputed with the same estimators, metrics, bootstrap, and simultaneous-band definition. No treated target outcome selects a context or sentinel.
 
-## Frozen stopping and validity rules
+## Fixed stopping and validity rules
 
 - Any hidden-target invariance failure: stop with `STRICT_ENTRYWISE_EXPERIMENTAL_COMPRESSION_INVALID`.
 - Any axis, source hash, plate pairing, budget, or all-but-one accounting failure: stop invalid.
 - Positive-control failure does not alter the real-data numbers, but blocks an interpretable negative conclusion and is prominently reported.
 - The final report first returns the integrity label, then quantitative results. No estimator, grid, seed, null, threshold, or interpretation is changed after outcome inspection.
-

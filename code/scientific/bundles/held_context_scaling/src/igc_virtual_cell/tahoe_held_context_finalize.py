@@ -1,4 +1,4 @@
-"""Freeze, adjudicate and render Tahoe held-context scaling results.
+"""Summarize and render Tahoe held-context scaling results.
 
 SPDX-License-Identifier: MIT
 """
@@ -659,7 +659,7 @@ def write_report_and_qa(
 
     floor_low = float(floor["parameter_0_bootstrap_lower_95"])
     floor_high = float(floor["parameter_0_bootstrap_upper_95"])
-    lines = f"""# Tahoe heterogeneous held-context scaling: final adjudication
+    lines = f"""# Tahoe heterogeneous held-context scaling: response recovery
 
 ## Verdict
 
@@ -713,13 +713,9 @@ The requested same-context State bridge is not defined. The five official State 
 
 Fairfax remains an independent positive boundary: normalized single-measurement donor `g` rose to 0.210–0.237 across fixed IFN-gamma and LPS stimuli in one primary-monocyte domain. Tahoe uses a different replicate-stable cross-plate estimand across heterogeneous cell lines. The two experiments jointly show that context-number scaling can occur in both within-domain donor and heterogeneous held-cell-line regimes, but their numerical `g` values are not pooled or treated as identical.
 
-## Manuscript recommendation
+## Interpretation
 
-`STRONG_ENOUGH_TO_JUSTIFY_MANUSCRIPT_INTEGRATION_REVIEW`
-
-This result changes the scientific balance of the CGC story: Tahoe no longer supports a blanket “more contexts do not help” interpretation. The stronger defensible statement is that heterogeneous zero-shot context breadth produces substantial but slow, incomplete operator recovery over 2–49 contexts, with continuing late gains and no identified asymptote. This is potentially manuscript-relevant as an independent context-axis experiment, provided the text preserves the zero-shot design, replicate-stable estimand, finite-range boundary and State/Fairfax non-equivalence.
-
-No manuscript file, author affiliation, original 600-dpi figure, Main Figure, Extended Data, supplement or publication table was modified.
+Heterogeneous held-context prediction shows increasing but incomplete operator recovery over 2–49 response-observed reference contexts, with continuing late gains and no identified asymptote. These estimates use the replicate-stable cross-plate response metric.
 """
     (out / "TAHOE_HELD_CONTEXT_SCALING_FINAL.md").write_text(lines, encoding="utf-8")
 

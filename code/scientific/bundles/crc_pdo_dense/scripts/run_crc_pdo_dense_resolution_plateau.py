@@ -373,9 +373,9 @@ def final_report(
             "",
             f"- Implementation frozen before dense outcomes: `{qa['implementation_commit']}`.",
             f"- Scientific QA: `{qa['passed_checks']}/{qa['required_checks']}` checks passed.",
-            f"- Prior hashes and manuscript unchanged: `{qa['prior_hashes_unchanged']}`.",
+            f"- Input hashes unchanged: `{qa['prior_hashes_unchanged']}`.",
             f"- Test status: `{qa['repository_test_status']}`.",
-            "- The manuscript was not modified.",
+            "- Source file integrity was checked.",
         ]
     )
     path.write_text("\n".join(lines), encoding="utf-8")

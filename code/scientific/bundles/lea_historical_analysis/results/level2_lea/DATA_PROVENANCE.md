@@ -10,8 +10,8 @@
 - Filtered sample info: `31Mar21_filtered_sample_info.txt`, SHA-256 `883db8852f992e634410f8fcc7b714e8e809a8e0b619fea08d497146b2895e58`.
 - Gene-ID companion: `31Mar21_all_runs_voom_norm_geneIDs.txt`, SHA-256 `78ed16fd0139cf8f0c6a1ea4451ddb26f357827df70663d554a00b55b4b2fd0a`.
 - Official author repository commit: `68a59dad28012b956b6dfcfba6ed85b05e0ba1c0`.
-- Download/audit date: `2026-08-22`.
-- Git commit at data audit: `7ec0049fb105a5d21d41239737750b4128b8eca4`.
+- Download/analysis date: `2026-08-22`.
+- Git commit at data analysis: `7ec0049fb105a5d21d41239737750b4128b8eca4`.
 - FASTQ/BAM/SRA/genotype downloads: **none**.
 
 The matrix is the authors' filtered and limma/voom-normalized expression after

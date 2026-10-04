@@ -546,14 +546,14 @@ def reconcile_and_report(paths: dict[str, Path], runtime_seconds: float, device:
     arch = comparison.iloc[1]
     arch_gene_increase = arch["Best full-gene R2"] - post["Best full-gene R2"]
     consequence = {
-        "ARCHS4_RESOLUTION_HIERARCHY_REPLICATED": "The current Fig. 4 resolution interpretation survives; add only the prespecified independent-reprocessing robustness sentence.",
-        "ARCHS4_RESOLUTION_HIERARCHY_PARTIAL": "The hierarchy survives only with qualification: the original processing contributes quantitatively to the separation.",
-        "ARCHS4_RESOLUTION_HIERARCHY_NOT_REPLICATED": "The current Fig. 4 interpretation requires substantive revision; no preprocessing rescue is permitted.",
+        "ARCHS4_RESOLUTION_HIERARCHY_REPLICATED": "Independent RNA processing reproduces the gene-to-program recovery hierarchy.",
+        "ARCHS4_RESOLUTION_HIERARCHY_PARTIAL": "The hierarchy is partially reproduced; processing contributes quantitatively to the separation.",
+        "ARCHS4_RESOLUTION_HIERARCHY_NOT_REPLICATED": "Independent RNA processing does not reproduce the gene-to-program recovery hierarchy.",
     }[verdict]
     table = comparison.to_markdown(index=False, floatfmt=".6f")
-    report = f"""# ARCHS4 pre-SVA robustness audit for the Lea resolution hierarchy
+    report = f"""# ARCHS4 pre-SVA robustness analysis for the Lea resolution hierarchy
 
-## Formal matched comparison
+## Matched comparison
 
 {table}
 
@@ -564,7 +564,7 @@ def reconcile_and_report(paths: dict[str, Path], runtime_seconds: float, device:
 5. Population and fold mismatch cannot explain the comparison: both rows use the same 340 LCLs, historical folds, and exact 10,110-gene axis.
 6. Leakage invariance passed in all 10 representation-by-fold tests; no held-out DEX outcome changed a fit-side object or prediction.
 7. Normalization, raw-version aggregation, matching, folds, models, and numerical verdict thresholds were all committed before formal outcomes; no choice depended on model performance.
-8. Manuscript consequence: {consequence}
+8. Interpretation: {consequence}
 
 ## Representation boundary
 
@@ -577,7 +577,7 @@ One included public ARCHS4 GSM has a full-gene pseudocount library of only 6. Th
 - Selected GSMs: {extract['selected_gsms']}; matched genes: {extract['matched_genes']}.
 - HTTP expression bytes transferred: {extract['expression_bytes_transferred'] / 1e9:.3f} GB; full 47.865-GB HDF5 was not downloaded.
 - Selected cache footprint: {(extract['shard_cache_size_bytes'] + extract['representation_size_bytes']) / 1e9:.3f} GB.
-- Total local audit footprint after completion: 0.533 GB (0.259 GB restartable data/model cache and 0.274 GB result-side OOF/audit artifacts).
+- Total local analysis footprint after completion: 0.533 GB (0.259 GB restartable data/model cache and 0.274 GB result-side OOF/audit artifacts).
 - Peak extraction-worker RSS: {extract['peak_worker_rss_bytes'] / 1e9:.3f} GB.
 - Initial selective-extraction runtime: {extract.get('initial_extraction_runtime_seconds', extract['runtime_seconds']) / 60:.2f} min.
 - Formal model runtime: {runtime_seconds / 3600:.2f} h; device: `{device}`.
@@ -589,14 +589,14 @@ One included public ARCHS4 GSM has a full-gene pseudocount library of only 6. Th
 {verdict}
 """
     (OUT / "ARCHS4_ROBUSTNESS_REPORT.md").write_text(report, encoding="utf-8")
-    wording = f"""# Recommended manuscript wording
+    wording = f"""# LCL response prediction with independent RNA processing
 
-The gene-to-program recovery hierarchy was reproduced in an independently reprocessed gene-count representation derived from the original sequencing reads without the original SVA residualization (Extended Data Fig. X).
+The gene-to-program recovery hierarchy was reproduced in an independently reprocessed gene-count representation derived from the original sequencing reads without the original SVA residualization.
 
-Methods boundary: ARCHS4 provides Kallisto-derived gene-level pseudocounts independently reprocessed from the original sequencing reads and therefore serves as an independent raw-read-derived, pre-SVA robustness representation rather than an exact reconstruction of the Lea et al. STAR/HTSeq pre-SVA matrix.
+Representation: ARCHS4 provides Kallisto-derived gene-level pseudocounts independently reprocessed from the original sequencing reads and therefore serves as an independent raw-read-derived, pre-SVA robustness representation rather than an exact reconstruction of the Lea et al. STAR/HTSeq pre-SVA matrix.
 
 Formal verdict: `{verdict}`.
-""" if verdict == "ARCHS4_RESOLUTION_HIERARCHY_REPLICATED" else f"""# Recommended manuscript consequence
+""" if verdict == "ARCHS4_RESOLUTION_HIERARCHY_REPLICATED" else f"""# LCL response prediction with independent RNA processing
 
 {consequence}
 

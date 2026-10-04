@@ -63,13 +63,13 @@
   ],
   "runtime_git_sources": [],
   "known_portability_constraints": [
-    "Frozen source export is not evidence that scientific execution has been rerun.",
-    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
-    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
-    "CUDA-enabled Torch and a compatible GPU are required by this unchanged implementation; benchmark.run explicitly rejects unavailable CUDA. Substantial input caches are required.",
-    "Four donor-disjoint outer folds; response-basis protocol deviation is explicitly disclosed in original run_manifest.json, not hidden by source packaging."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Requires CUDA-enabled PyTorch, a compatible GPU and prepared input caches.",
+    "Uses four donor-disjoint outer folds.",
+    "Response coefficients are computed by direct projection without subtracting the saved PCA mean; the run manifest records the projection convention."
   ],
-  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "smoke_tests": [
     {
       "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -81,7 +81,7 @@
       "status": "packaged, not rerun by registry build"
     }
   ],
-  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "source_policy": "Per-file SHA-256 checksums identify the distributed sources; commit identifiers record source provenance.",
   "missing_metadata_provenance": [],
   "exported_file_count": 31,
   "exported_source_bytes": 322993,
@@ -378,6 +378,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

@@ -60,7 +60,7 @@
       "bytes_if_known": 86490128,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_FILE",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     },
     {
       "path": "data/cgc_entrywise_cache/same_plate14_float32.npy",
@@ -68,7 +68,7 @@
       "bytes_if_known": 86490128,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_FILE",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     },
     {
       "path": "data/cgc_entrywise_cache/cross_plate6_plate14_float32.npy",
@@ -76,7 +76,7 @@
       "bytes_if_known": 86490128,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_FILE",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     },
     {
       "path": "data/cgc_entrywise_cache/sample_gene_sums_float64.npy",
@@ -84,16 +84,18 @@
       "bytes_if_known": 74528,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_FILE",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     }
   ],
   "outputs": [
     "results/cgc_entrywise_compression"
   ],
-  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "known_portability_constraints": [
-    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Hyperparameter selection uses only the reference contexts observed at each support budget.",
+    "Prediction reconstruction preserves support-sequence-specific parameters."
   ],
   "smoke_tests": [
     {
@@ -105,7 +107,7 @@
     }
   ],
   "exported_file_count": 34,
-  "exported_source_bytes": 7181977,
+  "exported_source_bytes": 7181887,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -126,11 +128,11 @@
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
       "source_file": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FROZEN_PROTOCOL.md",
-      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
-      "git_blob": "53bd6281fba5b694455f26ae9f33f52c7bd14d3f",
-      "sha256": "c769e9cb5657a006c40d489ac1c8c2c69e6e65fc277c3429c44c70391aafed03",
-      "size_bytes": 8802,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "647a694b20364eebc43dcf412134f6b9d64355784504eccdd105bd311aeb2df3",
+      "size_bytes": 8716,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_FOUNDATION_MANIFEST.json",
@@ -153,11 +155,11 @@
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md",
       "source_file": "results/cgc_entrywise_compression/ENTRYWISE_METRIC_DEFINITIONS.md",
-      "source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
-      "git_blob": "f9d5dad4e5b8737660ee6eac0e57a196ee3acaa3",
-      "sha256": "f8b8cfc01ca7018deb76ce96ed47f340ff8f8214ae127f78f026ca8c0621948c",
-      "size_bytes": 4057,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "c18397e1ef099666aea50dd2c8ad54d020d29e1596998067a8e5acc80333c3c5",
+      "size_bytes": 4053,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_RUN_MANIFEST.json",
@@ -269,7 +271,7 @@
       "pre_correction_sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
       "base_source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
       "base_git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/controls.py",
@@ -300,7 +302,7 @@
       "pre_correction_sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
       "base_source_commit": "a893cc338c11f402a9ef9966bd376f2aca92cb88",
       "base_git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
@@ -376,7 +378,7 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_POINTWISE_CI.csv",
@@ -388,7 +390,7 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_RECOVERY_SURFACE_SIMULTANEOUS_CI.csv",
@@ -400,7 +402,7 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_FRONTIER.csv",
@@ -412,7 +414,7 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_COMPRESSION_THRESHOLDS.csv",
@@ -424,7 +426,7 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "results/cgc_entrywise_compression/ENTRYWISE_NULL_CONTROLS.csv",
@@ -436,7 +438,7 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "results/cgc_entrywise_compression/SUPPORT_BUDGET_CORRECTION_20260908.json",
@@ -448,11 +450,11 @@
       "role": "corrected_result",
       "base_source_commit": null,
       "base_git_blob": null,
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     }
   ],
-  "source_modification": "Audited 2026-09-08 correction. Modified/new files have null source_commit/git_blob; original provenance is retained in base_* and pre_correction_sha256 fields.",
-  "analysis_execution": "NOT_RUN",
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
   "post_freeze_correction": {
     "date": "2026-09-08",
     "protocol": "EPISODE_REFERENCE_SUPPORT_ONLY_V2",

@@ -1,42 +1,31 @@
 # Patient-disjoint ex-vivo functional drug prioritization and nested Ridge
 
-Capability: `FULL_ANALYSIS`. Source: `c2a5699bfb560ffb9f3ad8204ee4587d1cd03936`.
-
-Runtime: **PREPARED_INPUTS_REQUIRED; scientific run not performed**.
-
-The files listed in SOURCE_MANIFEST.json are byte-exact historical Git blobs. The launcher and any current bounded release reporting entry are separate, explicitly identified release code. No frozen scientific source was rewritten.
-
-## Safe inspection
+## Execution
 
 ```text
 python code/scientific/launch.py crc_pdo_application --inspect-only
 ```
 
-The inspection command is not analysis reproduction. To execute a scientific stage, provide its exact prepared inputs and deliberately add `--execute`. No stage was run during this release repair.
+`--inspect-only` lists requirements. Use `--cli-help` for supported parsers and `--execute` after preparing the inputs.
 
-## Entry points
+Entrypoints:
 
-- `python code/scientific/launch.py crc_pdo_application --entrypoint scripts/run_crc_pdo_personalized_audit.py --execute -- <original CLI arguments; see safe help>`
-- `python code/scientific/launch.py crc_pdo_application --entrypoint scripts/run_crc_pdo_personalized_application.py --execute -- <original CLI arguments; see safe help>`
+- `scripts/run_crc_pdo_personalized_audit.py`
+- `scripts/run_crc_pdo_personalized_application.py`
 
-For allowlisted argument-parsing scripts, replace `--execute` and arguments with `--cli-help`. Scripts without a parser must never be probed with raw `--help`: several historical scripts would start their analysis. The launcher rejects unavailable help safely.
+## Inputs
 
-## Input contract
+- `data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz`: GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json
+- `data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz`: Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3
+- `results/crc_pdo_personalized_drug_application`: Patient patient/panel/intersection analysis tables required by application and follow-up runners
+- `data/crc_pdo_personalized_application/raw`: Official supplementary spreadsheets, GEO processed matrices and exact source-manifest hashes needed only for preparation
+- `data/crc_pdo_personalized_application/processed/HTA2_PDO_public_processed.npz`: Secondary HTA expression platform; full original application loops over RNAseq and HTA2.0
 
-- `data/crc_pdo_personalized_application/processed/RNAseq_PDO_log2CPM1.npz` — GSE294511 processed RNAseq and official PDO/patient mapping; source_manifest.json. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/crc_pdo_personalized_application/processed/PRIMARY_DSS.npz` — Kryeziu et al. Cell Reports Medicine 2026, DOI 10.1016/j.xcrm.2026.102840; official supplementary DSS and Mendeley 10.17632/hr94h42xdc.3. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `results/crc_pdo_personalized_drug_application` — Frozen premodel patient/panel/intersection audit tables required by application and follow-up runners. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/crc_pdo_personalized_application/raw` — Official supplementary spreadsheets, GEO processed matrices and exact source-manifest hashes needed only for preparation. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
-- `data/crc_pdo_personalized_application/processed/HTA2_PDO_public_processed.npz` — Secondary HTA expression platform; full original application loops over RNAseq and HTA2.0. Size: not available bytes. not bundled; third-party terms or separate frozen-input archive required.
+Paths are relative to the supplied workspace. `SOURCE_MANIFEST.json` records provenance and file checksums.
 
-Prepared paths are relative to the workspace or explicit source root used by the original CLI. The registry is not a claim that those data are embedded. Large inputs were neither copied nor downloaded. Use the source manifests and DATA_AVAILABILITY_FINAL.md to resolve provenance before running.
+## Analysis and runtime requirements
 
-## Boundaries
-
-- Frozen source export is not evidence that scientific execution has been rerun.
-- Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.
-- pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.
-- Primary RNAseq cohort is 52 patients/91 PDOs/24 drugs/19421 genes. Secondary HTA is distinct; no clinical-response claim.
-- Patient-level aggregation and LOPO outer evaluation; alpha is selected within five-fold training data.
-- Final source includes corrected restudentization per shared sign-flip draw; initial implementation alone is not valid final inferential authority.
-- --postprocess-only requires frozen predictions/null draws; it is not a substitute for the complete analysis.
+- Primary RNA-seq cohort: 52 patients, 91 organoids, 24 drugs and 19,421 genes. The HTA expression platform is analyzed separately.
+- Patient-level aggregation and leave-one-patient-out evaluation; alpha is selected within five training folds.
+- Shared sign-flip draws use restudentization for simultaneous inference.
+- The --postprocess-only option requires saved predictions and null draws.

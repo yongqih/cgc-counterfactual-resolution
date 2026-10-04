@@ -1,8 +1,8 @@
-# Scientific implementations used in the current manuscript
+# Scientific implementations
 
-The table maps the retained frozen source bundles to the 4 October 2026 manuscript. Historical numbering inside an unchanged source manifest identifies provenance; the mapping below identifies current use.
+The bundles below contain the scientific implementations used in the article.
 
-| Bundle | Current use |
+| Bundle | Figure or analysis |
 | --- | --- |
 | `experimental_compression` | Figure 2; Supplementary Figure 2 |
 | `low_rank_completion` | Figure 2e; Supplementary Figure 2d |
@@ -18,7 +18,7 @@ The table maps the retained frozen source bundles to the 4 October 2026 manuscri
 | `lea_historical_analysis` | Figure 3b-d; Supplementary Figure 3 |
 | `lea_archs4` | Supplementary Figure 3a |
 | `lea_full_span` | Supplementary Figure 3d |
-| `resolution_pathway_frozen` | Figure 3f; corrected paired contrasts |
+| `resolution_pathway_frozen` | Figure 3f; paired pathway-minus-gene contrasts |
 | `pathway_fidelity` | Figure 3g |
 | `pathway_composition` | Extended Data Figure 2b |
 | `crc_pdo_application` | Figure 4a,b; Supplementary Figure 4a-c |
@@ -27,4 +27,4 @@ The table maps the retained frozen source bundles to the 4 October 2026 manuscri
 | `crc_pdo_dense` | Figure 4c,d; Supplementary Figure 4d |
 | `lea_semisynthetic` | Supplementary Figure 3c |
 
-Inspect an entrypoint with `python code/scientific/launch.py BUNDLE --inspect-only`. Read its `SOURCE_MANIFEST.json` for input, provenance and runtime requirements. Sources remain byte-exact; prior smoke-test counts are historical. Current checks are recorded in `reproducibility/VALIDATION.json`. New LARRY, CellTag and Tahoe analyses use `code/reproduce.py`.
+Inspect an entrypoint with `python code/scientific/launch.py BUNDLE --inspect-only`. Its `SOURCE_MANIFEST.json` lists inputs, source identifiers, checksums and runtime requirements. Computational checks are recorded in `reproducibility/VALIDATION.json`. LARRY, CellTag-multi and Tahoe resolution analyses also have entrypoints in `code/reproduce.py`.

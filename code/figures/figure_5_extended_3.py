@@ -118,4 +118,4 @@ for model,color,marker,off in models:
  q=s[s.model==model].set_index('condition').loc[conds];f.plot(np.arange(4)+off,q.size_cc90,ls='none',marker=marker,color=color,ms=4)
 f.set_xticks(range(4),['RNA','ATAC','Joint','Shuffled']);f.set_ylim(5.6,6.02);f.set_yticks([5.6,5.8,6]);f.set_ylabel('Mean candidate fates')
 save(fig,'Extended_Data_3',[a,b,c,d,e,f],list('abcdef'),[['a','b'],['c','d'],['e','f']],[['a','c'],['d','f']])
-print('Wrote three revised figures.')
+print('Rendered Figure 5 and its supporting figures.')

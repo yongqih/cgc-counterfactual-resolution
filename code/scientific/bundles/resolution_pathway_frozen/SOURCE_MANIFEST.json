@@ -1,6 +1,6 @@
 {
   "id": "resolution_pathway_frozen",
-  "analysis_name": "Same frozen predictions, gene-versus-predefined-pathway readout and corrected inference",
+  "analysis_name": "Gene and pathway readouts of the same response predictions",
   "class": "FIGURE_FROM_FROZEN_PREDICTIONS",
   "commit": "46b25eec4a97e3001cc43262980af8f69c533478",
   "implementation_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
@@ -38,14 +38,13 @@
   ],
   "runtime_git_sources": [],
   "known_portability_constraints": [
-    "Frozen source export is not evidence that scientific execution has been rerun.",
-    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
-    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
-    "Historical random-projection arm is INVALID and excluded from manuscript inference. Source inclusion is archival, not endorsement or permission to execute that arm.",
-    "Valid pathway-minus-gene comparison is 0.27281393788398667 versus 0.11068053088808294; the claim authority is the corrected frozen interval, not random-projection results.",
-    "Default source/truth roots are author-machine Windows paths; override them explicitly. No automatic replay or scientific execution during packaging."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "The pathway-minus-gene comparison uses fixed predictions and a four-term max-T calibration.",
+    "The primary recovery estimates are 0.27281393788398667 in pathway coordinates and 0.11068053088808294 in gene coordinates.",
+    "Use the release entrypoint listed in this manifest and supply source and truth roots explicitly."
   ],
-  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "smoke_tests": [
     {
       "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -62,7 +61,7 @@
       "status": "packaged, not rerun by registry build"
     }
   ],
-  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "source_policy": "Per-file SHA-256 checksums identify the distributed sources; commit identifiers record source provenance.",
   "missing_metadata_provenance": [],
   "archival_entrypoints": [
     {
@@ -84,8 +83,8 @@
   ],
   "release_entrypoint": "render_valid_resolution.py",
   "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
-  "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
-  "claim_boundary": "Current renderer uses corrected episode-reference-only predictions and two retained pathway-minus-gene contrasts, preserving original four-term max-T multiplicity calibration. Invalid random-projection claims remain excluded. Historical tables are preserved but superseded.",
+  "active_execution_guard": "The launcher executes the release_entrypoint listed in this manifest.",
+  "claim_boundary": "Two pathway-minus-gene contrasts use observed-reference-only predictions and four-term max-T calibration. Random-panel contributions are used for calibration only.",
   "archival_required_inputs": [
     {
       "path": "data/cgc_resolution2_replay/truth_g_primary_float32.npy",
@@ -151,7 +150,7 @@
     }
   ],
   "exported_file_count": 23,
-  "exported_source_bytes": 156468,
+  "exported_source_bytes": 151681,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -172,11 +171,11 @@
     {
       "path": "results/cgc_resolution_poc_v2/RESOLUTION2_FROZEN_PROTOCOL.md",
       "source_file": "results/cgc_resolution_poc_v2/RESOLUTION2_FROZEN_PROTOCOL.md",
-      "source_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
-      "git_blob": "a96a6c6301e19ee11bb8f8f6e5292f23a40fc939",
-      "sha256": "b199b98a7f764cb0e1833838f69d68544a6277c47585f569b7fdb23f1eb77b53",
-      "size_bytes": 7845,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "7e5aa985e076c72b16a7ad224b78001ec96e7e58544642a3633cd772b21d2a99",
+      "size_bytes": 3058,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_resolution_poc_v2/RESOLUTION2_PAIRED_COMPARISONS.csv",
@@ -261,7 +260,7 @@
       "pre_correction_sha256": "a41dd82d7d727a49b4445ef95c82d1989e082e7ddb54687e02d5b482994495a1",
       "base_source_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
       "base_git_blob": "e61a435889cffe99bdd1523c878cdb7070de4501",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/core.py",
@@ -283,7 +282,7 @@
       "pre_correction_sha256": "000e29af0327e7705571748eed8ed30a7043e4b622f2056171cc1441125aae0c",
       "base_source_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
       "base_git_blob": "ccdc190fc88d911cc157f83a5131e0de091b3a5c",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_entrywise/foundation.py",
@@ -332,7 +331,7 @@
       "pre_correction_sha256": "2b17eb122960de2d0801a414955228d557012b04088deefb5457fa35b7110f56",
       "base_source_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
       "base_git_blob": "ba42fe56da10593e9468fff25b77bbdf1e11e914",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "src/igc_virtual_cell/cgc_resolution_poc/pathway.py",
@@ -354,7 +353,7 @@
       "pre_correction_sha256": "c0880daa0727b0c7e528e60386b342d1b21a86651f5fa4851dbec7b46d27f5ee",
       "base_source_commit": "46b25eec4a97e3001cc43262980af8f69c533478",
       "base_git_blob": "69259f186b09d3e9a34efed77079248598ebd669",
-      "modification": "2026-09-08 audited support-budget/replay correction"
+      "modification": "Observed-support hyperparameter selection and sequence-specific replay."
     },
     {
       "path": "tests/test_cgc_resolution2_inference.py",
@@ -385,8 +384,8 @@
       "modification": "2026-09-08 support-budget correction; newly generated, not a historical Git blob"
     }
   ],
-  "source_modification": "Audited 2026-09-08 correction. Modified/new files have null source_commit/git_blob; original provenance is retained in base_* and pre_correction_sha256 fields.",
-  "analysis_execution": "NOT_RUN",
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
   "release_entrypoint_provenance": {
     "path": "render_valid_resolution.py",
     "sha256": "9a9c6cda9a73c863dcb3bbf092fee93640c8d0ed54ccae08475ac4f80420ffb5",

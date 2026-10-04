@@ -30,7 +30,7 @@
       "bytes_if_known": null,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_DIRECTORY",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     },
     {
       "path": "data/cgc_bio1_official/frozen_program_weights.parquet",
@@ -38,23 +38,25 @@
       "bytes_if_known": 2705687,
       "redistribution": "not copied into code bundle; see DATA_AVAILABILITY_FINAL.md",
       "local_presence": "PRESENT_FILE",
-      "notes": "Prepared input; external to the code-only export."
+      "notes": "Prepared input supplied separately from source code."
     }
   ],
   "outputs": [
     "results/tahoe_five_pathway_scaling"
   ],
-  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "known_portability_constraints": [
-    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Five pathways are defined independently of outcomes.",
+    "Compute hierarchical intervals using ed7_hierarchical_repair."
   ],
   "smoke_tests": [],
-  "claim_boundary": "Externally predefined pathway set; no outcome-based selection. Historical uncertainty superseded by ed7_hierarchical_repair.",
+  "claim_boundary": "The pathway set is externally defined. Hierarchical inference is supplied by ed7_hierarchical_repair.",
   "allowed_stage": "prepare",
-  "active_execution_guard": "Only the empirical prepare stage is allowlisted; original finalize/all produce superseded context-only intervals. Use ed7_hierarchical_repair for current inference.",
+  "active_execution_guard": "The launcher permits the prepare stage. Use ed7_hierarchical_repair for hierarchical inference.",
   "exported_file_count": 10,
-  "exported_source_bytes": 185720,
+  "exported_source_bytes": 186826,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -130,19 +132,19 @@
     {
       "path": "src/igc_virtual_cell/tahoe_five_pathway_scaling.py",
       "source_file": "src/igc_virtual_cell/tahoe_five_pathway_scaling.py",
-      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
-      "git_blob": "3db2f732d0241720b5463ad7b6aa568c5b0530cb",
-      "sha256": "c758cbcda6069875c9847d5aa4250f2b6d2b24af3030c0f49634d6af7cd0efeb",
-      "size_bytes": 61558,
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "ce168c587a639555113d00047c6c7b444219c592a374dc597d7d5b0123dd3366",
+      "size_bytes": 62472,
       "role": "scientific_source"
     },
     {
       "path": "src/igc_virtual_cell/tahoe_held_context_finalize.py",
       "source_file": "src/igc_virtual_cell/tahoe_held_context_finalize.py",
-      "source_commit": "22926886e3f87994492720ad2a529dd382596f09",
-      "git_blob": "7e75f39d4360cdcb228fded651d35aec132d8074",
-      "sha256": "5b3947a06c92e442575faeaeb2b37a96819432927c9fac8259c6e91efdeb8109",
-      "size_bytes": 40285,
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "89a74bc6c8c1b93c4751fa42d888dc7049adfde5bb4a1ac6f59a6da9641de5a4",
+      "size_bytes": 40477,
       "role": "scientific_source"
     },
     {
@@ -155,6 +157,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

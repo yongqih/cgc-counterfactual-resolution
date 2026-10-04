@@ -1,9 +1,9 @@
-# Tahoe low-rank interaction completion — frozen protocol
+# Tahoe low-rank interaction completion — fixed protocol
 
 Status: **FROZEN BEFORE LOW-RANK HELD-OUT OUTCOME INSPECTION**
 
-Frozen source authority: `codex/cgc_entrywise_experimental_compression` at
-`a893cc338c11f402a9ef9966bd376f2aca92cb88`. The historical strict all-but-one
+Fixed source provenance: `codex/cgc_entrywise_experimental_compression` at
+`a893cc338c11f402a9ef9966bd376f2aca92cb88`. The recorded strict all-but-one
 M2 result (`g=0.11068053088808294`) is context only and is not the matched
 comparator if the fallback design is used.
 
@@ -13,7 +13,7 @@ The response for context `c`, intervention `p`, and gene `g` is modeled as
 
 `Y[c,p,g] = mu[g] + A[c,g] + B[p,g] + sum_r U[c,r] V[p,r] Q[r,g] + error`.
 
-The primary endpoint is the frozen context-specific cross-plate recovery
+The primary endpoint is the fixed context-specific cross-plate recovery
 
 `g = 1 - sum_i <D6_i-Dhat6_i, D14_i-Dhat14_i> / sum_i <D6_i,D14_i>`,
 
@@ -22,7 +22,7 @@ the other 49 contexts for the same intervention. Full-response recovery uses
 the identical residual numerator and the uncentered response denominator.
 
 Plate 6 and Plate 14 are fit independently. They share masks only. They are
-combined only in the frozen cross-plate estimand.
+combined only in the fixed cross-plate estimand.
 
 ## Input freeze
 
@@ -30,9 +30,9 @@ combined only in the frozen cross-plate estimand.
 - `G_PRIMARY`, 25,695 genes.
 - `delta_primary`: treatment `log1p(CPM)` minus the equal-weight mean of the
   two independently normalized DMSO-well profiles.
-- Frozen sample order: context-major, intervention-minor.
+- Fixed sample order: context-major, intervention-minor.
 - Same-plate and cross-plate Gram caches and the materialized `G_PRIMARY`
-  response tensor must match the hashes recorded by the run audit.
+  response tensor must match the hashes recorded by the run analysis.
 - No external annotation, baseline RNA, drug descriptor, pathway, or target
   label is supplied to either comparator.
 
@@ -49,18 +49,18 @@ unchanged. Failure is `LOW_RANK_INTERACTION_COMPLETION_INVALID`.
 ## Executability gate
 
 Before any low-rank target outcome is evaluated, four target episodes are
-chosen by SHA256 ordering of the frozen `(context_id, intervention_id)` axis at
+chosen by SHA256 ordering of the fixed `(context_id, intervention_id)` axis at
 the 0%, 33%, 67%, and 100% order statistics. Both plates, every rank/ridge
-candidate, both frozen starts, train-side validation, and the final refit are
+candidate, both fixed starts, train-side validation, and the final refit are
 timed without scoring the outer targets.
 
 Exact 4,650-fit all-but-one is executable only if the extrapolated total wall
 time is at most 24 GPU-hours, peak allocated VRAM is at most 10.5 GiB, and at
-least 95% of representative candidate fits meet the frozen convergence gate.
+least 95% of representative candidate fits meet the fixed convergence gate.
 Otherwise the fallback below is mandatory. This decision cannot use outer
 target performance.
 
-## Frozen fallback masks
+## Fixed fallback masks
 
 Fallback uses 100 balanced entry folds. Context and intervention axes are
 independently permuted with seed `202608251`. If `a(c)` and `b(p)` are their
@@ -110,13 +110,13 @@ interaction. The primary increment is
 
 ## Matched affine comparator
 
-The frozen M2 affine context-weight estimator and its exact sum-to-one
+The fixed M2 affine context-weight estimator and its exact sum-to-one
 constraint are rerun on each fallback outer mask. The target intervention uses
 the other 49 contexts. All 92 target-context sentinels are retained. If a
 non-target source-sentinel entry is also absent in the same outer fold, it is
 replaced only by the outer-train additive prediction; target outcomes are never
 imputed into training. Ridge values are the target-context/plate-specific
-`m=49,k=92` values frozen by the earlier reference-only pseudo-target CV. This
+`m=49,k=92` values fixed by the earlier reference-only pseudo-target CV. This
 is conservative prior tuning for the affine comparator and is not reselected
 from the new held-out outcomes. On a one-entry mask this implementation must
 reproduce the original M2 prediction coefficients within `1e-8`.
@@ -127,7 +127,7 @@ uses all observed entries because that is its declared completion structure.
 
 ## Inference
 
-- Use the existing 10,000 frozen hierarchical context-then-intervention
+- Use the existing 10,000 fixed hierarchical context-then-intervention
   bootstrap count table, preserving plate pairing.
 - Report point estimate and percentile 95% interval for each model and paired
   difference. No refit occurs inside the bootstrap.
@@ -139,7 +139,7 @@ uses all observed entries because that is its declared completion structure.
 ## Synthetic implementation control
 
 Seed `202608253` generates a 50x93x512 rank-4 CP interaction with independent
-plate noise and the exact frozen outer/inner masks. Signal and noise are fixed
+plate noise and the exact fixed outer/inner masks. Signal and noise are fixed
 so replicate-stable interaction reliability is 0.90 in expectation. The
 implementation control passes only if full low-rank context-specific recovery
 is at least 0.80, its gain over additive is at least 0.50, every entry is OOF,
@@ -161,6 +161,6 @@ Among valid runs:
   point gain at least 0.05, without meeting the close-gap rule.
 - `LOW_RANK_INTERACTION_COMPLETION_NO_RESCUE`: every other valid result.
 
-These thresholds are frozen before real low-rank held-out outcomes are
+These thresholds are fixed before real low-rank held-out outcomes are
 computed. No rank, L2, start, mask, metric, or verdict threshold may be changed
 after inspection.

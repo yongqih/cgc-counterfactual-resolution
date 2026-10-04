@@ -37,13 +37,13 @@ def main():
         for r in report:f.write(r['sha256']+'  '+r['file']+'\n')
     (args.output/'README_UPLOAD.md').write_text('''# Upload files for the current manuscript
 
-Upload both dated ZIPs as the replacement CODE and DATA payloads for the revised manuscript. They share one top-level directory and should be extracted together. The original public v1.0.1 record remains historical. Publishing these archives to Zenodo is a separate step from updating the GitHub repository.
+The CODE archive contains analysis code, figure source tables and reproducibility instructions. The DATA archive contains processed inputs, figures and manuscript files. Upload both archives to Zenodo and extract them together into their shared top-level directory. GitHub contains the CODE subset.
 
-On Windows, use a short extraction directory such as `C:/CGC` to accommodate the preserved historical source filenames.
+On Windows, use a short extraction directory such as `C:/CGC` to accommodate nested source paths.
 
 The local GitHub working copy is in `../github_publication/`. It contains the CODE subset. To run prepared-data analyses in a GitHub checkout, copy `prepared/` from the DATA archive into the checkout root. Figure rendering requires only the CODE subset, which includes the current figure source tables.
 
-Use `PACKAGE_MANIFEST.json` and `SHA256SUMS.txt` to check the upload payloads. After the new deposit has a public identifier, update the manuscript's code-availability paragraph with that identifier.
+Use `PACKAGE_MANIFEST.json` and `SHA256SUMS.txt` to check the upload payloads. The package manifest lists file counts, archive sizes and SHA-256 checksums.
 ''',encoding='utf-8')
     print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

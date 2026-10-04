@@ -893,7 +893,7 @@ Interpretation labels:
 - `{verdict['geometry_label']}`
 - `{verdict['coarse_vs_specific_label']}`
 
-CGC-TCELL-1C does not change the frozen 1B verdict: **NO**. The preregistered 1B relational criterion detected statistically positive coarse ordering, whereas the post-frozen 1C adjudication tested the stronger question of intervention-identity-specific operator recovery.
+The relational criterion detects statistically positive coarse ordering. The operator-alignment analysis tests the stronger question of intervention-identity-specific response recovery.
 """
     (reports/"cgc_tcell_1c_operator_alignment.md").write_text(text,encoding="utf-8")
     answers=f"""# CGC-TCELL-1C mechanistic interpretation

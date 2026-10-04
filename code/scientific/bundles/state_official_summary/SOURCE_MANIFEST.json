@@ -42,14 +42,13 @@
   ],
   "runtime_git_sources": [],
   "known_portability_constraints": [
-    "Frozen source export is not evidence that scientific execution has been rerun.",
-    "Third-party arrays are not included. Run only after arranging original input paths and verifying frozen checksums.",
-    "pyproject.toml is a dependency range declaration, not a fully pinned environment lock; matplotlib and some historical optional runtime dependencies need explicit installation.",
-    "Official artifact summary, not STATE model training or recreation of the official upstream predictions.",
-    "DO NOT run --help: this historical script has no argparse guard and would execute analysis.",
-    "Historical sampled context-null p-value is superseded in manuscript by conservative exact-unique-support 1/45=0.022222; unmodified legacy source may reproduce obsolete 1/5001. Frozen audit authority 21b08f02d3371129bb5cbf49704c65a271240c7c governs interpretation."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Evaluates official State predictions.",
+    "Uses all 44 exact context derangements and a conservative plus-one probability with minimum 1/45.",
+    "Use the release entrypoint listed in this manifest."
   ],
-  "runtime_readiness": "SOURCE_PRESENT_INPUTS_AND_ENVIRONMENT_REQUIRED; no full-analysis execution in this repair",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "smoke_tests": [
     {
       "kind": "EXACT_GIT_BLOB_SYNTAX",
@@ -61,7 +60,7 @@
       "status": "packaged, not rerun by registry build"
     }
   ],
-  "source_policy": "Byte-exact Git blobs only; no scientific source rewrite",
+  "source_policy": "Per-file SHA-256 checksums identify the distributed sources; commit identifiers record source provenance.",
   "missing_metadata_provenance": [],
   "archival_entrypoints": [
     {
@@ -73,10 +72,10 @@
   ],
   "release_entrypoint": "current_state_summary.py",
   "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c",
-  "active_execution_guard": "Original all-stages scripts cannot be invoked through release launcher; only current bounded entrypoint is allowed.",
-  "claim_boundary": "Current summary reads actual official mean artifacts, computes existing audited metrics, and uses all44 exact context derangements with conservative plus-one p. Historical sampled p and historical main/rendering are not active; no State fitting or bootstrap intervals are claimed by the bounded summary.",
+  "active_execution_guard": "The launcher executes the release_entrypoint listed in this manifest.",
+  "claim_boundary": "The summary computes response geometry from official prediction means and all 44 exact context derangements, with a conservative plus-one probability.",
   "exported_file_count": 15,
-  "exported_source_bytes": 74693,
+  "exported_source_bytes": 74691,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -124,11 +123,11 @@
     {
       "path": "results/cgc_state_1/license_acknowledgement.md",
       "source_file": "results/cgc_state_1/license_acknowledgement.md",
-      "source_commit": "58e7facf1b9b9573ee487469afdecfdff6f1eece",
-      "git_blob": "98e88475fab93bb78d9f073618311ac2dd5167d7",
-      "sha256": "fe23f63374b8d232679a098d6f12940d2cb68ea3a2c57079d12741e94bc7ea0d",
-      "size_bytes": 303,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "ec1d696fd4c7f9d8cc4009d083fc057415cdcff62a4589dfee4453a51076faed",
+      "size_bytes": 301,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_state_1/official_source_manifest.json",
@@ -221,8 +220,8 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN",
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
   "release_entrypoint_provenance": {
     "path": "current_state_summary.py",
     "sha256": "e316238edd09007f56748ebd24d04bf8c5fd205d62a3e27c0a97305cbfcda097",

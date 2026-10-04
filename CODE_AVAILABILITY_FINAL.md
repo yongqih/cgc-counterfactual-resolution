@@ -1,5 +1,5 @@
 # Code availability
 
-This 4 October 2026 revision contains the analysis code and portable figure assembly for the current manuscript. The public repository is https://github.com/yongqih/cgc-counterfactual-resolution. The previously deposited version is v1.0.1, https://doi.org/10.5281/zenodo.22664234. Zenodo deposition of the revised CODE and DATA archives is pending.
+Analysis code, figure-generation scripts and reproducibility instructions are available at https://github.com/yongqih/cgc-counterfactual-resolution. The repository includes the T-cell, State, Tahoe, LCL, organoid, LARRY and CellTag-multi analyses.
 
-Use `REPRODUCIBILITY.md` for current execution commands and tested capabilities. Prepared numerical inputs accompany the DATA archive. Frozen earlier implementations retain their documented input and historical-provenance requirements.
+`REPRODUCIBILITY.md` lists executable commands, input requirements and tested computations. Prepared numerical inputs accompany the DATA archive. Third-party software and model artifacts retain their upstream licenses and terms.

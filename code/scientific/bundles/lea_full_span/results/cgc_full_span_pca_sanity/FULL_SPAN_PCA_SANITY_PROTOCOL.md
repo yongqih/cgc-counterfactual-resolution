@@ -1,19 +1,18 @@
 # Full-training-span PCA sanity protocol
 
-Frozen before computing any held full-span outcome.
+Fixed before computing any held full-span outcome.
 
-## Authority and scope
+## Provenance and scope
 
-- Frozen dimension-matched audit parent: `77b346e669b5daf4a4492816cee3429337b4d9ff`.
+- Fixed dimension-matched analysis parent: `77b346e669b5daf4a4492816cee3429337b4d9ff`.
 - Matched-340 representation SHA-256: `7f44947ec59a43eb954ec2032e4b9c3733306542bcd117e03f584d72b3ecf59b`.
-- Frozen global-PCA curve SHA-256: `31c7e72d76becb9fd78f2f52ad85fd8dff5f91195981f70649bfd78bac4d21e6`.
-- Frozen dimension-matched summary SHA-256: `220b98089ff92008b86b94920127ec322a547ae27995fe414e1920960c565516`.
-- Data, sample order, historical five biological-LCL-disjoint folds, 10,110 genes, ETOH–DEX response, training-shared centering and held full-gene denominator are unchanged.
-- No predictor, WGCNA change, normalization, gene filter, nonlinear representation or manuscript modification is permitted.
+- Fixed global-PCA curve SHA-256: `31c7e72d76becb9fd78f2f52ad85fd8dff5f91195981f70649bfd78bac4d21e6`.
+- Fixed dimension-matched summary SHA-256: `220b98089ff92008b86b94920127ec322a547ae27995fe414e1920960c565516`.
+- Data, sample order, recorded five biological-LCL-disjoint folds, 10,110 genes, ETOH–DEX response, training-shared centering and held full-gene denominator define the analysis.
 
 ## Exact SVD matrix and numerical rank
 
-For each outer fold, start with the exact float32 `y_train` supplied to the frozen global-PCA audit. As standard PCA does, calculate its outer-training column mean in float64 and form:
+For each outer fold, start with the exact float32 `y_train` supplied to the fixed global-PCA analysis. As standard PCA does, calculate its outer-training column mean in float64 and form:
 
 `X_train = y_train.astype(float64) - mean_train`.
 
@@ -21,25 +20,25 @@ Compute the direct thin SVD `X_train = U S V^T` with `numpy.linalg.svd(full_matr
 
 `max(n_train, 10110) × eps(float64) × S_max`.
 
-This is the same prespecified rank tolerance used in the frozen dimension-matched audit. Do not force rank to `n_train−1`.
+This is the same prespecified rank tolerance used in the fixed dimension-matched analysis. Do not force rank to `n_train−1`.
 
-## Reconstruction and historical fidelity
+## Reconstruction and recorded fidelity
 
 The full-span affine PCA reconstruction is:
 
 `prediction = mean_train + (response - mean_train) V_r^T V_r`.
 
-Training full-rank reconstruction reports relative squared Frobenius error against the exact supplied `y_train`, maximum absolute error and the frozen fidelity:
+Training full-rank reconstruction reports relative squared Frobenius error against the exact supplied `y_train`, maximum absolute error and the fixed fidelity:
 
 `F = 1 - sum(||truth - prediction||²) / sum(||truth||²)`.
 
 Require training `F >= 1−1e−12`, relative error `<=1e−12`, and maximum right-basis Gram error `<=1e−10` before held interpretation.
 
-Direct SVD prefixes at `D=4,8,16,32,64,128,256` use the same affine reconstruction and must reproduce the frozen historical D=256 fold and pooled values within absolute `1e−10`.
+Direct SVD prefixes at `D=4,8,16,32,64,128,256` use the same affine reconstruction and must reproduce the fixed recorded D=256 fold and pooled values within absolute `1e−10`.
 
 ## Full-span held result and pure geometry
 
-Use every non-zero training right singular vector in each fold. The primary historical-metric quantity is the pooled full-span affine fidelity. The independent geometric quantity follows the requested zero-origin definition on the exact train-shared-centered held response `r_i = y_test[i]`:
+Use every non-zero training right singular vector in each fold. The primary recorded-metric quantity is the pooled full-span affine fidelity. The independent geometric quantity uses the zero-origin definition on the exact train-shared-centered held response `r_i = y_test[i]`:
 
 `q_i = ||P r_i||² / ||r_i||²`, where `P = V_r^T V_r`.
 
@@ -47,9 +46,9 @@ For every held LCL, verify:
 
 `||r_i||² = ||P r_i||² + ||(I−P)r_i||²`
 
-within relative `1e−10`. Report raw `q_i`, and additionally report the affine-centered fraction using `r_i−mean_train` so the historical fidelity can be reconciled exactly.
+within relative `1e−10`. Report raw `q_i`, and additionally report the affine-centered fraction using `r_i−mean_train` so the recorded fidelity can be reconciled exactly.
 
-The frozen fidelity and raw pooled projection fraction are not silently equated. Algebraically:
+The fixed fidelity and raw pooled projection fraction use different centering conventions. Algebraically:
 
 `F_affine = 1 - E_perp,affine / E_raw`,
 
@@ -65,14 +64,12 @@ Their difference is caused only by the training-mean origin and its cross terms.
 
 Report cumulative training singular-value energy at `D=4,8,16,32,64,128,256` and full numerical rank. These are training variance fractions, not held fidelities.
 
-The optional leave-one-training-LCL diagnostic is preregistered as **skipped**. Exact leave-one-out shared-response recentering would require a distinct span for each of roughly 1,360 training-withheld cases and is not computationally trivial; the primary full-span algebraic audit is complete without it.
+Leave-one-training-LCL span estimation was not evaluated. The analysis uses the five outer training folds.
 
-## Adjudication and stop rule
+## Numerical validation
 
 Use exactly one verdict:
 
 - `HELDOUT_RESPONSE_SUBSPACE_TRANSFER_POOR` if training reconstruction, direct D256 reproduction and projection identities pass but full-span held transfer remains low;
-- `GLOBAL_PCA_METRIC_OR_IMPLEMENTATION_ISSUE` if any algebraic or historical-reproduction gate fails;
+- `GLOBAL_PCA_METRIC_OR_IMPLEMENTATION_ISSUE` if any algebraic or recorded-reproduction gate fails;
 - `GLOBAL_PCA_SANITY_AUDIT_AMBIGUOUS` only if numerical or provenance limitations prevent adjudication.
-
-After the audit, stop without prediction, alternative PCA, nonlinear analysis, new data or manuscript changes.

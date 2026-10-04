@@ -6,22 +6,22 @@ Identity: `SEMI_SYNTHETIC_BASELINE_ENCODED_RESPONSE_CONTROL`
 
 ## Scientific scope
 
-This is the last new empirical control in the CGC evidence chain. It asks whether the exact held-LCL Lea pipeline can detect a matched-dimensional response when transferable individual-specific response structure is deliberately encoded in the observed baseline transcriptome. It is a pipeline-sensitivity and positive-control recoverability experiment, not an estimate or upper bound on the information content of real RNA.
+This positive control tests whether the exact held-LCL Lea pipeline can detect a matched-dimensional response when transferable individual-specific response structure is deliberately encoded in the observed baseline transcriptome. It is a pipeline-sensitivity and positive-control recoverability experiment, not an estimate or upper bound on the information content of real RNA.
 
-## Frozen real-data authority
+## Fixed real-data provenance
 
-- Authority branch: `codex/level2_lea_rna_counterfactual`.
-- Authority HEAD: `4424e4acbbcc593f61b7556282f45f12e29802fc`.
-- Frozen full-battery result commit: `c3d074412ecc1be0958141726db16a1ed0036a04`.
+- Provenance branch: `codex/level2_lea_rna_counterfactual`.
+- Provenance HEAD: `4424e4acbbcc593f61b7556282f45f12e29802fc`.
+- Fixed full-battery result commit: `c3d074412ecc1be0958141726db16a1ed0036a04`.
 - Biological units: the exact 342 paired LCLs.
 - Expression rows: the exact 10,157-row post-SVA processed representation.
-- Predictor: the exact frozen ETOH baseline matrix in `LEVEL2_OOF_FROZEN.npz`.
-- Splits: the exact frozen five biological-LCL-disjoint outer folds.
+- Predictor: the exact fixed ETOH baseline matrix in `LEVEL2_OOF_FROZEN.npz`.
+- Splits: the exact fixed five biological-LCL-disjoint outer folds.
 - Metric: pooled full-gene OOF residual R2, using each fold's outer-training response mean exactly as in the real analysis.
 
-Before any synthetic fit, reconciliation must reproduce the six frozen real-data values recorded in `configs/lea_semisynthetic_control_frozen.json`. Failure returns `LEA_FROZEN_PIPELINE_MISMATCH` and stops.
+Before any synthetic fit, reconciliation must reproduce the six fixed real-data values recorded in `configs/lea_semisynthetic_control_frozen.json`. Failure returns `LEA_FROZEN_PIPELINE_MISMATCH` and stops.
 
-## Frozen generator
+## Fixed generator
 
 Primary latent rank is `r=4`. The optional `r=8` secondary is disabled and will not be run.
 
@@ -39,7 +39,7 @@ Replicate A is the only prediction target. Replicate B is used only for reliabil
 
 Random streams for `W_X`, `z_H`, `W_Y`, replicate-A noise, and replicate-B noise are deterministic, disjoint, and recorded by seed and lambda index.
 
-## Frozen estimators and preprocessing
+## Fixed estimators and preprocessing
 
 The exact existing Lea implementations are reused:
 
@@ -54,7 +54,7 @@ No inner tuning is performed on synthetic outcomes. Every outer fold reuses the 
 
 ## Outcome-blind runtime design
 
-The preselected design is the protocol-authorized tiered design:
+The preselected design is the tiered design:
 
 - Tier 1: Ridge, RBF kernel Ridge, and deep residual MLP at all seven lambda values and ten seeds.
 - Tier 2: all six models at lambda `0`, `0.25`, and `1` for all ten seeds.
@@ -64,7 +64,7 @@ This selection was made before synthetic outcome inspection because the full des
 
 All formal computations are fold-resumable and atomic. A completed cache with matching generator/config/source hashes is reused; a mismatched cache is rejected rather than silently overwritten.
 
-## Primary endpoint and frozen adjudication
+## Primary endpoint and fixed adjudication
 
 The primary endpoint is pooled full-gene OOF residual R2 for every executed `(model,lambda,seed)`.
 
@@ -79,21 +79,7 @@ If no model passes all four gates but at least one executed model has median lam
 
 The qualifying model may be any of the three preregistered Tier-1 models; it is not substituted into the real-data analysis.
 
-## Reporting and figure
 
-The single Extended Data/Supplementary figure contains four lowercase panels in restrained Nature Biotechnology style:
-
-- **a**, the semi-synthetic construction;
-- **b**, realized replicate reliability across all seeds/lambda values;
-- **c**, lambda-to-OOF-R2 curves with seed distributions and median trajectories;
-- **d**, real Lea RBF R2 as a reference beside lambda-zero and lambda-one synthetic endpoints.
-
-Panel d uses the preregistered RBF kernel Ridge for both synthetic endpoints; it does not select the most favorable synthetic model after outcome inspection.
-
-The caption must state: “The real-data value is shown only as a reference and is not inverted into an estimate of biological information content.”
-
-## Claim boundary and stop rule
+## Interpretation
 
 A pass would show that the near-zero real full-gene result is not forced by sample size, output dimensionality, or evaluation code alone. It would not estimate real RNA information, prove an information-theoretic limit, or identify a synthetic lambda corresponding to the real result.
-
-After this control and the prespecified theory-positioning audit, stop all new scientific analyses. Do not alter the generator, rank, noise, lambda grid, folds, models, or gates; do not add CCA, mutual-information estimation, a new architecture, or a new dataset.

@@ -51,10 +51,11 @@
   "outputs": [
     "results/cgc_lowrank_interaction_completion"
   ],
-  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "known_portability_constraints": [
-    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Fits additive and CP-interaction models using the recorded target-hidden masks."
   ],
   "smoke_tests": [
     {
@@ -66,7 +67,7 @@
     }
   ],
   "exported_file_count": 22,
-  "exported_source_bytes": 594399,
+  "exported_source_bytes": 594614,
   "external_import_roots": [
     "matplotlib",
     "numpy",
@@ -87,11 +88,11 @@
     {
       "path": "results/cgc_lowrank_interaction_completion/LOW_RANK_INTERACTION_PROTOCOL.md",
       "source_file": "results/cgc_lowrank_interaction_completion/LOW_RANK_INTERACTION_PROTOCOL.md",
-      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
-      "git_blob": "3d418254cae59289c02d044871e032eed4d5368e",
-      "sha256": "6cbf4a89ecc56631f4967721b1dfd922ec9903e27e52e2c50a1880f99778b455",
-      "size_bytes": 8238,
-      "role": "frozen_configuration_or_metadata"
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "e8ecde853c99fa931ae65a7ed6f5c7bd1bd32fce4cb51275c487bca1b10da308",
+      "size_bytes": 8226,
+      "role": "documentation"
     },
     {
       "path": "results/cgc_lowrank_interaction_completion/LOW_RANK_MASK_MANIFEST.csv",
@@ -249,10 +250,10 @@
     {
       "path": "src/igc_virtual_cell/cgc_lowrank_completion/reporting.py",
       "source_file": "src/igc_virtual_cell/cgc_lowrank_completion/reporting.py",
-      "source_commit": "d734df721a7914c965d99af1a6955cff6f64209c",
-      "git_blob": "59e4f8194ff18f71412d13b342d9396b8ca0c368",
-      "sha256": "eb2509d1a5b8a8df70aac26d00ec73dc41f87fbf760005a8730a736573a635fa",
-      "size_bytes": 12419,
+      "source_commit": null,
+      "git_blob": null,
+      "sha256": "49b0267d2f523ab2de4ce983b5bd797bcbe975dc8ed8235b38d4a40e2d13d81c",
+      "size_bytes": 12646,
       "role": "scientific_source"
     },
     {
@@ -274,6 +275,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

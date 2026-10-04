@@ -47,10 +47,11 @@
   "outputs": [
     "results/cgc_tahoe_0c"
   ],
-  "runtime_readiness": "CODE_EXPORTED; prepared inputs must be staged or explicitly rooted before an analysis run",
+  "runtime_readiness": "Prepared inputs and listed runtime dependencies required.",
   "known_portability_constraints": [
-    "No raw reads, arrays, predictions or checkpoints are embedded. CLI smoke tests do not constitute a scientific rerun.",
-    "Original figures are historical analytical outputs, not byte-exact reproduction of manually edited R2 SVGs."
+    "Prepare the inputs listed below and verify their checksums before execution.",
+    "Install the declared dependencies and any optional packages required by the selected entrypoint.",
+    "Constructs paired-plate pseudobulk responses and their reproducibility summaries."
   ],
   "smoke_tests": [],
   "max_single_source_bytes": 16000000,
@@ -433,6 +434,6 @@
       "role": "scientific_source"
     }
   ],
-  "source_modification": "NONE; byte-exact Git blobs",
-  "analysis_execution": "NOT_RUN"
+  "source_modification": "Per-file SHA-256 checksums identify the distributed source files.",
+  "analysis_execution": "See reproducibility/VALIDATION.json for executed computations."
 }

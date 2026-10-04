@@ -209,10 +209,10 @@ thresholds. A valid no-rescue result means that lack of this explicit rank-32-or
 smaller context-by-intervention interaction family does not explain the dense-
 support gap. It does not imply that every nonlinear model must fail. A partial
 result means low-rank interaction structure mitigates but does not close CGC. A
-close-gap result means the earlier dense-support conclusion was substantially
-estimator-limited and requires revision.
+close-gap result means the dense-support gap depends substantially on the
+estimator family.
 
-No manuscript file was modified by this audit.
+The comparison uses matched observations and held-out masks.
 
 {result['verdict']}
 """
