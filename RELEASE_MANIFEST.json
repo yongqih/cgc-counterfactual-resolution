@@ -3112,14 +3112,14 @@
     {
       "path": "CODE_AVAILABILITY_FINAL.md",
       "archive": "CODE",
-      "bytes": 499,
-      "sha256": "b6408bc59e7fc0571ff9e5194b75b5ee1fdd9ada1e68467b4848b0852455259c"
+      "bytes": 572,
+      "sha256": "3e9862a6d2901ca2645f81552a74d0aae6978f7aa5edbee525a676b7e8c8e78e"
     },
     {
       "path": "DATA_AVAILABILITY_FINAL.md",
       "archive": "CODE",
-      "bytes": 580,
-      "sha256": "c7abaa8d638fa6aae0336ebf3074b5e63a5cef2062919d66dc857b86e07be6e4"
+      "bytes": 715,
+      "sha256": "77e1e42146e5946b066d3ace6f4b51ff75f78768049bc259a01a687451bc897a"
     },
     {
       "path": "DATASET_ACCESSION_MANIFEST.csv",
@@ -4030,8 +4030,8 @@
     {
       "path": "README.md",
       "archive": "CODE",
-      "bytes": 2860,
-      "sha256": "51951853920bfd7d90be1da0a7ab1c3acc3eb245266fa2c60053a46204933ac0"
+      "bytes": 3727,
+      "sha256": "6450309ce01a5b27243183ab9ed5ec83a2ce2629036f684634323339356b5f16"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -4308,6 +4308,18 @@
       "archive": "CODE",
       "bytes": 1623,
       "sha256": "a6c5cc9436bf889e84009d5ed1e4d73a440d256ec752e074a876ed5794e29810"
+    },
+    {
+      "path": "CITATION.cff",
+      "archive": "CODE",
+      "bytes": 995,
+      "sha256": "5d85477bf042a11a083735af5a1a56d32767787c80456b8f1fb7f0c4509b8c8e"
+    },
+    {
+      "path": "ZENODO_RECORDS.json",
+      "archive": "CODE",
+      "bytes": 1481,
+      "sha256": "28cab49cebe1b115ac2973ff8105e14f0b698f5921c2bda6ae6a379610c6301d"
     }
   ]
 }

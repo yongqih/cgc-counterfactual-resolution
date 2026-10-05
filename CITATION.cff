@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite this versioned analysis-code archive. Cite the source-data archive listed below when using the processed data."
+type: software
+title: "The recoverable resolution of virtual-cell prediction — Analysis code"
+authors:
+  - family-names: Huang
+    given-names: Yongqi
+version: v2.0.0
+date-released: "2026-10-05"
+doi: 10.5281/zenodo.23148656
+repository-code: "https://github.com/yongqih/cgc-counterfactual-resolution"
+url: "https://doi.org/10.5281/zenodo.23148656"
+license: MIT
+references:
+  - type: data
+    title: "The recoverable resolution of virtual-cell prediction — Source data"
+    authors:
+      - family-names: Huang
+        given-names: Yongqi
+      - family-names: Wang
+        given-names: Hanzhi
+      - family-names: Li
+        given-names: Chenyu
+      - family-names: Wilson
+        given-names: Parker
+    version: v2.0.0
+    date-released: "2026-10-05"
+    doi: 10.5281/zenodo.23148615
+    url: "https://doi.org/10.5281/zenodo.23148615"

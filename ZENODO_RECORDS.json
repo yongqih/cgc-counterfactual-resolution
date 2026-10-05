@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "archive": "CODE",
+      "record_id": "23148656",
+      "doi": "10.5281/zenodo.23148656",
+      "url": "https://doi.org/10.5281/zenodo.23148656",
+      "title": "The recoverable resolution of virtual-cell prediction — Analysis code",
+      "version": "v2.0.0",
+      "publication_date": "2026-10-05",
+      "creators": [
+        "Huang, Yongqi"
+      ],
+      "files": [
+        {
+          "filename": "CGC_CODE_2026-10-04.zip",
+          "bytes": 9264685,
+          "md5": "de6871a4e197487bab833831531c497d",
+          "sha256": "9ff33fe777dd1bda2636382edb1ac5c903c49e7c943befc724f8b5c2d697f3c8"
+        }
+      ],
+      "code_commit": "0e8e0150eb96d49e24d97ad41e4228f99d7b5f6d"
+    },
+    {
+      "archive": "DATA",
+      "record_id": "23148615",
+      "doi": "10.5281/zenodo.23148615",
+      "url": "https://doi.org/10.5281/zenodo.23148615",
+      "title": "The recoverable resolution of virtual-cell prediction — Source data",
+      "version": "v2.0.0",
+      "publication_date": "2026-10-05",
+      "creators": [
+        "Huang, Yongqi",
+        "Wang, Hanzhi",
+        "Li, Chenyu",
+        "Wilson, Parker"
+      ],
+      "files": [
+        {
+          "filename": "CGC_DATA_2026-10-04.zip",
+          "bytes": 214534510,
+          "md5": "2352e415b3c42daf7d84960f3651c47d",
+          "sha256": "ed4c76970af391f82e99f4769dfe8604f0ed6d7d5e6a030337327d7f273154eb"
+        }
+      ]
+    }
+  ]
+}

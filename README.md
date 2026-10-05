@@ -6,6 +6,8 @@ The study examines which biological detail can be predicted from a specified tar
 
 ## Getting started
 
+The **v2.0.0** archives are available on Zenodo: [analysis code and figure-level source tables](https://doi.org/10.5281/zenodo.23148656) and [processed data, figures and manuscript](https://doi.org/10.5281/zenodo.23148615).
+
 The GitHub repository contains code and figure-level source tables. Figure rendering requires this repository alone. The CODE and DATA archives share a `CGC/` directory; extract them into the same location to use the prepared numerical inputs. On Windows, use a short extraction path.
 
 The prepared-data analyses were tested with Python 3.10.20. Package versions and computational checks are recorded in `reproducibility/VALIDATION.json`.
@@ -42,5 +44,14 @@ python code/reproduce.py tahoe-summary --work-dir ../reproduction
 | `reproducibility/` | Input specifications, software versions and computational checks |
 
 Repository: [cgc-counterfactual-resolution](https://github.com/yongqih/cgc-counterfactual-resolution). Upstream datasets are listed in `DATASET_ACCESSION_MANIFEST.csv`; input requirements are listed in `reproducibility/INPUT_DELIVERY.csv`.
+
+## Citation
+
+Please cite the archive used in your analysis:
+
+- **Analysis code:** Huang, Y. *The recoverable resolution of virtual-cell prediction — Analysis code*. v2.0.0. Zenodo (2026). [doi:10.5281/zenodo.23148656](https://doi.org/10.5281/zenodo.23148656).
+- **Source data:** Huang, Y., Wang, H., Li, C. & Wilson, P. *The recoverable resolution of virtual-cell prediction — Source data*. v2.0.0. Zenodo (2026). [doi:10.5281/zenodo.23148615](https://doi.org/10.5281/zenodo.23148615).
+
+`CITATION.cff` provides machine-readable citation metadata. `ZENODO_RECORDS.json` records the published versions, filenames and checksums.
 
 CGC-authored code is MIT licensed. Third-party data and software retain their providers' terms; see `THIRD_PARTY_NOTICES.md`.
