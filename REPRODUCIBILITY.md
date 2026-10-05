@@ -39,3 +39,13 @@ This renders all twelve figures from the source tables and three included SVG sc
 ## Computational checks
 
 `code/verify_release.py --code-only` checks a GitHub checkout. After extracting the DATA archive, `code/verify_release.py` checks the complete package. These commands verify SHA-256 integrity and figure coverage. `reproducibility/VALIDATION.json` records numerical recomputations, figure comparisons and software versions. Randomized analyses use the recorded seeds, splits and numerical precision.
+
+### Implementation tests
+
+With both archives extracted, run:
+
+```text
+python code/check_scientific.py --work-dir ../scientific-tests
+```
+
+The command runs tests for 18 scientific source bundles and the Tahoe joint-resolution analysis in separate workspaces. These tests cover training/test separation, algebraic identities, estimator behavior and selected reference results. The DATA archive includes the compact organoid and LCL reference tables required by three suites in `prepared/scientific_validation/`; its manifest records their source checksums. This command does not refit the full study. Use `--bundle NAME` to select one suite.

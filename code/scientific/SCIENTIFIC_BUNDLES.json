@@ -4155,7 +4155,7 @@
       "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
       "release_entrypoint_provenance": {
         "path": "render_valid_resolution.py",
-        "sha256": "9a9c6cda9a73c863dcb3bbf092fee93640c8d0ed54ccae08475ac4f80420ffb5",
+        "sha256": "ca068478bf7afe44686e14d57d17acc20458324aec10fa920b134bc445eb3002",
         "origin": "release-only bounded reporting adapter; not a historical source blob",
         "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c"
       },
@@ -4579,7 +4579,7 @@
       "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
       "release_entrypoint_provenance": {
         "path": "current_state_summary.py",
-        "sha256": "e316238edd09007f56748ebd24d04bf8c5fd205d62a3e27c0a97305cbfcda097",
+        "sha256": "f9563765f935750f12a9aef94e0666dfb5d737f7f51a4f9b7413c988b9a9905b",
         "origin": "release-only bounded reporting adapter; not a historical source blob",
         "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c"
       }

@@ -8,7 +8,9 @@
     "sklearn": "1.7.2",
     "torch": "2.11.0+cu128",
     "matplotlib": "3.10.9",
-    "pymupdf": "1.28.2"
+    "pymupdf": "1.28.2",
+    "zarr": "2.18.3",
+    "numcodecs": "0.13.1"
   },
   "numerical_recomputations": {
     "larry_clone_estimates.csv": {
@@ -35,6 +37,11 @@
       "contrasts": 8,
       "simultaneous_intervals_reproduced": true,
       "valid_draws": 10000
+    },
+    "celltag_original_intervals": {
+      "paired_contrasts": 90,
+      "bootstrap_draws": 10000,
+      "reproduced": true
     }
   },
   "figure_comparisons": [
@@ -163,8 +170,8 @@
   "celltag_full_nested_refit": false,
   "test_scope": "LARRY recomputation from measured cell-level RNA; CellTag calibration reconstruction from frozen held-out probabilities; Tahoe recomputation from frozen sufficient statistics; all twelve figure renders.",
   "source_checks": {
-    "syntax_files": 320,
-    "frozen_files_verified": 411,
+    "syntax_files": 322,
+    "source_and_runtime_hash_entries_verified": 419,
     "errors": []
   },
   "path_adaptations": [
@@ -172,15 +179,155 @@
     "Figure input and output paths are release-relative."
   ],
   "clean_archive_checks": {
-    "file_integrity": {
-      "status": "PASS",
-      "files_verified": 700,
-      "mode": "CODE+DATA",
-      "scientific_recomputation": false,
-      "errors": []
-    },
     "rendered_figures": 12,
     "celltag_calibration_completed": true,
     "fresh_dependency_installation_tested": false
+  },
+  "implementation_tests": {
+    "suites": [
+      {
+        "suite": "crc_pdo_application",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "crc_pdo_conditioning",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "crc_pdo_dense",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "crc_pdo_pca",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "experimental_compression",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "lea_archs4",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "lea_full_span",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "lea_historical_analysis",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "lea_semisynthetic",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "low_rank_completion",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "pathway_composition",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "pathway_fidelity",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "resolution_pathway_frozen",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "state_independent_stability",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "state_official_summary",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "tcell_decomposition",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "tcell_lodo",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "tcell_truth",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "tahoe_joint_resolution",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "total_tests": 108,
+    "status": "PASS",
+    "command": "python code/check_scientific.py --work-dir ../scientific-tests"
+  },
+  "figure_quality_checks": {
+    "alignment": "PASS",
+    "pdf_glyph_floor_5pt": "PASS",
+    "rendered_figures_reviewed": 12,
+    "manuscript_pages_reviewed": 27,
+    "supplementary_pages_reviewed": 7
   }
 }

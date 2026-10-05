@@ -1,6 +1,6 @@
-# The recoverable resolution of Virtual-Cell prediction
+# The recoverable resolution of virtual-cell prediction
 
-Analysis code, source data and figure-generation scripts for **The recoverable resolution of Virtual-Cell prediction**.
+Analysis code, source data and figure-generation scripts for **The recoverable resolution of virtual-cell prediction**.
 
 The study examines which biological detail can be predicted from a specified target, the information available at prediction time and a required level of reliability. Analyses cover T-cell perturbations, State predictions, Tahoe experimental support and response resolution, LCL response programs, organoid drug ranking, LARRY lineages and CellTag-multi fate prediction.
 
@@ -20,6 +20,7 @@ With the DATA archive extracted:
 
 ```text
 python code/verify_release.py
+python code/check_scientific.py --work-dir ../scientific-tests
 python code/reproduce.py larry --work-dir ../reproduction
 python code/reproduce.py celltag-calibration --work-dir ../reproduction
 python code/reproduce.py tahoe-summary --work-dir ../reproduction

@@ -388,7 +388,7 @@
   "analysis_execution": "See reproducibility/VALIDATION.json for executed computations.",
   "release_entrypoint_provenance": {
     "path": "render_valid_resolution.py",
-    "sha256": "9a9c6cda9a73c863dcb3bbf092fee93640c8d0ed54ccae08475ac4f80420ffb5",
+    "sha256": "ca068478bf7afe44686e14d57d17acc20458324aec10fa920b134bc445eb3002",
     "origin": "release-only bounded reporting adapter; not a historical source blob",
     "correction_authority": "21b08f02d3371129bb5cbf49704c65a271240c7c"
   },

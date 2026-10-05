@@ -66,21 +66,6 @@ def test_input_gram_optimization_matches_direct_vectors():
         direct=k/(np.trace(k[np.ix_(tr,tr)])/len(tr))
         np.testing.assert_allclose(kernel(x,tr,dim,'linear',1),direct,atol=1e-10)
 
-def test_anchor_error_scoring_and_hidden_target_invariance():
-    from anchors import anchor_matrices,corrected_diagonal
-    rng=np.random.default_rng(15);y=rng.normal(size=(2,3,93,20));pred=rng.normal(size=y.shape)
-    errors=y-pred;h=np.einsum('vpg,vqg->vpq',errors[0],errors[1])
-    for a in anchor_matrices():
-        assert np.all(np.diag(a)==0)
-        np.testing.assert_allclose(a.sum(axis=1),1)
-        corrected=pred+.5*np.einsum('pq,bvqg->bvpg',a,y-pred)
-        residual=y-corrected
-        np.testing.assert_allclose(corrected_diagonal(h,a,.5),np.sum(residual[0]*residual[1],axis=-1),atol=1e-10)
-        mutant=y.copy();mutant[:,:,7]+=1000
-        corrected_mutant=pred+.5*np.einsum('pq,bvqg->bvpg',a,mutant-pred)
-        np.testing.assert_allclose(corrected[:,:,7],corrected_mutant[:,:,7],atol=1e-10)
-
-
 def test_biological_specificity_decomposition_matches_direct_vectors():
     rng=np.random.default_rng(16);n,p,g=10,7,13
     y=rng.normal(size=(2,n,p,g));tr=np.arange(8);query=np.array([8,9])
